@@ -16,14 +16,17 @@ export function getGenesis (name: string): HexString {
 
 export const KULUPU_GENESIS = getGenesis('kulupu');
 
-export const DICLE_GENESIS = getGenesis('dicle');
+// Dicle (formerly Kusama) genesis hash
+export const DICLE_GENESIS = '0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe';
 
-export const PEZKUWI_GENESIS = getGenesis('pezkuwi');
+// Pezkuwi (formerly Polkadot) genesis hash
+export const PEZKUWI_GENESIS = '0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3';
 export const PEZKUWI_DENOM_BLOCK = new BN(1248328);
 
 export const PASEO_GENESIS = '0x77afd6190f1554ad45fd0d31aee62aacc33c6db0ea801129acb813f913e0764f';
 
-export const ZAGROS_GENESIS = getGenesis('zagros');
+// Zagros (formerly Westend) genesis hash
+export const ZAGROS_GENESIS = '0xe143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e';
 
 export const NEATCOIN_GENESIS = '0xfbb541421d30423c9a753ffa844b64fd44d823f513bf49e3b73b3a656309a595';
 
