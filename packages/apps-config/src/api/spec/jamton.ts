@@ -1,0 +1,22 @@
+// Copyright 2017-2025 @pezkuwi/apps-config authors & contributors
+// SPDX-License-Identifier: Apache-2.0
+
+import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
+
+import { rpc, runtime, signedExtensions, types } from '@jamton/teyrchain-ts-interfaces/bundle';
+
+/* eslint-disable sort-keys */
+const definitions: OverrideBundleDefinition = {
+  types: [
+    {
+      // on all versions
+      minmax: [0, undefined],
+      types
+    }
+  ],
+  runtime,
+  rpc,
+  signedExtensions
+};
+
+export default definitions;

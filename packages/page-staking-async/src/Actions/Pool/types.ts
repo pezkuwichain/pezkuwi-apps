@@ -1,0 +1,10 @@
+// Copyright 2017-2025 @pezkuwi/app-staking-async authors & contributors
+// SPDX-License-Identifier: Apache-2.0
+
+import type { PalletNominationPoolsPoolMember } from '@pezkuwi/types/lookup';
+import type { BN } from '@pezkuwi/util';
+
+export interface AccountInfo {
+  claimable: BN;
+  member: PalletNominationPoolsPoolMember;
+}

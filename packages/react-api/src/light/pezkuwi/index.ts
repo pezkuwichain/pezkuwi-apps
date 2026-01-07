@@ -1,0 +1,10 @@
+// Copyright 2017-2025 @pezkuwi/react-api authors & contributors
+// SPDX-License-Identifier: Apache-2.0
+
+// Add your imported spec here in alphabetical order.
+// The key here reflects the URL of the light client endpoint.
+// e.g. light://bizinikiwi-connect/pezkuwi/astar
+export const specs: string[] = [
+  'astar',
+  'laos'
+];

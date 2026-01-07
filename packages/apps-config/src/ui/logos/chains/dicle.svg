@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="dicleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f47738;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Dicle (Tigris) River inspired - Orange/Gold for canary network -->
+  <circle cx="50" cy="50" r="48" fill="url(#dicleGrad)"/>
+  <circle cx="50" cy="50" r="35" fill="#ffffff"/>
+  <circle cx="50" cy="50" r="20" fill="#f47738"/>
+  <!-- D letter for Dicle -->
+  <text x="50" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#ffffff">D</text>
+</svg>
