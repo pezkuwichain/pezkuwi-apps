@@ -40,13 +40,13 @@ const ZKVERIFY_VOLTA_INFLATION_PARAMS = { ...DEFAULT_PARAMS, auctionAdjust: 0, m
 const KNOWN_PARAMS: Record<string, InflationParams> = {
   [CERE_NETWORK_GENESIS]: CERE_NETWORK_INFLATION_PARAMS,
   [CERE_NETWORK_TESTNET_GENESIS]: CERE_NETWORK_INFLATION_PARAMS,
-  [DOCK_POS_TESTNET_GENESIS]: { ...DEFAULT_PARAMS, stakeTarget: 0.75 },
-  [JOYSTREAM_GENESIS]: JOYSTREAM_INFLATION_PARAMS,
   // 30% for up to 60 slots, see
   // https://github.com/pezkuwichain/pezkuwi/blob/816cb64ea16102c6c79f6be2a917d832d98df757/runtime/dicle/src/lib.rs#L526-L527
   // 75% ideal target, see
   // https://github.com/pezkuwichain/pezkuwi/blob/816cb64ea16102c6c79f6be2a917d832d98df757/runtime/dicle/src/lib.rs#L529-L531
   [DICLE_GENESIS]: { ...DEFAULT_PARAMS, auctionAdjust: (0.3 / 60), auctionMax: 60, stakeTarget: 0.75 },
+  [DOCK_POS_TESTNET_GENESIS]: { ...DEFAULT_PARAMS, stakeTarget: 0.75 },
+  [JOYSTREAM_GENESIS]: JOYSTREAM_INFLATION_PARAMS,
   [NEATCOIN_GENESIS]: { ...DEFAULT_PARAMS, stakeTarget: 0.75 },
   [NFTMART_GENESIS]: { ...DEFAULT_PARAMS, falloff: 0.04, stakeTarget: 0.60 },
   [PEZKUWI_GENESIS]: { ...DEFAULT_PARAMS, stakeTarget: 0.75 },
