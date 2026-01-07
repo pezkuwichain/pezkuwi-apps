@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // structs need to be in order
-/* eslint-disable sort-keys */
+/* eslint-disable sort-keys, @typescript-eslint/no-unsafe-assignment */
 
 import type { Observable } from 'rxjs';
 import type { ApiInterfaceRx } from '@pezkuwi/api/types';

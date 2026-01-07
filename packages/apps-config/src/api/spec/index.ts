@@ -1,6 +1,8 @@
 // Copyright 2017-2026 @pezkuwi/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
 import acala from './acala.js';
@@ -295,11 +297,11 @@ const spec: Record<string, OverrideBundleDefinition> = {
   stafi,
   standard,
   steam: eave,
+  'bizinikiwi-contracts-node': bizinikiwiContractsNode,
   subdao,
   subgame,
   subsocial: subsocial as OverrideBundleDefinition,
   subspace,
-  'bizinikiwi-contracts-node': bizinikiwiContractsNode,
   subzero: zero,
   swapdex,
   t0rn,

@@ -3,4 +3,5 @@
 
 import { typesBundleForPezkuwi } from '@acala-network/type-definitions';
 
-export default typesBundleForPezkuwi.spec;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+export default (typesBundleForPezkuwi as Record<string, unknown>).spec;

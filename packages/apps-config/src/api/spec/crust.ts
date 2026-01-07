@@ -5,4 +5,5 @@ import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
 import { typesBundleForPezkuwi } from '@crustio/type-definitions';
 
-export default typesBundleForPezkuwi.spec.crust as unknown as OverrideBundleDefinition;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+export default (typesBundleForPezkuwi as Record<string, Record<string, unknown>>).spec.crust as unknown as OverrideBundleDefinition;
