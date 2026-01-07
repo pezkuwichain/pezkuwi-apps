@@ -61,6 +61,32 @@ function hexToRGB (hex: string, alpha?: string) {
 }
 
 export default createGlobalStyle<Props>(({ uiHighlight }: Props) => `
+  /* Dark theme CSS variables */
+  html[data-theme="dark"],
+  [data-theme="dark"] {
+    --bg-page: #26272c !important;
+    --bg-table: #3b3d3f !important;
+    --bg-input: #38393f !important;
+    --bg-menu: #26272c !important;
+    --bg-tabs: #38393f !important;
+    --bg-sidebar: #1a1b20 !important;
+    --color-text: rgba(244, 242, 240, 0.8) !important;
+    --border-table: #343536 !important;
+  }
+
+  /* Light theme CSS variables */
+  html[data-theme="light"],
+  [data-theme="light"] {
+    --bg-page: #f5f3f1 !important;
+    --bg-table: #ffffff !important;
+    --bg-input: #ffffff !important;
+    --bg-menu: #ffffff !important;
+    --bg-tabs: #ffffff !important;
+    --bg-sidebar: #fafafa !important;
+    --color-text: rgba(78, 78, 78, 0.8) !important;
+    --border-table: #efedeb !important;
+  }
+
   .highlight--all {
     background: ${getHighlight(uiHighlight)} !important;
     border-color: ${getHighlight(uiHighlight)} !important;

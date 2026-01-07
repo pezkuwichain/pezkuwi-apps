@@ -3076,9 +3076,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/ui-settings@npm:3.16.6":
-  version: 3.16.6
-  resolution: "@pezkuwi/ui-settings@npm:3.16.6"
+"@pezkuwi/ui-settings@npm:^3.16.9":
+  version: 3.16.9
+  resolution: "@pezkuwi/ui-settings@npm:3.16.9"
   dependencies:
     "@pezkuwi/networks": "npm:^14.0.5"
     "@pezkuwi/util": "npm:^14.0.5"
@@ -3088,23 +3088,7 @@ __metadata:
   peerDependencies:
     "@pezkuwi/networks": "*"
     "@pezkuwi/util": "*"
-  checksum: 10/a5dc5249828922b367a624b065ce1ba898c0fed64414abed1b1ed1c3f0a04eee1fd972969b9e2010381a266fbb3effb282ba504fc1174765bc55bb52144d89ab
-  languageName: node
-  linkType: hard
-
-"@pezkuwi/ui-settings@npm:^3.16.3":
-  version: 3.16.8
-  resolution: "@pezkuwi/ui-settings@npm:3.16.8"
-  dependencies:
-    "@pezkuwi/networks": "npm:^14.0.5"
-    "@pezkuwi/util": "npm:^14.0.5"
-    eventemitter3: "npm:^5.0.1"
-    store: "npm:^2.0.12"
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    "@pezkuwi/networks": "*"
-    "@pezkuwi/util": "*"
-  checksum: 10/caa14d98d337db9ab1498473bde271026dee063b3d762b1023af40c534ec957e2b34b27ad9e91f5c14635537782184479446679b2be00eb0be479eb274123aac
+  checksum: 10/73c0c3eefc06d98352f4bfc5fbf432a9313673236fa00069fdeb0100ae9a9cc5560074895514ba6598b6de85e8fb4e7d04b15af599603d739f34b2bb758a1fd3
   languageName: node
   linkType: hard
 

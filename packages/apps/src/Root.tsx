@@ -20,10 +20,9 @@ interface Props {
   store?: KeyringStore;
 }
 
-function createTheme ({ uiTheme }: { uiTheme: string }): ThemeDef {
-  const theme = uiTheme === 'dark'
-    ? 'dark'
-    : 'light';
+function createTheme (settings: { uiTheme?: string }): ThemeDef {
+  const uiTheme = settings?.uiTheme || 'light';
+  const theme = uiTheme === 'dark' ? 'dark' : 'light';
 
   document?.documentElement?.setAttribute('data-theme', theme);
 
@@ -34,7 +33,7 @@ function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
   const [theme, setTheme] = useState(() => createTheme(settings));
 
   useEffect((): void => {
-    settings.on('change', (settings) => setTheme(createTheme(settings)));
+    settings.on('change', (newSettings) => setTheme(createTheme(newSettings)));
   }, []);
 
   // The ordering here is critical. It defines the hierarchy of dependencies,

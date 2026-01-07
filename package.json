@@ -110,6 +110,7 @@
     "@pezkuwi/types-create": "^16.5.6",
     "@pezkuwi/types-known": "^16.5.8",
     "@pezkuwi/types-support": "^16.5.6",
+    "@pezkuwi/ui-settings": "^3.16.9",
     "@pezkuwi/util": "^14.0.7",
     "@pezkuwi/util-crypto": "^14.0.7",
     "@pezkuwi/wasm-crypto": "^7.5.4",

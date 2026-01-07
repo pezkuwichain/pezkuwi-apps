@@ -11,6 +11,9 @@ module.exports = merge(
   baseConfig(__dirname, 'development'),
   {
     devServer: {
+      client: {
+        overlay: false  // Disable error overlay
+      },
       headers: {
         'Content-Security-Policy': "frame-ancestors 'none'",
         'X-Frame-Options': 'DENY'
