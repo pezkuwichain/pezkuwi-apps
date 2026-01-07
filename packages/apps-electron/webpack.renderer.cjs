@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @polkadot/apps authors & contributors
+// Copyright 2017-2025 @pezkuwi/apps authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 /* eslint-disable camelcase */
@@ -27,7 +27,7 @@ module.exports = merge(
         }]
       }),
       new HtmlWebpackPlugin({
-        PAGE_TITLE: 'Polkadot/Substrate Portal',
+        PAGE_TITLE: 'Pezkuwi/Bizinikiwi Portal',
         minify: false,
         template: path.join(context, '../apps/public/index.html')
       })

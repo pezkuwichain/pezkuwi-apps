@@ -1,4 +1,4 @@
-// Copyright 2017-2025 @polkadot/apps authors & contributors
+// Copyright 2017-2025 @pezkuwi/apps authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 const path = require('path');
@@ -22,7 +22,7 @@ module.exports = merge(
     },
     plugins: [
       new HtmlWebpackPlugin({
-        PAGE_TITLE: 'Polkadot/Substrate Portal',
+        PAGE_TITLE: 'Pezkuwi/Bizinikiwi Portal',
         inject: true,
         template: path.join(__dirname, 'public/index.html')
       })
