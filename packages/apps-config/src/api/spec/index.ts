@@ -46,7 +46,7 @@ import encointerNodeTeeproxy from './encointer-node-teeproxy.js';
 import encointerPara from './encointer-para.js';
 import equilibrium from './equilibrium.js';
 import fantour from './fantour.js';
-// See https://github.com/pezkuwi-js/apps/pull/9243
+// See https://github.com/pezkuwichain/pezkuwi-apps/pull/9243
 // import fragnova from './fragnova.js';
 import ferrum from './ferrum.js';
 import frequency from './frequency.js';
@@ -198,7 +198,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'encointer-node-teeproxy': encointerNodeTeeproxy,
   'encointer-teyrchain': encointerPara,
   fantour,
-  // See https://github.com/pezkuwi-js/apps/pull/9243
+  // See https://github.com/pezkuwichain/pezkuwi-apps/pull/9243
   // fragnova,
   // 'fragnova-testnet': fragnova,
   'ferrum-teyrchain': ferrum,

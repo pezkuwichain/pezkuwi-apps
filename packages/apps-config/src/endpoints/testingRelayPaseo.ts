@@ -48,7 +48,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'paseoAmplitude',
     paraId: 2124,
     providers: {
-      // PendulumChain: 'wss://rpc-foucoco.pendulumchain.tech' // https://github.com/pezkuwi-js/apps/issues/11267
+      // PendulumChain: 'wss://rpc-foucoco.pendulumchain.tech' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11267
     },
     text: 'Amplitude testnet (Foucoco)',
     ui: {
@@ -61,7 +61,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'paseoAventus',
     paraId: 2056,
     providers: {
-      // Aventus: 'wss://public-rpc.testnet.aventus.io' // https://github.com/pezkuwi-js/apps/issues/11827
+      // Aventus: 'wss://public-rpc.testnet.aventus.io' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11827
     },
     text: 'Aventus',
     ui: {
@@ -74,7 +74,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'Bajun(paseo)',
     paraId: 2119,
     providers: {
-      // BajunNetwork: 'wss://rpc-paseo.bajun.network'  https://github.com/pezkuwi-js/apps/issues/11026
+      // BajunNetwork: 'wss://rpc-paseo.bajun.network'  https://github.com/pezkuwichain/pezkuwi-apps/issues/11026
     },
     text: 'Bajun Network (Paseo)',
     ui: {
@@ -101,7 +101,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'Darwinia Koi',
     paraId: 2105,
     providers: {
-      // Darwinia: 'wss://koi-rpc.darwinia.network' // https://github.com/pezkuwi-js/apps/issues/11279
+      // Darwinia: 'wss://koi-rpc.darwinia.network' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11279
     },
     text: 'Darwinia Koi',
     ui: {
@@ -207,7 +207,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'integritee',
     paraId: 2039,
     providers: {
-      // Integritee: 'wss://paseo.api.integritee.network' // https://github.com/pezkuwi-js/apps/issues/11992
+      // Integritee: 'wss://paseo.api.integritee.network' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11992
     },
     text: 'Integritee Network (Paseo)',
     ui: {
@@ -287,7 +287,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'Myriad Social',
     paraId: 4005,
     providers: {
-      // myriadPaseo: 'wss://ws-rpc.paseo.myriad.social' // https://github.com/pezkuwi-js/apps/issues/11589
+      // myriadPaseo: 'wss://ws-rpc.paseo.myriad.social' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11589
     },
     text: 'Myriad Social Testnet',
     ui: {
@@ -351,7 +351,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     paraId: 4001,
     providers: {
       'R0GUE-RPC1': 'wss://rpc1.paseo.popnetwork.xyz'
-      // 'R0GUE-RPC2': 'wss://rpc2.paseo.popnetwork.xyz', // https://github.com/pezkuwi-js/apps/issues/11629
+      // 'R0GUE-RPC2': 'wss://rpc2.paseo.popnetwork.xyz', // https://github.com/pezkuwichain/pezkuwi-apps/issues/11629
     },
     text: 'Pop Network',
     ui: {
@@ -364,7 +364,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'qf-paseo',
     paraId: 4775,
     providers: {
-      // 'QF Network': 'wss://para-test.qfnetwork.xyz' // https://github.com/pezkuwi-js/apps/issues/11745
+      // 'QF Network': 'wss://para-test.qfnetwork.xyz' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11745
     },
     text: 'QF Network (Paseo)',
     ui: {
@@ -376,7 +376,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'regionxCocos',
     paraId: 4509,
     providers: {
-      // RegionX: 'wss://regionx-paseo.regionx.tech' // https://github.com/pezkuwi-js/apps/issues/11098
+      // RegionX: 'wss://regionx-paseo.regionx.tech' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11098
     },
     text: 'RegionX(Paseo)',
     ui: {
@@ -389,7 +389,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'PaseoShibuyaChain',
     paraId: 2000,
     providers: {
-      // Astar: 'wss://rpc.shibuya.astar.network' // https://github.com/pezkuwi-js/apps/issues/11950
+      // Astar: 'wss://rpc.shibuya.astar.network' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11950
     },
     relayName: 'paseo',
     text: 'Shibuya Testnet (Astar)',
@@ -402,7 +402,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'paseoWatr',
     paraId: 2058,
     providers: {
-      // Watr: 'wss://rpc.dev.watr.org' // https://github.com/pezkuwi-js/apps/issues/11648
+      // Watr: 'wss://rpc.dev.watr.org' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11648
     },
     text: 'Watr Network',
     ui: {
@@ -415,7 +415,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'TEE cloud',
     paraId: 4545,
     providers: {
-      // WeTEEDAO: 'wss://paseo.asyou.me/ws' // https://github.com/pezkuwi-js/apps/issues/11610
+      // WeTEEDAO: 'wss://paseo.asyou.me/ws' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11610
     },
     text: 'WeTEE (Paseo)',
     ui: {
@@ -428,7 +428,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'Xcavate',
     paraId: 4683,
     providers: {
-      // Xcavate: 'wss://rpc2-paseo.xcavate.io' // https://github.com/pezkuwi-js/apps/issues/12007
+      // Xcavate: 'wss://rpc2-paseo.xcavate.io' // https://github.com/pezkuwichain/pezkuwi-apps/issues/12007
     },
     text: 'Xcavate',
     ui: {
@@ -441,7 +441,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'paseoXode',
     paraId: 4607,
     providers: {
-      // XodeCommunity: 'wss://paseo-rpcnode.xode.net' // https://github.com/pezkuwi-js/apps/issues/12007
+      // XodeCommunity: 'wss://paseo-rpcnode.xode.net' // https://github.com/pezkuwichain/pezkuwi-apps/issues/12007
     },
     text: 'Xode',
     ui: {
@@ -454,7 +454,7 @@ export const testParasPaseo: Omit<EndpointOption, 'teleport'>[] = [
     info: 'ZeitgeistBatteryStation',
     paraId: 2101,
     providers: {
-      // Zeitgeist: 'wss://bsr.zeitgeist.pm' // https://github.com/pezkuwi-js/apps/issues/11992
+      // Zeitgeist: 'wss://bsr.zeitgeist.pm' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11992
     },
     text: 'Zeitgeist Battery Station',
     ui: {
@@ -523,7 +523,7 @@ export const testParasPaseoCommon: EndpointOption[] = [
     providers: {
       IBP1: 'wss://sys.ibp.network/coretime-paseo',
       IBP2: 'wss://coretime-paseo.dotters.network'
-      // ParaNodes: 'wss://paseo-coretime.paranodes.io', // https://github.com/pezkuwi-js/apps/issues/11587
+      // ParaNodes: 'wss://paseo-coretime.paranodes.io', // https://github.com/pezkuwichain/pezkuwi-apps/issues/11587
     },
     relayName: 'paseo',
     teleport: [-1],
@@ -602,7 +602,7 @@ export const testRelayPaseo: EndpointOption = {
     IBP1: 'wss://rpc.ibp.network/paseo',
     IBP2: 'wss://paseo.dotters.network',
     StakeWorld: 'wss://pas-rpc.stakeworld.io'
-    // Zondax: 'wss://api2.zondax.ch/pas/node/rpc' // https://github.com/pezkuwi-js/apps/issues/11199
+    // Zondax: 'wss://api2.zondax.ch/pas/node/rpc' // https://github.com/pezkuwichain/pezkuwi-apps/issues/11199
     // 'light client': 'light://bizinikiwi-connect/paseo'
   },
   teleport: getTeleports(testParasPaseoCommon),

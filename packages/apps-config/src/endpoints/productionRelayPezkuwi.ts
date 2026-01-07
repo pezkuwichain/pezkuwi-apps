@@ -4,6 +4,7 @@
 import type { EndpointOption } from './types.js';
 
 import { PEZKUWI_GENESIS } from '../api/constants.js';
+import { chainsPezkuwiSVG } from '../ui/logos/chains/index.js';
 import { getTeleports } from './util.js';
 
 // Pezkuwi Network Endpoints
@@ -22,7 +23,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Asset Hub',
     ui: {
       color: '#86e62a',
-      logo: 'chainsPezkuwiSVG'
+      logo: chainsPezkuwiSVG
     }
   },
   {
@@ -36,7 +37,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Bridge Hub',
     ui: {
       color: '#86e62a',
-      logo: 'chainsPezkuwiSVG'
+      logo: chainsPezkuwiSVG
     }
   },
   {
@@ -50,7 +51,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Collectives',
     ui: {
       color: '#86e62a',
-      logo: 'chainsPezkuwiSVG'
+      logo: chainsPezkuwiSVG
     }
   },
   {
@@ -64,7 +65,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Coretime',
     ui: {
       color: '#86e62a',
-      logo: 'chainsPezkuwiSVG'
+      logo: chainsPezkuwiSVG
     }
   },
   {
@@ -79,7 +80,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     text: 'People',
     ui: {
       color: '#86e62a',
-      logo: 'chainsPezkuwiSVG'
+      logo: chainsPezkuwiSVG
     }
   }
 ];
@@ -103,6 +104,6 @@ export const prodRelayPezkuwi: EndpointOption = {
   ui: {
     color: '#e6007a',
     identityIcon: 'jdenticon',
-    logo: 'chainsPezkuwiSVG'
+    logo: chainsPezkuwiSVG
   }
 };

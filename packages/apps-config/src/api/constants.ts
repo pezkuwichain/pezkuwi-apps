@@ -16,17 +16,20 @@ export function getGenesis (name: string): HexString {
 
 export const KULUPU_GENESIS = getGenesis('kulupu');
 
-// Dicle (formerly Kusama) genesis hash
-export const DICLE_GENESIS = '0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe';
+// Dicle - Pezkuwi canary relay chain (placeholder until mainnet launch)
+export const DICLE_GENESIS = '0xd9d3cd7c1e5d890d969b957f4c5b71a111bbeeabc968f1d0d4538c2663f080a7';
 
-// Pezkuwi (formerly Polkadot) genesis hash
-export const PEZKUWI_GENESIS = '0x91b171bb158e2d3848fa23a9f1c25182fb8e20313b2c1eb49219da7a70ce90c3';
+// Pezkuwi - Pezkuwi main relay chain (placeholder until mainnet launch)
+export const PEZKUWI_GENESIS = '0x41693961995d879073269a008d0a52832caa3e0ae73869f02127f3d5daa4934c';
 export const PEZKUWI_DENOM_BLOCK = new BN(1248328);
 
 export const PASEO_GENESIS = '0x77afd6190f1554ad45fd0d31aee62aacc33c6db0ea801129acb813f913e0764f';
 
-// Zagros (formerly Westend) genesis hash
-export const ZAGROS_GENESIS = '0xe143f23803ac50e8f6f8e62695d1ce9e4e1d68aa36c1cd2cfd15340213f3423e';
+// Zagros - Pezkuwi test relay chain (placeholder until testnet launch)
+export const ZAGROS_GENESIS = '0x297f5a4d105b4b28312586ff1915572ffe4ee015ff772b76399ecbff25a22026';
+
+// PezkuwiChain - Pezkuwi dev relay chain (placeholder until devnet launch)
+export const PEZKUWICHAIN_GENESIS = '0x32154fd2c844f928c82964ff66168b41b15fc235f3a956d14393734c1ed4326b';
 
 export const NEATCOIN_GENESIS = '0xfbb541421d30423c9a753ffa844b64fd44d823f513bf49e3b73b3a656309a595';
 

@@ -7,7 +7,7 @@ import type { ExternalDef } from './types.js';
 import { externalPezkuwistatsSVG } from '../ui/logos/external/index.js';
 
 // NOTE Not maintained, see breakage reports in
-// https://github.com/pezkuwi-js/apps/issues/8903
+// https://github.com/pezkuwichain/pezkuwi-apps/issues/8903
 export const Pezkuwistats: ExternalDef = {
   chains: {
     Dicle: 'dicle',

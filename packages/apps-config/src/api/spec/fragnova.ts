@@ -1,7 +1,7 @@
 // Copyright 2017-2025 @pezkuwi/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-// Not used/included in index.ts as of https://github.com/pezkuwi-js/apps/pull/9243
+// Not used/included in index.ts as of https://github.com/pezkuwichain/pezkuwi-apps/pull/9243
 
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 

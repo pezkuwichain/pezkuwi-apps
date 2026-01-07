@@ -24,7 +24,7 @@ interface State {
 
 /**
  * Declares the Runtime APIs that do not require extrinsic length to be prefixed when converting them to a u8 array.
- * REF: https://github.com/pezkuwi-js/apps/blob/master/packages/react-params/src/Param/BaseBytes.tsx#L99
+ * REF: https://github.com/pezkuwichain/pezkuwi-apps/blob/master/packages/react-params/src/Param/BaseBytes.tsx#L99
 */
 const WITHOUT_LENGTH = ['transactionPaymentApi'];
 

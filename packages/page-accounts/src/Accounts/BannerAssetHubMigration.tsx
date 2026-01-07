@@ -36,7 +36,7 @@ const BannerAssetHubMigration = () => {
         <br />
         {t('For more information about Asset Hub migration, check the ')}
         <a
-          href='https://support.pezkuwi.network/support/solutions/articles/65000190561#What-would-happen-after-the-migration?'
+          href='https://support.pezkuwichain.io/support/solutions/articles/65000190561#What-would-happen-after-the-migration?'
           rel='noopener noreferrer'
           target='_blank'
         >details here</a>.

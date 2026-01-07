@@ -40,7 +40,7 @@ const OPT_ID = {
       ? optId.unwrap()
       : null;
 
-    // Backwards compatibility - https://github.com/pezkuwi-js/apps/issues/10493
+    // Backwards compatibility - https://github.com/pezkuwichain/pezkuwi-apps/issues/10493
     return !id
       ? null
       : Array.isArray(id)

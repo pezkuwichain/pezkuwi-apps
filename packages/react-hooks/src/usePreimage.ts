@@ -225,7 +225,7 @@ function usePreimageImpl (hashOrBounded?: Hash | HexString | FrameSupportPreimag
   );
 
   // api.query.preimage.statusFor has been deprecated in favor of api.query.preimage.requestStatusFor.
-  // To ensure we get all preimages correctly we query both storages. see: https://github.com/pezkuwi-js/apps/pull/10310
+  // To ensure we get all preimages correctly we query both storages. see: https://github.com/pezkuwichain/pezkuwi-apps/pull/10310
   const optStatus = useCall<Option<PalletPreimageRequestStatus>>(!inlineData && paramsStatus && api.query.preimage?.statusFor, paramsStatus);
   const optRequstStatus = useCall<Option<PalletPreimageRequestStatus>>(!inlineData && paramsStatus && api.query.preimage?.requestStatusFor, paramsStatus);
   const someOptStatus = optStatus?.isSome ? optStatus : optRequstStatus;

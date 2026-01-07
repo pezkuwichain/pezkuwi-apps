@@ -6,7 +6,7 @@ import type { Route, TFunction } from './types.js';
 import Component, { useCounter } from '@pezkuwi/app-claims';
 import { hasBuffer, u8aToBuffer } from '@pezkuwi/util';
 
-// See https://github.com/pezkuwi-js/apps/issues/10115 - this may not work,
+// See https://github.com/pezkuwichain/pezkuwi-apps/issues/10115 - this may not work,
 // if not we will have to disable it all (no way of testing)
 function needsApiCheck (): boolean {
   try {

@@ -68,7 +68,7 @@ function PreimageCall ({ className = '', value }: Props): React.ReactElement<Pro
             ? (
               <AddressMini
                 // HACK: In the rare case that the value is passed down as a Null Codec type as seen with Tangle
-                // We ensure to handle that case. ref: https://github.com/pezkuwi-js/apps/issues/10793
+                // We ensure to handle that case. ref: https://github.com/pezkuwichain/pezkuwi-apps/issues/10793
                 balance={!(value.deposit.amount instanceof Null) ? value.deposit.amount : undefined}
                 value={value.deposit.who}
                 withBalance

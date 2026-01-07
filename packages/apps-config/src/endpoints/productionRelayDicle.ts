@@ -4,6 +4,7 @@
 import type { EndpointOption } from './types.js';
 
 import { DICLE_GENESIS } from '../api/constants.js';
+import { chainsDicleSVG } from '../ui/logos/chains/index.js';
 import { getTeleports } from './util.js';
 
 // Dicle Network Endpoints (Canary Network)
@@ -22,7 +23,7 @@ export const prodParasDicle: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Asset Hub',
     ui: {
       color: '#f47738',
-      logo: 'chainsDicleSVG'
+      logo: chainsDicleSVG
     }
   },
   {
@@ -36,7 +37,7 @@ export const prodParasDicle: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Bridge Hub',
     ui: {
       color: '#f47738',
-      logo: 'chainsDicleSVG'
+      logo: chainsDicleSVG
     }
   },
   {
@@ -50,7 +51,7 @@ export const prodParasDicle: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Collectives',
     ui: {
       color: '#f47738',
-      logo: 'chainsDicleSVG'
+      logo: chainsDicleSVG
     }
   },
   {
@@ -64,7 +65,7 @@ export const prodParasDicle: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Coretime',
     ui: {
       color: '#f47738',
-      logo: 'chainsDicleSVG'
+      logo: chainsDicleSVG
     }
   },
   {
@@ -79,7 +80,7 @@ export const prodParasDicle: Omit<EndpointOption, 'teleport'>[] = [
     text: 'People',
     ui: {
       color: '#f47738',
-      logo: 'chainsDicleSVG'
+      logo: chainsDicleSVG
     }
   }
 ];
@@ -102,6 +103,6 @@ export const prodRelayDicle: EndpointOption = {
   ui: {
     color: '#f47738',
     identityIcon: 'jdenticon',
-    logo: 'chainsDicleSVG'
+    logo: chainsDicleSVG
   }
 };

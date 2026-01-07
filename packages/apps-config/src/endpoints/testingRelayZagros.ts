@@ -4,6 +4,7 @@
 import type { EndpointOption } from './types.js';
 
 import { ZAGROS_GENESIS } from '../api/constants.js';
+import { chainsZagrosSVG } from '../ui/logos/chains/index.js';
 import { getTeleports } from './util.js';
 
 // Zagros Test Network Endpoints
@@ -22,7 +23,7 @@ export const testParasZagros: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Asset Hub',
     ui: {
       color: '#00b894',
-      logo: 'chainsZagrosSVG'
+      logo: chainsZagrosSVG
     }
   },
   {
@@ -36,7 +37,7 @@ export const testParasZagros: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Bridge Hub',
     ui: {
       color: '#00b894',
-      logo: 'chainsZagrosSVG'
+      logo: chainsZagrosSVG
     }
   },
   {
@@ -50,7 +51,7 @@ export const testParasZagros: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Collectives',
     ui: {
       color: '#00b894',
-      logo: 'chainsZagrosSVG'
+      logo: chainsZagrosSVG
     }
   },
   {
@@ -64,7 +65,7 @@ export const testParasZagros: Omit<EndpointOption, 'teleport'>[] = [
     text: 'Coretime',
     ui: {
       color: '#00b894',
-      logo: 'chainsZagrosSVG'
+      logo: chainsZagrosSVG
     }
   },
   {
@@ -79,7 +80,7 @@ export const testParasZagros: Omit<EndpointOption, 'teleport'>[] = [
     text: 'People',
     ui: {
       color: '#00b894',
-      logo: 'chainsZagrosSVG'
+      logo: chainsZagrosSVG
     }
   }
 ];
@@ -102,6 +103,6 @@ export const testRelayZagros: EndpointOption = {
   ui: {
     color: '#00b894',
     identityIcon: 'jdenticon',
-    logo: 'chainsZagrosSVG'
+    logo: chainsZagrosSVG
   }
 };

@@ -22,7 +22,7 @@ To start off, this repo (along with others in the [@pezkuwi](https://github.com/
 
 To get started -
 
-1. Clone the repo locally, via `git clone https://github.com/pezkuwi-js/apps <optional local path>`
+1. Clone the repo locally, via `git clone https://github.com/pezkuwichain/pezkuwi-apps <optional local path>`
 2. Ensure that you have a recent LTS version of Node.js, for development purposes [Node >= 16](https://nodejs.org/en/) is recommended.
 3. Ensure that you have a recent version of Yarn, for development purposes [Yarn >= 1.22](https://yarnpkg.com/docs/install) is required.
 4. Install the dependencies by running `yarn install --frozen-lockfile`
@@ -141,4 +141,4 @@ The accounts are stored in the following directories:
 * Linux: `~/.config/pezkuwi-apps/pezkuwi-accounts` (or `$XDG_CONFIG_HOME/pezkuwi-apps/pezkuwi-accounts` if `$XDG_CONFIG_HOME` is defined)
 * Windows: `%APPDATA%\pezkuwi-apps\pezkuwi-accounts`
 
-For more details on the desktop app, head over to [Electron package README](https://github.com/pezkuwi-js/apps/blob/master/packages/apps-electron/README.md).
+For more details on the desktop app, head over to [Electron package README](https://github.com/pezkuwichain/pezkuwi-apps/blob/master/packages/apps-electron/README.md).

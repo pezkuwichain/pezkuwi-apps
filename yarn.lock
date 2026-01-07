@@ -2726,14 +2726,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/networks@npm:^14.0.7":
-  version: 14.0.7
-  resolution: "@pezkuwi/networks@npm:14.0.7"
+"@pezkuwi/networks@npm:^14.0.9":
+  version: 14.0.9
+  resolution: "@pezkuwi/networks@npm:14.0.9"
   dependencies:
     "@pezkuwi/util": "npm:14.0.1"
     "@substrate/ss58-registry": "npm:^1.51.0"
     tslib: "npm:^2.8.0"
-  checksum: 10/33cad7a0bcd89f5d60ba12a61681909f4a1bad983c15458f3ba1f12b6db0859771cbceee297ad3c98e1a741070baf0d5b9bb660387b4acc0351ecb6237e834ed
+  checksum: 10/349f248806d53394d4b152823d70f656844501a60b4039ba299b79cd0ee28321ed062210915b348759e27f8a067324be7fa406ef42a47505154f578442ecbda7
   languageName: node
   linkType: hard
 
@@ -3016,9 +3016,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/types-known@npm:^16.5.6":
-  version: 16.5.6
-  resolution: "@pezkuwi/types-known@npm:16.5.6"
+"@pezkuwi/types-known@npm:^16.5.8":
+  version: 16.5.8
+  resolution: "@pezkuwi/types-known@npm:16.5.8"
   dependencies:
     "@pezkuwi/networks": "npm:^14.0.1"
     "@pezkuwi/types": "npm:16.5.4"
@@ -3026,7 +3026,7 @@ __metadata:
     "@pezkuwi/types-create": "npm:16.5.4"
     "@pezkuwi/util": "npm:^14.0.1"
     tslib: "npm:^2.8.1"
-  checksum: 10/de13c583dccfbc794bcd5ccfe7c6e14efedf101cea702a9476ec06986f3c211765d86f20adb4e427e9ff6ac213d26f5b4b6648f54402a6f8ba40d5cf3becd38f
+  checksum: 10/f248d06f776ac884e3c60e1a00d00df43e7a11f595abd69321e38d5c9822c24a15fb31bc4e696c612e6054dd37fd881ea94913ef968b91c7f65418c66b1ad5ed
   languageName: node
   linkType: hard
 

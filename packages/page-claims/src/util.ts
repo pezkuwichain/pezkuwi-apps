@@ -120,8 +120,8 @@ function getPezkuwi (kind?: StatementKind | null): Statement | undefined {
   }
 
   const url = kind.isRegular
-    ? 'https://statement.pezkuwi.network/regular.html'
-    : 'https://statement.pezkuwi.network/saft.html';
+    ? 'https://statement.pezkuwichain.io/regular.html'
+    : 'https://statement.pezkuwichain.io/saft.html';
   const hash = kind.isRegular
     ? 'Qmc1XYqT6S39WNp2UeiRUrZichUWUPpGEThDE6dAb3f6Ny'
     : 'QmXEkMahfhHJPzT3RjkXiZVFi77ZeVeuxtAjhojGRNYckz';

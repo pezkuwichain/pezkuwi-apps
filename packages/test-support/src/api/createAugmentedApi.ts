@@ -9,7 +9,7 @@ import metaStatic from '@pezkuwi/types-support/metadata/static-bizinikiwi';
 
 export function createAugmentedApi (): ApiPromise {
   const registry = new TypeRegistry();
-  // FIXME - ref: https://github.com/pezkuwi-js/apps/pull/11051
+  // FIXME - ref: https://github.com/pezkuwichain/pezkuwi-apps/pull/11051
   // Adding support for CJS and ESM correctly has caused some build issues.
   // This is a hacky type cast to allow the compiler to be happy.
   const metadata = new Metadata(registry as unknown as Registry, metaStatic);
