@@ -1,9 +1,9 @@
 <!--
 
 For general support, howto, coding and bundling questions, please
-use the Bizinikiwi & Pezkuwi StackExchange at
+visit the Pezkuwi documentation at
 
-  https://bizinikiwi.stackexchange.com/
+  https://docs.pezkuwichain.io/
 
 and get other ecosystem developers involved. This issues in this
 repository are meant for the tracking of feature requests and bug

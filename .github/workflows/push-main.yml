@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        token: ${{ secrets.GH_PAT_BOT }}
+        token: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/setup-node@v4
       with:
         node-version: 'lts/*'
@@ -28,8 +28,8 @@ jobs:
         CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         CRUST_SEEDS: ${{ secrets.CRUST_SEEDS }}
         GH_PAGES_SRC: packages/apps/build
-        GH_PAT: ${{ secrets.GH_PAT_BOT }}
-        GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.GH_PAT_BOT }}
+        GH_PAT: ${{ secrets.GITHUB_TOKEN }}
+        GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         PINATA_API_KEY: ${{ secrets.PINATA_API_KEY }}
         PINATA_SECRET_KEY: ${{ secrets.PINATA_SECRET_KEY }}
@@ -60,18 +60,18 @@ jobs:
     strategy:
       matrix:
         # Removed `macos-latest` since notarization errors.
-        # ref: https://github.com/polkadot-js/apps/issues/10486
+        # ref: https://github.com/pezkuwichain/pezkuwi-apps/issues/10486
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GH_PAT_BOT }}
+        token: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/setup-node@v4
       with:
         node-version: 'lts/*'
     # Removed `macos-latest` since notarization errors.
-    # ref: https://github.com/polkadot-js/apps/issues/10486
+    # ref: https://github.com/pezkuwichain/pezkuwi-apps/issues/10486
     # - name: Prepare for app notarization (macOS)
     #   if: startsWith(matrix.os, 'macos')
     #   # Import Apple API key for app notarization on macOS

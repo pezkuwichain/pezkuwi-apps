@@ -2,7 +2,7 @@
 
 A Portal into the Pezkuwi and Bizinikiwi networks. Provides a view and interaction layer from a browser.
 
-This can be accessed as a hosted application via https://pezkuwi.js.org/apps/ or you can access the IPFS hosted version via https://pezkuwi.js.org/apps/ipfs (via hash) or https://dotapps.io (via ipns) to explore any of the supported Pezkuwi and Bizinikiwi chains.
+This can be accessed as a hosted application via https://pezkuwichain.app or you can access the IPFS hosted version via https://pezkuwichain.app/ipfs (via hash) to explore any of the supported Pezkuwi and Bizinikiwi chains.
 
 If you run one or more IPFS node(s), pinning the UI (which only gets updated on releases) will make it faster for you and others. You can find details about that below in the IPFS chapter below.
 
@@ -18,7 +18,7 @@ The repo is split into a number of packages, each representing an application.
 
 Contributions are welcome!
 
-To start off, this repo (along with others in the [@pezkuwi](https://github.com/pezkuwi-js/) family) uses yarn workspaces to organize the code. As such, after cloning dependencies _should_ be installed via `yarn`, not via npm, the latter will result in broken dependencies.
+To start off, this repo (along with others in the [@pezkuwi](https://github.com/pezkuwichain/) family) uses yarn workspaces to organize the code. As such, after cloning dependencies _should_ be installed via `yarn`, not via npm, the latter will result in broken dependencies.
 
 To get started -
 
@@ -35,13 +35,13 @@ To get started -
 You can run a docker container via -
 
 ```
-docker run --rm -it --name pezkuwi-ui -e WS_URL=ws://someip:9944 -p 80:80 jacogr/pezkuwi-js-apps:latest
+docker run --rm -it --name pezkuwi-ui -e WS_URL=ws://someip:9944 -p 80:80 pezkuwichain/pezkuwi-apps:latest
 ```
 
 To build a docker container containing local changes -
 
 ```
-docker build -t jacogr/pezkuwi-js-apps -f docker/Dockerfile .
+docker build -t pezkuwichain/pezkuwi-apps -f docker/Dockerfile .
 ```
 
 When using these Docker commands, you can access the UI via http://localhost:80 (or just http://localhost)
@@ -53,7 +53,7 @@ IPFS allows sharing files in a decentralized manner in a similar fashion the pez
 You can pin with the following command:
 
 ```
-curl -s https://pezkuwi.js.org/apps/ipfs/pin.json | jq -jr .IpfsHash | xargs -0 -I CID ipfs pin add --progress CID
+curl -s https://pezkuwichain.app/apps/ipfs/pin.json | jq -jr .IpfsHash | xargs -0 -I CID ipfs pin add --progress CID
 ```
 
 Here is a script you can save as `/usr/local/bin/pezkuwijs-ipfs-pin.sh`:
@@ -62,7 +62,7 @@ Here is a script you can save as `/usr/local/bin/pezkuwijs-ipfs-pin.sh`:
 #!/usr/bin/env bash
 
 IPFS='/usr/local/bin/ipfs'
-curl -s https://pezkuwi.js.org/apps/ipfs/pin.json | jq -jr .IpfsHash | xargs -0 -I CID $IPFS pin add --progress CID
+curl -s https://pezkuwichain.app/apps/ipfs/pin.json | jq -jr .IpfsHash | xargs -0 -I CID $IPFS pin add --progress CID
 ```
 
 I suggest to run the script once. The output should be similar to (the CID/Hash will very likely be different though):

@@ -3,7 +3,7 @@ title: Unavailable chain endpoints {{ date | date('ddd, MMM D YYYY, h:mm:ss a') 
 labels: ['ci']
 ---
 
-cc @pezkuwi-js/notifications
+cc @pezkuwichain/notifications
 
 Some configured endpoints are not available.
 
