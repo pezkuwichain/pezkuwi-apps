@@ -21,8 +21,16 @@ export function createLanguages (t: TFunction): Option[] {
       value: 'ar'
     },
     {
+      text: 'کوردی (سۆرانی)',
+      value: 'ckb'
+    },
+    {
       text: 'Español',
       value: 'es'
+    },
+    {
+      text: 'فارسی',
+      value: 'fa'
     },
     {
       text: 'Français',
@@ -45,12 +53,20 @@ export function createLanguages (t: TFunction): Option[] {
       value: 'ko'
     },
     {
+      text: 'Kurdî (Kurmancî)',
+      value: 'ku'
+    },
+    {
       text: 'Português',
       value: 'pt'
     },
     {
       text: 'русский',
       value: 'ru'
+    },
+    {
+      text: 'Türkçe',
+      value: 'tr'
     },
     {
       text: '汉语',
