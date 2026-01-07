@@ -22,11 +22,11 @@ function Overview ({ className, relayName }: Props): React.ReactElement<Props> {
       {coretimeInfo && (
         <Summary
           config={coretimeInfo?.config}
-          teyrchainCount={coretimeInfo.taskIds?.length || 0}
           region={coretimeInfo?.region}
           relayName={relayName}
           saleInfo={coretimeInfo?.salesInfo}
           status={coretimeInfo?.status}
+          teyrchainCount={coretimeInfo.taskIds?.length || 0}
         />
       )}
       {!!coretimeInfo &&

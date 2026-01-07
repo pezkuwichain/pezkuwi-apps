@@ -20,7 +20,7 @@ function Free ({ className, value: { count, deposit, proposalHash, status } }: P
   const { api } = useApi();
   const { allAccounts } = useAccounts();
   const isAvailable = useMemo(
-    () => count === 0 && status && status.isUnrequested && deposit && allAccounts.includes(deposit.who),
+    () => count === 0 && status?.isUnrequested && deposit && allAccounts.includes(deposit.who),
     [allAccounts, count, deposit, status]
   );
 

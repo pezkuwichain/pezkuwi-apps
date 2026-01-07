@@ -180,7 +180,7 @@ function Overview ({ className = '', onStatusChange }: Props): React.ReactElemen
   const accountsMap = useMemo(
     () => allAccounts
       .map((address, index): Omit<SortedAccount, 'account'> & { account: KeyringAddress | undefined } => {
-        const deleg = delegations && delegations[index]?.isDelegating && delegations[index]?.asDelegating;
+        const deleg = delegations?.[index]?.isDelegating && delegations[index]?.asDelegating;
         const delegation: Delegation | undefined = (deleg && {
           accountDelegated: deleg.target.toString(),
           amount: deleg.balance,

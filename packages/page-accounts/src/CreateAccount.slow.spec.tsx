@@ -13,9 +13,9 @@ import { ThemeProvider } from 'styled-components';
 import AccountsApp from '@pezkuwi/app-accounts';
 import { ApiCtxRoot } from '@pezkuwi/react-api';
 import { lightTheme } from '@pezkuwi/react-components';
+import { BIZINIKIWI_PORT } from '@pezkuwi/test-support/bizinikiwi';
 import { MemoryStore } from '@pezkuwi/test-support/keyring';
 import { WaitForApi } from '@pezkuwi/test-support/react';
-import { BIZINIKIWI_PORT } from '@pezkuwi/test-support/bizinikiwi';
 
 function noop (): void {
   // do nothing

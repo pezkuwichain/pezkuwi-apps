@@ -12,7 +12,7 @@ module.exports = merge(
   {
     devServer: {
       client: {
-        overlay: false  // Disable error overlay
+        overlay: false // Disable error overlay
       },
       headers: {
         'Content-Security-Policy': "frame-ancestors 'none'",

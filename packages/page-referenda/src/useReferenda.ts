@@ -82,7 +82,7 @@ function group (tracks: TrackDescription[], totalIssuance?: BN, referenda?: Refe
   for (let i = 0, count = referenda.length; i < count; i++) {
     const ref = referenda[i];
 
-    if (!ref.info || !ref.info.isOngoing) {
+    if (!ref.info?.isOngoing) {
     // info is undefined or not ongoing — can't get track
       other.referenda.push(ref);
       continue;

@@ -1,8 +1,8 @@
 // Copyright 2017-2026 @pezkuwi/app-teyrchains authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { AccountId, AuctionIndex, BalanceOf, BlockNumber, LeasePeriodOf, TeyrchainProposal, ParaId, SessionIndex } from '@pezkuwi/types/interfaces';
-import type { PezkuwiTeyrchainPrimitivesPrimitivesHrmpChannelId, PezkuwiRuntimeCommonCrowdloanFundInfo, PezkuwiRuntimeCommonParasRegistrarParaInfo, PezkuwiRuntimeTeyrchainsHrmpHrmpChannel } from '@pezkuwi/types/lookup';
+import type { AccountId, AuctionIndex, BalanceOf, BlockNumber, LeasePeriodOf, ParaId, SessionIndex, TeyrchainProposal } from '@pezkuwi/types/interfaces';
+import type { PezkuwiRuntimeCommonCrowdloanFundInfo, PezkuwiRuntimeCommonParasRegistrarParaInfo, PezkuwiRuntimeTeyrchainsHrmpHrmpChannel, PezkuwiTeyrchainPrimitivesPrimitivesHrmpChannelId } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 export type ChannelMap = Record<string, [PezkuwiTeyrchainPrimitivesPrimitivesHrmpChannelId, PezkuwiRuntimeTeyrchainsHrmpHrmpChannel][]>;

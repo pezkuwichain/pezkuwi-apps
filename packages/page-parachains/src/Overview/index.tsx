@@ -6,8 +6,8 @@ import type { LeasePeriod, Proposals, QueuedAction } from '../types.js';
 
 import React from 'react';
 
-import Teyrchains from './Teyrchains.js';
 import Summary from './Summary.js';
+import Teyrchains from './Teyrchains.js';
 
 interface Props {
   actionsQueue: QueuedAction[];
@@ -24,8 +24,8 @@ function Overview ({ actionsQueue, className, leasePeriod, paraIds, proposals, t
     <div className={className}>
       <Summary
         leasePeriod={leasePeriod}
-        teyrchainCount={paraIds?.length}
         proposalCount={proposals?.proposalIds.length}
+        teyrchainCount={paraIds?.length}
         upcomingCount={threadIds?.length}
       />
       <Teyrchains

@@ -23,7 +23,7 @@ interface Props {
   relayName: RelayName,
 }
 
-function Summary ({ config, teyrchainCount, relayName, status }: Props): React.ReactElement<Props> {
+function Summary ({ config, relayName, status, teyrchainCount }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { coretimeInfo, currentRegionEnd, currentRegionStart, saleEndDate, saleStartDate } = useCoretimeContext();
 

@@ -14,8 +14,8 @@ import { formatNumber } from '@pezkuwi/util';
 
 import { useTranslation } from '../translate.js';
 import Lifecycle from './Lifecycle.js';
-import TeyrchainInfo from './TeyrchainInfo.js';
 import Periods from './Periods.js';
+import TeyrchainInfo from './TeyrchainInfo.js';
 import useParaInfo from './useParaInfo.js';
 
 interface Props {

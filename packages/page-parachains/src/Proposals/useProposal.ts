@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@pezkuwi/types';
-import type { TeyrchainProposal, ParaId } from '@pezkuwi/types/interfaces';
+import type { ParaId, TeyrchainProposal } from '@pezkuwi/types/interfaces';
 import type { ProposalExt, ScheduledProposals } from '../types.js';
 
 import { useMemo } from 'react';

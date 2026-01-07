@@ -19,7 +19,7 @@ interface Props {
   upcomingCount?: number;
 }
 
-function Summary ({ leasePeriod, teyrchainCount, proposalCount, upcomingCount }: Props): React.ReactElement<Props> {
+function Summary ({ leasePeriod, proposalCount, teyrchainCount, upcomingCount }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
 
   return (
