@@ -95,9 +95,9 @@ export const prodRelayPezkuwi: EndpointOption = {
     ...getTeleports(prodParasPezkuwi)
   ],
   providers: {
+    Local: 'ws://127.0.0.1:9944',
     'Pezkuwi Foundation': 'wss://rpc.pezkuwichain.io',
-    'Pezkuwi Zagros': 'wss://zagros-rpc.pezkuwichain.io',
-    Local: 'ws://127.0.0.1:9944'
+    'Pezkuwi Zagros': 'wss://zagros-rpc.pezkuwichain.io'
   },
   teleport: [1000],
   text: 'Pezkuwi',

@@ -89,8 +89,8 @@ export const testRelayZagros: EndpointOption = {
   dnslink: 'zagros',
   genesisHash: ZAGROS_GENESIS,
   info: 'zagros',
-  isRelay: true,
   isPeopleForIdentity: true,
+  isRelay: true,
   linked: [
     ...getTeleports(testParasZagros)
   ],
