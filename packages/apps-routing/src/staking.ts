@@ -19,11 +19,13 @@ function needsApiCheck (api: ApiPromise): boolean {
     }
 
     // we need a known Exposure type
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const { nominatorCount, own, pageCount, total } = api.registry.createType<SpStakingPagedExposureMetadata>(
       unwrapStorageType(api.registry, api.query.staking.erasStakersOverview.creator.meta.type),
       { nominatorCount: BN_ONE, own: BN_ONE, pageCount: BN_ONE, total: BN_ONE }
     );
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     assert(total && own && nominatorCount && pageCount && total.eq(BN_ONE) && own.eq(BN_ONE), 'Needs a known Exposure type');
   } catch {
     console.warn('Unable to create known-shape Exposure type, disabling staking route');

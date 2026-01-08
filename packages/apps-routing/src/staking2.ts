@@ -13,11 +13,13 @@ import { assert, BN_ONE } from '@pezkuwi/util';
 function needsApiCheck (api: ApiPromise): boolean {
   try {
     // we need a known Exposure type
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const { others: [{ value, who }], own, total } = api.registry.createType<SpStakingExposure>(
       unwrapStorageType(api.registry, api.query.staking.erasStakers.creator.meta.type),
       { others: [{ value: BN_ONE, who: ZERO_ACCOUNT }], own: BN_ONE, total: BN_ONE }
     );
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     assert(total && own && value && who && total.eq(BN_ONE) && own.eq(BN_ONE) && value.eq(BN_ONE), 'Needs a known Exposure type');
   } catch {
     console.warn('Unable to create known-shape Exposure type, disabling staking route');
