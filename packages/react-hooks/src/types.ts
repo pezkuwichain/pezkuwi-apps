@@ -9,7 +9,7 @@ import type { SubmittableExtrinsic } from '@pezkuwi/api/types';
 import type { DeriveAccountFlags, DeriveAccountRegistration } from '@pezkuwi/api-derive/types';
 import type { Option, u32, u128, Vec } from '@pezkuwi/types';
 import type { AccountId, BlockNumber, Call, Hash, SessionIndex, ValidatorPrefs } from '@pezkuwi/types/interfaces';
-import type { PezpalletAssetsAssetDetails, PezpalletAssetsAssetMetadata, PezpalletPreimageRequestStatus, PezpalletStakingRewardDestination, PezpalletStakingStakingLedger, PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescriptor, PezspStakingExposurePage, PezspStakingPagedExposureMetadata } from '@pezkuwi/types/lookup';
+import type { PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescriptor, PezpalletAssetsAssetDetails, PezpalletAssetsAssetMetadata, PezpalletPreimageRequestStatus, PezpalletStakingRewardDestination, PezpalletStakingStakingLedger, PezspStakingExposurePage, PezspStakingPagedExposureMetadata } from '@pezkuwi/types/lookup';
 import type { ICompact, IExtrinsic, INumber } from '@pezkuwi/types/types';
 import type { KeyringJson$Meta } from '@pezkuwi/ui-keyring/types';
 import type { BN } from '@pezkuwi/util';

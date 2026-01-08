@@ -3,7 +3,7 @@
 
 // Override react-copy-to-clipboard types for React 18 compatibility
 declare module 'react-copy-to-clipboard' {
-  import type { ReactNode, ReactElement } from 'react';
+  import type { ReactElement, ReactNode } from 'react';
 
   interface Options {
     debug?: boolean;

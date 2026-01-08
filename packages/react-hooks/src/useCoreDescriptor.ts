@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { StorageKey, u32 } from '@pezkuwi/types';
-import type { PezpalletBrokerCoretimeInterfaceCoreAssignment, PezkuwiRuntimeTeyrchainsAssignerCoretimeAssignmentState, PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescriptor, PezkuwiRuntimeTeyrchainsAssignerCoretimeQueueDescriptor, PezkuwiRuntimeTeyrchainsAssignerCoretimeWorkState } from '@pezkuwi/types/lookup';
+import type { PezkuwiRuntimeTeyrchainsAssignerCoretimeAssignmentState, PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescriptor, PezkuwiRuntimeTeyrchainsAssignerCoretimeQueueDescriptor, PezkuwiRuntimeTeyrchainsAssignerCoretimeWorkState, PezpalletBrokerCoretimeInterfaceCoreAssignment } from '@pezkuwi/types/lookup';
 import type { CoreDescriptor } from './types.js';
 
 import { useEffect, useState } from 'react';
