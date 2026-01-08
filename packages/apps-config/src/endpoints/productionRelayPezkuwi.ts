@@ -16,7 +16,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     isPeopleForIdentity: true,
     paraId: 1000,
     providers: {
-      'Pezkuwi Foundation': 'wss://zagros-asset-hub-rpc.pezkuwichain.io'
+      'Pezkuwi Foundation': 'wss://pezkuwi-asset-hub-rpc.pezkuwichain.io'
     },
     relayName: 'pezkuwi',
     text: 'Asset Hub',
@@ -30,7 +30,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     info: 'bridge-hub-pezkuwi',
     paraId: 1002,
     providers: {
-      'Pezkuwi Foundation': 'wss://zagros-bridge-hub-rpc.pezkuwichain.io'
+      'Pezkuwi Foundation': 'wss://pezkuwi-bridge-hub-rpc.pezkuwichain.io'
     },
     relayName: 'pezkuwi',
     text: 'Bridge Hub',
@@ -44,7 +44,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     info: 'collectives-pezkuwi',
     paraId: 1001,
     providers: {
-      'Pezkuwi Foundation': 'wss://zagros-collectives-rpc.pezkuwichain.io'
+      'Pezkuwi Foundation': 'wss://pezkuwi-collectives-rpc.pezkuwichain.io'
     },
     relayName: 'pezkuwi',
     text: 'Collectives',
@@ -58,7 +58,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     info: 'coretime-pezkuwi',
     paraId: 1005,
     providers: {
-      'Pezkuwi Foundation': 'wss://zagros-coretime-rpc.pezkuwichain.io'
+      'Pezkuwi Foundation': 'wss://pezkuwi-coretime-rpc.pezkuwichain.io'
     },
     relayName: 'pezkuwi',
     text: 'Coretime',
@@ -73,7 +73,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     isPeople: true,
     paraId: 1004,
     providers: {
-      'Pezkuwi Foundation': 'wss://zagros-people-rpc.pezkuwichain.io'
+      'Pezkuwi Foundation': 'wss://pezkuwi-people-rpc.pezkuwichain.io'
     },
     relayName: 'pezkuwi',
     text: 'People',
