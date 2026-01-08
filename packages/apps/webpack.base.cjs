@@ -17,8 +17,8 @@ function createWebpack (context, mode = 'production') {
 
     return alias;
   }, {
-    // Fix for @pezkuwi/ui-shared package with files in build subdirectory
-    '@pezkuwi/ui-shared': path.resolve(context, '../../node_modules/@pezkuwi/ui-shared/build')
+    // @pezkuwi/ui-shared npm package (flat structure)
+    '@pezkuwi/ui-shared': path.resolve(context, '../../node_modules/@pezkuwi/ui-shared')
   });
   const plugins = fs.existsSync(path.join(context, 'public'))
     ? new CopyWebpackPlugin({

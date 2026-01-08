@@ -2406,7 +2406,7 @@ __metadata:
     "@pezkuwi/api": "npm:^16.5.6"
     "@pezkuwi/api-derive": "npm:^16.5.6"
     "@pezkuwi/networks": "npm:^14.0.7"
-    "@pezkuwi/react-identicon": "npm:^3.16.3"
+    "@pezkuwi/react-identicon": "npm:^3.17.1"
     "@pezkuwi/types": "npm:^16.5.6"
     "@pezkuwi/types-codec": "npm:^16.5.6"
     "@pezkuwi/util": "npm:^14.0.7"
@@ -2758,11 +2758,11 @@ __metadata:
     "@fortawesome/react-fontawesome": "npm:^0.2.0"
     "@pezkuwi/keyring": "npm:^14.0.7"
     "@pezkuwi/react-api": "npm:^0.168.2-4-x"
-    "@pezkuwi/react-identicon": "npm:^3.16.3"
-    "@pezkuwi/react-qr": "npm:^3.16.3"
+    "@pezkuwi/react-identicon": "npm:^3.17.1"
+    "@pezkuwi/react-qr": "npm:^3.17.1"
     "@pezkuwi/react-query": "npm:^0.168.2-4-x"
-    "@pezkuwi/ui-keyring": "npm:^3.16.3"
-    "@pezkuwi/ui-settings": "npm:^3.16.3"
+    "@pezkuwi/ui-keyring": "npm:^3.17.1"
+    "@pezkuwi/ui-settings": "npm:^3.17.1"
     "@pezkuwi/util": "npm:^14.0.7"
     "@pezkuwi/util-crypto": "npm:^14.0.7"
     "@types/chartjs-plugin-crosshair": "npm:^1.1.4"
@@ -2813,13 +2813,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/react-identicon@npm:^3.16.3":
-  version: 3.16.8
-  resolution: "@pezkuwi/react-identicon@npm:3.16.8"
+"@pezkuwi/react-identicon@npm:^3.17.2":
+  version: 3.17.2
+  resolution: "@pezkuwi/react-identicon@npm:3.17.2"
   dependencies:
     "@pezkuwi/keyring": "npm:^14.0.5"
-    "@pezkuwi/ui-settings": "npm:3.16.6"
-    "@pezkuwi/ui-shared": "npm:3.16.6"
+    "@pezkuwi/ui-settings": "npm:3.17.2"
+    "@pezkuwi/ui-shared": "npm:3.17.2"
     "@pezkuwi/util": "npm:^14.0.5"
     "@pezkuwi/util-crypto": "npm:^14.0.5"
     ethereum-blockies-base64: "npm:^1.0.2"
@@ -2834,7 +2834,7 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-is: "*"
-  checksum: 10/4004f3ac449a285d1c1d171c9d3e1d41e84f9309dbcf670ef49768b97ed51c69d5ac769f0777ff08396e31ca1536eff0cec97579d49a075e82c6773829ebaee7
+  checksum: 10/a3ae4d83532260fe01457df610398c06ec5082d65e48f28d498c52d87d144d222675beda040f9bb04d3cfeb0e8caf9bf438596461032600fc6774e55171888fa
   languageName: node
   linkType: hard
 
@@ -2851,11 +2851,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/react-qr@npm:^3.16.3":
-  version: 3.16.8
-  resolution: "@pezkuwi/react-qr@npm:3.16.8"
+"@pezkuwi/react-qr@npm:^3.17.2":
+  version: 3.17.2
+  resolution: "@pezkuwi/react-qr@npm:3.17.2"
   dependencies:
-    "@pezkuwi/ui-settings": "npm:3.16.6"
+    "@pezkuwi/ui-settings": "npm:3.17.2"
     "@pezkuwi/util": "npm:^14.0.5"
     "@pezkuwi/util-crypto": "npm:^14.0.5"
     "@zxing/browser": "npm:^0.1.5"
@@ -2869,7 +2869,7 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-is: "*"
-  checksum: 10/54f1dc7ac258c740b2d31b4fdc411f14156c44a51b19d8adbfcd202919362827a3f86ae0828aa5a0a04f4a39157cadb289f34913a3a3c38a28bfd8e3451497e2
+  checksum: 10/79046d80017aac386f461f48ffa889921a0bd2815c08e6c2c9b7ad6e47c44c77e96bea5f78a79dc197fd44f0b054b72e23aee2214e9ec0b10af2842baa498323
   languageName: node
   linkType: hard
 
@@ -3038,12 +3038,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/ui-keyring@npm:^3.16.3":
-  version: 3.16.8
-  resolution: "@pezkuwi/ui-keyring@npm:3.16.8"
+"@pezkuwi/ui-keyring@npm:^3.17.2":
+  version: 3.17.2
+  resolution: "@pezkuwi/ui-keyring@npm:3.17.2"
   dependencies:
     "@pezkuwi/keyring": "npm:^14.0.5"
-    "@pezkuwi/ui-settings": "npm:3.16.6"
+    "@pezkuwi/ui-settings": "npm:3.17.2"
     "@pezkuwi/util": "npm:^14.0.5"
     "@pezkuwi/util-crypto": "npm:^14.0.5"
     mkdirp: "npm:^3.0.1"
@@ -3054,13 +3054,13 @@ __metadata:
     "@pezkuwi/keyring": "*"
     "@pezkuwi/ui-settings": "*"
     "@pezkuwi/util": "*"
-  checksum: 10/180891c47c387c38e8f13f6fc1c402ba5725fb88a0af5a57f2ed0869f22d771daf6371a59ed71fc945fa16ad614b0804fadc7a22ab5df9e751f9cd837be9c9a2
+  checksum: 10/d8f13302e30c643847362ad830f457a541119f7b65064a397b863beaa576b70ab81ce375aa5ee197af504eb4e03fbde4e24aac57307dd87bb23538a194b8bb73
   languageName: node
   linkType: hard
 
-"@pezkuwi/ui-settings@npm:^3.16.9":
-  version: 3.16.9
-  resolution: "@pezkuwi/ui-settings@npm:3.16.9"
+"@pezkuwi/ui-settings@npm:^3.17.2":
+  version: 3.17.2
+  resolution: "@pezkuwi/ui-settings@npm:3.17.2"
   dependencies:
     "@pezkuwi/networks": "npm:^14.0.5"
     "@pezkuwi/util": "npm:^14.0.5"
@@ -3070,20 +3070,20 @@ __metadata:
   peerDependencies:
     "@pezkuwi/networks": "*"
     "@pezkuwi/util": "*"
-  checksum: 10/73c0c3eefc06d98352f4bfc5fbf432a9313673236fa00069fdeb0100ae9a9cc5560074895514ba6598b6de85e8fb4e7d04b15af599603d739f34b2bb758a1fd3
+  checksum: 10/8a1b7806997c4c4997f082702dd13d0a81210850d226a723b0840dfc7598e78bc31206656e54b2d561d3b998b032440632dafa6cc6da8c0df11cd3e6975d9fdb
   languageName: node
   linkType: hard
 
-"@pezkuwi/ui-shared@npm:3.16.6":
-  version: 3.16.6
-  resolution: "@pezkuwi/ui-shared@npm:3.16.6"
+"@pezkuwi/ui-shared@npm:^3.17.2":
+  version: 3.17.2
+  resolution: "@pezkuwi/ui-shared@npm:3.17.2"
   dependencies:
     colord: "npm:^2.9.3"
     tslib: "npm:^2.8.1"
   peerDependencies:
     "@pezkuwi/util": "*"
     "@pezkuwi/util-crypto": "*"
-  checksum: 10/795ecdbe82205c8530aebef2c7eb54235fdf30835a709f6287c0177da5b472fe61269067dd75011f2d68c02caa717ced415cfa4eaa37bd22f4569a5a72f2cb86
+  checksum: 10/a5562b51e57ed5b2aa98970c710c8dd2d8345086c1cb05739796853220715ef12164c7bdc9da43dd86867d0b6b1f152d6ebbd30b388f941bba701c93b7db458e
   languageName: node
   linkType: hard
 
@@ -8900,11 +8900,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.9.0":
-  version: 2.9.12
-  resolution: "baseline-browser-mapping@npm:2.9.12"
+  version: 2.9.13
+  resolution: "baseline-browser-mapping@npm:2.9.13"
   bin:
     baseline-browser-mapping: dist/cli.js
-  checksum: 10/07af71d6139d177bfed83ed70ac6b12f3326903f67338a6e36fbb529dfc8f384da9b054650f0d44d1b2619e673ff1df2540f63bbf5d9412bad15101e6d657aff
+  checksum: 10/304fcd0668941aabf9cf59e7852481767ed9ca9f6e4355afe7e4af2008eab14cd55676bd9078226f24895b5225c28693a91c59c561b36c3baae7262ad0e56f26
   languageName: node
   linkType: hard
 
@@ -14406,11 +14406,11 @@ __metadata:
   linkType: hard
 
 "iconv-lite@npm:^0.7.0":
-  version: 0.7.1
-  resolution: "iconv-lite@npm:0.7.1"
+  version: 0.7.2
+  resolution: "iconv-lite@npm:0.7.2"
   dependencies:
     safer-buffer: "npm:>= 2.1.2 < 3.0.0"
-  checksum: 10/bf9bfa10132b591d7b43cc2cc6700cd72d848b7943c3f38db05527d04c224eb44d1d92101f76d25eac7fabc67cb918320b93808b0be47e45cf7257df0a5ec54c
+  checksum: 10/24c937b532f868e938386b62410b303b7c767ce3d08dc2829cbe59464d5a26ef86ae5ad1af6b34eec43ddfea39e7d101638644b0178d67262fa87015d59f983a
   languageName: node
   linkType: hard
 
@@ -19658,9 +19658,9 @@ __metadata:
   linkType: hard
 
 "sax@npm:^1.2.4":
-  version: 1.4.3
-  resolution: "sax@npm:1.4.3"
-  checksum: 10/99161215f23e0b13bc7f94adbaa63a6a2f188fe291c450790d92b5bc3cd7966d574a15dcd5918c30917e17ed68129e34cc3168564263b967f9b8f61869d6ccc4
+  version: 1.4.4
+  resolution: "sax@npm:1.4.4"
+  checksum: 10/00ff7b258baa37d98f8abfa0b5c8b3ee739ca37e9b6ecb83405be9e6e5b0b2856394a5eff142db1d987d589b54b139d4236f25830c1e17a2b640efa53c8fda72
   languageName: node
   linkType: hard
 
