@@ -3,4 +3,5 @@
 
 import { typesBundleForPezkuwi } from '@parallel-finance/type-definitions';
 
-export default typesBundleForPezkuwi.spec.parallel;
+// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+export default (typesBundleForPezkuwi as Record<string, unknown>).spec;

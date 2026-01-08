@@ -89,8 +89,8 @@ export const prodRelayPezkuwi: EndpointOption = {
   dnslink: 'pezkuwi',
   genesisHash: PEZKUWI_GENESIS,
   info: 'pezkuwi',
-  isRelay: true,
   isPeopleForIdentity: true,
+  isRelay: true,
   linked: [
     ...getTeleports(prodParasPezkuwi)
   ],

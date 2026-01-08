@@ -10,10 +10,10 @@ const HASH_PATHS = ['proposal/councilmotion'];
 
 export const Commonwealth: ExternalDef = {
   chains: {
-    Edgeware: 'edgeware',
-    Kulupu: 'kulupu',
     Dicle: 'dicle',
-    'Dicle CC3': 'dicle'
+    'Dicle CC3': 'dicle',
+    Edgeware: 'edgeware',
+    Kulupu: 'kulupu'
   },
   create: (chain: string, path: string, data: BN | number | string, hash?: string): string =>
     `https://commonwealth.im/${chain}/${path}/${HASH_PATHS.includes(path) ? (hash || '') : data.toString()}`,

@@ -89,14 +89,14 @@ export const prodRelayDicle: EndpointOption = {
   dnslink: 'dicle',
   genesisHash: DICLE_GENESIS,
   info: 'dicle',
-  isRelay: true,
   isPeopleForIdentity: true,
+  isRelay: true,
   linked: [
     ...getTeleports(prodParasDicle)
   ],
   providers: {
-    'Pezkuwi Foundation': 'wss://dicle-rpc.pezkuwichain.io',
-    Local: 'ws://127.0.0.1:9944'
+    Local: 'ws://127.0.0.1:9944',
+    'Pezkuwi Foundation': 'wss://dicle-rpc.pezkuwichain.io'
   },
   teleport: [1000],
   text: 'Dicle',

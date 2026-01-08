@@ -51,6 +51,7 @@ export function getBalance (
     instanceId,
     (account: string): Observable<DeriveBalancesAll> =>
       combineLatest<[any, any]>([api.query.tokens.accounts(account, 0), api.query.system.account(account)]).pipe(
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
         map(([data, systemAccount]: [OrmlAccountData, FrameSystemAccountInfo]): DeriveBalancesAll => {
           return {
             ...defaultAccountBalance(),
