@@ -8,12 +8,13 @@ import { externalHeztreasurySVG } from '../ui/logos/external/index.js';
 
 export const Heztreasury: ExternalDef = {
   chains: {
-    Dicle: 'ksm',
-    Pezkuwi: 'dot'
+    Dicle: 'dicle',
+    Pezkuwi: 'pezkuwi',
+    Zagros: 'zagros'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://www.dotreasury.com/${chain}/${path}/${data.toString()}`,
-  homepage: 'https://dotreasury.com/',
+    `https://treasury.pezkuwichain.io/${chain}/${path}/${data.toString()}`,
+  homepage: 'https://treasury.pezkuwichain.io/',
   isActive: true,
   paths: {
     bounty: 'bounties',

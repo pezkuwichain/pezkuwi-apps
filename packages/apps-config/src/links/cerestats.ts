@@ -7,13 +7,12 @@ import type { ExternalDef } from './types.js';
 import { externalCerestatsPNG } from '../ui/logos/external/index.js';
 
 export const CereStats: ExternalDef = {
-  chains: {
-    'Cere Mainnet Beta': 'cere'
-  },
+  // CereStats is Cere-specific, not applicable to Pezkuwi networks
+  chains: {},
   create: (_: string, path: string, data: BN | number | string): string =>
     `https://stats.cere.network/${path}/${data.toString()}`,
   homepage: 'https://stats.cere.network',
-  isActive: true,
+  isActive: false,
   paths: {
     address: 'account',
     block: 'block',

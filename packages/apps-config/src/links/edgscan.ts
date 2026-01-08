@@ -7,13 +7,12 @@ import type { ExternalDef } from './types.js';
 import { externalEdgscanPNG } from '../ui/logos/external/index.js';
 
 export const Edgscan: ExternalDef = {
-  chains: {
-    Edgeware: 'edgeware'
-  },
+  // Edgscan is Edgeware-specific, not applicable to Pezkuwi networks
+  chains: {},
   create: (_chain: string, path: string, data: BN | number | string): string =>
     `https://edgscan.ink/#/${path}/${data.toString()}`,
   homepage: 'https://edgscan.ink/',
-  isActive: true,
+  isActive: false,
   paths: {
     address: 'accounts',
     block: 'blocks',

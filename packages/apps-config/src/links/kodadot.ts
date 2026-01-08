@@ -17,15 +17,16 @@ const getNetwork = (_chain: string) => {
 };
 
 export const KodaDot: ExternalDef = {
+  // Note: KodaDot may not support Pezkuwi networks yet. These are placeholder entries.
   chains: {
-    Basilisk: 'basilisk',
     'Dicle Asset Hub': 'statemine',
-    'Pezkuwi Asset Hub': 'statemint'
+    'Pezkuwi Asset Hub': 'statemint',
+    'Zagros Asset Hub': 'statemint'
   },
   create: (_chain: string, _path: string, data: BN | number | string): string =>
     `${getNetwork(_chain)}${data.toString()}`,
   homepage: 'https://kodadot.xyz',
-  isActive: true,
+  isActive: false,
   paths: {
     address: 'account'
   },

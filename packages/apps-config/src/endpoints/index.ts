@@ -5,9 +5,8 @@ import type { TFunction, TOptions } from '../types.js';
 import type { LinkOption } from './types.js';
 
 import { createCustom, createDev, createOwn } from './development.js';
-import { prodChains, prodRelayDicle, prodRelayPezkuwi } from './production.js';
-import { testChains, testRelayZagros } from './testing.js';
-import { testRelayPaseo } from './testingRelayPaseo.js';
+import { prodRelayDicle, prodRelayPezkuwi } from './production.js';
+import { testRelayZagros } from './testing.js';
 import { expandEndpoints } from './util.js';
 
 export { CUSTOM_ENDPOINT_KEY } from './development.js';
@@ -64,36 +63,6 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       value: ''
     },
     ...expandEndpoints(t, [testRelayZagros], firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      isSpaced: true,
-      text: t('rpc.header.paseo.relay', 'Test Paseo & teyrchains', { ns: 'apps-config' }),
-      textBy: '',
-      ui: {},
-      value: ''
-    },
-    ...expandEndpoints(t, [testRelayPaseo], firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      isSpaced: true,
-      text: t('rpc.header.live', 'Live networks', { ns: 'apps-config' }),
-      textBy: '',
-      ui: {},
-      value: ''
-    },
-    ...expandEndpoints(t, prodChains, firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      isSpaced: true,
-      text: t('rpc.header.test', 'Test networks', { ns: 'apps-config' }),
-      textBy: '',
-      ui: {},
-      value: ''
-    },
-    ...expandEndpoints(t, testChains, firstOnly, withSort),
     {
       isDevelopment: true,
       isDisabled: false,

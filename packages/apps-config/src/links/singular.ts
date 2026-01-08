@@ -16,14 +16,19 @@ const getNetwork = (_chain: string) => {
 };
 
 export const Singular: ExternalDef = {
+  // Note: Singular may not support Pezkuwi networks yet. These are placeholder entries.
   chains: {
     Dicle: 'dicle',
-    Statemine: 'statemine'
+    'Dicle Asset Hub': 'statemine',
+    Pezkuwi: 'pezkuwi',
+    'Pezkuwi Asset Hub': 'statemint',
+    Zagros: 'zagros',
+    'Zagros Asset Hub': 'statemint'
   },
   create: (_chain: string, _path: string, data: BN | number | string): string =>
     `https://singular.app/space/${getNetwork(_chain)}${data.toString()}`,
   homepage: 'https://singular.app',
-  isActive: true,
+  isActive: false,
   paths: {
     address: 'account'
   },

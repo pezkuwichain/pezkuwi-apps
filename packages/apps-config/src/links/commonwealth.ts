@@ -9,16 +9,16 @@ import { externalCommonwealthPNG } from '../ui/logos/external/index.js';
 const HASH_PATHS = ['proposal/councilmotion'];
 
 export const Commonwealth: ExternalDef = {
+  // Note: Commonwealth may not support Pezkuwi networks yet. These are placeholder entries.
   chains: {
     Dicle: 'dicle',
-    'Dicle CC3': 'dicle',
-    Edgeware: 'edgeware',
-    Kulupu: 'kulupu'
+    Pezkuwi: 'pezkuwi',
+    Zagros: 'zagros'
   },
   create: (chain: string, path: string, data: BN | number | string, hash?: string): string =>
     `https://commonwealth.im/${chain}/${path}/${HASH_PATHS.includes(path) ? (hash || '') : data.toString()}`,
   homepage: 'https://commonwealth.im/',
-  isActive: true,
+  isActive: false,
   paths: {
     council: 'proposal/councilmotion',
     democracyProposal: 'proposal/democracyproposal',

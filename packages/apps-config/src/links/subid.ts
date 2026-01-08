@@ -7,39 +7,19 @@ import type { ExternalDef } from './types.js';
 import { externalSubidSVG } from '../ui/logos/external/index.js';
 
 export const SubId: ExternalDef = {
+  // Note: Sub.ID may not support Pezkuwi networks yet. These are placeholder entries.
   chains: {
-    Acala: 'acala',
-    Altair: 'altair',
-    Astar: 'astar',
-    Basilisk: 'basilisk',
-    Bifrost: 'bifrost',
-    Centrifuge: 'centrifuge',
-    'Centrifuge Mainnet': 'centrifuge',
-    ChainX: 'chainx',
-    'Composable Finance': 'composable',
-    Edgeware: 'edgeware',
-    Hydration: 'hydration',
-    Interlay: 'interlay',
-    InvArch: 'invarch',
-    'KILT Spiritnet': 'kilt',
-    Karura: 'karura',
-    Khala: 'khala',
     Dicle: 'dicle',
-    'Dicle Asset Hub': 'statemine',
-    Nodle: 'nodle',
-    Picasso: 'picasso',
-    'Pioneer Network': 'pioneer',
+    'Dicle Asset Hub': 'assethub-dicle',
     Pezkuwi: 'pezkuwi',
-    'Pezkuwi Asset Hub': 'statemint',
-    SORA: 'sora-bizinikiwi',
-    Shiden: 'shiden',
-    Subsocial: 'subsocial',
-    Zeitgeist: 'zeitgeist'
+    'Pezkuwi Asset Hub': 'assethub-pezkuwi',
+    Zagros: 'zagros',
+    'Zagros Asset Hub': 'assethub-zagros'
   },
   create: (_chain: string, _path: string, data: BN | number | string): string =>
     `https://sub.id/${data.toString()}`,
   homepage: 'https://sub.id',
-  isActive: true,
+  isActive: false,
   paths: {
     address: 'account'
   },

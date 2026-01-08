@@ -8,44 +8,25 @@ import { externalPezkuwiassemblySVG } from '../ui/logos/external/index.js';
 
 export const PezkuwiassemblyIo: ExternalDef = {
   chains: {
-    Acala: 'acala',
-    Altair: 'altair',
-    Astar: 'astar',
-    Basilisk: 'basilisk',
-    'Bifrost Pezkuwi': 'bifrost',
-    Calamari: 'calamari',
-    Centrifuge: 'centrifuge',
-    'Centrifuge Mainnet': 'centrifuge',
-    'Cere Mainnet Beta': 'cere',
-    Collectives: 'collectives',
-    'Equilibrium teyrchain': 'equilibrium',
-    'Hashed Network': 'hashed',
-    Hydration: 'hydradx',
-    'Integritee Network (Dicle)': 'integritee',
-    Khala: 'khala',
-    Kintsugi: 'kintsugi',
     Dicle: 'dicle',
-    'Dicle Asset Hub': 'dicle',
-    'Dicle CC3': 'dicle',
-    'Dicle People': 'dicle',
-    Parallel: 'parallel',
-    'Parallel Heiko': 'heiko',
-    Picasso: 'picasso',
-    'Pioneer Network': 'pioneer',
-    'Polkadex Main Network': 'polkadex',
+    'Dicle Asset Hub': 'dicle/assethub',
+    'Dicle Collectives': 'dicle/collectives',
+    'Dicle Coretime': 'dicle/coretime',
+    'Dicle People': 'dicle/people',
     Pezkuwi: 'pezkuwi',
-    'Pezkuwi Asset Hub': 'pezkuwi',
-    Robonomics: 'robonomics',
-    PezkuwiChain: 'pezkuwichain',
-    Shibuya: 'shibuya',
-    Shiden: 'shiden',
-    'Vara Network': 'vara',
-    'Zagros Collectives': 'zagros-collectives',
-    Zeitgeist: 'zeitgeist'
+    'Pezkuwi Asset Hub': 'pezkuwi/assethub',
+    'Pezkuwi Collectives': 'pezkuwi/collectives',
+    'Pezkuwi Coretime': 'pezkuwi/coretime',
+    'Pezkuwi People': 'pezkuwi/people',
+    Zagros: 'zagros',
+    'Zagros Asset Hub': 'zagros/assethub',
+    'Zagros Collectives': 'zagros/collectives',
+    'Zagros Coretime': 'zagros/coretime',
+    'Zagros People': 'zagros/people'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://${chain}.polkassembly.io/${path}/${data.toString()}`,
-  homepage: 'https://polkassembly.io/',
+    `https://governance.pezkuwichain.io/${chain}/${path}/${data.toString()}`,
+  homepage: 'https://governance.pezkuwichain.io/',
   isActive: true,
   paths: {
     address: 'address',
@@ -65,16 +46,10 @@ export const PezkuwiassemblyIo: ExternalDef = {
 
 export const PezkuwiassemblyNetwork: ExternalDef = {
   ...PezkuwiassemblyIo,
-  chains: {
-    Bifrost: 'bifrost',
-    'KILT Spiritnet': 'kilt',
-    Karura: 'karura',
-    'Khala Network': 'khala',
-    'Moonbase Alpha': 'moonbase',
-    Moonbeam: 'moonbeam',
-    Moonriver: 'moonriver'
-  },
+  // Secondary governance portal (alias)
+  chains: {},
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://${chain}.polkassembly.network/${path}/${data.toString()}`,
-  homepage: 'https://polkassembly.network/'
+    `https://governance.pezkuwichain.io/${chain}/${path}/${data.toString()}`,
+  homepage: 'https://governance.pezkuwichain.io/',
+  isActive: false
 };

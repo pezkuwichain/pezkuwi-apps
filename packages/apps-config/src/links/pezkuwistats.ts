@@ -6,18 +6,30 @@ import type { ExternalDef } from './types.js';
 
 import { externalPezkuwistatsSVG } from '../ui/logos/external/index.js';
 
-// NOTE Not maintained, see breakage reports in
-// https://github.com/pezkuwichain/pezkuwi-apps/issues/8903
 export const Pezkuwistats: ExternalDef = {
   chains: {
     Dicle: 'dicle',
+    'Dicle Asset Hub': 'dicle/assethub',
+    'Dicle Bridge Hub': 'dicle/bridgehub',
+    'Dicle Collectives': 'dicle/collectives',
+    'Dicle Coretime': 'dicle/coretime',
+    'Dicle People': 'dicle/people',
     Pezkuwi: 'pezkuwi',
-    Zagros: 'zagros'
-
+    'Pezkuwi Asset Hub': 'pezkuwi/assethub',
+    'Pezkuwi Bridge Hub': 'pezkuwi/bridgehub',
+    'Pezkuwi Collectives': 'pezkuwi/collectives',
+    'Pezkuwi Coretime': 'pezkuwi/coretime',
+    'Pezkuwi People': 'pezkuwi/people',
+    Zagros: 'zagros',
+    'Zagros Asset Hub': 'zagros/assethub',
+    'Zagros Bridge Hub': 'zagros/bridgehub',
+    'Zagros Collectives': 'zagros/collectives',
+    'Zagros Coretime': 'zagros/coretime',
+    'Zagros People': 'zagros/people'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
-    `https://${chain}.polkastats.io/${path}/${data.toString()}`,
-  homepage: 'https://polkastats.io/',
+    `https://stats.pezkuwichain.io/${chain}/${path}/${data.toString()}`,
+  homepage: 'https://stats.pezkuwichain.io/',
   isActive: true,
   paths: {
     address: 'account',

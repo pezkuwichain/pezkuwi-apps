@@ -7,40 +7,28 @@ import type { ExternalDef } from './types.js';
 import { externalSubsquareSVG } from '../ui/logos/external/index.js';
 
 export const Subsquare: ExternalDef = {
+  // Note: Subsquare may not support Pezkuwi networks yet. These are placeholder entries.
   chains: {
-    Acala: 'acala',
-    'Ajuna Pezkuwi': 'ajuna',
-    Altair: 'altair',
-    Astar: 'astar',
-    Basilisk: 'basilisk',
-    Bifrost: 'bifrost-dicle',
-    'Bifrost Pezkuwi': 'bifrost-pezkuwi',
-    Centrifuge: 'centrifuge',
-    Collectives: 'collectives',
-    Crust: 'crust',
-    Heima: 'heima',
-    Hydration: 'hydration',
-    'Hyperbridge (Nexus)': 'hyperbridge',
-    Interlay: 'interlay',
-    Karura: 'karura',
     Dicle: 'dicle',
     'Dicle Asset Hub': 'dicle',
-    'Laos Network': 'laos',
-    'Paseo Asset Hub': 'paseo',
-    'Paseo Testnet': 'paseo',
-    Phala: 'phala',
+    'Dicle Collectives': 'dicle',
+    'Dicle Coretime': 'dicle',
+    'Dicle People': 'dicle',
     Pezkuwi: 'pezkuwi',
     'Pezkuwi Asset Hub': 'pezkuwi',
-    'Vara Network': 'vara',
+    'Pezkuwi Collectives': 'pezkuwi',
+    'Pezkuwi Coretime': 'pezkuwi',
+    'Pezkuwi People': 'pezkuwi',
     Zagros: 'zagros',
     'Zagros Asset Hub': 'zagros',
-    Zeitgeist: 'zeitgeist',
-    kintsugi: 'kintsugi'
+    'Zagros Collectives': 'zagros',
+    'Zagros Coretime': 'zagros',
+    'Zagros People': 'zagros'
   },
   create: (chain: string, path: string, data: BN | number | string): string =>
     `https://${chain}.subsquare.io/${path}/${data.toString()}${path === 'user' ? '/votes' : ''}`,
   homepage: 'https://subsquare.io/',
-  isActive: true,
+  isActive: false,
   paths: {
     address: 'user',
     bounty: 'treasury/bounty',
