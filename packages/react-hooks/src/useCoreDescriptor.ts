@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { StorageKey, u32 } from '@pezkuwi/types';
-import type { PalletBrokerCoretimeInterfaceCoreAssignment, PezkuwiRuntimeTeyrchainsAssignerCoretimeAssignmentState, PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescriptor, PezkuwiRuntimeTeyrchainsAssignerCoretimeQueueDescriptor, PezkuwiRuntimeTeyrchainsAssignerCoretimeWorkState } from '@pezkuwi/types/lookup';
+import type { PezpalletBrokerCoretimeInterfaceCoreAssignment, PezkuwiRuntimeTeyrchainsAssignerCoretimeAssignmentState, PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescriptor, PezkuwiRuntimeTeyrchainsAssignerCoretimeQueueDescriptor, PezkuwiRuntimeTeyrchainsAssignerCoretimeWorkState } from '@pezkuwi/types/lookup';
 import type { CoreDescriptor } from './types.js';
 
 import { useEffect, useState } from 'react';
@@ -20,7 +20,7 @@ function extractInfo (info: PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescript
     core,
     info: {
       currentWork: {
-        assignments: assignments?.map((one: [PalletBrokerCoretimeInterfaceCoreAssignment, PezkuwiRuntimeTeyrchainsAssignerCoretimeAssignmentState]) => {
+        assignments: assignments?.map((one: [PezpalletBrokerCoretimeInterfaceCoreAssignment, PezkuwiRuntimeTeyrchainsAssignerCoretimeAssignmentState]) => {
           return ({
             isPool: one[0]?.isPool,
             isTask: one[0]?.isTask,

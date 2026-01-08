@@ -5,7 +5,6 @@ import type { EndpointOption } from './types.js';
 
 import { PEZKUWI_GENESIS } from '../api/constants.js';
 import { chainsPezkuwiSVG } from '../ui/logos/chains/index.js';
-import { getTeleports } from './util.js';
 
 // Pezkuwi Network Endpoints
 // These are the official PezkuwiChain network endpoints
@@ -92,12 +91,10 @@ export const prodRelayPezkuwi: EndpointOption = {
   isPeopleForIdentity: true,
   isRelay: true,
   linked: [
-    ...getTeleports(prodParasPezkuwi)
+    ...prodParasPezkuwi
   ],
   providers: {
-    Local: 'ws://127.0.0.1:9944',
-    'Pezkuwi Foundation': 'wss://rpc.pezkuwichain.io',
-    'Pezkuwi Zagros': 'wss://zagros-rpc.pezkuwichain.io'
+    'Pezkuwi Foundation': 'wss://rpc.pezkuwichain.io'
   },
   teleport: [1000],
   text: 'Pezkuwi',

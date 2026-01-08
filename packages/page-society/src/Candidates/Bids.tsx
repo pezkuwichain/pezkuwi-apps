@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-society authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletSocietyBid } from '@pezkuwi/types/lookup';
+import type { PezpalletSocietyBid } from '@pezkuwi/types/lookup';
 
 import React, { useRef } from 'react';
 
@@ -18,7 +18,7 @@ interface Props {
 function Bids ({ className }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api } = useApi();
-  const bids = useCall<PalletSocietyBid[]>(api.query.society.bids);
+  const bids = useCall<PezpalletSocietyBid[]>(api.query.society.bids);
 
   const headerRef = useRef<[React.ReactNode?, string?, number?][]>([
     [t('bids'), 'start'],

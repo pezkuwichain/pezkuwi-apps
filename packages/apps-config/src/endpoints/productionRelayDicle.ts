@@ -5,7 +5,6 @@ import type { EndpointOption } from './types.js';
 
 import { DICLE_GENESIS } from '../api/constants.js';
 import { chainsDicleSVG } from '../ui/logos/chains/index.js';
-import { getTeleports } from './util.js';
 
 // Dicle Network Endpoints (Canary Network)
 // Dicle is the canary network for Pezkuwi
@@ -92,10 +91,9 @@ export const prodRelayDicle: EndpointOption = {
   isPeopleForIdentity: true,
   isRelay: true,
   linked: [
-    ...getTeleports(prodParasDicle)
+    ...prodParasDicle
   ],
   providers: {
-    Local: 'ws://127.0.0.1:9944',
     'Pezkuwi Foundation': 'wss://dicle-rpc.pezkuwichain.io'
   },
   teleport: [1000],

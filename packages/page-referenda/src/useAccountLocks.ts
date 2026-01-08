@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Option } from '@pezkuwi/types';
-import type { PalletConvictionVotingVoteCasting, PalletConvictionVotingVoteVoting, PalletReferendaReferendumInfoConvictionVotingTally } from '@pezkuwi/types/lookup';
+import type { PezpalletConvictionVotingVoteCasting, PezpalletConvictionVotingVoteVoting, PezpalletReferendaReferendumInfoConvictionVotingTally } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { Lock, PalletReferenda, PalletVote } from './types.js';
 
@@ -19,9 +19,9 @@ const OPT_CLASS = {
 };
 
 const OPT_VOTES = {
-  transform: ([[params], votes]: [[[string, BN][]], PalletConvictionVotingVoteVoting[]]): [classId: BN, refIds: BN[], casting: PalletConvictionVotingVoteCasting][] =>
+  transform: ([[params], votes]: [[[string, BN][]], PezpalletConvictionVotingVoteVoting[]]): [classId: BN, refIds: BN[], casting: PezpalletConvictionVotingVoteCasting][] =>
     votes
-      .map((v, index): null | [BN, BN[], PalletConvictionVotingVoteCasting] => {
+      .map((v, index): null | [BN, BN[], PezpalletConvictionVotingVoteCasting] => {
         if (!v.isCasting) {
           return null;
         }
@@ -34,19 +34,19 @@ const OPT_VOTES = {
           casting
         ];
       })
-      .filter((v): v is [BN, BN[], PalletConvictionVotingVoteCasting] => !!v),
+      .filter((v): v is [BN, BN[], PezpalletConvictionVotingVoteCasting] => !!v),
   withParamsTransform: true
 };
 
 const OPT_REFS = {
-  transform: ([[params], optTally]: [[BN[]], Option<PalletReferendaReferendumInfoConvictionVotingTally>[]]): [BN, PalletReferendaReferendumInfoConvictionVotingTally][] =>
+  transform: ([[params], optTally]: [[BN[]], Option<PezpalletReferendaReferendumInfoConvictionVotingTally>[]]): [BN, PezpalletReferendaReferendumInfoConvictionVotingTally][] =>
     optTally
-      .map((v, index): null | [BN, PalletReferendaReferendumInfoConvictionVotingTally] =>
+      .map((v, index): null | [BN, PezpalletReferendaReferendumInfoConvictionVotingTally] =>
         v.isSome
           ? [params[index], v.unwrap()]
           : null
       )
-      .filter((v): v is [BN, PalletReferendaReferendumInfoConvictionVotingTally] => !!v),
+      .filter((v): v is [BN, PezpalletReferendaReferendumInfoConvictionVotingTally] => !!v),
   withParamsTransform: true
 };
 
@@ -58,7 +58,7 @@ function getVoteParams (accountId: string, lockClasses?: BN[]): [[accountId: str
   return undefined;
 }
 
-function getRefParams (votes?: [classId: BN, refIds: BN[], casting: PalletConvictionVotingVoteCasting][]): [BN[]] | undefined {
+function getRefParams (votes?: [classId: BN, refIds: BN[], casting: PezpalletConvictionVotingVoteCasting][]): [BN[]] | undefined {
   if (votes?.length) {
     const refIds = votes.reduce<BN[]>((all, [, refIds]) => all.concat(refIds), []);
 
@@ -70,7 +70,7 @@ function getRefParams (votes?: [classId: BN, refIds: BN[], casting: PalletConvic
   return undefined;
 }
 
-function getLocks (api: ApiPromise, palletVote: PalletVote, votes: [classId: BN, refIds: BN[], casting: PalletConvictionVotingVoteCasting][], referenda: [BN, PalletReferendaReferendumInfoConvictionVotingTally][]): Lock[] {
+function getLocks (api: ApiPromise, palletVote: PalletVote, votes: [classId: BN, refIds: BN[], casting: PezpalletConvictionVotingVoteCasting][], referenda: [BN, PezpalletReferendaReferendumInfoConvictionVotingTally][]): Lock[] {
   const lockPeriod = api.consts[palletVote].voteLockingPeriod as BN;
   const locks: Lock[] = [];
 
@@ -157,7 +157,7 @@ function useAccountLocksImpl (palletReferenda: PalletReferenda, palletVote: Pall
     [accountId, lockClasses]
   );
 
-  const votes = useCall<[BN, BN[], PalletConvictionVotingVoteCasting][] | undefined>(voteParams && api.query[palletVote]?.votingFor.multi, voteParams, OPT_VOTES);
+  const votes = useCall<[BN, BN[], PezpalletConvictionVotingVoteCasting][] | undefined>(voteParams && api.query[palletVote]?.votingFor.multi, voteParams, OPT_VOTES);
 
   // retrieve the referendums that were voted on
   const refParams = useMemo(

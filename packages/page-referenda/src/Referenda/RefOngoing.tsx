@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Hash } from '@pezkuwi/types/interfaces';
-import type { PalletConvictionVotingTally, PalletRankedCollectiveTally, PalletReferendaDeposit, PalletReferendaReferendumStatusConvictionVotingTally, PalletReferendaReferendumStatusRankedCollectiveTally, PalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
+import type { PezpalletConvictionVotingTally, PezpalletRankedCollectiveTally, PezpalletReferendaDeposit, PezpalletReferendaReferendumStatusConvictionVotingTally, PezpalletReferendaReferendumStatusRankedCollectiveTally, PezpalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { HexString } from '@pezkuwi/util/types';
 import type { Referendum, ReferendumProps as Props } from '../types.js';
@@ -23,21 +23,21 @@ import { unwrapDeposit } from './util.js';
 import Votes from './Votes.js';
 
 interface Expanded {
-  decisionDeposit: PalletReferendaDeposit | null;
+  decisionDeposit: PezpalletReferendaDeposit | null;
   periods: {
     periodEnd: BN | null;
     prepareEnd: BN | null;
     decideEnd: BN | null;
     confirmEnd: BN | null;
   };
-  ongoing: PalletReferendaReferendumStatusConvictionVotingTally | PalletReferendaReferendumStatusRankedCollectiveTally;
+  ongoing: PezpalletReferendaReferendumStatusConvictionVotingTally | PezpalletReferendaReferendumStatusRankedCollectiveTally;
   proposalHash?: HexString;
-  submissionDeposit: PalletReferendaDeposit | null;
-  tally: PalletConvictionVotingTally | PalletRankedCollectiveTally;
+  submissionDeposit: PezpalletReferendaDeposit | null;
+  tally: PezpalletConvictionVotingTally | PezpalletRankedCollectiveTally;
   tallyTotal: BN;
 }
 
-function expandOngoing (api: ApiPromise, info: Referendum['info'], track?: PalletReferendaTrackDetails): Expanded {
+function expandOngoing (api: ApiPromise, info: Referendum['info'], track?: PezpalletReferendaTrackDetails): Expanded {
   const ongoing = info.asOngoing;
   const proposalHash = getPreimageHash(api, ongoing.proposal || (ongoing as unknown as { proposalHash: Hash }).proposalHash).proposalHash;
   let prepareEnd: BN | null = null;

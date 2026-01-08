@@ -3,7 +3,7 @@
 
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
 import type { Balance, BountyIndex } from '@pezkuwi/types/interfaces';
-import type { PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useMemo } from 'react';
@@ -21,7 +21,7 @@ interface Props {
   fee?: BN;
   index: BountyIndex;
   proposals?: DeriveCollectiveProposal[];
-  status: PalletBountiesBountyStatus;
+  status: PezpalletBountiesBountyStatus;
   value: Balance;
 }
 

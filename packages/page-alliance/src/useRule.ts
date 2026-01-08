@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@pezkuwi/types';
-import type { PalletAllianceCid } from '@pezkuwi/types/lookup';
+import type { PezpalletAllianceCid } from '@pezkuwi/types/lookup';
 import type { Rule } from './types.js';
 
 import { createNamedHook, useApi, useCall } from '@pezkuwi/react-hooks';
@@ -10,7 +10,7 @@ import { createNamedHook, useApi, useCall } from '@pezkuwi/react-hooks';
 import { createCid } from './util.js';
 
 const OPT_RULE = {
-  transform: (opt: Option<PalletAllianceCid>): Rule =>
+  transform: (opt: Option<PezpalletAllianceCid>): Rule =>
     opt.isSome
       ? { cid: createCid(opt.unwrap()), hasRule: true }
       : { cid: null, hasRule: false }

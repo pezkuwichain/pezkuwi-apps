@@ -1,10 +1,10 @@
 // Copyright 2017-2026 @pezkuwi/app-bounties authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 import type { BountyStatusType, StatusName } from '../types.js';
 
-export const getBountyStatus = (status: PalletBountiesBountyStatus): BountyStatusType => {
+export const getBountyStatus = (status: PezpalletBountiesBountyStatus): BountyStatusType => {
   const statusAsString = status.type as StatusName;
 
   let result: BountyStatusType = {

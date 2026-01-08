@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@pezkuwi/types';
-import type { PalletNominationPoolsPoolMember } from '@pezkuwi/types/lookup';
+import type { PezpalletNominationPoolsPoolMember } from '@pezkuwi/types/lookup';
 import type { OwnPool, OwnPoolBase } from './types.js';
 
 import { useMemo } from 'react';
@@ -12,7 +12,7 @@ import { createNamedHook, useAccounts, useApi, useCall } from '@pezkuwi/react-ho
 import { createAccounts } from './usePoolAccounts.js';
 
 const OPT_MULTI = {
-  transform: ([[ids], opts]: [[string[]], Option<PalletNominationPoolsPoolMember>[]]): OwnPoolBase[] => {
+  transform: ([[ids], opts]: [[string[]], Option<PezpalletNominationPoolsPoolMember>[]]): OwnPoolBase[] => {
     const pools: OwnPoolBase[] = [];
 
     for (let i = 0; i < ids.length; i++) {

@@ -3,15 +3,15 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Option } from '@pezkuwi/types';
-import type { PalletBrokerSaleInfoRecord } from '@pezkuwi/types/lookup';
-import type { PalletBrokerSaleInfoRecord as SimplifiedPalletBrokerSaleInfoRecord } from './types.js';
+import type { PezpalletBrokerSaleInfoRecord } from '@pezkuwi/types/lookup';
+import type { PezpalletBrokerSaleInfoRecord as SimplifiedPezpalletBrokerSaleInfoRecord } from './types.js';
 
 import { useEffect, useState } from 'react';
 
 import { createNamedHook, useCall } from '@pezkuwi/react-hooks';
 import { BN } from '@pezkuwi/util';
 
-function extractInfo (record: Option<PalletBrokerSaleInfoRecord>): SimplifiedPalletBrokerSaleInfoRecord {
+function extractInfo (record: Option<PezpalletBrokerSaleInfoRecord>): SimplifiedPezpalletBrokerSaleInfoRecord {
   const v = record.unwrap();
 
   return {
@@ -29,9 +29,9 @@ function extractInfo (record: Option<PalletBrokerSaleInfoRecord>): SimplifiedPal
 }
 
 function useBrokerSalesInfoImpl (api: ApiPromise, ready: boolean) {
-  const record = useCall<Option<PalletBrokerSaleInfoRecord>>(ready && api?.query.broker.saleInfo);
+  const record = useCall<Option<PezpalletBrokerSaleInfoRecord>>(ready && api?.query.broker.saleInfo);
 
-  const [state, setState] = useState<SimplifiedPalletBrokerSaleInfoRecord | undefined>();
+  const [state, setState] = useState<SimplifiedPezpalletBrokerSaleInfoRecord | undefined>();
 
   useEffect((): void => {
     !!record && !!record.isSome && !!record.toJSON() &&

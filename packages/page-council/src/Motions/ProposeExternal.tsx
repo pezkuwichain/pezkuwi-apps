@@ -81,14 +81,15 @@ function ProposeExternal ({ className = '', isMember, members }: Props): React.R
 
   useEffect((): void => {
     if (isHashValid && hash) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const proposal = isCurrentPreimage
         ? preimage && api.tx.democracy.externalProposeMajority({
           Lookup: {
             hash: preimage.proposalHash,
             len: preimage.proposalLength || imageLen
           }
-        })
-        : api.tx.democracy.externalProposeMajority(hash);
+        } as any)
+        : api.tx.democracy.externalProposeMajority(hash as any);
 
       if (proposal) {
         return setProposal({

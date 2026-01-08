@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { u32, Vec } from '@pezkuwi/types';
-import type { SpStakingPagedExposureMetadata } from '@pezkuwi/types/lookup';
+import type { PezspStakingPagedExposureMetadata } from '@pezkuwi/types/lookup';
 import type { Route, TFunction } from './types.js';
 
 import Component from '@pezkuwi/app-staking';
@@ -20,7 +20,7 @@ function needsApiCheck (api: ApiPromise): boolean {
 
     // we need a known Exposure type
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const { nominatorCount, own, pageCount, total } = api.registry.createType<SpStakingPagedExposureMetadata>(
+    const { nominatorCount, own, pageCount, total } = api.registry.createType<PezspStakingPagedExposureMetadata>(
       unwrapStorageType(api.registry, api.query.staking.erasStakersOverview.creator.meta.type),
       { nominatorCount: BN_ONE, own: BN_ONE, pageCount: BN_ONE, total: BN_ONE }
     );
@@ -41,6 +41,7 @@ function needsApiCheck (api: ApiPromise): boolean {
       api.tx.staking.bond(ZERO_ACCOUNT, BN_ONE, { Account: ZERO_ACCOUNT });
     } else if (api.tx.staking.bond.meta.args.length === 2) {
       // current, no controller account
+      // @ts-expect-error Runtime type format
       api.tx.staking.bond(BN_ONE, { Account: ZERO_ACCOUNT });
     } else {
       // unknown

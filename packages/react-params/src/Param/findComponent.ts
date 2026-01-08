@@ -59,7 +59,7 @@ const componentDef: TypeToComponent[] = [
   { c: Bool, t: ['bool'] },
   { c: Bytes, t: ['Bytes', 'Vec<u8>'] },
   { c: Call, t: ['Call', 'Proposal', 'RuntimeCall'] },
-  { c: Cid, t: ['PalletAllianceCid'] },
+  { c: Cid, t: ['PezpalletAllianceCid'] },
   { c: Code, t: ['Code'] },
   { c: DispatchError, t: DISPATCH_ERROR },
   { c: DispatchResult, t: ['DispatchResult', 'Result<Null, SpRuntimeDispatchError>'] },

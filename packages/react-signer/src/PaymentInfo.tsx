@@ -41,12 +41,13 @@ function PaymentInfo ({ accountId, className = '', extrinsic, isHeader, signerOp
           const info = await extrinsic.paymentInfo(accountId, signerOptions);
 
           if (signerOptions?.assetId) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const convertedFee = new BN((await api.call.assetConversionApi.quotePriceTokensForExactTokens(
-              signerOptions?.assetId as string,
+              signerOptions?.assetId as any,
               {
                 interior: 'Here',
                 parents: 1
-              } as unknown as string,
+              } as any,
               info.partialFee,
               true
             )).toString());

@@ -31,7 +31,7 @@ describe('util', (): void => {
 
   describe('createIpfsHash', (): void => {
     it('encodes a pallet CID into an ipfs hash', (): void => {
-      const cid = registry.createType('PalletAllianceCid', {
+      const cid = registry.createType('PezpalletAllianceCid', {
         codec: 0x70,
         hash_: {
           code: 0x12,

@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/react-params authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletAllianceCid } from '@pezkuwi/types/lookup';
+import type { PezpalletAllianceCid } from '@pezkuwi/types/lookup';
 import type { Props } from '../types.js';
 
 import React, { useCallback, useState } from 'react';
@@ -19,7 +19,7 @@ function Cid (props: Props): React.ReactElement<Props> {
   const [isValid, setIsValid] = useState(false);
   const [ipfsCid] = useState<string | null>(() =>
     isDisabled && defaultValue && isCodec(defaultValue.value)
-      ? toIpfsCid(defaultValue.value as PalletAllianceCid)
+      ? toIpfsCid(defaultValue.value as PezpalletAllianceCid)
       : null
   );
   const [isStruct] = useState<boolean>(() => isDisabled || !defaultValue || isCodec(defaultValue.value));

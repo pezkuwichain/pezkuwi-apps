@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { AccountId32, Event, Hash } from '@pezkuwi/types/interfaces';
-import type { FrameSupportDispatchPerDispatchClassWeight, PezkuwiRuntimeTeyrchainsConfigurationHostConfiguration } from '@pezkuwi/types/lookup';
+import type { PezframeSupportDispatchPerDispatchClassWeight, PezkuwiRuntimeTeyrchainsConfigurationHostConfiguration } from '@pezkuwi/types/lookup';
 import type { IEventData, ITuple } from '@pezkuwi/types/types';
 import type { u32, Vec } from '@pezkuwi/types-codec';
 
@@ -173,7 +173,6 @@ const commandCenterHandler = async (
 
     setRcOutput({
       finalizedBlock: header.number.toNumber(),
-      teyrchainConfig,
       session: {
         hasQueuedInSession: hasQueuedInSession.isTrue,
         historicalRange: historicalRange.isSome
@@ -197,7 +196,8 @@ const commandCenterHandler = async (
         })(),
         mode: mode.toString(),
         validatorPoints: validatorPointsKeys.length
-      }
+      },
+      teyrchainConfig
     });
 
     if (enhancedEvents.length > 0) {
@@ -284,7 +284,7 @@ const commandCenterHandler = async (
     // Get block weight
     const weight = await (await ahApi.at(header.hash)).query.system.blockWeight();
 
-    const formatWeight = (w: FrameSupportDispatchPerDispatchClassWeight) => {
+    const formatWeight = (w: PezframeSupportDispatchPerDispatchClassWeight) => {
       const normalRef = w.normal?.refTime?.toBigInt() || 0n;
       const operationalRef = w.operational?.refTime?.toBigInt() || 0n;
       const mandatoryRef = w.mandatory?.refTime?.toBigInt() || 0n;
@@ -309,7 +309,8 @@ const commandCenterHandler = async (
     const parsedQueuedScore = ahApi.createType('Option<SpNposElectionsElectionScore>', queuedScore);
     const formattedQueuedScore = parsedQueuedScore.isSome
       ? (() => {
-        const score = parsedQueuedScore.unwrap();
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const score = parsedQueuedScore.unwrap() as any;
         const minimalStake = score.minimalStake?.toString() || '0';
         const formattedMinStake = formatBalance(minimalStake, { forceUnit: '-', withSi: true });
 
@@ -523,7 +524,7 @@ function CommandCenter ({ ahApi: initialAhApi, ahEndPoints, isRelayChain, rcApi:
           // Get block weight
           const weight = await (await ahApi.at(currentBlockHash)).query.system.blockWeight();
 
-          const formatWeight = (w: FrameSupportDispatchPerDispatchClassWeight) => {
+          const formatWeight = (w: PezframeSupportDispatchPerDispatchClassWeight) => {
             const normalRef = w.normal?.refTime?.toBigInt() || 0n;
             const operationalRef = w.operational?.refTime?.toBigInt() || 0n;
             const mandatoryRef = w.mandatory?.refTime?.toBigInt() || 0n;

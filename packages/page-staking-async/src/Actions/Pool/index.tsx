@@ -4,7 +4,7 @@
 import type { DeriveSessionProgress } from '@pezkuwi/api-derive/types';
 import type { SortedTargets } from '@pezkuwi/app-staking/types';
 import type { u32 } from '@pezkuwi/types';
-import type { PalletNominationPoolsPoolMember } from '@pezkuwi/types/lookup';
+import type { PezpalletNominationPoolsPoolMember } from '@pezkuwi/types/lookup';
 
 import React from 'react';
 
@@ -15,7 +15,7 @@ import Account from './Account.js';
 interface Props {
   count: number;
   className?: string;
-  members: Record<string, PalletNominationPoolsPoolMember>;
+  members: Record<string, PezpalletNominationPoolsPoolMember>;
   poolId: u32;
   sessionProgress?: DeriveSessionProgress;
   targets: SortedTargets;

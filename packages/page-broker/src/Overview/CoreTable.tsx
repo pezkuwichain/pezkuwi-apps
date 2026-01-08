@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { ApiPromise } from '@pezkuwi/api';
-import type { PalletBrokerConfigRecord } from '@pezkuwi/react-hooks/types';
+import type { PezpalletBrokerConfigRecord } from '@pezkuwi/react-hooks/types';
 
 import React, { useRef } from 'react';
 
@@ -15,7 +15,7 @@ import Workload from './Workload.js';
 interface Props {
   api: ApiPromise;
   core: number;
-  config: PalletBrokerConfigRecord,
+  config: PezpalletBrokerConfigRecord,
   workload?: CoreWorkloadType[],
   workplan?: CoreWorkplanType[],
 }

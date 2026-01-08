@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { StorageEntryBase } from '@pezkuwi/api/types';
-import type { PalletConstantMetadataLatest } from '@pezkuwi/types/interfaces';
+import type { PezpalletConstantMetadataLatest } from '@pezkuwi/types/interfaces';
 import type { AnyTuple } from '@pezkuwi/types/types';
 
 export type StorageEntryPromise = StorageEntryBase<'promise', any, AnyTuple>;
@@ -13,5 +13,5 @@ export interface ConstValueBase {
 }
 
 export interface ConstValue extends ConstValueBase {
-  meta: PalletConstantMetadataLatest;
+  meta: PezpalletConstantMetadataLatest;
 }

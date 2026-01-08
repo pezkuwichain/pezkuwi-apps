@@ -2,9 +2,12 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type React from 'react';
-import type { IconTheme } from '@pezkuwi/react-identicon/types';
+import type { IconTheme as BaseIconTheme } from '@pezkuwi/react-identicon/types';
 import type { HexString } from '@pezkuwi/util/types';
 import type { Option } from '../settings/types.js';
+
+// Extended IconTheme type that includes pezkuwi-specific themes
+export type IconTheme = BaseIconTheme | 'bizinikiwi' | 'pezkuwi';
 
 interface BaseOption {
   dnslink?: string;

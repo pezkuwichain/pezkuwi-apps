@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Vec } from '@pezkuwi/types';
-import type { PalletBrokerLeaseRecordItem } from '@pezkuwi/types/lookup';
+import type { PezpalletBrokerLeaseRecordItem } from '@pezkuwi/types/lookup';
 import type { LegacyLease } from './types.js';
 
 import { useEffect, useState } from 'react';
@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 import { createNamedHook, useCall } from '@pezkuwi/react-hooks';
 
 function useBrokerLeasesImpl (api: ApiPromise, ready: boolean): LegacyLease[] | undefined {
-  const leases = useCall<Vec<PalletBrokerLeaseRecordItem>>(ready && api?.query?.broker?.leases);
+  const leases = useCall<Vec<PezpalletBrokerLeaseRecordItem>>(ready && api?.query?.broker?.leases);
   const [state, setState] = useState<LegacyLease[]>();
 
   useEffect((): void => {

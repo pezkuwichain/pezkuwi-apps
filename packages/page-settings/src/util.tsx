@@ -41,9 +41,10 @@ export function createOption ({ info, isHeader, text, value }: Option, overrides
 }
 
 export function createIdenticon ({ info, text, value }: Option, overrides: string[] = [], override = 'empty'): Option {
-  const theme = info && overrides.includes(info)
-    ? override as 'empty'
-    : info as 'bizinikiwi';
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const theme = (info && overrides.includes(info)
+    ? override
+    : info) as any; // bizinikiwi is valid in pezkuwi-sdk but IconTheme type not yet updated
 
   return {
     text: (

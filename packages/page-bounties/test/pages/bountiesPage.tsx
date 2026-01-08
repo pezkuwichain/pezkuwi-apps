@@ -9,7 +9,7 @@ import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
 import type { ApiProps } from '@pezkuwi/react-api/types';
 import type { PartialQueueTxExtrinsic, QueueProps, QueueTxExtrinsicAdd } from '@pezkuwi/react-components/Status/types';
 import type { BountyIndex } from '@pezkuwi/types/interfaces';
-import type { PalletBountiesBounty, PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBounty, PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 import type { BountyApi } from '../../src/hooks/index.js';
 
 import { fireEvent, render, within } from '@testing-library/react';
@@ -57,11 +57,11 @@ interface RenderedBountiesPage {
 }
 
 export class BountiesPage {
-  aBounty: ({ status, value }?: Partial<PalletBountiesBounty>) => PalletBountiesBounty;
+  aBounty: ({ status, value }?: Partial<PezpalletBountiesBounty>) => PezpalletBountiesBounty;
   aBountyIndex: (index?: number) => BountyIndex;
-  aBountyStatus: (status: string) => PalletBountiesBountyStatus;
-  bountyStatusWith: ({ curator, status }: { curator?: string, status?: string, }) => PalletBountiesBountyStatus;
-  bountyWith: ({ status, value }: { status?: string, value?: number }) => PalletBountiesBounty;
+  aBountyStatus: (status: string) => PezpalletBountiesBountyStatus;
+  bountyStatusWith: ({ curator, status }: { curator?: string, status?: string, }) => PezpalletBountiesBountyStatus;
+  bountyWith: ({ status, value }: { status?: string, value?: number }) => PezpalletBountiesBounty;
 
   findByRole?: FindOne;
   findByText?: FindOne;
@@ -75,7 +75,7 @@ export class BountiesPage {
     ({ aBounty: this.aBounty, aBountyIndex: this.aBountyIndex, aBountyStatus: this.aBountyStatus, bountyStatusWith: this.bountyStatusWith, bountyWith: this.bountyWith } = new BountyFactory(api));
   }
 
-  renderOne (bounty: PalletBountiesBounty, proposals: DeriveCollectiveProposal[] = [], description = '', index = this.aBountyIndex()): RenderedBountiesPage {
+  renderOne (bounty: PezpalletBountiesBounty, proposals: DeriveCollectiveProposal[] = [], description = '', index = this.aBountyIndex()): RenderedBountiesPage {
     return this.renderMany({ bounties: [{ bounty, description, index, proposals }] });
   }
 

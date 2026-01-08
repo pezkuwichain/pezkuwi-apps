@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { AccountId, BalanceOf } from '@pezkuwi/types/interfaces';
-import type { PalletSocietyBidKind } from '@pezkuwi/types/lookup';
+import type { PezpalletSocietyBidKind } from '@pezkuwi/types/lookup';
 
 import React from 'react';
 
@@ -12,7 +12,7 @@ import BidType from '../Candidates/BidType.js';
 
 interface Props {
   balance?: BalanceOf;
-  bid?: PalletSocietyBidKind;
+  bid?: PezpalletSocietyBidKind;
   value: AccountId;
 }
 

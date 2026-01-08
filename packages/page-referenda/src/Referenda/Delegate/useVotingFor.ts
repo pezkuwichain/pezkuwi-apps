@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-referenda authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletConvictionVotingVoteVoting } from '@pezkuwi/types/lookup';
+import type { PezpalletConvictionVotingVoteVoting } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { PalletVote } from '../../types.js';
 import type { LockResult, VoteResult, VoteResultItem } from './types.js';
@@ -16,7 +16,7 @@ import useVotingLocks from './useVotingLocks.js';
 type ForParam = [accountId: string, classId: BN];
 
 const FOR_OPT = {
-  transform: ([[ids], votes]: [[ForParam[]], PalletConvictionVotingVoteVoting[]]): VoteResult =>
+  transform: ([[ids], votes]: [[ForParam[]], PezpalletConvictionVotingVoteVoting[]]): VoteResult =>
     ids.sort((a, b) => a[1].cmp(b[1])).reduce<VoteResult>((all, [accountId, classId], index) => {
       if (!all[accountId]) {
         all[accountId] = [];
@@ -33,7 +33,7 @@ const FOR_OPT = {
         delegating = { conviction: conviction.type, targetId: target.toString() };
       } else {
         // failsafe log... just in-case
-        console.error(`Unable to handle PalletConvictionVotingVoteVoting type ${votes[index].type}`);
+        console.error(`Unable to handle PezpalletConvictionVotingVoteVoting type ${votes[index].type}`);
       }
 
       all[accountId].push({ casting, classId, delegating });

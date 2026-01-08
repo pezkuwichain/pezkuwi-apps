@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option, u32 } from '@pezkuwi/types';
-import type { PalletStakingActiveEraInfo } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingActiveEraInfo } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { SessionInfo } from './types.js';
 
@@ -11,7 +11,7 @@ import { useMemo } from 'react';
 import { createNamedHook, useApi, useCall } from '@pezkuwi/react-hooks';
 
 const OPT_ACTIVEERA = {
-  transform: (activeEra: Option<PalletStakingActiveEraInfo>): BN | null =>
+  transform: (activeEra: Option<PezpalletStakingActiveEraInfo>): BN | null =>
     activeEra.isSome
       ? activeEra.unwrap().index
       : null

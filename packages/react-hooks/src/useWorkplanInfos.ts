@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Option, StorageKey, u16, u32, Vec } from '@pezkuwi/types';
-import type { PalletBrokerScheduleItem } from '@pezkuwi/types/lookup';
+import type { PezpalletBrokerScheduleItem } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { CoreWorkplan } from './types.js';
 
@@ -23,7 +23,7 @@ export function sortByCore<T extends { core: number }> (dataArray?: T | T[]): T[
   return sanitized.sort((a, b) => a.core - b.core);
 }
 
-function extractInfo (info: Vec<PalletBrokerScheduleItem>, core: number, timeslice: number): CoreWorkplan {
+function extractInfo (info: Vec<PezpalletBrokerScheduleItem>, core: number, timeslice: number): CoreWorkplan {
   const mask: string[] = processHexMask(info[0]?.mask);
   const assignment = info[0].assignment;
 
@@ -52,7 +52,7 @@ function useWorkplanInfosImpl (api: ApiPromise, ready: boolean): CoreWorkplan[] 
     return value[0];
   });
 
-  const workplanInfo = useCall<[[[u32, u16][]], Option<Vec<PalletBrokerScheduleItem>>[]]>(ready && api?.query.broker.workplan.multi, [sanitizedKeys], { withParams: true });
+  const workplanInfo = useCall<[[[u32, u16][]], Option<Vec<PezpalletBrokerScheduleItem>>[]]>(ready && api?.query.broker.workplan.multi, [sanitizedKeys], { withParams: true });
 
   const [state, setState] = useState<CoreWorkplan[] | undefined>();
 

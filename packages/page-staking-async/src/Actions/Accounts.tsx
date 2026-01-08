@@ -3,7 +3,7 @@
 
 import type { SortedTargets } from '@pezkuwi/app-staking/types';
 import type { StakerState } from '@pezkuwi/react-hooks/types';
-import type { PalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useRef } from 'react';
@@ -14,7 +14,7 @@ import { useTranslation } from '../translate.js';
 import Account from './Account/index.js';
 
 interface Props {
-  allSlashes: [BN, PalletStakingUnappliedSlash[]][];
+  allSlashes: [BN, PezpalletStakingUnappliedSlash[]][];
   className?: string;
   footer: React.ReactNode;
   isInElection?: boolean;

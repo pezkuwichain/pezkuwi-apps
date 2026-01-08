@@ -6,8 +6,7 @@
 import type { Observable } from 'rxjs';
 import type { ApiInterfaceRx } from '@pezkuwi/api/types';
 import type { DeriveBalancesAll } from '@pezkuwi/api-derive/types';
-import type { Balance } from '@pezkuwi/types/interfaces';
-import type { FrameSystemAccountInfo } from '@pezkuwi/types/lookup';
+import type { AccountInfo, Balance } from '@pezkuwi/types/interfaces';
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
 import interbtc from '@interlay/interbtc-types';
@@ -51,7 +50,7 @@ export function getBalance (
     instanceId,
     (account: string): Observable<DeriveBalancesAll> =>
       combineLatest<[any, any]>([api.query.tokens.accounts(account, { Token: nativeToken }), api.query.system.account(account)]).pipe(
-        map(([data, systemAccount]: [OrmlAccountData, FrameSystemAccountInfo]): DeriveBalancesAll => {
+        map(([data, systemAccount]: [OrmlAccountData, AccountInfo]): DeriveBalancesAll => {
           return {
             ...defaultAccountBalance(),
             accountId: api.registry.createType('AccountId', account),

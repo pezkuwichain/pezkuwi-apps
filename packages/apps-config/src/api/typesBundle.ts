@@ -398,7 +398,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC"
@@ -776,8 +776,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -815,7 +815,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC"
@@ -1193,8 +1193,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -1232,7 +1232,7 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "XBTC": 4,
                 "RENBTC": 5,
@@ -1243,7 +1243,7 @@ export const typesBundle = {
                 "BCG": 11,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "SDN": 135,
                 "KILT": 138
@@ -1618,8 +1618,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -1657,7 +1657,7 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "XBTC": 4,
                 "RENBTC": 5,
@@ -1668,7 +1668,7 @@ export const typesBundle = {
                 "BCG": 11,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "SDN": 135,
                 "KILT": 138
@@ -2044,8 +2044,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -2088,12 +2088,12 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 4,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "CASH": 140
               }
@@ -2471,8 +2471,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -2515,13 +2515,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131
               }
             },
@@ -2898,8 +2898,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -2942,13 +2942,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -3330,8 +3330,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -3374,13 +3374,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -3759,8 +3759,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -3798,13 +3798,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -4183,8 +4183,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -4222,13 +4222,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -4607,8 +4607,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -4785,7 +4785,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC"
@@ -5163,8 +5163,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -5202,7 +5202,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC"
@@ -5580,8 +5580,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -5619,7 +5619,7 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "XBTC": 4,
                 "RENBTC": 5,
@@ -5630,7 +5630,7 @@ export const typesBundle = {
                 "BCG": 11,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "SDN": 135,
                 "KILT": 138
@@ -6005,8 +6005,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -6044,7 +6044,7 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "XBTC": 4,
                 "RENBTC": 5,
@@ -6055,7 +6055,7 @@ export const typesBundle = {
                 "BCG": 11,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "SDN": 135,
                 "KILT": 138
@@ -6431,8 +6431,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -6475,12 +6475,12 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 4,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "CASH": 140
               }
@@ -6858,8 +6858,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -6902,13 +6902,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131
               }
             },
@@ -7285,8 +7285,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -7329,13 +7329,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -7717,8 +7717,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -7761,13 +7761,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -8146,8 +8146,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -8185,13 +8185,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -8570,8 +8570,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -8609,13 +8609,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -8994,8 +8994,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -9172,7 +9172,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC"
@@ -9550,8 +9550,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -9589,7 +9589,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC"
@@ -9967,8 +9967,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -10006,7 +10006,7 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "XBTC": 4,
                 "RENBTC": 5,
@@ -10017,7 +10017,7 @@ export const typesBundle = {
                 "BCG": 11,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "SDN": 135,
                 "KILT": 138
@@ -10392,8 +10392,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -10431,7 +10431,7 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "XBTC": 4,
                 "RENBTC": 5,
@@ -10442,7 +10442,7 @@ export const typesBundle = {
                 "BCG": 11,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "SDN": 135,
                 "KILT": 138
@@ -10818,8 +10818,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -10862,12 +10862,12 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 4,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "CASH": 140
               }
@@ -11245,8 +11245,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -11289,13 +11289,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131
               }
             },
@@ -11672,8 +11672,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -11716,13 +11716,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -12104,8 +12104,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -12148,13 +12148,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -12533,8 +12533,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -12572,13 +12572,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -12957,8 +12957,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -12996,13 +12996,13 @@ export const typesBundle = {
               "_enum": {
                 "ACA": 0,
                 "AUSD": 1,
-                "HEZ": 2,
+                "DOT": 2,
                 "LDOT": 3,
                 "RENBTC": 20,
                 "CASH": 21,
                 "KAR": 128,
                 "KUSD": 129,
-                "DCL": 130,
+                "KSM": 130,
                 "LKSM": 131,
                 "BNC": 168,
                 "VSKSM": 169,
@@ -13381,8 +13381,8 @@ export const typesBundle = {
             "BalanceInfo": {
               "amount": "Balance"
             },
-            "PezkuwiAccountId": "AccountId",
-            "PezkuwiAccountIdOf": "PezkuwiAccountId",
+            "PolkadotAccountId": "AccountId",
+            "PolkadotAccountIdOf": "PolkadotAccountId",
             "ExchangeRate": "FixedU128",
             "Rate": "FixedU128",
             "Ratio": "FixedU128",
@@ -14887,7 +14887,7 @@ export const typesBundle = {
             "section": "zenlinkProtocol"
           },
           "getSovereignsInfo": {
-            "description": "Get the ownership of a certain currency for each teyrchain.",
+            "description": "Get the ownership of a certain currency for each parachain.",
             "params": [
               {
                 "name": "asset_id",
@@ -15375,9 +15375,9 @@ export const typesBundle = {
             "IsExtended": "bool",
             "SystemPalletId": "PalletId",
             "ledger": {
-              "Bizinikiwi": "BizinikiwiLedger"
+              "Substrate": "SubstrateLedger"
             },
-            "BizinikiwiLedger": {
+            "SubstrateLedger": {
               "account": "AccountId",
               "total": "Balance",
               "active": "Balance",
@@ -15451,20 +15451,20 @@ export const typesBundle = {
                 "Withdraw": "Withdraw"
               }
             },
-            "TeyrchainTransactProxyType": {
+            "ParachainTransactProxyType": {
               "_enum": {
                 "Primary": 0,
                 "Derived": 1
               }
             },
-            "TeyrchainDerivedProxyAccountType": {
+            "ParachainDerivedProxyAccountType": {
               "_enum": {
                 "Salp": 0,
                 "Staking": 1
               }
             },
             "Keys": "SessionKeys1",
-            "TeyrchainTransactType": {
+            "ParachainTransactType": {
               "_enum": {
                 "Xcm": 0,
                 "Proxy": 1
@@ -15562,8 +15562,8 @@ export const typesBundle = {
                 "ASG": 0,
                 "BNC": 1,
                 "KUSD": 2,
-                "HEZ": 3,
-                "DCL": 4,
+                "DOT": 3,
+                "KSM": 4,
                 "ETH": 5,
                 "KAR": 6,
                 "ZLK": 7,
@@ -15951,9 +15951,9 @@ export const typesBundle = {
             "IsExtended": "bool",
             "SystemPalletId": "PalletId",
             "ledger": {
-              "Bizinikiwi": "BizinikiwiLedger"
+              "Substrate": "SubstrateLedger"
             },
-            "BizinikiwiLedger": {
+            "SubstrateLedger": {
               "account": "AccountId",
               "total": "Balance",
               "active": "Balance",
@@ -16027,20 +16027,20 @@ export const typesBundle = {
                 "Withdraw": "Withdraw"
               }
             },
-            "TeyrchainTransactProxyType": {
+            "ParachainTransactProxyType": {
               "_enum": {
                 "Primary": 0,
                 "Derived": 1
               }
             },
-            "TeyrchainDerivedProxyAccountType": {
+            "ParachainDerivedProxyAccountType": {
               "_enum": {
                 "Salp": 0,
                 "Staking": 1
               }
             },
             "Keys": "SessionKeys1",
-            "TeyrchainTransactType": {
+            "ParachainTransactType": {
               "_enum": {
                 "Xcm": 0,
                 "Proxy": 1
@@ -16138,8 +16138,8 @@ export const typesBundle = {
                 "ASG": 0,
                 "BNC": 1,
                 "KUSD": 2,
-                "HEZ": 3,
-                "DCL": 4,
+                "DOT": 3,
+                "KSM": 4,
                 "ETH": 5,
                 "KAR": 6,
                 "ZLK": 7,
@@ -17145,7 +17145,7 @@ export const typesBundle = {
             "section": "zenlinkProtocol"
           },
           "getSovereignsInfo": {
-            "description": "Get the ownership of a certain currency for each teyrchain.",
+            "description": "Get the ownership of a certain currency for each parachain.",
             "params": [
               {
                 "name": "asset_id",
@@ -17633,9 +17633,9 @@ export const typesBundle = {
             "IsExtended": "bool",
             "SystemPalletId": "PalletId",
             "ledger": {
-              "Bizinikiwi": "BizinikiwiLedger"
+              "Substrate": "SubstrateLedger"
             },
-            "BizinikiwiLedger": {
+            "SubstrateLedger": {
               "account": "AccountId",
               "total": "Balance",
               "active": "Balance",
@@ -17709,20 +17709,20 @@ export const typesBundle = {
                 "Withdraw": "Withdraw"
               }
             },
-            "TeyrchainTransactProxyType": {
+            "ParachainTransactProxyType": {
               "_enum": {
                 "Primary": 0,
                 "Derived": 1
               }
             },
-            "TeyrchainDerivedProxyAccountType": {
+            "ParachainDerivedProxyAccountType": {
               "_enum": {
                 "Salp": 0,
                 "Staking": 1
               }
             },
             "Keys": "SessionKeys1",
-            "TeyrchainTransactType": {
+            "ParachainTransactType": {
               "_enum": {
                 "Xcm": 0,
                 "Proxy": 1
@@ -17820,8 +17820,8 @@ export const typesBundle = {
                 "ASG": 0,
                 "BNC": 1,
                 "KUSD": 2,
-                "HEZ": 3,
-                "DCL": 4,
+                "DOT": 3,
+                "KSM": 4,
                 "KAR": 6,
                 "ZLK": 7,
                 "PHA": 8,
@@ -18208,9 +18208,9 @@ export const typesBundle = {
             "IsExtended": "bool",
             "SystemPalletId": "PalletId",
             "ledger": {
-              "Bizinikiwi": "BizinikiwiLedger"
+              "Substrate": "SubstrateLedger"
             },
-            "BizinikiwiLedger": {
+            "SubstrateLedger": {
               "account": "AccountId",
               "total": "Balance",
               "active": "Balance",
@@ -18284,20 +18284,20 @@ export const typesBundle = {
                 "Withdraw": "Withdraw"
               }
             },
-            "TeyrchainTransactProxyType": {
+            "ParachainTransactProxyType": {
               "_enum": {
                 "Primary": 0,
                 "Derived": 1
               }
             },
-            "TeyrchainDerivedProxyAccountType": {
+            "ParachainDerivedProxyAccountType": {
               "_enum": {
                 "Salp": 0,
                 "Staking": 1
               }
             },
             "Keys": "SessionKeys1",
-            "TeyrchainTransactType": {
+            "ParachainTransactType": {
               "_enum": {
                 "Xcm": 0,
                 "Proxy": 1
@@ -18395,8 +18395,8 @@ export const typesBundle = {
                 "ASG": 0,
                 "BNC": 1,
                 "KUSD": 2,
-                "HEZ": 3,
-                "DCL": 4,
+                "DOT": 3,
+                "KSM": 4,
                 "KAR": 6,
                 "ZLK": 7,
                 "PHA": 8,
@@ -18722,7 +18722,7 @@ export const typesBundle = {
             "section": "zenlinkProtocol"
           },
           "getSovereignsInfo": {
-            "description": "Get the ownership of a certain currency for each teyrchain.",
+            "description": "Get the ownership of a certain currency for each parachain.",
             "params": [
               {
                 "name": "asset_id",
@@ -19210,9 +19210,9 @@ export const typesBundle = {
             "IsExtended": "bool",
             "SystemPalletId": "PalletId",
             "ledger": {
-              "Bizinikiwi": "BizinikiwiLedger"
+              "Substrate": "SubstrateLedger"
             },
-            "BizinikiwiLedger": {
+            "SubstrateLedger": {
               "account": "AccountId",
               "total": "Balance",
               "active": "Balance",
@@ -19286,20 +19286,20 @@ export const typesBundle = {
                 "Withdraw": "Withdraw"
               }
             },
-            "TeyrchainTransactProxyType": {
+            "ParachainTransactProxyType": {
               "_enum": {
                 "Primary": 0,
                 "Derived": 1
               }
             },
-            "TeyrchainDerivedProxyAccountType": {
+            "ParachainDerivedProxyAccountType": {
               "_enum": {
                 "Salp": 0,
                 "Staking": 1
               }
             },
             "Keys": "SessionKeys1",
-            "TeyrchainTransactType": {
+            "ParachainTransactType": {
               "_enum": {
                 "Xcm": 0,
                 "Proxy": 1
@@ -19397,8 +19397,8 @@ export const typesBundle = {
                 "ASG": 0,
                 "BNC": 1,
                 "KUSD": 2,
-                "HEZ": 3,
-                "DCL": 4,
+                "DOT": 3,
+                "KSM": 4,
                 "KAR": 6,
                 "ZLK": 7,
                 "PHA": 8,
@@ -19785,9 +19785,9 @@ export const typesBundle = {
             "IsExtended": "bool",
             "SystemPalletId": "PalletId",
             "ledger": {
-              "Bizinikiwi": "BizinikiwiLedger"
+              "Substrate": "SubstrateLedger"
             },
-            "BizinikiwiLedger": {
+            "SubstrateLedger": {
               "account": "AccountId",
               "total": "Balance",
               "active": "Balance",
@@ -19861,20 +19861,20 @@ export const typesBundle = {
                 "Withdraw": "Withdraw"
               }
             },
-            "TeyrchainTransactProxyType": {
+            "ParachainTransactProxyType": {
               "_enum": {
                 "Primary": 0,
                 "Derived": 1
               }
             },
-            "TeyrchainDerivedProxyAccountType": {
+            "ParachainDerivedProxyAccountType": {
               "_enum": {
                 "Salp": 0,
                 "Staking": 1
               }
             },
             "Keys": "SessionKeys1",
-            "TeyrchainTransactType": {
+            "ParachainTransactType": {
               "_enum": {
                 "Xcm": 0,
                 "Proxy": 1
@@ -19972,8 +19972,8 @@ export const typesBundle = {
                 "ASG": 0,
                 "BNC": 1,
                 "KUSD": 2,
-                "HEZ": 3,
-                "DCL": 4,
+                "DOT": 3,
+                "KSM": 4,
                 "KAR": 6,
                 "ZLK": 7,
                 "PHA": 8,
@@ -20303,6 +20303,19 @@ export const typesBundle = {
               "bonds": "Vec<(u32, u64)>",
               "weights": "Vec<(u32, u32)>"
             }
+          }
+        }
+      ]
+    },
+    "bizinikiwi-contracts-node": {
+      "types": [
+        {
+          "minmax": [
+            0,
+            null
+          ],
+          "types": {
+            "Keys": "SessionKeys2"
           }
         }
       ]
@@ -21691,8 +21704,8 @@ export const typesBundle = {
         "_enum": {
           "Any": "Null",
           "Named": "Vec<u8>",
-          "Pezkuwi": "Null",
-          "Dicle": "Null"
+          "Polkadot": "Null",
+          "Kusama": "Null"
         }
       },
       "CollectionType": {
@@ -21708,7 +21721,7 @@ export const typesBundle = {
           "NUUM",
           "AUSD",
           "ACA",
-          "HEZ"
+          "DOT"
         ]
       },
       "CountryCurrencyId": "u32",
@@ -21754,7 +21767,7 @@ export const typesBundle = {
       "BlindBoxId": "u64",
       "BlindBoxType": {
         "_enum": [
-          "DCL",
+          "KSM",
           "NUUM",
           "MainnetNFTHat",
           "MainnetNFTJacket",
@@ -27759,441 +27772,443 @@ export const typesBundle = {
       ]
     },
     "heiko": {
-      "rpc": {
-        "oracle": {
-          "getValue": {
-            "description": "Retrieves the oracle value for a given key.",
-            "params": [
-              {
-                "name": "providerId",
-                "type": "RpcDataProviderId"
-              },
-              {
-                "name": "key",
-                "type": "OracleKey"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "Option<TimestampedValue>",
-            "isSubscription": false,
-            "jsonrpc": "oracle_getValue",
-            "method": "getValue",
-            "section": "oracle"
+      "parallel": {
+        "rpc": {
+          "oracle": {
+            "getValue": {
+              "description": "Retrieves the oracle value for a given key.",
+              "params": [
+                {
+                  "name": "providerId",
+                  "type": "RpcDataProviderId"
+                },
+                {
+                  "name": "key",
+                  "type": "OracleKey"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "Option<TimestampedValue>",
+              "isSubscription": false,
+              "jsonrpc": "oracle_getValue",
+              "method": "getValue",
+              "section": "oracle"
+            },
+            "getAllValues": {
+              "description": "Retrieves all oracle values.",
+              "params": [
+                {
+                  "name": "providerId",
+                  "type": "RpcDataProviderId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "Vec<(OracleKey, Option<TimestampedValue>)>",
+              "isSubscription": false,
+              "jsonrpc": "oracle_getAllValues",
+              "method": "getAllValues",
+              "section": "oracle"
+            }
           },
-          "getAllValues": {
-            "description": "Retrieves all oracle values.",
-            "params": [
-              {
-                "name": "providerId",
-                "type": "RpcDataProviderId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "Vec<(OracleKey, Option<TimestampedValue>)>",
-            "isSubscription": false,
-            "jsonrpc": "oracle_getAllValues",
-            "method": "getAllValues",
-            "section": "oracle"
+          "tokens": {
+            "queryExistentialDeposit": {
+              "description": "Query Existential Deposit for a given currency.",
+              "params": [
+                {
+                  "name": "currencyId",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "NumberOrHex",
+              "isSubscription": false,
+              "jsonrpc": "tokens_queryExistentialDeposit",
+              "method": "queryExistentialDeposit",
+              "section": "tokens"
+            }
+          },
+          "loans": {
+            "getCollateralLiquidity": {
+              "description": "Retrieves collateral liquidity for the given user.",
+              "params": [
+                {
+                  "name": "account",
+                  "type": "AccountId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getCollateralLiquidity",
+              "method": "getCollateralLiquidity",
+              "section": "loans"
+            },
+            "getLiquidationThresholdLiquidity": {
+              "description": "Retrieves liquidation threshold liquidity for the given user.",
+              "params": [
+                {
+                  "name": "account",
+                  "type": "AccountId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getLiquidationThresholdLiquidity",
+              "method": "getLiquidationThresholdLiquidity",
+              "section": "loans"
+            },
+            "getMarketStatus": {
+              "description": "Retrieves market status data for a given asset id.",
+              "params": [
+                {
+                  "name": "asset_id",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Rate, Rate, Rate, Ratio, Balance, Balance, FixedU128)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getMarketStatus",
+              "method": "getMarketStatus",
+              "section": "loans"
+            }
+          },
+          "router": {
+            "getBestRoute": {
+              "description": "Returns the route that results in the largest amount out for amount in",
+              "params": [
+                {
+                  "name": "amount",
+                  "type": "Balance"
+                },
+                {
+                  "name": "token_in",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "token_out",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "reversed",
+                  "type": "bool"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Vec<CurrencyId>, FixedU128)",
+              "isSubscription": false,
+              "jsonrpc": "router_getBestRoute",
+              "method": "getBestRoute",
+              "section": "router"
+            }
           }
         },
-        "tokens": {
-          "queryExistentialDeposit": {
-            "description": "Query Existential Deposit for a given currency.",
-            "params": [
-              {
-                "name": "currencyId",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "NumberOrHex",
-            "isSubscription": false,
-            "jsonrpc": "tokens_queryExistentialDeposit",
-            "method": "queryExistentialDeposit",
-            "section": "tokens"
-          }
+        "instances": {
+          "council": [
+            "generalCouncil"
+          ]
         },
-        "loans": {
-          "getCollateralLiquidity": {
-            "description": "Retrieves collateral liquidity for the given user.",
-            "params": [
-              {
-                "name": "account",
-                "type": "AccountId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
+        "types": [
+          {
+            "minmax": [
+              0,
+              null
             ],
-            "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getCollateralLiquidity",
-            "method": "getCollateralLiquidity",
-            "section": "loans"
-          },
-          "getLiquidationThresholdLiquidity": {
-            "description": "Retrieves liquidation threshold liquidity for the given user.",
-            "params": [
-              {
-                "name": "account",
-                "type": "AccountId"
+            "types": {
+              "CallOf": "Call",
+              "DispatchTime": {
+                "_enum": {
+                  "At": "BlockNumber",
+                  "After": "BlockNumber"
+                }
               },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getLiquidationThresholdLiquidity",
-            "method": "getLiquidationThresholdLiquidity",
-            "section": "loans"
-          },
-          "getMarketStatus": {
-            "description": "Retrieves market status data for a given asset id.",
-            "params": [
-              {
-                "name": "asset_id",
-                "type": "CurrencyId"
+              "ScheduleTaskIndex": "u32",
+              "DelayedOrigin": {
+                "delay": "BlockNumber",
+                "origin": "PalletsOrigin"
               },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Rate, Rate, Rate, Ratio, Balance, Balance, FixedU128)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getMarketStatus",
-            "method": "getMarketStatus",
-            "section": "loans"
+              "AuthorityOrigin": "DelayedOrigin",
+              "StorageValue": "Vec<u8>",
+              "GraduallyUpdate": {
+                "key": "StorageKey",
+                "targetValue": "StorageValue",
+                "perBlock": "StorageValue"
+              },
+              "StorageKeyBytes": "Vec<u8>",
+              "StorageValueBytes": "Vec<u8>",
+              "RpcDataProviderId": "Text",
+              "DataProviderId": "u8",
+              "TimestampedValue": {
+                "value": "OracleValue",
+                "timestamp": "Moment"
+              },
+              "TimestampedValueOf": "TimestampedValue",
+              "OrderedSet": "Vec<AccountId>",
+              "OrmlAccountData": {
+                "free": "Balance",
+                "reserved": "Balance",
+                "frozen": "Balance"
+              },
+              "OrmlBalanceLock": {
+                "amount": "Balance",
+                "id": "LockIdentifier"
+              },
+              "AuctionInfo": {
+                "bid": "Option<(AccountId, Balance)>",
+                "start": "BlockNumber",
+                "end": "Option<BlockNumber>"
+              },
+              "DelayedDispatchTime": {
+                "_enum": {
+                  "At": "BlockNumber",
+                  "After": "BlockNumber"
+                }
+              },
+              "DispatchId": "u32",
+              "Price": "FixedU128",
+              "OrmlVestingSchedule": {
+                "start": "BlockNumber",
+                "period": "BlockNumber",
+                "periodCount": "u32",
+                "perPeriod": "Compact<Balance>"
+              },
+              "VestingScheduleOf": "OrmlVestingSchedule",
+              "OrmlCurrencyId": "u8",
+              "PoolInfo": {
+                "isActive": "bool",
+                "totalDeposited": "Balance",
+                "unlockHeight": "BlockNumber",
+                "coolDownDuration": "BlockNumber",
+                "rewardDuration": "BlockNumber",
+                "periodFinish": "BlockNumber",
+                "lastUpdateBlock": "BlockNumber",
+                "rewardRate": "Balance",
+                "rewardPerShareStored": "Balance"
+              },
+              "CompactBalance": "Compact<Balance>",
+              "PoolInfoV0": {
+                "totalShares": "Compact<Share>",
+                "totalRewards": "CompactBalance",
+                "totalWithdrawnRewards": "CompactBalance"
+              },
+              "Share": "u128",
+              "OracleValue": "Price",
+              "Deposits": {
+                "voucherBalance": "Balance",
+                "isCollateral": "bool"
+              },
+              "BorrowSnapshot": {
+                "principal": "Balance",
+                "borrowIndex": "u128"
+              },
+              "EarnedSnapshot": {
+                "totalEarnedPrior": "Balance",
+                "exchangeRatePrior": "u128"
+              },
+              "JumpModel": {
+                "baseRate": "Rate",
+                "jumpRate": "Rate",
+                "fullRate": "Rate",
+                "jumpUtilization": "Ratio"
+              },
+              "CurveModel": {
+                "baseRate": "Rate"
+              },
+              "InterestRateModel": {
+                "_enum": {
+                  "JumpModel": "JumpModel",
+                  "CurveModel": "CurveModel"
+                }
+              },
+              "Market": {
+                "collateralFactor": "Ratio",
+                "liquidationThreshold": "Ratio",
+                "reserveFactor": "Ratio",
+                "closeFactor": "Ratio",
+                "liquidateIncentive": "Rate",
+                "liquidateIncentiveReservedFactor": "Ratio",
+                "rateModel": "InterestRateModel",
+                "state": "MarketState",
+                "supplyCap": "Balance",
+                "borrowCap": "Balance",
+                "ptokenId": "CurrencyId"
+              },
+              "MarketState": {
+                "_enum": [
+                  "Active",
+                  "Pending",
+                  "Supervision"
+                ]
+              },
+              "RewardMarketState": {
+                "index": "Balance",
+                "block": "BlockNumber"
+              },
+              "Liquidity": "FixedU128",
+              "Shortfall": "FixedU128",
+              "ReservableAmount": {
+                "total": "Balance",
+                "reserved": "Balance"
+              },
+              "MatchingLedger": {
+                "totalStakeAmount": "ReservableAmount",
+                "totalUnstakeAmount": "ReservableAmount"
+              },
+              "UnlockChunk": {
+                "value": "Balance",
+                "era": "EraIndex"
+              },
+              "StakingLedger": {
+                "stash": "AccountId",
+                "total": "Balance",
+                "active": "Balance",
+                "unlocking": "Vec<UnlockChunk>",
+                "claimedRewards": "Vec<EraIndex>"
+              },
+              "DerivativeIndex": "u16",
+              "Pool": {
+                "baseAmount": "Balance",
+                "quoteAmount": "Balance",
+                "baseAmountLast": "Balance",
+                "quoteAmountLast": "Balance",
+                "lpTokenId": "AssetId",
+                "blockTimestampLast": "BlockNumber",
+                "price0CumulativeLast": "Balance",
+                "price1CumulativeLast": "Balance"
+              },
+              "Amount": "i128",
+              "AmountOf": "Amount",
+              "Rate": "FixedU128",
+              "Ratio": "Permill",
+              "Timestamp": "u64",
+              "PriceDetail": "(Price, Timestamp)",
+              "CurrencyId": "AssetId",
+              "CurrencyIdOf": "CurrencyId",
+              "Currency": "CurrencyId",
+              "AssetIdOf": "AssetId",
+              "OracleKey": "AssetId",
+              "BoundedBalance": "BoundedVec<(Balance, BlockNumber), u32>",
+              "UserPosition": {
+                "depositBalance": "Balance",
+                "lockBalanceItems": "BoundedBalance",
+                "rewardAmount": "Balance",
+                "rewardPerSharePaid": "Balance"
+              },
+              "Route": "Vec<(AssetId, AssetId)>",
+              "VaultPhase": {
+                "_enum": [
+                  "Pending",
+                  "Contributing",
+                  "Closed",
+                  "Failed",
+                  "Succeeded",
+                  "Expired"
+                ]
+              },
+              "ContributionStrategy": {
+                "_enum": [
+                  "XCM",
+                  "XCMPROXY"
+                ]
+              },
+              "ChildStorageKind": {
+                "_enum": [
+                  "Pending",
+                  "Flying",
+                  "Contributed"
+                ]
+              },
+              "TrieIndex": "u32",
+              "LeasePeriod": "BlockNumber",
+              "Vault": {
+                "ctoken": "AssetId",
+                "phase": "VaultPhase",
+                "contributed": "Balance",
+                "pending": "Balance",
+                "flying": "Balance",
+                "contributionStrategy": "ContributionStrategy",
+                "cap": "Balance",
+                "endBlock": "BlockNumber",
+                "trieIndex": "TrieIndex",
+                "leaseStart": "LeasePeriod",
+                "leaseEnd": "LeasePeriod"
+              },
+              "XcmWeightFeeMisc": {
+                "weight": "Weight",
+                "fee": "Balance"
+              },
+              "XcmCall": {
+                "_enum": [
+                  "Bond",
+                  "BondExtra",
+                  "Unbond",
+                  "Rebond",
+                  "WithdrawUnbonded",
+                  "Nominate",
+                  "Contribute",
+                  "Withdraw",
+                  "AddMemo"
+                ]
+              },
+              "BridgeToken": {
+                "id": "CurrencyId",
+                "external": "bool",
+                "fee": "Balance"
+              },
+              "ProposalStatus": {
+                "_enum": [
+                  "Initiated",
+                  "Approved",
+                  "Rejected"
+                ]
+              },
+              "Address": "MultiAddress",
+              "LookupSource": "MultiAddress",
+              "TAssetBalance": "u128"
+            }
           }
-        },
-        "router": {
-          "getBestRoute": {
-            "description": "Returns the route that results in the largest amount out for amount in",
-            "params": [
-              {
-                "name": "amount",
-                "type": "Balance"
-              },
-              {
-                "name": "token_in",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "token_out",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "reversed",
-                "type": "bool"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Vec<CurrencyId>, FixedU128)",
-            "isSubscription": false,
-            "jsonrpc": "router_getBestRoute",
-            "method": "getBestRoute",
-            "section": "router"
+        ],
+        "alias": {
+          "tokens": {
+            "AccountData": "OrmlAccountData",
+            "BalanceLock": "OrmlBalanceLock"
           }
-        }
-      },
-      "instances": {
-        "council": [
-          "generalCouncil"
-        ]
-      },
-      "types": [
-        {
-          "minmax": [
-            0,
-            null
-          ],
-          "types": {
-            "CallOf": "Call",
-            "DispatchTime": {
-              "_enum": {
-                "At": "BlockNumber",
-                "After": "BlockNumber"
-              }
-            },
-            "ScheduleTaskIndex": "u32",
-            "DelayedOrigin": {
-              "delay": "BlockNumber",
-              "origin": "PalletsOrigin"
-            },
-            "AuthorityOrigin": "DelayedOrigin",
-            "StorageValue": "Vec<u8>",
-            "GraduallyUpdate": {
-              "key": "StorageKey",
-              "targetValue": "StorageValue",
-              "perBlock": "StorageValue"
-            },
-            "StorageKeyBytes": "Vec<u8>",
-            "StorageValueBytes": "Vec<u8>",
-            "RpcDataProviderId": "Text",
-            "DataProviderId": "u8",
-            "TimestampedValue": {
-              "value": "OracleValue",
-              "timestamp": "Moment"
-            },
-            "TimestampedValueOf": "TimestampedValue",
-            "OrderedSet": "Vec<AccountId>",
-            "OrmlAccountData": {
-              "free": "Balance",
-              "reserved": "Balance",
-              "frozen": "Balance"
-            },
-            "OrmlBalanceLock": {
-              "amount": "Balance",
-              "id": "LockIdentifier"
-            },
-            "AuctionInfo": {
-              "bid": "Option<(AccountId, Balance)>",
-              "start": "BlockNumber",
-              "end": "Option<BlockNumber>"
-            },
-            "DelayedDispatchTime": {
-              "_enum": {
-                "At": "BlockNumber",
-                "After": "BlockNumber"
-              }
-            },
-            "DispatchId": "u32",
-            "Price": "FixedU128",
-            "OrmlVestingSchedule": {
-              "start": "BlockNumber",
-              "period": "BlockNumber",
-              "periodCount": "u32",
-              "perPeriod": "Compact<Balance>"
-            },
-            "VestingScheduleOf": "OrmlVestingSchedule",
-            "OrmlCurrencyId": "u8",
-            "PoolInfo": {
-              "isActive": "bool",
-              "totalDeposited": "Balance",
-              "unlockHeight": "BlockNumber",
-              "coolDownDuration": "BlockNumber",
-              "rewardDuration": "BlockNumber",
-              "periodFinish": "BlockNumber",
-              "lastUpdateBlock": "BlockNumber",
-              "rewardRate": "Balance",
-              "rewardPerShareStored": "Balance"
-            },
-            "CompactBalance": "Compact<Balance>",
-            "PoolInfoV0": {
-              "totalShares": "Compact<Share>",
-              "totalRewards": "CompactBalance",
-              "totalWithdrawnRewards": "CompactBalance"
-            },
-            "Share": "u128",
-            "OracleValue": "Price",
-            "Deposits": {
-              "voucherBalance": "Balance",
-              "isCollateral": "bool"
-            },
-            "BorrowSnapshot": {
-              "principal": "Balance",
-              "borrowIndex": "u128"
-            },
-            "EarnedSnapshot": {
-              "totalEarnedPrior": "Balance",
-              "exchangeRatePrior": "u128"
-            },
-            "JumpModel": {
-              "baseRate": "Rate",
-              "jumpRate": "Rate",
-              "fullRate": "Rate",
-              "jumpUtilization": "Ratio"
-            },
-            "CurveModel": {
-              "baseRate": "Rate"
-            },
-            "InterestRateModel": {
-              "_enum": {
-                "JumpModel": "JumpModel",
-                "CurveModel": "CurveModel"
-              }
-            },
-            "Market": {
-              "collateralFactor": "Ratio",
-              "liquidationThreshold": "Ratio",
-              "reserveFactor": "Ratio",
-              "closeFactor": "Ratio",
-              "liquidateIncentive": "Rate",
-              "liquidateIncentiveReservedFactor": "Ratio",
-              "rateModel": "InterestRateModel",
-              "state": "MarketState",
-              "supplyCap": "Balance",
-              "borrowCap": "Balance",
-              "ptokenId": "CurrencyId"
-            },
-            "MarketState": {
-              "_enum": [
-                "Active",
-                "Pending",
-                "Supervision"
-              ]
-            },
-            "RewardMarketState": {
-              "index": "Balance",
-              "block": "BlockNumber"
-            },
-            "Liquidity": "FixedU128",
-            "Shortfall": "FixedU128",
-            "ReservableAmount": {
-              "total": "Balance",
-              "reserved": "Balance"
-            },
-            "MatchingLedger": {
-              "totalStakeAmount": "ReservableAmount",
-              "totalUnstakeAmount": "ReservableAmount"
-            },
-            "UnlockChunk": {
-              "value": "Balance",
-              "era": "EraIndex"
-            },
-            "StakingLedger": {
-              "stash": "AccountId",
-              "total": "Balance",
-              "active": "Balance",
-              "unlocking": "Vec<UnlockChunk>",
-              "claimedRewards": "Vec<EraIndex>"
-            },
-            "DerivativeIndex": "u16",
-            "Pool": {
-              "baseAmount": "Balance",
-              "quoteAmount": "Balance",
-              "baseAmountLast": "Balance",
-              "quoteAmountLast": "Balance",
-              "lpTokenId": "AssetId",
-              "blockTimestampLast": "BlockNumber",
-              "price0CumulativeLast": "Balance",
-              "price1CumulativeLast": "Balance"
-            },
-            "Amount": "i128",
-            "AmountOf": "Amount",
-            "Rate": "FixedU128",
-            "Ratio": "Permill",
-            "Timestamp": "u64",
-            "PriceDetail": "(Price, Timestamp)",
-            "CurrencyId": "AssetId",
-            "CurrencyIdOf": "CurrencyId",
-            "Currency": "CurrencyId",
-            "AssetIdOf": "AssetId",
-            "OracleKey": "AssetId",
-            "BoundedBalance": "BoundedVec<(Balance, BlockNumber), u32>",
-            "UserPosition": {
-              "depositBalance": "Balance",
-              "lockBalanceItems": "BoundedBalance",
-              "rewardAmount": "Balance",
-              "rewardPerSharePaid": "Balance"
-            },
-            "Route": "Vec<(AssetId, AssetId)>",
-            "VaultPhase": {
-              "_enum": [
-                "Pending",
-                "Contributing",
-                "Closed",
-                "Failed",
-                "Succeeded",
-                "Expired"
-              ]
-            },
-            "ContributionStrategy": {
-              "_enum": [
-                "XCM",
-                "XCMPROXY"
-              ]
-            },
-            "ChildStorageKind": {
-              "_enum": [
-                "Pending",
-                "Flying",
-                "Contributed"
-              ]
-            },
-            "TrieIndex": "u32",
-            "LeasePeriod": "BlockNumber",
-            "Vault": {
-              "ctoken": "AssetId",
-              "phase": "VaultPhase",
-              "contributed": "Balance",
-              "pending": "Balance",
-              "flying": "Balance",
-              "contributionStrategy": "ContributionStrategy",
-              "cap": "Balance",
-              "endBlock": "BlockNumber",
-              "trieIndex": "TrieIndex",
-              "leaseStart": "LeasePeriod",
-              "leaseEnd": "LeasePeriod"
-            },
-            "XcmWeightFeeMisc": {
-              "weight": "Weight",
-              "fee": "Balance"
-            },
-            "XcmCall": {
-              "_enum": [
-                "Bond",
-                "BondExtra",
-                "Unbond",
-                "Rebond",
-                "WithdrawUnbonded",
-                "Nominate",
-                "Contribute",
-                "Withdraw",
-                "AddMemo"
-              ]
-            },
-            "BridgeToken": {
-              "id": "CurrencyId",
-              "external": "bool",
-              "fee": "Balance"
-            },
-            "ProposalStatus": {
-              "_enum": [
-                "Initiated",
-                "Approved",
-                "Rejected"
-              ]
-            },
-            "Address": "MultiAddress",
-            "LookupSource": "MultiAddress",
-            "TAssetBalance": "u128"
-          }
-        }
-      ],
-      "alias": {
-        "tokens": {
-          "AccountData": "OrmlAccountData",
-          "BalanceLock": "OrmlBalanceLock"
         }
       }
     },
@@ -28331,7 +28346,7 @@ export const typesBundle = {
         }
       ]
     },
-    "interbtc-teyrchain": {
+    "interbtc-standalone": {
       "default": {
         "types": [
           {
@@ -28399,20 +28414,20 @@ export const typesBundle = {
               "SignedFixedPoint": "FixedU128",
               "TokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
               },
               "InterbtcPrimitivesTokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
@@ -28894,7 +28909,7 @@ export const typesBundle = {
         }
       }
     },
-    "interbtc-standalone": {
+    "interbtc-teyrchain": {
       "default": {
         "types": [
           {
@@ -28962,20 +28977,20 @@ export const typesBundle = {
               "SignedFixedPoint": "FixedU128",
               "TokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
               },
               "InterbtcPrimitivesTokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
@@ -29525,20 +29540,20 @@ export const typesBundle = {
               "SignedFixedPoint": "FixedU128",
               "TokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
               },
               "InterbtcPrimitivesTokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
@@ -30186,7 +30201,7 @@ export const typesBundle = {
           {
             "methods": {
               "doton_mint_amount_with_dot": {
-                "description": "Amount of DOTON that expected to be minted from passed HEZ amount.",
+                "description": "Amount of DOTON that expected to be minted from passed DOT amount.",
                 "params": [
                   {
                     "name": "amount",
@@ -30196,7 +30211,7 @@ export const typesBundle = {
                 "type": "Result<Balance, DispatchError>"
               },
               "dot_redeem_amount_with_doton": {
-                "description": "Amount of HEZ that expected to be redeemed with passed amount of DOTON.",
+                "description": "Amount of DOT that expected to be redeemed with passed amount of DOTON.",
                 "params": [
                   {
                     "name": "amount",
@@ -30206,12 +30221,12 @@ export const typesBundle = {
                 "type": "Result<Balance, DispatchError>"
               },
               "min_mint_from_dot_amount": {
-                "description": "Minimal amount of HEZ to stake through DOTON module.",
+                "description": "Minimal amount of DOT to stake through DOTON module.",
                 "params": [],
                 "type": "Result<Balance, DispatchError>"
               },
               "min_redeem_to_dot_amount": {
-                "description": "Minimal amount of DOTON to redeem HEZ.",
+                "description": "Minimal amount of DOTON to redeem DOT.",
                 "params": [],
                 "type": "Result<Balance, DispatchError>"
               },
@@ -30236,7 +30251,7 @@ export const typesBundle = {
                 "type": "Result<Balance, DispatchError>"
               },
               "max_doton_amount_to_redeem_into_dot": {
-                "description": "Maximum amount of DOTON to request redeem to HEZ due to the vault state.",
+                "description": "Maximum amount of DOTON to request redeem to DOT due to the vault state.",
                 "params": [],
                 "type": "Result<Balance, DispatchError>"
               },
@@ -30249,7 +30264,7 @@ export const typesBundle = {
             "version": 1
           }
         ],
-        "TeyrchainStaking": [
+        "ParachainStaking": [
           {
             "methods": {
               "get_staking_rates": {
@@ -30285,7 +30300,7 @@ export const typesBundle = {
           {
             "methods": {
               "maybe_remaining_dot_stake_limit": {
-                "description": "Remaining HEZ amount that account allowed to stake. Returns None if no limit.",
+                "description": "Remaining DOT amount that account allowed to stake. Returns None if no limit.",
                 "params": [
                   {
                     "name": "account",
@@ -30311,6 +30326,20 @@ export const typesBundle = {
       },
       "rpc": {},
       "signedExtensions": {}
+    },
+    "jupiter-pezkuwichain": {
+      "types": [
+        {
+          "minmax": [
+            0,
+            null
+          ],
+          "types": {
+            "LookupSource": "MultiAddress",
+            "Address": "MultiAddress"
+          }
+        }
+      ]
     },
     "jupiter-prep": {
       "types": [
@@ -30381,20 +30410,6 @@ export const typesBundle = {
         }
       ]
     },
-    "jupiter-pezkuwichain": {
-      "types": [
-        {
-          "minmax": [
-            0,
-            null
-          ],
-          "types": {
-            "LookupSource": "MultiAddress",
-            "Address": "MultiAddress"
-          }
-        }
-      ]
-    },
     "jur-chain": {
       "types": [
         {
@@ -30418,441 +30433,443 @@ export const typesBundle = {
       ]
     },
     "kerria": {
-      "rpc": {
-        "oracle": {
-          "getValue": {
-            "description": "Retrieves the oracle value for a given key.",
-            "params": [
-              {
-                "name": "providerId",
-                "type": "RpcDataProviderId"
-              },
-              {
-                "name": "key",
-                "type": "OracleKey"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "Option<TimestampedValue>",
-            "isSubscription": false,
-            "jsonrpc": "oracle_getValue",
-            "method": "getValue",
-            "section": "oracle"
+      "parallel": {
+        "rpc": {
+          "oracle": {
+            "getValue": {
+              "description": "Retrieves the oracle value for a given key.",
+              "params": [
+                {
+                  "name": "providerId",
+                  "type": "RpcDataProviderId"
+                },
+                {
+                  "name": "key",
+                  "type": "OracleKey"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "Option<TimestampedValue>",
+              "isSubscription": false,
+              "jsonrpc": "oracle_getValue",
+              "method": "getValue",
+              "section": "oracle"
+            },
+            "getAllValues": {
+              "description": "Retrieves all oracle values.",
+              "params": [
+                {
+                  "name": "providerId",
+                  "type": "RpcDataProviderId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "Vec<(OracleKey, Option<TimestampedValue>)>",
+              "isSubscription": false,
+              "jsonrpc": "oracle_getAllValues",
+              "method": "getAllValues",
+              "section": "oracle"
+            }
           },
-          "getAllValues": {
-            "description": "Retrieves all oracle values.",
-            "params": [
-              {
-                "name": "providerId",
-                "type": "RpcDataProviderId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "Vec<(OracleKey, Option<TimestampedValue>)>",
-            "isSubscription": false,
-            "jsonrpc": "oracle_getAllValues",
-            "method": "getAllValues",
-            "section": "oracle"
+          "tokens": {
+            "queryExistentialDeposit": {
+              "description": "Query Existential Deposit for a given currency.",
+              "params": [
+                {
+                  "name": "currencyId",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "NumberOrHex",
+              "isSubscription": false,
+              "jsonrpc": "tokens_queryExistentialDeposit",
+              "method": "queryExistentialDeposit",
+              "section": "tokens"
+            }
+          },
+          "loans": {
+            "getCollateralLiquidity": {
+              "description": "Retrieves collateral liquidity for the given user.",
+              "params": [
+                {
+                  "name": "account",
+                  "type": "AccountId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getCollateralLiquidity",
+              "method": "getCollateralLiquidity",
+              "section": "loans"
+            },
+            "getLiquidationThresholdLiquidity": {
+              "description": "Retrieves liquidation threshold liquidity for the given user.",
+              "params": [
+                {
+                  "name": "account",
+                  "type": "AccountId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getLiquidationThresholdLiquidity",
+              "method": "getLiquidationThresholdLiquidity",
+              "section": "loans"
+            },
+            "getMarketStatus": {
+              "description": "Retrieves market status data for a given asset id.",
+              "params": [
+                {
+                  "name": "asset_id",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Rate, Rate, Rate, Ratio, Balance, Balance, FixedU128)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getMarketStatus",
+              "method": "getMarketStatus",
+              "section": "loans"
+            }
+          },
+          "router": {
+            "getBestRoute": {
+              "description": "Returns the route that results in the largest amount out for amount in",
+              "params": [
+                {
+                  "name": "amount",
+                  "type": "Balance"
+                },
+                {
+                  "name": "token_in",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "token_out",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "reversed",
+                  "type": "bool"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Vec<CurrencyId>, FixedU128)",
+              "isSubscription": false,
+              "jsonrpc": "router_getBestRoute",
+              "method": "getBestRoute",
+              "section": "router"
+            }
           }
         },
-        "tokens": {
-          "queryExistentialDeposit": {
-            "description": "Query Existential Deposit for a given currency.",
-            "params": [
-              {
-                "name": "currencyId",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "NumberOrHex",
-            "isSubscription": false,
-            "jsonrpc": "tokens_queryExistentialDeposit",
-            "method": "queryExistentialDeposit",
-            "section": "tokens"
-          }
+        "instances": {
+          "council": [
+            "generalCouncil"
+          ]
         },
-        "loans": {
-          "getCollateralLiquidity": {
-            "description": "Retrieves collateral liquidity for the given user.",
-            "params": [
-              {
-                "name": "account",
-                "type": "AccountId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
+        "types": [
+          {
+            "minmax": [
+              0,
+              null
             ],
-            "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getCollateralLiquidity",
-            "method": "getCollateralLiquidity",
-            "section": "loans"
-          },
-          "getLiquidationThresholdLiquidity": {
-            "description": "Retrieves liquidation threshold liquidity for the given user.",
-            "params": [
-              {
-                "name": "account",
-                "type": "AccountId"
+            "types": {
+              "CallOf": "Call",
+              "DispatchTime": {
+                "_enum": {
+                  "At": "BlockNumber",
+                  "After": "BlockNumber"
+                }
               },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getLiquidationThresholdLiquidity",
-            "method": "getLiquidationThresholdLiquidity",
-            "section": "loans"
-          },
-          "getMarketStatus": {
-            "description": "Retrieves market status data for a given asset id.",
-            "params": [
-              {
-                "name": "asset_id",
-                "type": "CurrencyId"
+              "ScheduleTaskIndex": "u32",
+              "DelayedOrigin": {
+                "delay": "BlockNumber",
+                "origin": "PalletsOrigin"
               },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Rate, Rate, Rate, Ratio, Balance, Balance, FixedU128)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getMarketStatus",
-            "method": "getMarketStatus",
-            "section": "loans"
+              "AuthorityOrigin": "DelayedOrigin",
+              "StorageValue": "Vec<u8>",
+              "GraduallyUpdate": {
+                "key": "StorageKey",
+                "targetValue": "StorageValue",
+                "perBlock": "StorageValue"
+              },
+              "StorageKeyBytes": "Vec<u8>",
+              "StorageValueBytes": "Vec<u8>",
+              "RpcDataProviderId": "Text",
+              "DataProviderId": "u8",
+              "TimestampedValue": {
+                "value": "OracleValue",
+                "timestamp": "Moment"
+              },
+              "TimestampedValueOf": "TimestampedValue",
+              "OrderedSet": "Vec<AccountId>",
+              "OrmlAccountData": {
+                "free": "Balance",
+                "reserved": "Balance",
+                "frozen": "Balance"
+              },
+              "OrmlBalanceLock": {
+                "amount": "Balance",
+                "id": "LockIdentifier"
+              },
+              "AuctionInfo": {
+                "bid": "Option<(AccountId, Balance)>",
+                "start": "BlockNumber",
+                "end": "Option<BlockNumber>"
+              },
+              "DelayedDispatchTime": {
+                "_enum": {
+                  "At": "BlockNumber",
+                  "After": "BlockNumber"
+                }
+              },
+              "DispatchId": "u32",
+              "Price": "FixedU128",
+              "OrmlVestingSchedule": {
+                "start": "BlockNumber",
+                "period": "BlockNumber",
+                "periodCount": "u32",
+                "perPeriod": "Compact<Balance>"
+              },
+              "VestingScheduleOf": "OrmlVestingSchedule",
+              "OrmlCurrencyId": "u8",
+              "PoolInfo": {
+                "isActive": "bool",
+                "totalDeposited": "Balance",
+                "unlockHeight": "BlockNumber",
+                "coolDownDuration": "BlockNumber",
+                "rewardDuration": "BlockNumber",
+                "periodFinish": "BlockNumber",
+                "lastUpdateBlock": "BlockNumber",
+                "rewardRate": "Balance",
+                "rewardPerShareStored": "Balance"
+              },
+              "CompactBalance": "Compact<Balance>",
+              "PoolInfoV0": {
+                "totalShares": "Compact<Share>",
+                "totalRewards": "CompactBalance",
+                "totalWithdrawnRewards": "CompactBalance"
+              },
+              "Share": "u128",
+              "OracleValue": "Price",
+              "Deposits": {
+                "voucherBalance": "Balance",
+                "isCollateral": "bool"
+              },
+              "BorrowSnapshot": {
+                "principal": "Balance",
+                "borrowIndex": "u128"
+              },
+              "EarnedSnapshot": {
+                "totalEarnedPrior": "Balance",
+                "exchangeRatePrior": "u128"
+              },
+              "JumpModel": {
+                "baseRate": "Rate",
+                "jumpRate": "Rate",
+                "fullRate": "Rate",
+                "jumpUtilization": "Ratio"
+              },
+              "CurveModel": {
+                "baseRate": "Rate"
+              },
+              "InterestRateModel": {
+                "_enum": {
+                  "JumpModel": "JumpModel",
+                  "CurveModel": "CurveModel"
+                }
+              },
+              "Market": {
+                "collateralFactor": "Ratio",
+                "liquidationThreshold": "Ratio",
+                "reserveFactor": "Ratio",
+                "closeFactor": "Ratio",
+                "liquidateIncentive": "Rate",
+                "liquidateIncentiveReservedFactor": "Ratio",
+                "rateModel": "InterestRateModel",
+                "state": "MarketState",
+                "supplyCap": "Balance",
+                "borrowCap": "Balance",
+                "ptokenId": "CurrencyId"
+              },
+              "MarketState": {
+                "_enum": [
+                  "Active",
+                  "Pending",
+                  "Supervision"
+                ]
+              },
+              "RewardMarketState": {
+                "index": "Balance",
+                "block": "BlockNumber"
+              },
+              "Liquidity": "FixedU128",
+              "Shortfall": "FixedU128",
+              "ReservableAmount": {
+                "total": "Balance",
+                "reserved": "Balance"
+              },
+              "MatchingLedger": {
+                "totalStakeAmount": "ReservableAmount",
+                "totalUnstakeAmount": "ReservableAmount"
+              },
+              "UnlockChunk": {
+                "value": "Balance",
+                "era": "EraIndex"
+              },
+              "StakingLedger": {
+                "stash": "AccountId",
+                "total": "Balance",
+                "active": "Balance",
+                "unlocking": "Vec<UnlockChunk>",
+                "claimedRewards": "Vec<EraIndex>"
+              },
+              "DerivativeIndex": "u16",
+              "Pool": {
+                "baseAmount": "Balance",
+                "quoteAmount": "Balance",
+                "baseAmountLast": "Balance",
+                "quoteAmountLast": "Balance",
+                "lpTokenId": "AssetId",
+                "blockTimestampLast": "BlockNumber",
+                "price0CumulativeLast": "Balance",
+                "price1CumulativeLast": "Balance"
+              },
+              "Amount": "i128",
+              "AmountOf": "Amount",
+              "Rate": "FixedU128",
+              "Ratio": "Permill",
+              "Timestamp": "u64",
+              "PriceDetail": "(Price, Timestamp)",
+              "CurrencyId": "AssetId",
+              "CurrencyIdOf": "CurrencyId",
+              "Currency": "CurrencyId",
+              "AssetIdOf": "AssetId",
+              "OracleKey": "AssetId",
+              "BoundedBalance": "BoundedVec<(Balance, BlockNumber), u32>",
+              "UserPosition": {
+                "depositBalance": "Balance",
+                "lockBalanceItems": "BoundedBalance",
+                "rewardAmount": "Balance",
+                "rewardPerSharePaid": "Balance"
+              },
+              "Route": "Vec<(AssetId, AssetId)>",
+              "VaultPhase": {
+                "_enum": [
+                  "Pending",
+                  "Contributing",
+                  "Closed",
+                  "Failed",
+                  "Succeeded",
+                  "Expired"
+                ]
+              },
+              "ContributionStrategy": {
+                "_enum": [
+                  "XCM",
+                  "XCMPROXY"
+                ]
+              },
+              "ChildStorageKind": {
+                "_enum": [
+                  "Pending",
+                  "Flying",
+                  "Contributed"
+                ]
+              },
+              "TrieIndex": "u32",
+              "LeasePeriod": "BlockNumber",
+              "Vault": {
+                "ctoken": "AssetId",
+                "phase": "VaultPhase",
+                "contributed": "Balance",
+                "pending": "Balance",
+                "flying": "Balance",
+                "contributionStrategy": "ContributionStrategy",
+                "cap": "Balance",
+                "endBlock": "BlockNumber",
+                "trieIndex": "TrieIndex",
+                "leaseStart": "LeasePeriod",
+                "leaseEnd": "LeasePeriod"
+              },
+              "XcmWeightFeeMisc": {
+                "weight": "Weight",
+                "fee": "Balance"
+              },
+              "XcmCall": {
+                "_enum": [
+                  "Bond",
+                  "BondExtra",
+                  "Unbond",
+                  "Rebond",
+                  "WithdrawUnbonded",
+                  "Nominate",
+                  "Contribute",
+                  "Withdraw",
+                  "AddMemo"
+                ]
+              },
+              "BridgeToken": {
+                "id": "CurrencyId",
+                "external": "bool",
+                "fee": "Balance"
+              },
+              "ProposalStatus": {
+                "_enum": [
+                  "Initiated",
+                  "Approved",
+                  "Rejected"
+                ]
+              },
+              "Address": "MultiAddress",
+              "LookupSource": "MultiAddress",
+              "TAssetBalance": "u128"
+            }
           }
-        },
-        "router": {
-          "getBestRoute": {
-            "description": "Returns the route that results in the largest amount out for amount in",
-            "params": [
-              {
-                "name": "amount",
-                "type": "Balance"
-              },
-              {
-                "name": "token_in",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "token_out",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "reversed",
-                "type": "bool"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Vec<CurrencyId>, FixedU128)",
-            "isSubscription": false,
-            "jsonrpc": "router_getBestRoute",
-            "method": "getBestRoute",
-            "section": "router"
+        ],
+        "alias": {
+          "tokens": {
+            "AccountData": "OrmlAccountData",
+            "BalanceLock": "OrmlBalanceLock"
           }
-        }
-      },
-      "instances": {
-        "council": [
-          "generalCouncil"
-        ]
-      },
-      "types": [
-        {
-          "minmax": [
-            0,
-            null
-          ],
-          "types": {
-            "CallOf": "Call",
-            "DispatchTime": {
-              "_enum": {
-                "At": "BlockNumber",
-                "After": "BlockNumber"
-              }
-            },
-            "ScheduleTaskIndex": "u32",
-            "DelayedOrigin": {
-              "delay": "BlockNumber",
-              "origin": "PalletsOrigin"
-            },
-            "AuthorityOrigin": "DelayedOrigin",
-            "StorageValue": "Vec<u8>",
-            "GraduallyUpdate": {
-              "key": "StorageKey",
-              "targetValue": "StorageValue",
-              "perBlock": "StorageValue"
-            },
-            "StorageKeyBytes": "Vec<u8>",
-            "StorageValueBytes": "Vec<u8>",
-            "RpcDataProviderId": "Text",
-            "DataProviderId": "u8",
-            "TimestampedValue": {
-              "value": "OracleValue",
-              "timestamp": "Moment"
-            },
-            "TimestampedValueOf": "TimestampedValue",
-            "OrderedSet": "Vec<AccountId>",
-            "OrmlAccountData": {
-              "free": "Balance",
-              "reserved": "Balance",
-              "frozen": "Balance"
-            },
-            "OrmlBalanceLock": {
-              "amount": "Balance",
-              "id": "LockIdentifier"
-            },
-            "AuctionInfo": {
-              "bid": "Option<(AccountId, Balance)>",
-              "start": "BlockNumber",
-              "end": "Option<BlockNumber>"
-            },
-            "DelayedDispatchTime": {
-              "_enum": {
-                "At": "BlockNumber",
-                "After": "BlockNumber"
-              }
-            },
-            "DispatchId": "u32",
-            "Price": "FixedU128",
-            "OrmlVestingSchedule": {
-              "start": "BlockNumber",
-              "period": "BlockNumber",
-              "periodCount": "u32",
-              "perPeriod": "Compact<Balance>"
-            },
-            "VestingScheduleOf": "OrmlVestingSchedule",
-            "OrmlCurrencyId": "u8",
-            "PoolInfo": {
-              "isActive": "bool",
-              "totalDeposited": "Balance",
-              "unlockHeight": "BlockNumber",
-              "coolDownDuration": "BlockNumber",
-              "rewardDuration": "BlockNumber",
-              "periodFinish": "BlockNumber",
-              "lastUpdateBlock": "BlockNumber",
-              "rewardRate": "Balance",
-              "rewardPerShareStored": "Balance"
-            },
-            "CompactBalance": "Compact<Balance>",
-            "PoolInfoV0": {
-              "totalShares": "Compact<Share>",
-              "totalRewards": "CompactBalance",
-              "totalWithdrawnRewards": "CompactBalance"
-            },
-            "Share": "u128",
-            "OracleValue": "Price",
-            "Deposits": {
-              "voucherBalance": "Balance",
-              "isCollateral": "bool"
-            },
-            "BorrowSnapshot": {
-              "principal": "Balance",
-              "borrowIndex": "u128"
-            },
-            "EarnedSnapshot": {
-              "totalEarnedPrior": "Balance",
-              "exchangeRatePrior": "u128"
-            },
-            "JumpModel": {
-              "baseRate": "Rate",
-              "jumpRate": "Rate",
-              "fullRate": "Rate",
-              "jumpUtilization": "Ratio"
-            },
-            "CurveModel": {
-              "baseRate": "Rate"
-            },
-            "InterestRateModel": {
-              "_enum": {
-                "JumpModel": "JumpModel",
-                "CurveModel": "CurveModel"
-              }
-            },
-            "Market": {
-              "collateralFactor": "Ratio",
-              "liquidationThreshold": "Ratio",
-              "reserveFactor": "Ratio",
-              "closeFactor": "Ratio",
-              "liquidateIncentive": "Rate",
-              "liquidateIncentiveReservedFactor": "Ratio",
-              "rateModel": "InterestRateModel",
-              "state": "MarketState",
-              "supplyCap": "Balance",
-              "borrowCap": "Balance",
-              "ptokenId": "CurrencyId"
-            },
-            "MarketState": {
-              "_enum": [
-                "Active",
-                "Pending",
-                "Supervision"
-              ]
-            },
-            "RewardMarketState": {
-              "index": "Balance",
-              "block": "BlockNumber"
-            },
-            "Liquidity": "FixedU128",
-            "Shortfall": "FixedU128",
-            "ReservableAmount": {
-              "total": "Balance",
-              "reserved": "Balance"
-            },
-            "MatchingLedger": {
-              "totalStakeAmount": "ReservableAmount",
-              "totalUnstakeAmount": "ReservableAmount"
-            },
-            "UnlockChunk": {
-              "value": "Balance",
-              "era": "EraIndex"
-            },
-            "StakingLedger": {
-              "stash": "AccountId",
-              "total": "Balance",
-              "active": "Balance",
-              "unlocking": "Vec<UnlockChunk>",
-              "claimedRewards": "Vec<EraIndex>"
-            },
-            "DerivativeIndex": "u16",
-            "Pool": {
-              "baseAmount": "Balance",
-              "quoteAmount": "Balance",
-              "baseAmountLast": "Balance",
-              "quoteAmountLast": "Balance",
-              "lpTokenId": "AssetId",
-              "blockTimestampLast": "BlockNumber",
-              "price0CumulativeLast": "Balance",
-              "price1CumulativeLast": "Balance"
-            },
-            "Amount": "i128",
-            "AmountOf": "Amount",
-            "Rate": "FixedU128",
-            "Ratio": "Permill",
-            "Timestamp": "u64",
-            "PriceDetail": "(Price, Timestamp)",
-            "CurrencyId": "AssetId",
-            "CurrencyIdOf": "CurrencyId",
-            "Currency": "CurrencyId",
-            "AssetIdOf": "AssetId",
-            "OracleKey": "AssetId",
-            "BoundedBalance": "BoundedVec<(Balance, BlockNumber), u32>",
-            "UserPosition": {
-              "depositBalance": "Balance",
-              "lockBalanceItems": "BoundedBalance",
-              "rewardAmount": "Balance",
-              "rewardPerSharePaid": "Balance"
-            },
-            "Route": "Vec<(AssetId, AssetId)>",
-            "VaultPhase": {
-              "_enum": [
-                "Pending",
-                "Contributing",
-                "Closed",
-                "Failed",
-                "Succeeded",
-                "Expired"
-              ]
-            },
-            "ContributionStrategy": {
-              "_enum": [
-                "XCM",
-                "XCMPROXY"
-              ]
-            },
-            "ChildStorageKind": {
-              "_enum": [
-                "Pending",
-                "Flying",
-                "Contributed"
-              ]
-            },
-            "TrieIndex": "u32",
-            "LeasePeriod": "BlockNumber",
-            "Vault": {
-              "ctoken": "AssetId",
-              "phase": "VaultPhase",
-              "contributed": "Balance",
-              "pending": "Balance",
-              "flying": "Balance",
-              "contributionStrategy": "ContributionStrategy",
-              "cap": "Balance",
-              "endBlock": "BlockNumber",
-              "trieIndex": "TrieIndex",
-              "leaseStart": "LeasePeriod",
-              "leaseEnd": "LeasePeriod"
-            },
-            "XcmWeightFeeMisc": {
-              "weight": "Weight",
-              "fee": "Balance"
-            },
-            "XcmCall": {
-              "_enum": [
-                "Bond",
-                "BondExtra",
-                "Unbond",
-                "Rebond",
-                "WithdrawUnbonded",
-                "Nominate",
-                "Contribute",
-                "Withdraw",
-                "AddMemo"
-              ]
-            },
-            "BridgeToken": {
-              "id": "CurrencyId",
-              "external": "bool",
-              "fee": "Balance"
-            },
-            "ProposalStatus": {
-              "_enum": [
-                "Initiated",
-                "Approved",
-                "Rejected"
-              ]
-            },
-            "Address": "MultiAddress",
-            "LookupSource": "MultiAddress",
-            "TAssetBalance": "u128"
-          }
-        }
-      ],
-      "alias": {
-        "tokens": {
-          "AccountData": "OrmlAccountData",
-          "BalanceLock": "OrmlBalanceLock"
         }
       }
     },
@@ -31830,8 +31847,8 @@ export const typesBundle = {
             "CurrencyIdOf": "CurrencyId",
             "CurrencyId": {
               "_enum": {
-                "HEZ": 0,
-                "DCL": 1,
+                "DOT": 0,
+                "KSM": 1,
                 "KILT": 2
               }
             },
@@ -36198,8 +36215,8 @@ export const typesBundle = {
             "CurrencyIdOf": "CurrencyId",
             "CurrencyId": {
               "_enum": {
-                "HEZ": 0,
-                "DCL": 1,
+                "DOT": 0,
+                "KSM": 1,
                 "KILT": 2
               }
             },
@@ -40473,8 +40490,8 @@ export const typesBundle = {
             "CurrencyIdOf": "CurrencyId",
             "CurrencyId": {
               "_enum": {
-                "HEZ": 0,
-                "DCL": 1,
+                "DOT": 0,
+                "KSM": 1,
                 "KILT": 2
               }
             },
@@ -44568,8 +44585,8 @@ export const typesBundle = {
             "CurrencyIdOf": "CurrencyId",
             "CurrencyId": {
               "_enum": {
-                "HEZ": 0,
-                "DCL": 1,
+                "DOT": 0,
+                "KSM": 1,
                 "KILT": 2
               }
             },
@@ -48363,20 +48380,20 @@ export const typesBundle = {
               "SignedFixedPoint": "FixedU128",
               "TokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
               },
               "InterbtcPrimitivesTokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
@@ -49146,7 +49163,7 @@ export const typesBundle = {
               "_enum": [
                 "LAMI",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "FEUR",
                 "FJPY",
                 "FBTC",
@@ -49658,7 +49675,7 @@ export const typesBundle = {
               "_enum": [
                 "LAMI",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "FEUR",
                 "FJPY",
                 "FBTC",
@@ -50429,7 +50446,7 @@ export const typesBundle = {
             "SupportedAccountId": {
               "_enum": {
                 "None": null,
-                "Pezkuwi": "AccountId",
+                "Polkadot": "AccountId",
                 "Other": "OtherAccountId"
               }
             },
@@ -51434,19 +51451,19 @@ export const typesBundle = {
         "txpool": {
           "content": {
             "aliasSection": "txpool",
-            "description": "The detailed information regarding Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "The detailed information regarding Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultContent"
           },
           "inspect": {
             "aliasSection": "txpool",
-            "description": "Summarized information of the Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "Summarized information of the Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultInspect"
           },
           "status": {
             "aliasSection": "txpool",
-            "description": "The number of Ethereum transaction that are currently in the Bizinikiwi transaction pool.",
+            "description": "The number of Ethereum transaction that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultStatus"
           }
@@ -51489,7 +51506,7 @@ export const typesBundle = {
             "type": "Result<()>"
           },
           "injectHrmpMessage": {
-            "description": "Inject an HRMP message from a dedicated channel from a sibling teyrchain",
+            "description": "Inject an HRMP message from a dedicated channel from a sibling parachain",
             "params": [
               {
                 "name": "sender",
@@ -52133,7 +52150,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             }
@@ -52283,7 +52300,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -52438,7 +52455,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -52614,7 +52631,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -52790,7 +52807,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -52845,7 +52862,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -53017,7 +53034,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -53072,7 +53089,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -53099,7 +53116,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -53257,7 +53274,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -53312,7 +53329,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -53339,7 +53356,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -53367,19 +53384,19 @@ export const typesBundle = {
         "txpool": {
           "content": {
             "aliasSection": "txpool",
-            "description": "The detailed information regarding Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "The detailed information regarding Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultContent"
           },
           "inspect": {
             "aliasSection": "txpool",
-            "description": "Summarized information of the Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "Summarized information of the Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultInspect"
           },
           "status": {
             "aliasSection": "txpool",
-            "description": "The number of Ethereum transaction that are currently in the Bizinikiwi transaction pool.",
+            "description": "The number of Ethereum transaction that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultStatus"
           }
@@ -53422,7 +53439,7 @@ export const typesBundle = {
             "type": "Result<()>"
           },
           "injectHrmpMessage": {
-            "description": "Inject an HRMP message from a dedicated channel from a sibling teyrchain",
+            "description": "Inject an HRMP message from a dedicated channel from a sibling parachain",
             "params": [
               {
                 "name": "sender",
@@ -54066,7 +54083,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             }
@@ -54216,7 +54233,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -54371,7 +54388,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -54547,7 +54564,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -54723,7 +54740,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -54778,7 +54795,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -54950,7 +54967,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -55005,7 +55022,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -55032,7 +55049,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -55190,7 +55207,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -55245,7 +55262,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -55272,7 +55289,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -55300,19 +55317,19 @@ export const typesBundle = {
         "txpool": {
           "content": {
             "aliasSection": "txpool",
-            "description": "The detailed information regarding Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "The detailed information regarding Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultContent"
           },
           "inspect": {
             "aliasSection": "txpool",
-            "description": "Summarized information of the Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "Summarized information of the Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultInspect"
           },
           "status": {
             "aliasSection": "txpool",
-            "description": "The number of Ethereum transaction that are currently in the Bizinikiwi transaction pool.",
+            "description": "The number of Ethereum transaction that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultStatus"
           }
@@ -55355,7 +55372,7 @@ export const typesBundle = {
             "type": "Result<()>"
           },
           "injectHrmpMessage": {
-            "description": "Inject an HRMP message from a dedicated channel from a sibling teyrchain",
+            "description": "Inject an HRMP message from a dedicated channel from a sibling parachain",
             "params": [
               {
                 "name": "sender",
@@ -55999,7 +56016,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             }
@@ -56149,7 +56166,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -56304,7 +56321,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -56480,7 +56497,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -56656,7 +56673,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -56711,7 +56728,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -56883,7 +56900,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -56938,7 +56955,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -56965,7 +56982,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -57123,7 +57140,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -57178,7 +57195,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -57205,7 +57222,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -57233,19 +57250,19 @@ export const typesBundle = {
         "txpool": {
           "content": {
             "aliasSection": "txpool",
-            "description": "The detailed information regarding Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "The detailed information regarding Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultContent"
           },
           "inspect": {
             "aliasSection": "txpool",
-            "description": "Summarized information of the Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "Summarized information of the Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultInspect"
           },
           "status": {
             "aliasSection": "txpool",
-            "description": "The number of Ethereum transaction that are currently in the Bizinikiwi transaction pool.",
+            "description": "The number of Ethereum transaction that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultStatus"
           }
@@ -57288,7 +57305,7 @@ export const typesBundle = {
             "type": "Result<()>"
           },
           "injectHrmpMessage": {
-            "description": "Inject an HRMP message from a dedicated channel from a sibling teyrchain",
+            "description": "Inject an HRMP message from a dedicated channel from a sibling parachain",
             "params": [
               {
                 "name": "sender",
@@ -57932,7 +57949,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             }
@@ -58082,7 +58099,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -58237,7 +58254,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -58413,7 +58430,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -58589,7 +58606,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -58644,7 +58661,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -58816,7 +58833,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -58871,7 +58888,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -58898,7 +58915,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -59056,7 +59073,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -59111,7 +59128,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -59138,7 +59155,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -59434,19 +59451,19 @@ export const typesBundle = {
         "txpool": {
           "content": {
             "aliasSection": "txpool",
-            "description": "The detailed information regarding Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "The detailed information regarding Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultContent"
           },
           "inspect": {
             "aliasSection": "txpool",
-            "description": "Summarized information of the Ethereum transactions that are currently in the Bizinikiwi transaction pool.",
+            "description": "Summarized information of the Ethereum transactions that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultInspect"
           },
           "status": {
             "aliasSection": "txpool",
-            "description": "The number of Ethereum transaction that are currently in the Bizinikiwi transaction pool.",
+            "description": "The number of Ethereum transaction that are currently in the Substrate transaction pool.",
             "params": [],
             "type": "TxPoolResultStatus"
           }
@@ -59489,7 +59506,7 @@ export const typesBundle = {
             "type": "Result<()>"
           },
           "injectHrmpMessage": {
-            "description": "Inject an HRMP message from a dedicated channel from a sibling teyrchain",
+            "description": "Inject an HRMP message from a dedicated channel from a sibling parachain",
             "params": [
               {
                 "name": "sender",
@@ -60133,7 +60150,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             }
@@ -60283,7 +60300,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -60438,7 +60455,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -60614,7 +60631,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -60790,7 +60807,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -60845,7 +60862,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -61017,7 +61034,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -61072,7 +61089,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -61099,7 +61116,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -61257,7 +61274,7 @@ export const typesBundle = {
               "account": "AccountId",
               "deposit": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -61312,7 +61329,7 @@ export const typesBundle = {
             "JunctionV0": {
               "_enum": {
                 "Parent": "Null",
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -61339,7 +61356,7 @@ export const typesBundle = {
             "MultiLocation": "MultiLocationV1",
             "JunctionV1": {
               "_enum": {
-                "Teyrchain": "Compact<u32>",
+                "Parachain": "Compact<u32>",
                 "AccountId32": "ENUM_AccountId32",
                 "AccountIndex64": "ENUM_AccountIndex64",
                 "AccountKey20": "ENUM_AccountKey20",
@@ -62053,7 +62070,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC",
@@ -62091,441 +62108,443 @@ export const typesBundle = {
       ]
     },
     "parallel": {
-      "rpc": {
-        "oracle": {
-          "getValue": {
-            "description": "Retrieves the oracle value for a given key.",
-            "params": [
-              {
-                "name": "providerId",
-                "type": "RpcDataProviderId"
-              },
-              {
-                "name": "key",
-                "type": "OracleKey"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "Option<TimestampedValue>",
-            "isSubscription": false,
-            "jsonrpc": "oracle_getValue",
-            "method": "getValue",
-            "section": "oracle"
+      "parallel": {
+        "rpc": {
+          "oracle": {
+            "getValue": {
+              "description": "Retrieves the oracle value for a given key.",
+              "params": [
+                {
+                  "name": "providerId",
+                  "type": "RpcDataProviderId"
+                },
+                {
+                  "name": "key",
+                  "type": "OracleKey"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "Option<TimestampedValue>",
+              "isSubscription": false,
+              "jsonrpc": "oracle_getValue",
+              "method": "getValue",
+              "section": "oracle"
+            },
+            "getAllValues": {
+              "description": "Retrieves all oracle values.",
+              "params": [
+                {
+                  "name": "providerId",
+                  "type": "RpcDataProviderId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "Vec<(OracleKey, Option<TimestampedValue>)>",
+              "isSubscription": false,
+              "jsonrpc": "oracle_getAllValues",
+              "method": "getAllValues",
+              "section": "oracle"
+            }
           },
-          "getAllValues": {
-            "description": "Retrieves all oracle values.",
-            "params": [
-              {
-                "name": "providerId",
-                "type": "RpcDataProviderId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "Vec<(OracleKey, Option<TimestampedValue>)>",
-            "isSubscription": false,
-            "jsonrpc": "oracle_getAllValues",
-            "method": "getAllValues",
-            "section": "oracle"
+          "tokens": {
+            "queryExistentialDeposit": {
+              "description": "Query Existential Deposit for a given currency.",
+              "params": [
+                {
+                  "name": "currencyId",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "NumberOrHex",
+              "isSubscription": false,
+              "jsonrpc": "tokens_queryExistentialDeposit",
+              "method": "queryExistentialDeposit",
+              "section": "tokens"
+            }
+          },
+          "loans": {
+            "getCollateralLiquidity": {
+              "description": "Retrieves collateral liquidity for the given user.",
+              "params": [
+                {
+                  "name": "account",
+                  "type": "AccountId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getCollateralLiquidity",
+              "method": "getCollateralLiquidity",
+              "section": "loans"
+            },
+            "getLiquidationThresholdLiquidity": {
+              "description": "Retrieves liquidation threshold liquidity for the given user.",
+              "params": [
+                {
+                  "name": "account",
+                  "type": "AccountId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getLiquidationThresholdLiquidity",
+              "method": "getLiquidationThresholdLiquidity",
+              "section": "loans"
+            },
+            "getMarketStatus": {
+              "description": "Retrieves market status data for a given asset id.",
+              "params": [
+                {
+                  "name": "asset_id",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Rate, Rate, Rate, Ratio, Balance, Balance, FixedU128)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getMarketStatus",
+              "method": "getMarketStatus",
+              "section": "loans"
+            }
+          },
+          "router": {
+            "getBestRoute": {
+              "description": "Returns the route that results in the largest amount out for amount in",
+              "params": [
+                {
+                  "name": "amount",
+                  "type": "Balance"
+                },
+                {
+                  "name": "token_in",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "token_out",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "reversed",
+                  "type": "bool"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Vec<CurrencyId>, FixedU128)",
+              "isSubscription": false,
+              "jsonrpc": "router_getBestRoute",
+              "method": "getBestRoute",
+              "section": "router"
+            }
           }
         },
-        "tokens": {
-          "queryExistentialDeposit": {
-            "description": "Query Existential Deposit for a given currency.",
-            "params": [
-              {
-                "name": "currencyId",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "NumberOrHex",
-            "isSubscription": false,
-            "jsonrpc": "tokens_queryExistentialDeposit",
-            "method": "queryExistentialDeposit",
-            "section": "tokens"
-          }
+        "instances": {
+          "council": [
+            "generalCouncil"
+          ]
         },
-        "loans": {
-          "getCollateralLiquidity": {
-            "description": "Retrieves collateral liquidity for the given user.",
-            "params": [
-              {
-                "name": "account",
-                "type": "AccountId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
+        "types": [
+          {
+            "minmax": [
+              0,
+              null
             ],
-            "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getCollateralLiquidity",
-            "method": "getCollateralLiquidity",
-            "section": "loans"
-          },
-          "getLiquidationThresholdLiquidity": {
-            "description": "Retrieves liquidation threshold liquidity for the given user.",
-            "params": [
-              {
-                "name": "account",
-                "type": "AccountId"
+            "types": {
+              "CallOf": "Call",
+              "DispatchTime": {
+                "_enum": {
+                  "At": "BlockNumber",
+                  "After": "BlockNumber"
+                }
               },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getLiquidationThresholdLiquidity",
-            "method": "getLiquidationThresholdLiquidity",
-            "section": "loans"
-          },
-          "getMarketStatus": {
-            "description": "Retrieves market status data for a given asset id.",
-            "params": [
-              {
-                "name": "asset_id",
-                "type": "CurrencyId"
+              "ScheduleTaskIndex": "u32",
+              "DelayedOrigin": {
+                "delay": "BlockNumber",
+                "origin": "PalletsOrigin"
               },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Rate, Rate, Rate, Ratio, Balance, Balance, FixedU128)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getMarketStatus",
-            "method": "getMarketStatus",
-            "section": "loans"
+              "AuthorityOrigin": "DelayedOrigin",
+              "StorageValue": "Vec<u8>",
+              "GraduallyUpdate": {
+                "key": "StorageKey",
+                "targetValue": "StorageValue",
+                "perBlock": "StorageValue"
+              },
+              "StorageKeyBytes": "Vec<u8>",
+              "StorageValueBytes": "Vec<u8>",
+              "RpcDataProviderId": "Text",
+              "DataProviderId": "u8",
+              "TimestampedValue": {
+                "value": "OracleValue",
+                "timestamp": "Moment"
+              },
+              "TimestampedValueOf": "TimestampedValue",
+              "OrderedSet": "Vec<AccountId>",
+              "OrmlAccountData": {
+                "free": "Balance",
+                "reserved": "Balance",
+                "frozen": "Balance"
+              },
+              "OrmlBalanceLock": {
+                "amount": "Balance",
+                "id": "LockIdentifier"
+              },
+              "AuctionInfo": {
+                "bid": "Option<(AccountId, Balance)>",
+                "start": "BlockNumber",
+                "end": "Option<BlockNumber>"
+              },
+              "DelayedDispatchTime": {
+                "_enum": {
+                  "At": "BlockNumber",
+                  "After": "BlockNumber"
+                }
+              },
+              "DispatchId": "u32",
+              "Price": "FixedU128",
+              "OrmlVestingSchedule": {
+                "start": "BlockNumber",
+                "period": "BlockNumber",
+                "periodCount": "u32",
+                "perPeriod": "Compact<Balance>"
+              },
+              "VestingScheduleOf": "OrmlVestingSchedule",
+              "OrmlCurrencyId": "u8",
+              "PoolInfo": {
+                "isActive": "bool",
+                "totalDeposited": "Balance",
+                "unlockHeight": "BlockNumber",
+                "coolDownDuration": "BlockNumber",
+                "rewardDuration": "BlockNumber",
+                "periodFinish": "BlockNumber",
+                "lastUpdateBlock": "BlockNumber",
+                "rewardRate": "Balance",
+                "rewardPerShareStored": "Balance"
+              },
+              "CompactBalance": "Compact<Balance>",
+              "PoolInfoV0": {
+                "totalShares": "Compact<Share>",
+                "totalRewards": "CompactBalance",
+                "totalWithdrawnRewards": "CompactBalance"
+              },
+              "Share": "u128",
+              "OracleValue": "Price",
+              "Deposits": {
+                "voucherBalance": "Balance",
+                "isCollateral": "bool"
+              },
+              "BorrowSnapshot": {
+                "principal": "Balance",
+                "borrowIndex": "u128"
+              },
+              "EarnedSnapshot": {
+                "totalEarnedPrior": "Balance",
+                "exchangeRatePrior": "u128"
+              },
+              "JumpModel": {
+                "baseRate": "Rate",
+                "jumpRate": "Rate",
+                "fullRate": "Rate",
+                "jumpUtilization": "Ratio"
+              },
+              "CurveModel": {
+                "baseRate": "Rate"
+              },
+              "InterestRateModel": {
+                "_enum": {
+                  "JumpModel": "JumpModel",
+                  "CurveModel": "CurveModel"
+                }
+              },
+              "Market": {
+                "collateralFactor": "Ratio",
+                "liquidationThreshold": "Ratio",
+                "reserveFactor": "Ratio",
+                "closeFactor": "Ratio",
+                "liquidateIncentive": "Rate",
+                "liquidateIncentiveReservedFactor": "Ratio",
+                "rateModel": "InterestRateModel",
+                "state": "MarketState",
+                "supplyCap": "Balance",
+                "borrowCap": "Balance",
+                "ptokenId": "CurrencyId"
+              },
+              "MarketState": {
+                "_enum": [
+                  "Active",
+                  "Pending",
+                  "Supervision"
+                ]
+              },
+              "RewardMarketState": {
+                "index": "Balance",
+                "block": "BlockNumber"
+              },
+              "Liquidity": "FixedU128",
+              "Shortfall": "FixedU128",
+              "ReservableAmount": {
+                "total": "Balance",
+                "reserved": "Balance"
+              },
+              "MatchingLedger": {
+                "totalStakeAmount": "ReservableAmount",
+                "totalUnstakeAmount": "ReservableAmount"
+              },
+              "UnlockChunk": {
+                "value": "Balance",
+                "era": "EraIndex"
+              },
+              "StakingLedger": {
+                "stash": "AccountId",
+                "total": "Balance",
+                "active": "Balance",
+                "unlocking": "Vec<UnlockChunk>",
+                "claimedRewards": "Vec<EraIndex>"
+              },
+              "DerivativeIndex": "u16",
+              "Pool": {
+                "baseAmount": "Balance",
+                "quoteAmount": "Balance",
+                "baseAmountLast": "Balance",
+                "quoteAmountLast": "Balance",
+                "lpTokenId": "AssetId",
+                "blockTimestampLast": "BlockNumber",
+                "price0CumulativeLast": "Balance",
+                "price1CumulativeLast": "Balance"
+              },
+              "Amount": "i128",
+              "AmountOf": "Amount",
+              "Rate": "FixedU128",
+              "Ratio": "Permill",
+              "Timestamp": "u64",
+              "PriceDetail": "(Price, Timestamp)",
+              "CurrencyId": "AssetId",
+              "CurrencyIdOf": "CurrencyId",
+              "Currency": "CurrencyId",
+              "AssetIdOf": "AssetId",
+              "OracleKey": "AssetId",
+              "BoundedBalance": "BoundedVec<(Balance, BlockNumber), u32>",
+              "UserPosition": {
+                "depositBalance": "Balance",
+                "lockBalanceItems": "BoundedBalance",
+                "rewardAmount": "Balance",
+                "rewardPerSharePaid": "Balance"
+              },
+              "Route": "Vec<(AssetId, AssetId)>",
+              "VaultPhase": {
+                "_enum": [
+                  "Pending",
+                  "Contributing",
+                  "Closed",
+                  "Failed",
+                  "Succeeded",
+                  "Expired"
+                ]
+              },
+              "ContributionStrategy": {
+                "_enum": [
+                  "XCM",
+                  "XCMPROXY"
+                ]
+              },
+              "ChildStorageKind": {
+                "_enum": [
+                  "Pending",
+                  "Flying",
+                  "Contributed"
+                ]
+              },
+              "TrieIndex": "u32",
+              "LeasePeriod": "BlockNumber",
+              "Vault": {
+                "ctoken": "AssetId",
+                "phase": "VaultPhase",
+                "contributed": "Balance",
+                "pending": "Balance",
+                "flying": "Balance",
+                "contributionStrategy": "ContributionStrategy",
+                "cap": "Balance",
+                "endBlock": "BlockNumber",
+                "trieIndex": "TrieIndex",
+                "leaseStart": "LeasePeriod",
+                "leaseEnd": "LeasePeriod"
+              },
+              "XcmWeightFeeMisc": {
+                "weight": "Weight",
+                "fee": "Balance"
+              },
+              "XcmCall": {
+                "_enum": [
+                  "Bond",
+                  "BondExtra",
+                  "Unbond",
+                  "Rebond",
+                  "WithdrawUnbonded",
+                  "Nominate",
+                  "Contribute",
+                  "Withdraw",
+                  "AddMemo"
+                ]
+              },
+              "BridgeToken": {
+                "id": "CurrencyId",
+                "external": "bool",
+                "fee": "Balance"
+              },
+              "ProposalStatus": {
+                "_enum": [
+                  "Initiated",
+                  "Approved",
+                  "Rejected"
+                ]
+              },
+              "Address": "MultiAddress",
+              "LookupSource": "MultiAddress",
+              "TAssetBalance": "u128"
+            }
           }
-        },
-        "router": {
-          "getBestRoute": {
-            "description": "Returns the route that results in the largest amount out for amount in",
-            "params": [
-              {
-                "name": "amount",
-                "type": "Balance"
-              },
-              {
-                "name": "token_in",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "token_out",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "reversed",
-                "type": "bool"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Vec<CurrencyId>, FixedU128)",
-            "isSubscription": false,
-            "jsonrpc": "router_getBestRoute",
-            "method": "getBestRoute",
-            "section": "router"
+        ],
+        "alias": {
+          "tokens": {
+            "AccountData": "OrmlAccountData",
+            "BalanceLock": "OrmlBalanceLock"
           }
-        }
-      },
-      "instances": {
-        "council": [
-          "generalCouncil"
-        ]
-      },
-      "types": [
-        {
-          "minmax": [
-            0,
-            null
-          ],
-          "types": {
-            "CallOf": "Call",
-            "DispatchTime": {
-              "_enum": {
-                "At": "BlockNumber",
-                "After": "BlockNumber"
-              }
-            },
-            "ScheduleTaskIndex": "u32",
-            "DelayedOrigin": {
-              "delay": "BlockNumber",
-              "origin": "PalletsOrigin"
-            },
-            "AuthorityOrigin": "DelayedOrigin",
-            "StorageValue": "Vec<u8>",
-            "GraduallyUpdate": {
-              "key": "StorageKey",
-              "targetValue": "StorageValue",
-              "perBlock": "StorageValue"
-            },
-            "StorageKeyBytes": "Vec<u8>",
-            "StorageValueBytes": "Vec<u8>",
-            "RpcDataProviderId": "Text",
-            "DataProviderId": "u8",
-            "TimestampedValue": {
-              "value": "OracleValue",
-              "timestamp": "Moment"
-            },
-            "TimestampedValueOf": "TimestampedValue",
-            "OrderedSet": "Vec<AccountId>",
-            "OrmlAccountData": {
-              "free": "Balance",
-              "reserved": "Balance",
-              "frozen": "Balance"
-            },
-            "OrmlBalanceLock": {
-              "amount": "Balance",
-              "id": "LockIdentifier"
-            },
-            "AuctionInfo": {
-              "bid": "Option<(AccountId, Balance)>",
-              "start": "BlockNumber",
-              "end": "Option<BlockNumber>"
-            },
-            "DelayedDispatchTime": {
-              "_enum": {
-                "At": "BlockNumber",
-                "After": "BlockNumber"
-              }
-            },
-            "DispatchId": "u32",
-            "Price": "FixedU128",
-            "OrmlVestingSchedule": {
-              "start": "BlockNumber",
-              "period": "BlockNumber",
-              "periodCount": "u32",
-              "perPeriod": "Compact<Balance>"
-            },
-            "VestingScheduleOf": "OrmlVestingSchedule",
-            "OrmlCurrencyId": "u8",
-            "PoolInfo": {
-              "isActive": "bool",
-              "totalDeposited": "Balance",
-              "unlockHeight": "BlockNumber",
-              "coolDownDuration": "BlockNumber",
-              "rewardDuration": "BlockNumber",
-              "periodFinish": "BlockNumber",
-              "lastUpdateBlock": "BlockNumber",
-              "rewardRate": "Balance",
-              "rewardPerShareStored": "Balance"
-            },
-            "CompactBalance": "Compact<Balance>",
-            "PoolInfoV0": {
-              "totalShares": "Compact<Share>",
-              "totalRewards": "CompactBalance",
-              "totalWithdrawnRewards": "CompactBalance"
-            },
-            "Share": "u128",
-            "OracleValue": "Price",
-            "Deposits": {
-              "voucherBalance": "Balance",
-              "isCollateral": "bool"
-            },
-            "BorrowSnapshot": {
-              "principal": "Balance",
-              "borrowIndex": "u128"
-            },
-            "EarnedSnapshot": {
-              "totalEarnedPrior": "Balance",
-              "exchangeRatePrior": "u128"
-            },
-            "JumpModel": {
-              "baseRate": "Rate",
-              "jumpRate": "Rate",
-              "fullRate": "Rate",
-              "jumpUtilization": "Ratio"
-            },
-            "CurveModel": {
-              "baseRate": "Rate"
-            },
-            "InterestRateModel": {
-              "_enum": {
-                "JumpModel": "JumpModel",
-                "CurveModel": "CurveModel"
-              }
-            },
-            "Market": {
-              "collateralFactor": "Ratio",
-              "liquidationThreshold": "Ratio",
-              "reserveFactor": "Ratio",
-              "closeFactor": "Ratio",
-              "liquidateIncentive": "Rate",
-              "liquidateIncentiveReservedFactor": "Ratio",
-              "rateModel": "InterestRateModel",
-              "state": "MarketState",
-              "supplyCap": "Balance",
-              "borrowCap": "Balance",
-              "ptokenId": "CurrencyId"
-            },
-            "MarketState": {
-              "_enum": [
-                "Active",
-                "Pending",
-                "Supervision"
-              ]
-            },
-            "RewardMarketState": {
-              "index": "Balance",
-              "block": "BlockNumber"
-            },
-            "Liquidity": "FixedU128",
-            "Shortfall": "FixedU128",
-            "ReservableAmount": {
-              "total": "Balance",
-              "reserved": "Balance"
-            },
-            "MatchingLedger": {
-              "totalStakeAmount": "ReservableAmount",
-              "totalUnstakeAmount": "ReservableAmount"
-            },
-            "UnlockChunk": {
-              "value": "Balance",
-              "era": "EraIndex"
-            },
-            "StakingLedger": {
-              "stash": "AccountId",
-              "total": "Balance",
-              "active": "Balance",
-              "unlocking": "Vec<UnlockChunk>",
-              "claimedRewards": "Vec<EraIndex>"
-            },
-            "DerivativeIndex": "u16",
-            "Pool": {
-              "baseAmount": "Balance",
-              "quoteAmount": "Balance",
-              "baseAmountLast": "Balance",
-              "quoteAmountLast": "Balance",
-              "lpTokenId": "AssetId",
-              "blockTimestampLast": "BlockNumber",
-              "price0CumulativeLast": "Balance",
-              "price1CumulativeLast": "Balance"
-            },
-            "Amount": "i128",
-            "AmountOf": "Amount",
-            "Rate": "FixedU128",
-            "Ratio": "Permill",
-            "Timestamp": "u64",
-            "PriceDetail": "(Price, Timestamp)",
-            "CurrencyId": "AssetId",
-            "CurrencyIdOf": "CurrencyId",
-            "Currency": "CurrencyId",
-            "AssetIdOf": "AssetId",
-            "OracleKey": "AssetId",
-            "BoundedBalance": "BoundedVec<(Balance, BlockNumber), u32>",
-            "UserPosition": {
-              "depositBalance": "Balance",
-              "lockBalanceItems": "BoundedBalance",
-              "rewardAmount": "Balance",
-              "rewardPerSharePaid": "Balance"
-            },
-            "Route": "Vec<(AssetId, AssetId)>",
-            "VaultPhase": {
-              "_enum": [
-                "Pending",
-                "Contributing",
-                "Closed",
-                "Failed",
-                "Succeeded",
-                "Expired"
-              ]
-            },
-            "ContributionStrategy": {
-              "_enum": [
-                "XCM",
-                "XCMPROXY"
-              ]
-            },
-            "ChildStorageKind": {
-              "_enum": [
-                "Pending",
-                "Flying",
-                "Contributed"
-              ]
-            },
-            "TrieIndex": "u32",
-            "LeasePeriod": "BlockNumber",
-            "Vault": {
-              "ctoken": "AssetId",
-              "phase": "VaultPhase",
-              "contributed": "Balance",
-              "pending": "Balance",
-              "flying": "Balance",
-              "contributionStrategy": "ContributionStrategy",
-              "cap": "Balance",
-              "endBlock": "BlockNumber",
-              "trieIndex": "TrieIndex",
-              "leaseStart": "LeasePeriod",
-              "leaseEnd": "LeasePeriod"
-            },
-            "XcmWeightFeeMisc": {
-              "weight": "Weight",
-              "fee": "Balance"
-            },
-            "XcmCall": {
-              "_enum": [
-                "Bond",
-                "BondExtra",
-                "Unbond",
-                "Rebond",
-                "WithdrawUnbonded",
-                "Nominate",
-                "Contribute",
-                "Withdraw",
-                "AddMemo"
-              ]
-            },
-            "BridgeToken": {
-              "id": "CurrencyId",
-              "external": "bool",
-              "fee": "Balance"
-            },
-            "ProposalStatus": {
-              "_enum": [
-                "Initiated",
-                "Approved",
-                "Rejected"
-              ]
-            },
-            "Address": "MultiAddress",
-            "LookupSource": "MultiAddress",
-            "TAssetBalance": "u128"
-          }
-        }
-      ],
-      "alias": {
-        "tokens": {
-          "AccountData": "OrmlAccountData",
-          "BalanceLock": "OrmlBalanceLock"
         }
       }
     },
@@ -64196,8 +64215,8 @@ export const typesBundle = {
         "_enum": {
           "Any": "Null",
           "Named": "Vec<u8>",
-          "Pezkuwi": "Null",
-          "Dicle": "Null"
+          "Polkadot": "Null",
+          "Kusama": "Null"
         }
       },
       "CollectionType": {
@@ -64213,7 +64232,7 @@ export const typesBundle = {
           "NUUM",
           "AUSD",
           "ACA",
-          "HEZ"
+          "DOT"
         ]
       },
       "CountryCurrencyId": "u32",
@@ -64259,7 +64278,7 @@ export const typesBundle = {
       "BlindBoxId": "u64",
       "BlindBoxType": {
         "_enum": [
-          "DCL",
+          "KSM",
           "NUUM",
           "MainnetNFTHat",
           "MainnetNFTJacket",
@@ -92865,7 +92884,7 @@ export const typesBundle = {
               }
             },
             "OrderedSet": "Vec<Bond>",
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },
@@ -96011,9 +96030,9 @@ export const typesBundle = {
             "SubNetworkId": {
               "_enum": {
                 "Mainnet": null,
-                "Dicle": null,
-                "Pezkuwi": null,
-                "PezkuwiChain": null,
+                "Kusama": null,
+                "Polkadot": null,
+                "Rococo": null,
                 "Custom": "u32"
               }
             },
@@ -96215,8 +96234,8 @@ export const typesBundle = {
             "PredefinedAssetId": {
               "_enum": [
                 "XOR",
-                "HEZ",
-                "DCL",
+                "DOT",
+                "KSM",
                 "USDT",
                 "VAL",
                 "PSWAP",
@@ -97816,9 +97835,9 @@ export const typesBundle = {
             "SubNetworkId": {
               "_enum": {
                 "Mainnet": null,
-                "Dicle": null,
-                "Pezkuwi": null,
-                "PezkuwiChain": null,
+                "Kusama": null,
+                "Polkadot": null,
+                "Rococo": null,
                 "Custom": "u32"
               }
             },
@@ -98020,8 +98039,8 @@ export const typesBundle = {
             "PredefinedAssetId": {
               "_enum": [
                 "XOR",
-                "HEZ",
-                "DCL",
+                "DOT",
+                "KSM",
                 "USDT",
                 "VAL",
                 "PSWAP",
@@ -99243,7 +99262,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC",
@@ -100266,19 +100285,6 @@ export const typesBundle = {
         }
       ]
     },
-    "bizinikiwi-contracts-node": {
-      "types": [
-        {
-          "minmax": [
-            0,
-            null
-          ],
-          "types": {
-            "Keys": "SessionKeys2"
-          }
-        }
-      ]
-    },
     "subzero": {
       "types": [
         {
@@ -101076,20 +101082,20 @@ export const typesBundle = {
               "SignedFixedPoint": "FixedU128",
               "TokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
               },
               "InterbtcPrimitivesTokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
@@ -101639,20 +101645,20 @@ export const typesBundle = {
               "SignedFixedPoint": "FixedU128",
               "TokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
               },
               "InterbtcPrimitivesTokenSymbol": {
                 "_enum": {
-                  "HEZ": 0,
+                  "DOT": 0,
                   "IBTC": 1,
                   "INTR": 2,
-                  "DCL": 10,
+                  "KSM": 10,
                   "KBTC": 11,
                   "KINT": 12
                 }
@@ -103161,7 +103167,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC",
@@ -103199,441 +103205,443 @@ export const typesBundle = {
       ]
     },
     "vanilla": {
-      "rpc": {
-        "oracle": {
-          "getValue": {
-            "description": "Retrieves the oracle value for a given key.",
-            "params": [
-              {
-                "name": "providerId",
-                "type": "RpcDataProviderId"
-              },
-              {
-                "name": "key",
-                "type": "OracleKey"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "Option<TimestampedValue>",
-            "isSubscription": false,
-            "jsonrpc": "oracle_getValue",
-            "method": "getValue",
-            "section": "oracle"
+      "parallel": {
+        "rpc": {
+          "oracle": {
+            "getValue": {
+              "description": "Retrieves the oracle value for a given key.",
+              "params": [
+                {
+                  "name": "providerId",
+                  "type": "RpcDataProviderId"
+                },
+                {
+                  "name": "key",
+                  "type": "OracleKey"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "Option<TimestampedValue>",
+              "isSubscription": false,
+              "jsonrpc": "oracle_getValue",
+              "method": "getValue",
+              "section": "oracle"
+            },
+            "getAllValues": {
+              "description": "Retrieves all oracle values.",
+              "params": [
+                {
+                  "name": "providerId",
+                  "type": "RpcDataProviderId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "Vec<(OracleKey, Option<TimestampedValue>)>",
+              "isSubscription": false,
+              "jsonrpc": "oracle_getAllValues",
+              "method": "getAllValues",
+              "section": "oracle"
+            }
           },
-          "getAllValues": {
-            "description": "Retrieves all oracle values.",
-            "params": [
-              {
-                "name": "providerId",
-                "type": "RpcDataProviderId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "Vec<(OracleKey, Option<TimestampedValue>)>",
-            "isSubscription": false,
-            "jsonrpc": "oracle_getAllValues",
-            "method": "getAllValues",
-            "section": "oracle"
+          "tokens": {
+            "queryExistentialDeposit": {
+              "description": "Query Existential Deposit for a given currency.",
+              "params": [
+                {
+                  "name": "currencyId",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "NumberOrHex",
+              "isSubscription": false,
+              "jsonrpc": "tokens_queryExistentialDeposit",
+              "method": "queryExistentialDeposit",
+              "section": "tokens"
+            }
+          },
+          "loans": {
+            "getCollateralLiquidity": {
+              "description": "Retrieves collateral liquidity for the given user.",
+              "params": [
+                {
+                  "name": "account",
+                  "type": "AccountId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getCollateralLiquidity",
+              "method": "getCollateralLiquidity",
+              "section": "loans"
+            },
+            "getLiquidationThresholdLiquidity": {
+              "description": "Retrieves liquidation threshold liquidity for the given user.",
+              "params": [
+                {
+                  "name": "account",
+                  "type": "AccountId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getLiquidationThresholdLiquidity",
+              "method": "getLiquidationThresholdLiquidity",
+              "section": "loans"
+            },
+            "getMarketStatus": {
+              "description": "Retrieves market status data for a given asset id.",
+              "params": [
+                {
+                  "name": "asset_id",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Rate, Rate, Rate, Ratio, Balance, Balance, FixedU128)",
+              "isSubscription": false,
+              "jsonrpc": "loans_getMarketStatus",
+              "method": "getMarketStatus",
+              "section": "loans"
+            }
+          },
+          "router": {
+            "getBestRoute": {
+              "description": "Returns the route that results in the largest amount out for amount in",
+              "params": [
+                {
+                  "name": "amount",
+                  "type": "Balance"
+                },
+                {
+                  "name": "token_in",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "token_out",
+                  "type": "CurrencyId"
+                },
+                {
+                  "name": "reversed",
+                  "type": "bool"
+                },
+                {
+                  "name": "at",
+                  "type": "BlockHash",
+                  "isHistoric": true,
+                  "isOptional": true
+                }
+              ],
+              "type": "(Vec<CurrencyId>, FixedU128)",
+              "isSubscription": false,
+              "jsonrpc": "router_getBestRoute",
+              "method": "getBestRoute",
+              "section": "router"
+            }
           }
         },
-        "tokens": {
-          "queryExistentialDeposit": {
-            "description": "Query Existential Deposit for a given currency.",
-            "params": [
-              {
-                "name": "currencyId",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "NumberOrHex",
-            "isSubscription": false,
-            "jsonrpc": "tokens_queryExistentialDeposit",
-            "method": "queryExistentialDeposit",
-            "section": "tokens"
-          }
+        "instances": {
+          "council": [
+            "generalCouncil"
+          ]
         },
-        "loans": {
-          "getCollateralLiquidity": {
-            "description": "Retrieves collateral liquidity for the given user.",
-            "params": [
-              {
-                "name": "account",
-                "type": "AccountId"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
+        "types": [
+          {
+            "minmax": [
+              0,
+              null
             ],
-            "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getCollateralLiquidity",
-            "method": "getCollateralLiquidity",
-            "section": "loans"
-          },
-          "getLiquidationThresholdLiquidity": {
-            "description": "Retrieves liquidation threshold liquidity for the given user.",
-            "params": [
-              {
-                "name": "account",
-                "type": "AccountId"
+            "types": {
+              "CallOf": "Call",
+              "DispatchTime": {
+                "_enum": {
+                  "At": "BlockNumber",
+                  "After": "BlockNumber"
+                }
               },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Liquidity, Shortfall, Liquidity, Shortfall)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getLiquidationThresholdLiquidity",
-            "method": "getLiquidationThresholdLiquidity",
-            "section": "loans"
-          },
-          "getMarketStatus": {
-            "description": "Retrieves market status data for a given asset id.",
-            "params": [
-              {
-                "name": "asset_id",
-                "type": "CurrencyId"
+              "ScheduleTaskIndex": "u32",
+              "DelayedOrigin": {
+                "delay": "BlockNumber",
+                "origin": "PalletsOrigin"
               },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Rate, Rate, Rate, Ratio, Balance, Balance, FixedU128)",
-            "isSubscription": false,
-            "jsonrpc": "loans_getMarketStatus",
-            "method": "getMarketStatus",
-            "section": "loans"
+              "AuthorityOrigin": "DelayedOrigin",
+              "StorageValue": "Vec<u8>",
+              "GraduallyUpdate": {
+                "key": "StorageKey",
+                "targetValue": "StorageValue",
+                "perBlock": "StorageValue"
+              },
+              "StorageKeyBytes": "Vec<u8>",
+              "StorageValueBytes": "Vec<u8>",
+              "RpcDataProviderId": "Text",
+              "DataProviderId": "u8",
+              "TimestampedValue": {
+                "value": "OracleValue",
+                "timestamp": "Moment"
+              },
+              "TimestampedValueOf": "TimestampedValue",
+              "OrderedSet": "Vec<AccountId>",
+              "OrmlAccountData": {
+                "free": "Balance",
+                "reserved": "Balance",
+                "frozen": "Balance"
+              },
+              "OrmlBalanceLock": {
+                "amount": "Balance",
+                "id": "LockIdentifier"
+              },
+              "AuctionInfo": {
+                "bid": "Option<(AccountId, Balance)>",
+                "start": "BlockNumber",
+                "end": "Option<BlockNumber>"
+              },
+              "DelayedDispatchTime": {
+                "_enum": {
+                  "At": "BlockNumber",
+                  "After": "BlockNumber"
+                }
+              },
+              "DispatchId": "u32",
+              "Price": "FixedU128",
+              "OrmlVestingSchedule": {
+                "start": "BlockNumber",
+                "period": "BlockNumber",
+                "periodCount": "u32",
+                "perPeriod": "Compact<Balance>"
+              },
+              "VestingScheduleOf": "OrmlVestingSchedule",
+              "OrmlCurrencyId": "u8",
+              "PoolInfo": {
+                "isActive": "bool",
+                "totalDeposited": "Balance",
+                "unlockHeight": "BlockNumber",
+                "coolDownDuration": "BlockNumber",
+                "rewardDuration": "BlockNumber",
+                "periodFinish": "BlockNumber",
+                "lastUpdateBlock": "BlockNumber",
+                "rewardRate": "Balance",
+                "rewardPerShareStored": "Balance"
+              },
+              "CompactBalance": "Compact<Balance>",
+              "PoolInfoV0": {
+                "totalShares": "Compact<Share>",
+                "totalRewards": "CompactBalance",
+                "totalWithdrawnRewards": "CompactBalance"
+              },
+              "Share": "u128",
+              "OracleValue": "Price",
+              "Deposits": {
+                "voucherBalance": "Balance",
+                "isCollateral": "bool"
+              },
+              "BorrowSnapshot": {
+                "principal": "Balance",
+                "borrowIndex": "u128"
+              },
+              "EarnedSnapshot": {
+                "totalEarnedPrior": "Balance",
+                "exchangeRatePrior": "u128"
+              },
+              "JumpModel": {
+                "baseRate": "Rate",
+                "jumpRate": "Rate",
+                "fullRate": "Rate",
+                "jumpUtilization": "Ratio"
+              },
+              "CurveModel": {
+                "baseRate": "Rate"
+              },
+              "InterestRateModel": {
+                "_enum": {
+                  "JumpModel": "JumpModel",
+                  "CurveModel": "CurveModel"
+                }
+              },
+              "Market": {
+                "collateralFactor": "Ratio",
+                "liquidationThreshold": "Ratio",
+                "reserveFactor": "Ratio",
+                "closeFactor": "Ratio",
+                "liquidateIncentive": "Rate",
+                "liquidateIncentiveReservedFactor": "Ratio",
+                "rateModel": "InterestRateModel",
+                "state": "MarketState",
+                "supplyCap": "Balance",
+                "borrowCap": "Balance",
+                "ptokenId": "CurrencyId"
+              },
+              "MarketState": {
+                "_enum": [
+                  "Active",
+                  "Pending",
+                  "Supervision"
+                ]
+              },
+              "RewardMarketState": {
+                "index": "Balance",
+                "block": "BlockNumber"
+              },
+              "Liquidity": "FixedU128",
+              "Shortfall": "FixedU128",
+              "ReservableAmount": {
+                "total": "Balance",
+                "reserved": "Balance"
+              },
+              "MatchingLedger": {
+                "totalStakeAmount": "ReservableAmount",
+                "totalUnstakeAmount": "ReservableAmount"
+              },
+              "UnlockChunk": {
+                "value": "Balance",
+                "era": "EraIndex"
+              },
+              "StakingLedger": {
+                "stash": "AccountId",
+                "total": "Balance",
+                "active": "Balance",
+                "unlocking": "Vec<UnlockChunk>",
+                "claimedRewards": "Vec<EraIndex>"
+              },
+              "DerivativeIndex": "u16",
+              "Pool": {
+                "baseAmount": "Balance",
+                "quoteAmount": "Balance",
+                "baseAmountLast": "Balance",
+                "quoteAmountLast": "Balance",
+                "lpTokenId": "AssetId",
+                "blockTimestampLast": "BlockNumber",
+                "price0CumulativeLast": "Balance",
+                "price1CumulativeLast": "Balance"
+              },
+              "Amount": "i128",
+              "AmountOf": "Amount",
+              "Rate": "FixedU128",
+              "Ratio": "Permill",
+              "Timestamp": "u64",
+              "PriceDetail": "(Price, Timestamp)",
+              "CurrencyId": "AssetId",
+              "CurrencyIdOf": "CurrencyId",
+              "Currency": "CurrencyId",
+              "AssetIdOf": "AssetId",
+              "OracleKey": "AssetId",
+              "BoundedBalance": "BoundedVec<(Balance, BlockNumber), u32>",
+              "UserPosition": {
+                "depositBalance": "Balance",
+                "lockBalanceItems": "BoundedBalance",
+                "rewardAmount": "Balance",
+                "rewardPerSharePaid": "Balance"
+              },
+              "Route": "Vec<(AssetId, AssetId)>",
+              "VaultPhase": {
+                "_enum": [
+                  "Pending",
+                  "Contributing",
+                  "Closed",
+                  "Failed",
+                  "Succeeded",
+                  "Expired"
+                ]
+              },
+              "ContributionStrategy": {
+                "_enum": [
+                  "XCM",
+                  "XCMPROXY"
+                ]
+              },
+              "ChildStorageKind": {
+                "_enum": [
+                  "Pending",
+                  "Flying",
+                  "Contributed"
+                ]
+              },
+              "TrieIndex": "u32",
+              "LeasePeriod": "BlockNumber",
+              "Vault": {
+                "ctoken": "AssetId",
+                "phase": "VaultPhase",
+                "contributed": "Balance",
+                "pending": "Balance",
+                "flying": "Balance",
+                "contributionStrategy": "ContributionStrategy",
+                "cap": "Balance",
+                "endBlock": "BlockNumber",
+                "trieIndex": "TrieIndex",
+                "leaseStart": "LeasePeriod",
+                "leaseEnd": "LeasePeriod"
+              },
+              "XcmWeightFeeMisc": {
+                "weight": "Weight",
+                "fee": "Balance"
+              },
+              "XcmCall": {
+                "_enum": [
+                  "Bond",
+                  "BondExtra",
+                  "Unbond",
+                  "Rebond",
+                  "WithdrawUnbonded",
+                  "Nominate",
+                  "Contribute",
+                  "Withdraw",
+                  "AddMemo"
+                ]
+              },
+              "BridgeToken": {
+                "id": "CurrencyId",
+                "external": "bool",
+                "fee": "Balance"
+              },
+              "ProposalStatus": {
+                "_enum": [
+                  "Initiated",
+                  "Approved",
+                  "Rejected"
+                ]
+              },
+              "Address": "MultiAddress",
+              "LookupSource": "MultiAddress",
+              "TAssetBalance": "u128"
+            }
           }
-        },
-        "router": {
-          "getBestRoute": {
-            "description": "Returns the route that results in the largest amount out for amount in",
-            "params": [
-              {
-                "name": "amount",
-                "type": "Balance"
-              },
-              {
-                "name": "token_in",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "token_out",
-                "type": "CurrencyId"
-              },
-              {
-                "name": "reversed",
-                "type": "bool"
-              },
-              {
-                "name": "at",
-                "type": "BlockHash",
-                "isHistoric": true,
-                "isOptional": true
-              }
-            ],
-            "type": "(Vec<CurrencyId>, FixedU128)",
-            "isSubscription": false,
-            "jsonrpc": "router_getBestRoute",
-            "method": "getBestRoute",
-            "section": "router"
+        ],
+        "alias": {
+          "tokens": {
+            "AccountData": "OrmlAccountData",
+            "BalanceLock": "OrmlBalanceLock"
           }
-        }
-      },
-      "instances": {
-        "council": [
-          "generalCouncil"
-        ]
-      },
-      "types": [
-        {
-          "minmax": [
-            0,
-            null
-          ],
-          "types": {
-            "CallOf": "Call",
-            "DispatchTime": {
-              "_enum": {
-                "At": "BlockNumber",
-                "After": "BlockNumber"
-              }
-            },
-            "ScheduleTaskIndex": "u32",
-            "DelayedOrigin": {
-              "delay": "BlockNumber",
-              "origin": "PalletsOrigin"
-            },
-            "AuthorityOrigin": "DelayedOrigin",
-            "StorageValue": "Vec<u8>",
-            "GraduallyUpdate": {
-              "key": "StorageKey",
-              "targetValue": "StorageValue",
-              "perBlock": "StorageValue"
-            },
-            "StorageKeyBytes": "Vec<u8>",
-            "StorageValueBytes": "Vec<u8>",
-            "RpcDataProviderId": "Text",
-            "DataProviderId": "u8",
-            "TimestampedValue": {
-              "value": "OracleValue",
-              "timestamp": "Moment"
-            },
-            "TimestampedValueOf": "TimestampedValue",
-            "OrderedSet": "Vec<AccountId>",
-            "OrmlAccountData": {
-              "free": "Balance",
-              "reserved": "Balance",
-              "frozen": "Balance"
-            },
-            "OrmlBalanceLock": {
-              "amount": "Balance",
-              "id": "LockIdentifier"
-            },
-            "AuctionInfo": {
-              "bid": "Option<(AccountId, Balance)>",
-              "start": "BlockNumber",
-              "end": "Option<BlockNumber>"
-            },
-            "DelayedDispatchTime": {
-              "_enum": {
-                "At": "BlockNumber",
-                "After": "BlockNumber"
-              }
-            },
-            "DispatchId": "u32",
-            "Price": "FixedU128",
-            "OrmlVestingSchedule": {
-              "start": "BlockNumber",
-              "period": "BlockNumber",
-              "periodCount": "u32",
-              "perPeriod": "Compact<Balance>"
-            },
-            "VestingScheduleOf": "OrmlVestingSchedule",
-            "OrmlCurrencyId": "u8",
-            "PoolInfo": {
-              "isActive": "bool",
-              "totalDeposited": "Balance",
-              "unlockHeight": "BlockNumber",
-              "coolDownDuration": "BlockNumber",
-              "rewardDuration": "BlockNumber",
-              "periodFinish": "BlockNumber",
-              "lastUpdateBlock": "BlockNumber",
-              "rewardRate": "Balance",
-              "rewardPerShareStored": "Balance"
-            },
-            "CompactBalance": "Compact<Balance>",
-            "PoolInfoV0": {
-              "totalShares": "Compact<Share>",
-              "totalRewards": "CompactBalance",
-              "totalWithdrawnRewards": "CompactBalance"
-            },
-            "Share": "u128",
-            "OracleValue": "Price",
-            "Deposits": {
-              "voucherBalance": "Balance",
-              "isCollateral": "bool"
-            },
-            "BorrowSnapshot": {
-              "principal": "Balance",
-              "borrowIndex": "u128"
-            },
-            "EarnedSnapshot": {
-              "totalEarnedPrior": "Balance",
-              "exchangeRatePrior": "u128"
-            },
-            "JumpModel": {
-              "baseRate": "Rate",
-              "jumpRate": "Rate",
-              "fullRate": "Rate",
-              "jumpUtilization": "Ratio"
-            },
-            "CurveModel": {
-              "baseRate": "Rate"
-            },
-            "InterestRateModel": {
-              "_enum": {
-                "JumpModel": "JumpModel",
-                "CurveModel": "CurveModel"
-              }
-            },
-            "Market": {
-              "collateralFactor": "Ratio",
-              "liquidationThreshold": "Ratio",
-              "reserveFactor": "Ratio",
-              "closeFactor": "Ratio",
-              "liquidateIncentive": "Rate",
-              "liquidateIncentiveReservedFactor": "Ratio",
-              "rateModel": "InterestRateModel",
-              "state": "MarketState",
-              "supplyCap": "Balance",
-              "borrowCap": "Balance",
-              "ptokenId": "CurrencyId"
-            },
-            "MarketState": {
-              "_enum": [
-                "Active",
-                "Pending",
-                "Supervision"
-              ]
-            },
-            "RewardMarketState": {
-              "index": "Balance",
-              "block": "BlockNumber"
-            },
-            "Liquidity": "FixedU128",
-            "Shortfall": "FixedU128",
-            "ReservableAmount": {
-              "total": "Balance",
-              "reserved": "Balance"
-            },
-            "MatchingLedger": {
-              "totalStakeAmount": "ReservableAmount",
-              "totalUnstakeAmount": "ReservableAmount"
-            },
-            "UnlockChunk": {
-              "value": "Balance",
-              "era": "EraIndex"
-            },
-            "StakingLedger": {
-              "stash": "AccountId",
-              "total": "Balance",
-              "active": "Balance",
-              "unlocking": "Vec<UnlockChunk>",
-              "claimedRewards": "Vec<EraIndex>"
-            },
-            "DerivativeIndex": "u16",
-            "Pool": {
-              "baseAmount": "Balance",
-              "quoteAmount": "Balance",
-              "baseAmountLast": "Balance",
-              "quoteAmountLast": "Balance",
-              "lpTokenId": "AssetId",
-              "blockTimestampLast": "BlockNumber",
-              "price0CumulativeLast": "Balance",
-              "price1CumulativeLast": "Balance"
-            },
-            "Amount": "i128",
-            "AmountOf": "Amount",
-            "Rate": "FixedU128",
-            "Ratio": "Permill",
-            "Timestamp": "u64",
-            "PriceDetail": "(Price, Timestamp)",
-            "CurrencyId": "AssetId",
-            "CurrencyIdOf": "CurrencyId",
-            "Currency": "CurrencyId",
-            "AssetIdOf": "AssetId",
-            "OracleKey": "AssetId",
-            "BoundedBalance": "BoundedVec<(Balance, BlockNumber), u32>",
-            "UserPosition": {
-              "depositBalance": "Balance",
-              "lockBalanceItems": "BoundedBalance",
-              "rewardAmount": "Balance",
-              "rewardPerSharePaid": "Balance"
-            },
-            "Route": "Vec<(AssetId, AssetId)>",
-            "VaultPhase": {
-              "_enum": [
-                "Pending",
-                "Contributing",
-                "Closed",
-                "Failed",
-                "Succeeded",
-                "Expired"
-              ]
-            },
-            "ContributionStrategy": {
-              "_enum": [
-                "XCM",
-                "XCMPROXY"
-              ]
-            },
-            "ChildStorageKind": {
-              "_enum": [
-                "Pending",
-                "Flying",
-                "Contributed"
-              ]
-            },
-            "TrieIndex": "u32",
-            "LeasePeriod": "BlockNumber",
-            "Vault": {
-              "ctoken": "AssetId",
-              "phase": "VaultPhase",
-              "contributed": "Balance",
-              "pending": "Balance",
-              "flying": "Balance",
-              "contributionStrategy": "ContributionStrategy",
-              "cap": "Balance",
-              "endBlock": "BlockNumber",
-              "trieIndex": "TrieIndex",
-              "leaseStart": "LeasePeriod",
-              "leaseEnd": "LeasePeriod"
-            },
-            "XcmWeightFeeMisc": {
-              "weight": "Weight",
-              "fee": "Balance"
-            },
-            "XcmCall": {
-              "_enum": [
-                "Bond",
-                "BondExtra",
-                "Unbond",
-                "Rebond",
-                "WithdrawUnbonded",
-                "Nominate",
-                "Contribute",
-                "Withdraw",
-                "AddMemo"
-              ]
-            },
-            "BridgeToken": {
-              "id": "CurrencyId",
-              "external": "bool",
-              "fee": "Balance"
-            },
-            "ProposalStatus": {
-              "_enum": [
-                "Initiated",
-                "Approved",
-                "Rejected"
-              ]
-            },
-            "Address": "MultiAddress",
-            "LookupSource": "MultiAddress",
-            "TAssetBalance": "u128"
-          }
-        }
-      ],
-      "alias": {
-        "tokens": {
-          "AccountData": "OrmlAccountData",
-          "BalanceLock": "OrmlBalanceLock"
         }
       }
     },
@@ -103680,7 +103688,7 @@ export const typesBundle = {
               "_enum": [
                 "ACA",
                 "AUSD",
-                "HEZ",
+                "DOT",
                 "XBTC",
                 "LDOT",
                 "RENBTC",
@@ -103910,7 +103918,7 @@ export const typesBundle = {
               "totalIncentives": "Balance",
               "totalShares": "Balance"
             },
-            "TeyrchainBondConfig": {
+            "ParachainBondConfig": {
               "account": "AccountId",
               "percent": "Percent"
             },

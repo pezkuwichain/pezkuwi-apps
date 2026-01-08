@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@pezkuwi/types';
-import type { PalletUniquesItemMetadata } from '@pezkuwi/types/lookup';
+import type { PezpalletUniquesItemMetadata } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { AccountItem } from '../types.js';
 import type { ItemInfo, ItemSupportedMetadata } from './types.js';
@@ -37,7 +37,7 @@ const METADATA_FETCH_OPTIONS = {
   }
 };
 
-function extractInfo ([, itemId]: [BN, BN], metadata: Option<PalletUniquesItemMetadata>, accountItems: AccountItem[]): ItemInfo {
+function extractInfo ([, itemId]: [BN, BN], metadata: Option<PezpalletUniquesItemMetadata>, accountItems: AccountItem[]): ItemInfo {
   const item = accountItems.find(({ itemId: _itemId }) => _itemId.eq(itemId));
 
   if (!item) {
@@ -71,7 +71,7 @@ function useItemsInfosImpl (accountItems: AccountItem[]): ItemInfo[] | undefined
     [accountItems]
   );
 
-  const metadata = useCall<[[[BN, BN][]], Option<PalletUniquesItemMetadata>[]]>(api.query.uniques.instanceMetadataOf.multi, [ids], QUERY_OPTS);
+  const metadata = useCall<[[[BN, BN][]], Option<PezpalletUniquesItemMetadata>[]]>(api.query.uniques.instanceMetadataOf.multi, [ids], QUERY_OPTS);
 
   const metadataLinks = useMemo((): string[] | undefined => {
     if (metadata?.[1].length) {

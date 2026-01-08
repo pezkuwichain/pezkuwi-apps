@@ -3,7 +3,7 @@
 
 import type { ReactNode } from 'react';
 import type { ApiPromise } from '@pezkuwi/api';
-import type { BrokerStatus, ChainConstants, PalletBrokerConfigRecord, PalletBrokerSaleInfoRecord } from '@pezkuwi/react-hooks/types';
+import type { BrokerStatus, ChainConstants, PezpalletBrokerConfigRecord, PezpalletBrokerSaleInfoRecord } from '@pezkuwi/react-hooks/types';
 import type { CurrentRegion } from './types.js';
 
 import React, { createContext, useContext, useMemo } from 'react';
@@ -19,10 +19,10 @@ interface BrokerProviderProps {
 }
 
 interface BrokerContextProps {
-  config: PalletBrokerConfigRecord | null,
+  config: PezpalletBrokerConfigRecord | null,
   coretimeConsts: ChainConstants | null,
   currentRegion: CurrentRegion,
-  saleInfo: PalletBrokerSaleInfoRecord | null,
+  saleInfo: PezpalletBrokerSaleInfoRecord | null,
   status: BrokerStatus | null,
 }
 

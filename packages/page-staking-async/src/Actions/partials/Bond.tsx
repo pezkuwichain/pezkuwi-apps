@@ -93,6 +93,7 @@ function Bond ({ className = '', isNominating, minNominated, minNominatorBond, m
             // we have a batch with setController at the end
             // @ts-expect-error Previous generation
             ? api.tx.staking.bond(stashId, amount, bondDest)
+            // @ts-expect-error Runtime type format
             : api.tx.staking.bond(amount, bondDest),
           controllerId: mapControllerId,
           controllerTx: needsController

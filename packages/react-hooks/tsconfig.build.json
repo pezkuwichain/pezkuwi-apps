@@ -5,6 +5,11 @@
     "outDir": "./build",
     "rootDir": "./src"
   },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.d.ts"
+  ],
   "exclude": [
     "src/ctx/Api.tsx",
     "src/ctx/types.ts"

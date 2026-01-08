@@ -5,7 +5,7 @@ import type { ApiPromise } from '@pezkuwi/api';
 import type { DeriveSessionIndexes } from '@pezkuwi/api-derive/types';
 import type { Option } from '@pezkuwi/types';
 import type { EraIndex } from '@pezkuwi/types/interfaces';
-import type { PalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
 
 import { useEffect, useMemo, useState } from 'react';
 
@@ -18,13 +18,13 @@ import { useIsMountedRef } from './useIsMountedRef.js';
 
 type Unsub = () => void;
 
-function useAvailableSlashesImpl (apiOverride?: ApiPromise): [BN, PalletStakingUnappliedSlash[]][] {
+function useAvailableSlashesImpl (apiOverride?: ApiPromise): [BN, PezpalletStakingUnappliedSlash[]][] {
   const { api: connectedApi } = useApi();
   const api = useMemo(() => apiOverride ?? connectedApi, [apiOverride, connectedApi]);
   const indexes = useCall<DeriveSessionIndexes>(api.derive.session?.indexes);
   const earliestSlash = useCall<Option<EraIndex>>(api.query.staking?.earliestUnappliedSlash);
   const mountedRef = useIsMountedRef();
-  const [slashes, setSlashes] = useState<[BN, PalletStakingUnappliedSlash[]][]>([]);
+  const [slashes, setSlashes] = useState<[BN, PezpalletStakingUnappliedSlash[]][]>([]);
 
   useEffect((): Unsub => {
     let unsub: Unsub | undefined;
@@ -48,7 +48,7 @@ function useAvailableSlashesImpl (apiOverride?: ApiPromise): [BN, PalletStakingU
           unsub = await api.query.staking.unappliedSlashes.multi(range, (values): void => {
             mountedRef.current && setSlashes(
               values
-                .map((value, index): [BN, PalletStakingUnappliedSlash[]] => [from.addn(index), value])
+                .map((value, index): [BN, PezpalletStakingUnappliedSlash[]] => [from.addn(index), value])
                 .filter(([, slashes]) => slashes.length)
             );
           });

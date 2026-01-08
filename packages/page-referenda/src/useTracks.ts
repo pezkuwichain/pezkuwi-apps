@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-referenda authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
+import type { PezpalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { PalletReferenda, TrackDescription } from './types.js';
 
@@ -14,7 +14,7 @@ import { calcCurves } from './util.js';
 
 const zeroGraph = { approval: [BN_ZERO], support: [BN_ZERO], x: [BN_ZERO] };
 
-function expandTracks (tracks: [BN, PalletReferendaTrackDetails][]): TrackDescription[] {
+function expandTracks (tracks: [BN, PezpalletReferendaTrackDetails][]): TrackDescription[] {
   return tracks.map(([id, info]) => ({
     graph: info.decisionDeposit && info.minApproval && info.minSupport ? calcCurves(info) : zeroGraph,
     id,

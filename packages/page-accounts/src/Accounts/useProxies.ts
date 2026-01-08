@@ -3,7 +3,7 @@
 
 import type { Vec } from '@pezkuwi/types';
 import type { AccountId, BalanceOf } from '@pezkuwi/types/interfaces';
-import type { KitchensinkRuntimeProxyType, PalletProxyProxyDefinition } from '@pezkuwi/types/lookup';
+import type { KitchensinkRuntimeProxyType, PezpalletProxyProxyDefinition } from '@pezkuwi/types/lookup';
 import type { ITuple } from '@pezkuwi/types/types';
 import type { BN } from '@pezkuwi/util';
 
@@ -47,10 +47,10 @@ function useProxiesImpl (address?: string | null): State | null {
 
     address &&
       api.query.proxy
-        ?.proxies<ITuple<[Vec<ITuple<[AccountId, KitchensinkRuntimeProxyType]> | PalletProxyProxyDefinition>, BalanceOf]>>(address)
+        ?.proxies<ITuple<[Vec<ITuple<[AccountId, KitchensinkRuntimeProxyType]> | PezpalletProxyProxyDefinition>, BalanceOf]>>(address)
         .then(([_proxies]): void => {
           const proxies = api.tx.proxy.addProxy.meta.args.length === 3
-            ? (_proxies as PalletProxyProxyDefinition[]).map(({ delay, delegate, proxyType }) =>
+            ? (_proxies as PezpalletProxyProxyDefinition[]).map(({ delay, delegate, proxyType }) =>
               createProxy(allAccounts, delegate, proxyType, delay)
             )
             : (_proxies as [AccountId, KitchensinkRuntimeProxyType][]).map(([delegate, proxyType]) =>

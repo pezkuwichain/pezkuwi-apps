@@ -3,7 +3,7 @@
 
 import type { IconName } from '@fortawesome/fontawesome-svg-core';
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
-import type { PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 
 import React, { useMemo } from 'react';
 
@@ -16,7 +16,7 @@ interface Props {
   className?: string;
   option: 'ayes' | 'nays';
   proposals: DeriveCollectiveProposal[];
-  status: PalletBountiesBountyStatus;
+  status: PezpalletBountiesBountyStatus;
 }
 
 const icons: Record<string, IconName> = {

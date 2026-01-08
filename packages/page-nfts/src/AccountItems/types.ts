@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { AccountId } from '@pezkuwi/types/interfaces';
-import type { PalletUniquesItemMetadata } from '@pezkuwi/types/lookup';
+import type { PezpalletUniquesItemMetadata } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 export interface ItemSupportedMetadata {
@@ -14,6 +14,6 @@ export interface ItemInfo {
   account: AccountId,
   id: BN;
   key: string;
-  metadata: PalletUniquesItemMetadata | null;
+  metadata: PezpalletUniquesItemMetadata | null;
   ipfsData: ItemSupportedMetadata | null;
 }

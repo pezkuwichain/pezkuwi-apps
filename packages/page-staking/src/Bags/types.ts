@@ -1,12 +1,12 @@
 // Copyright 2017-2026 @pezkuwi/app-staking authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletBagsListListBag, PalletBagsListListNode } from '@pezkuwi/types/lookup';
+import type { PezpalletBagsListListBag, PezpalletBagsListListNode } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 export interface StashNode {
   stashId: string;
-  node: PalletBagsListListNode;
+  node: PezpalletBagsListListNode;
 }
 
 export interface ListNode {
@@ -20,7 +20,7 @@ export interface BagInfo {
   bagLower: BN;
   bagUpper: BN;
   index: number;
-  info: PalletBagsListListBag;
+  info: PezpalletBagsListListBag;
   key: string;
 }
 

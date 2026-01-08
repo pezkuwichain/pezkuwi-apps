@@ -6,7 +6,7 @@ import type { SubmittableExtrinsic } from '@pezkuwi/api/types';
 import type { QueueTx } from '@pezkuwi/react-components/Status/types';
 import type { Option, Vec } from '@pezkuwi/types';
 import type { AccountId, BalanceOf, Call, Multisig } from '@pezkuwi/types/interfaces';
-import type { KitchensinkRuntimeProxyType, PalletProxyProxyDefinition } from '@pezkuwi/types/lookup';
+import type { KitchensinkRuntimeProxyType, PezpalletProxyProxyDefinition } from '@pezkuwi/types/lookup';
 import type { ITuple } from '@pezkuwi/types/types';
 import type { BN } from '@pezkuwi/util';
 import type { AddressFlags, AddressProxy } from './types.js';
@@ -176,9 +176,9 @@ async function queryForMultisig (api: ApiPromise, requestAddress: string | null,
 async function queryForProxy (api: ApiPromise, allAccounts: string[], address: string | null, tx: SubmittableExtrinsic<'promise'>): Promise<ProxyState | null> {
   if (isFunction(api.query.proxy?.proxies)) {
     const { isProxied } = extractExternal(address);
-    const [_proxies] = await api.query.proxy.proxies<ITuple<[Vec<ITuple<[AccountId, KitchensinkRuntimeProxyType]> | PalletProxyProxyDefinition>, BalanceOf]>>(address);
+    const [_proxies] = await api.query.proxy.proxies<ITuple<[Vec<ITuple<[AccountId, KitchensinkRuntimeProxyType]> | PezpalletProxyProxyDefinition>, BalanceOf]>>(address);
     const proxies = api.tx.proxy.addProxy.meta.args.length === 3
-      ? (_proxies as PalletProxyProxyDefinition[]).map(({ delay, delegate, proxyType }): [string, BN, KitchensinkRuntimeProxyType] => [delegate.toString(), delay, proxyType])
+      ? (_proxies as PezpalletProxyProxyDefinition[]).map(({ delay, delegate, proxyType }): [string, BN, KitchensinkRuntimeProxyType] => [delegate.toString(), delay, proxyType])
       : (_proxies as [AccountId, KitchensinkRuntimeProxyType][]).map(([delegate, proxyType]): [string, BN, KitchensinkRuntimeProxyType] => [delegate.toString(), BN_ZERO, proxyType]);
     const proxiesFilter = filterProxies(allAccounts, tx, proxies);
 

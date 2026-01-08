@@ -4,7 +4,7 @@
 import type { KeyedEvent } from '@pezkuwi/react-hooks/ctx/types';
 import type { V2Weight } from '@pezkuwi/react-hooks/useWeight';
 import type { Balance, DispatchInfo, SignedBlock } from '@pezkuwi/types/interfaces';
-import type { FrameSupportDispatchPerDispatchClassWeight } from '@pezkuwi/types/lookup';
+import type { PezframeSupportDispatchPerDispatchClassWeight } from '@pezkuwi/types/lookup';
 
 import React, { useMemo } from 'react';
 
@@ -18,14 +18,14 @@ import { useTranslation } from '../translate.js';
 
 interface Props {
   events?: KeyedEvent[] | null;
-  blockWeight?: FrameSupportDispatchPerDispatchClassWeight | null;
+  blockWeight?: PezframeSupportDispatchPerDispatchClassWeight | null;
   maxBlockWeight?: BN;
   maxProofSize?: BN;
   signedBlock?: SignedBlock;
 }
 
 function accumulateWeights (
-  weight?: FrameSupportDispatchPerDispatchClassWeight | null
+  weight?: PezframeSupportDispatchPerDispatchClassWeight | null
 ): { totalRefTime: BN; totalProofSize: BN } {
   const totalRefTime = new BN(0);
   const totalProofSize = new BN(0);

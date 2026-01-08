@@ -5,7 +5,8 @@ import type { MetadataDef } from '@pezkuwi/extension-inject/types';
 
 export type ChainType = 'bizinikiwi' | 'ethereum';
 
-export interface ChainInfo extends MetadataDef {
+// Omit chainType from MetadataDef to override with pezkuwi-specific type
+export interface ChainInfo extends Omit<MetadataDef, 'chainType'> {
   color: string | undefined;
   chainType: ChainType;
 }

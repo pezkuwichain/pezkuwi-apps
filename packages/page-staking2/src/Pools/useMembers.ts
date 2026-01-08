@@ -4,7 +4,7 @@
 import type { Changes } from '@pezkuwi/react-hooks/useEventChanges';
 import type { bool, Option, StorageKey, u32, u128 } from '@pezkuwi/types';
 import type { AccountId32, EventRecord } from '@pezkuwi/types/interfaces';
-import type { PalletNominationPoolsPoolMember } from '@pezkuwi/types/lookup';
+import type { PezpalletNominationPoolsPoolMember } from '@pezkuwi/types/lookup';
 import type { MembersMap, MembersMapEntry } from './types.js';
 
 import { useEffect, useState } from 'react';
@@ -14,7 +14,7 @@ import { createNamedHook, useApi, useCall, useEventChanges, useMapEntries } from
 const EMPTY_START: AccountId32[] = [];
 
 const OPT_ENTRIES = {
-  transform: (entries: [StorageKey<[AccountId32]>, Option<PalletNominationPoolsPoolMember>][]): MembersMap =>
+  transform: (entries: [StorageKey<[AccountId32]>, Option<PezpalletNominationPoolsPoolMember>][]): MembersMap =>
     entries.reduce((all: MembersMap, [{ args: [accountId] }, optMember]) => {
       if (optMember.isSome) {
         const member = optMember.unwrap();
@@ -35,7 +35,7 @@ const OPT_ENTRIES = {
 };
 
 const OPT_MULTI = {
-  transform: ([[ids], values]: [[AccountId32[]], Option<PalletNominationPoolsPoolMember>[]]): MembersMapEntry[] =>
+  transform: ([[ids], values]: [[AccountId32[]], Option<PezpalletNominationPoolsPoolMember>[]]): MembersMapEntry[] =>
     ids
       .filter((_, i) => values[i].isSome)
       .map((accountId, i) => ({

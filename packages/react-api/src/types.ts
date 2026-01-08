@@ -5,9 +5,33 @@ import type { Blockchain } from '@acala-network/chopsticks-core';
 import type React from 'react';
 import type { ApiPromise } from '@pezkuwi/api';
 import type { SubmittableExtrinsicFunction } from '@pezkuwi/api/promise/types';
+import type { Signer as InjectedSigner } from '@pezkuwi/api/types';
 import type { LinkOption } from '@pezkuwi/apps-config/endpoints/types';
-import type { InjectedExtension } from '@pezkuwi/extension-inject/types';
 import type { KeypairType } from '@pezkuwi/util-crypto/types';
+
+// InjectedExtension type from extension-inject (defined locally for module resolution)
+interface InjectedExtensionInfo {
+  name: string;
+  version: string;
+}
+
+interface InjectedAccount {
+  address: string;
+  genesisHash?: string | null;
+  name?: string;
+}
+
+interface InjectedAccounts {
+  get: (anyType?: boolean) => Promise<InjectedAccount[]>;
+  subscribe: (cb: (accounts: InjectedAccount[]) => void | Promise<void>) => () => void;
+}
+
+interface Injected {
+  accounts: InjectedAccounts;
+  signer: InjectedSigner;
+}
+
+export interface InjectedExtension extends InjectedExtensionInfo, Injected {}
 
 // helpers for HOC props
 export type OmitProps<T, K> = Pick<T, Exclude<keyof T, K>>;

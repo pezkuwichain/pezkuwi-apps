@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Option, StorageKey } from '@pezkuwi/types';
-import type { PalletBrokerRegionId, PalletBrokerRegionRecord } from '@pezkuwi/types/lookup';
+import type { PezpalletBrokerRegionId, PezpalletBrokerRegionRecord } from '@pezkuwi/types/lookup';
 import type { RegionInfo } from './types.js';
 
 import { useEffect, useState } from 'react';
@@ -22,14 +22,14 @@ function extractInfo (core: number, start: number, end: number, owner: string, p
 }
 
 const OPT_KEY = {
-  transform: (keys: StorageKey<[PalletBrokerRegionId]>[]): PalletBrokerRegionId[] =>
+  transform: (keys: StorageKey<[PezpalletBrokerRegionId]>[]): PezpalletBrokerRegionId[] =>
     keys.map(({ args: [regionId] }) => regionId)
 };
 
 function useRegionsImpl (api: ApiPromise): RegionInfo[] | undefined {
   const regionKeys = useMapKeys(api?.query?.broker.regions, [], OPT_KEY);
 
-  const regionInfo = useCall<[[PalletBrokerRegionId[]], Option<PalletBrokerRegionRecord>[]]>(api?.query?.broker.regions.multi, [regionKeys], { withParams: true });
+  const regionInfo = useCall<[[PezpalletBrokerRegionId[]], Option<PezpalletBrokerRegionRecord>[]]>(api?.query?.broker.regions.multi, [regionKeys], { withParams: true });
 
   const [state, setState] = useState<RegionInfo[] | undefined>();
 

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Bytes, Option } from '@pezkuwi/types';
-import type { PalletIdentityRegistration } from '@pezkuwi/types/lookup';
+import type { PezpalletIdentityRegistration } from '@pezkuwi/types/lookup';
 import type { ITuple } from '@pezkuwi/types/types';
 import type { HexString } from '@pezkuwi/util/types';
 
@@ -35,7 +35,7 @@ const JUDGEMENT_ENUM = [
 ];
 
 const OPT_ID = {
-  transform: (optId: Option<ITuple<[PalletIdentityRegistration, Option<Bytes>]>>): HexString | null => {
+  transform: (optId: Option<ITuple<[PezpalletIdentityRegistration, Option<Bytes>]>>): HexString | null => {
     const id = optId.isSome
       ? optId.unwrap()
       : null;
@@ -45,7 +45,7 @@ const OPT_ID = {
       ? null
       : Array.isArray(id)
         ? id[0].info.hash.toHex()
-        : (id as unknown as PalletIdentityRegistration).info.hash.toHex();
+        : (id as unknown as PezpalletIdentityRegistration).info.hash.toHex();
   }
 };
 

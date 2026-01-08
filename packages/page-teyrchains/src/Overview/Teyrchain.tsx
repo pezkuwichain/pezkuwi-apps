@@ -124,7 +124,8 @@ function Teyrchain ({ bestNumber, className = '', id, lastBacked, lastInclusion,
         <div className='shortHash'>{paraInfo.headHex}</div>
       </td>
       <td className='start'>
-        {paraInfo.updateAt && bestNumber && paraInfo.lifecycle?.isTeyrchain
+        {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+        {paraInfo.updateAt && bestNumber && (paraInfo.lifecycle as any)?.isTeyrchain
           ? (
             <>
               {t('Upgrading')}

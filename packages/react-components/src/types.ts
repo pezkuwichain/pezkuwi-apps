@@ -3,6 +3,9 @@
 
 import '@pezkuwi/api-augment';
 
+// Custom IconTheme type that includes pezkuwi project themes
+export type PezkuwiIconTheme = 'beachball' | 'bizinikiwi' | 'empty' | 'ethereum' | 'jdenticon' | 'pezkuwi' | 'polkadot' | 'substrate';
+
 import type { IconName } from '@fortawesome/fontawesome-svg-core';
 import type React from 'react';
 import type { SubmittableExtrinsic } from '@pezkuwi/api/types';

@@ -3,7 +3,7 @@
 
 import type { Bytes, Option } from '@pezkuwi/types';
 import type { BlockNumber, Call, SchedulePeriod, SchedulePriority } from '@pezkuwi/types/interfaces';
-import type { FrameSupportPreimagesBounded } from '@pezkuwi/types/lookup';
+import type { PezframeSupportPreimagesBounded } from '@pezkuwi/types/lookup';
 
 export interface ScheduledExt {
   blockNumber: BlockNumber;
@@ -12,5 +12,5 @@ export interface ScheduledExt {
   maybeId: Option<Bytes>;
   maybePeriodic: Option<SchedulePeriod>;
   priority: SchedulePriority;
-  preimageHash?: FrameSupportPreimagesBounded;
+  preimageHash?: PezframeSupportPreimagesBounded;
 }

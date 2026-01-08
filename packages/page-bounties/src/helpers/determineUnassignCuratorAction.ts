@@ -1,13 +1,13 @@
 // Copyright 2017-2026 @pezkuwi/app-bounties authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { UserRole, ValidUnassignCuratorAction } from '../types.js';
 
 import { BN_ZERO } from '@pezkuwi/util';
 
-export function determineUnassignCuratorAction (roles: UserRole[], status: PalletBountiesBountyStatus, blocksUntilUpdate?: BN): ValidUnassignCuratorAction[] {
+export function determineUnassignCuratorAction (roles: UserRole[], status: PezpalletBountiesBountyStatus, blocksUntilUpdate?: BN): ValidUnassignCuratorAction[] {
   const actions: ValidUnassignCuratorAction[] = [];
 
   if (status.isCuratorProposed && roles.includes('Member')) {

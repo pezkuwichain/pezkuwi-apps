@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { ApiPromise } from '@pezkuwi/api';
-import type { SpStakingExposure } from '@pezkuwi/types/lookup';
+import type { PezspStakingExposure } from '@pezkuwi/types/lookup';
 import type { Route, TFunction } from './types.js';
 
 import Component from '@pezkuwi/app-staking2';
@@ -14,7 +14,7 @@ function needsApiCheck (api: ApiPromise): boolean {
   try {
     // we need a known Exposure type
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const { others: [{ value, who }], own, total } = api.registry.createType<SpStakingExposure>(
+    const { others: [{ value, who }], own, total } = api.registry.createType<PezspStakingExposure>(
       unwrapStorageType(api.registry, api.query.staking.erasStakers.creator.meta.type),
       { others: [{ value: BN_ONE, who: ZERO_ACCOUNT }], own: BN_ONE, total: BN_ONE }
     );
@@ -35,6 +35,7 @@ function needsApiCheck (api: ApiPromise): boolean {
       api.tx.staking.bond(ZERO_ACCOUNT, BN_ONE, { Account: ZERO_ACCOUNT });
     } else if (api.tx.staking.bond.meta.args.length === 2) {
       // current, no controller account
+      // @ts-expect-error Runtime type format
       api.tx.staking.bond(BN_ONE, { Account: ZERO_ACCOUNT });
     } else {
       // unknown

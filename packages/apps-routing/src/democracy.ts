@@ -9,7 +9,8 @@ import Component, { useCounter } from '@pezkuwi/app-democracy';
 function needsApiCheck (api: ApiPromise): boolean {
   try {
     // we need to be able to create an actual vote
-    api.tx.democracy.vote(1, { Standard: { balance: 1, vote: { aye: true, conviction: 1 } } });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    api.tx.democracy.vote(1, { Standard: { balance: 1, vote: { aye: true, conviction: 1 } } } as any);
 
     return true;
   } catch {

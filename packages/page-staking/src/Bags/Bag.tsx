@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { AccountId32 } from '@pezkuwi/types/interfaces';
-import type { PalletBagsListListBag } from '@pezkuwi/types/lookup';
+import type { PezpalletBagsListListBag } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { ListNode, StashNode } from './types.js';
 
@@ -20,7 +20,7 @@ interface Props {
   bagLower: BN;
   bagUpper: BN;
   index: number;
-  info: PalletBagsListListBag;
+  info: PezpalletBagsListListBag;
   nodesOwn?: StashNode[];
 }
 

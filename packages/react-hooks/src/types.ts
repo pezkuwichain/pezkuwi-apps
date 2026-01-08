@@ -9,7 +9,7 @@ import type { SubmittableExtrinsic } from '@pezkuwi/api/types';
 import type { DeriveAccountFlags, DeriveAccountRegistration } from '@pezkuwi/api-derive/types';
 import type { Option, u32, u128, Vec } from '@pezkuwi/types';
 import type { AccountId, BlockNumber, Call, Hash, SessionIndex, ValidatorPrefs } from '@pezkuwi/types/interfaces';
-import type { PalletAssetsAssetDetails, PalletAssetsAssetMetadata, PalletPreimageRequestStatus, PalletStakingRewardDestination, PalletStakingStakingLedger, PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescriptor, SpStakingExposurePage, SpStakingPagedExposureMetadata } from '@pezkuwi/types/lookup';
+import type { PezpalletAssetsAssetDetails, PezpalletAssetsAssetMetadata, PezpalletPreimageRequestStatus, PezpalletStakingRewardDestination, PezpalletStakingStakingLedger, PezkuwiRuntimeTeyrchainsAssignerCoretimeCoreDescriptor, PezspStakingExposurePage, PezspStakingPagedExposureMetadata } from '@pezkuwi/types/lookup';
 import type { ICompact, IExtrinsic, INumber } from '@pezkuwi/types/types';
 import type { KeyringJson$Meta } from '@pezkuwi/ui-keyring/types';
 import type { BN } from '@pezkuwi/util';
@@ -54,19 +54,19 @@ export interface Inflation {
 }
 
 export interface AssetInfo {
-  details: PalletAssetsAssetDetails | null;
+  details: PezpalletAssetsAssetDetails | null;
   id: BN;
   isAdminMe: boolean;
   isIssuerMe: boolean;
   isFreezerMe: boolean;
   isOwnerMe: boolean;
   key: string;
-  metadata: PalletAssetsAssetMetadata | null;
+  metadata: PezpalletAssetsAssetMetadata | null;
 }
 
 export interface AssetInfoComplete extends AssetInfo {
-  details: PalletAssetsAssetDetails;
-  metadata: PalletAssetsAssetMetadata;
+  details: PezpalletAssetsAssetDetails;
+  metadata: PezpalletAssetsAssetMetadata;
 }
 
 export interface Slash {
@@ -159,9 +159,9 @@ export interface UseAccountInfo {
 
 export interface StakerState {
   controllerId: string | null;
-  destination?: PalletStakingRewardDestination | null;
-  exposurePaged?: Option<SpStakingExposurePage>;
-  exposureMeta?: Option<SpStakingPagedExposureMetadata>
+  destination?: PezpalletStakingRewardDestination | null;
+  exposurePaged?: Option<PezspStakingExposurePage>;
+  exposureMeta?: Option<PezspStakingPagedExposureMetadata>
   claimedRewardsEras?: Vec<u32>
   hexSessionIdNext: string | null;
   hexSessionIdQueue: string | null;
@@ -172,7 +172,7 @@ export interface StakerState {
   isStashValidating: boolean;
   nominating?: string[];
   sessionIds: string[];
-  stakingLedger?: PalletStakingStakingLedger;
+  stakingLedger?: PezpalletStakingStakingLedger;
   stashId: string;
   validatorPrefs?: ValidatorPrefs;
 }
@@ -201,7 +201,7 @@ export interface PreimageStatus {
   isHashParam: boolean;
   proposalHash: HexString;
   proposalLength?: BN;
-  status: PalletPreimageRequestStatus | null;
+  status: PezpalletPreimageRequestStatus | null;
 }
 
 export interface PreimageBytes {
@@ -307,7 +307,7 @@ export interface LegacyLease {
   task: string
 }
 
-export interface PalletBrokerSaleInfoRecord {
+export interface PezpalletBrokerSaleInfoRecord {
   saleStart: number;
   leadinLength: number;
   endPrice: BN;
@@ -320,7 +320,7 @@ export interface PalletBrokerSaleInfoRecord {
   coresSold: number;
 }
 
-export interface PalletBrokerConfigRecord {
+export interface PezpalletBrokerConfigRecord {
   advanceNotice: number;
   interludeLength: number;
   leadinLength: number;
@@ -360,10 +360,10 @@ export interface ChainConstants {
 export interface CoretimeInformation {
   constants: ChainConstants,
   chainInfo: Record<number, ChainInformation>,
-  salesInfo: PalletBrokerSaleInfoRecord,
+  salesInfo: PezpalletBrokerSaleInfoRecord,
   status: BrokerStatus,
   region: RegionInfo[],
-  config: PalletBrokerConfigRecord
+  config: PezpalletBrokerConfigRecord
   taskIds: number[]
 }
 

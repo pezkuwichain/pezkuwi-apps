@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Option } from '@pezkuwi/types';
-import type { PalletBrokerStatusRecord } from '@pezkuwi/types/lookup';
+import type { PezpalletBrokerStatusRecord } from '@pezkuwi/types/lookup';
 import type { BrokerStatus } from './types.js';
 
 import { useEffect, useState } from 'react';
@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react';
 import { createNamedHook, useCall } from '@pezkuwi/react-hooks';
 
 function useBrokerStatusImpl (api: ApiPromise, ready: boolean): BrokerStatus | undefined {
-  const status = useCall<Option<PalletBrokerStatusRecord>>(ready && api?.query.broker?.status);
+  const status = useCall<Option<PezpalletBrokerStatusRecord>>(ready && api?.query.broker?.status);
   const [state, setState] = useState<BrokerStatus | undefined>();
 
   useEffect((): void => {

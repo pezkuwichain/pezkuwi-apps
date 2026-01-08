@@ -4,7 +4,7 @@
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Bytes, u32, u128 } from '@pezkuwi/types';
 import type { AccountId, Hash } from '@pezkuwi/types/interfaces';
-import type { FrameSupportPreimagesBounded, PalletPreimageRequestStatus } from '@pezkuwi/types/lookup';
+import type { PezframeSupportPreimagesBounded, PezpalletPreimageRequestStatus } from '@pezkuwi/types/lookup';
 import type { ITuple } from '@pezkuwi/types/types';
 import type { HexString } from '@pezkuwi/util/types';
 import type { Preimage, PreimageDeposit, PreimageStatus } from './types.js';
@@ -65,7 +65,7 @@ export function getParamType (api: ApiPromise): Result {
 }
 
 /** @internal Unwraps a passed preimage hash into components */
-export function getPreimageHash (api: ApiPromise, hashOrBounded: Hash | HexString | FrameSupportPreimagesBounded): StatusParams {
+export function getPreimageHash (api: ApiPromise, hashOrBounded: Hash | HexString | PezframeSupportPreimagesBounded): StatusParams {
   let proposalHash: HexString | undefined;
   let inlineData: Uint8Array | undefined;
 
@@ -84,7 +84,7 @@ export function getPreimageHash (api: ApiPromise, hashOrBounded: Hash | HexStrin
     } else if (hashOrBounded.isLookup) {
       proposalHash = hashOrBounded.asLookup.hash_.toHex();
     } else {
-      console.error(`Unhandled FrameSupportPreimagesBounded type ${hashOrBounded.type}`);
+      console.error(`Unhandled PezframeSupportPreimagesBounded type ${hashOrBounded.type}`);
     }
   }
 
@@ -165,7 +165,7 @@ function convertDeposit (deposit?: [AccountId, u128] | null): PreimageDeposit | 
 }
 
 /** @internal Returns the parameters required for a call to bytes */
-function getBytesParams (interimResult: PreimageStatus, someOptStatus: Option<PalletPreimageRequestStatus>): BytesParams {
+function getBytesParams (interimResult: PreimageStatus, someOptStatus: Option<PezpalletPreimageRequestStatus>): BytesParams {
   const result = objectSpread<PreimageStatus>({}, interimResult, {
     status: someOptStatus.unwrapOr(null)
   });
@@ -201,7 +201,7 @@ function getBytesParams (interimResult: PreimageStatus, someOptStatus: Option<Pa
         result.proposalLength = asUnrequested.len;
       }
     } else {
-      console.error(`Unhandled PalletPreimageRequestStatus type: ${result.status.type}`);
+      console.error(`Unhandled PezpalletPreimageRequestStatus type: ${result.status.type}`);
     }
   }
 
@@ -213,7 +213,7 @@ function getBytesParams (interimResult: PreimageStatus, someOptStatus: Option<Pa
   };
 }
 
-function usePreimageImpl (hashOrBounded?: Hash | HexString | FrameSupportPreimagesBounded | null): Preimage | undefined {
+function usePreimageImpl (hashOrBounded?: Hash | HexString | PezframeSupportPreimagesBounded | null): Preimage | undefined {
   const { api } = useApi();
 
   // retrieve the status using only the hash of the image
@@ -226,8 +226,8 @@ function usePreimageImpl (hashOrBounded?: Hash | HexString | FrameSupportPreimag
 
   // api.query.preimage.statusFor has been deprecated in favor of api.query.preimage.requestStatusFor.
   // To ensure we get all preimages correctly we query both storages. see: https://github.com/pezkuwichain/pezkuwi-apps/pull/10310
-  const optStatus = useCall<Option<PalletPreimageRequestStatus>>(!inlineData && paramsStatus && api.query.preimage?.statusFor, paramsStatus);
-  const optRequstStatus = useCall<Option<PalletPreimageRequestStatus>>(!inlineData && paramsStatus && api.query.preimage?.requestStatusFor, paramsStatus);
+  const optStatus = useCall<Option<PezpalletPreimageRequestStatus>>(!inlineData && paramsStatus && api.query.preimage?.statusFor, paramsStatus);
+  const optRequstStatus = useCall<Option<PezpalletPreimageRequestStatus>>(!inlineData && paramsStatus && api.query.preimage?.requestStatusFor, paramsStatus);
   const someOptStatus = optStatus?.isSome ? optStatus : optRequstStatus;
 
   // from the retrieved status (if any), get the on-chain stored bytes

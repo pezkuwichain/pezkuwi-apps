@@ -4,7 +4,7 @@
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Bytes, Data, Option, Struct } from '@pezkuwi/types';
 import type { H160, IdentityInfo, Registration } from '@pezkuwi/types/interfaces';
-import type { PalletIdentityRegistration } from '@pezkuwi/types/lookup';
+import type { PezpalletIdentityRegistration } from '@pezkuwi/types/lookup';
 import type { ITuple } from '@pezkuwi/types-codec/types';
 
 import React, { useEffect, useState } from 'react';
@@ -95,7 +95,7 @@ function checkValue (hasValue: boolean, value: string | null | undefined, minLen
 function IdentityMain ({ address, className = '', onClose }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { apiIdentity, enableIdentity, specName } = useApi();
-  const identityOpt = useCall<Option<ITuple<[PalletIdentityRegistration, Option<Bytes>]>>>(apiIdentity.query.identity.identityOf, [address]);
+  const identityOpt = useCall<Option<ITuple<[PezpalletIdentityRegistration, Option<Bytes>]>>>(apiIdentity.query.identity.identityOf, [address]);
   const [{ okAll, okDiscord, okDisplay, okEmail, okGithub, okLegal, okMatrix, okRiot, okTwitter, okWeb }, setOkInfo] = useState<ValueState>({ okAll: false });
   const [legacyInfo, setLegacyInfo] = useState<Record<string, unknown>>({});
   const [info, setInfo] = useState<Record<string, unknown>>({});

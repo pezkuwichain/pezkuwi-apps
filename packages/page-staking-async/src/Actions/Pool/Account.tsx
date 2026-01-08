@@ -4,7 +4,7 @@
 import type { DeriveSessionProgress, DeriveUnlocking } from '@pezkuwi/api-derive/types';
 import type { SortedTargets } from '@pezkuwi/app-staking/types';
 import type { PoolInfo } from '@pezkuwi/app-staking2/Pools/types';
-import type { PalletNominationPoolsPoolMember, PalletNominationPoolsPoolRoles } from '@pezkuwi/types/lookup';
+import type { PezpalletNominationPoolsPoolMember, PezpalletNominationPoolsPoolRoles } from '@pezkuwi/types/lookup';
 
 import React, { useCallback, useMemo } from 'react';
 
@@ -35,13 +35,13 @@ interface Roles {
   isNominator: boolean;
 }
 
-function extractRoles (accountId: string, { nominator, root }: PalletNominationPoolsPoolRoles): Roles {
+function extractRoles (accountId: string, { nominator, root }: PezpalletNominationPoolsPoolRoles): Roles {
   return {
     isNominator: nominator.eq(accountId) || root.eq(accountId)
   };
 }
 
-function calcUnbonding (accountId: string, stashId: string, { activeEra }: DeriveSessionProgress, { unbondingEras }: PalletNominationPoolsPoolMember): { accountId: string, controllerId: string, redeemable: BN, stashId: string, unlocking: DeriveUnlocking[] } {
+function calcUnbonding (accountId: string, stashId: string, { activeEra }: DeriveSessionProgress, { unbondingEras }: PezpalletNominationPoolsPoolMember): { accountId: string, controllerId: string, redeemable: BN, stashId: string, unlocking: DeriveUnlocking[] } {
   const unlocking: DeriveUnlocking[] = [];
   const redeemable = new BN(0);
 

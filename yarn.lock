@@ -2328,9 +2328,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/app-teyrchains@workspace:packages/page-parachains":
+"@pezkuwi/app-teyrchains@workspace:packages/page-teyrchains":
   version: 0.0.0-use.local
-  resolution: "@pezkuwi/app-teyrchains@workspace:packages/page-parachains"
+  resolution: "@pezkuwi/app-teyrchains@workspace:packages/page-teyrchains"
   dependencies:
     "@pezkuwi/react-components": "npm:^0.168.2-4-x"
     "@pezkuwi/react-query": "npm:^0.168.2-4-x"
@@ -2511,16 +2511,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev-test@npm:^0.85.1":
-  version: 0.85.1
-  resolution: "@pezkuwi/dev-test@npm:0.85.1"
-  dependencies:
-    jsdom: "npm:^24.0.0"
-    tslib: "npm:^2.7.0"
-  checksum: 10/98253c862a0db3f59b10d761a9eba6ca96cac39f9608674de0ab6d8ee6d76c9a25d92d5ea6c4a003c86d36ab9fcda18e7c10ffd6155256a0e8de25d3a53ab997
-  languageName: node
-  linkType: hard
-
 "@pezkuwi/dev-ts@npm:^0.84.2":
   version: 0.84.3
   resolution: "@pezkuwi/dev-ts@npm:0.84.3"
@@ -2532,93 +2522,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev-ts@npm:^0.85.1":
-  version: 0.85.1
-  resolution: "@pezkuwi/dev-ts@npm:0.85.1"
-  dependencies:
-    json5: "npm:^2.2.3"
-    tslib: "npm:^2.7.0"
-    typescript: "npm:^5.5.4"
-  checksum: 10/badcf660f6c94ade4f4c56afff4c71f6bcee0790c5c666214a1dedbc686940e8784bd1d29d4a146c3666183212983f5aa0bfa744aa5b59acaedc6487cd88c327
-  languageName: node
-  linkType: hard
-
-"@pezkuwi/dev@npm:^0.85.2":
-  version: 0.85.2
-  resolution: "@pezkuwi/dev@npm:0.85.2"
-  dependencies:
-    "@eslint/js": "npm:^8.56.0"
-    "@pezkuwi/dev-test": "npm:^0.85.1"
-    "@pezkuwi/dev-ts": "npm:^0.85.1"
-    "@rollup/plugin-alias": "npm:^5.1.1"
-    "@rollup/plugin-commonjs": "npm:^25.0.8"
-    "@rollup/plugin-dynamic-import-vars": "npm:^2.1.5"
-    "@rollup/plugin-inject": "npm:^5.0.5"
-    "@rollup/plugin-json": "npm:^6.1.0"
-    "@rollup/plugin-node-resolve": "npm:^15.3.1"
-    "@tsconfig/strictest": "npm:^2.0.2"
-    "@typescript-eslint/eslint-plugin": "npm:^6.19.1"
-    "@typescript-eslint/parser": "npm:^6.19.1"
-    eslint: "npm:^8.56.0"
-    eslint-config-standard: "npm:^17.1.0"
-    eslint-import-resolver-node: "npm:^0.3.9"
-    eslint-import-resolver-typescript: "npm:^3.6.1"
-    eslint-plugin-deprecation: "npm:^2.0.0"
-    eslint-plugin-header: "npm:^3.1.1"
-    eslint-plugin-import: "npm:^2.29.1"
-    eslint-plugin-import-newlines: "npm:^1.3.4"
-    eslint-plugin-jest: "npm:^27.6.3"
-    eslint-plugin-n: "npm:^16.6.2"
-    eslint-plugin-promise: "npm:^6.1.1"
-    eslint-plugin-react: "npm:^7.33.2"
-    eslint-plugin-react-hooks: "npm:^4.6.0"
-    eslint-plugin-simple-import-sort: "npm:^10.0.0"
-    eslint-plugin-sort-destructure-keys: "npm:^1.5.0"
-    espree: "npm:^9.6.1"
-    gh-pages: "npm:^6.1.1"
-    gh-release: "npm:^7.0.2"
-    globals: "npm:^13.24.0"
-    json5: "npm:^2.2.3"
-    madge: "npm:^6.1.0"
-    rollup: "npm:^4.9.6"
-    rollup-plugin-cleanup: "npm:^3.2.1"
-    tslib: "npm:^2.7.0"
-    typescript: "npm:^5.5.4"
-    webpack: "npm:^5.89.0"
-    webpack-cli: "npm:^5.1.4"
-    webpack-dev-server: "npm:^4.15.1"
-    webpack-merge: "npm:^5.10.0"
-    webpack-subresource-integrity: "npm:^5.2.0-rc.1"
-    yargs: "npm:^17.7.2"
-  bin:
-    pezkuwi-ci-ghact-build: scripts/pezkuwi-ci-ghact-build.mjs
-    pezkuwi-ci-ghact-docs: scripts/pezkuwi-ci-ghact-docs.mjs
-    pezkuwi-ci-ghpages-force: scripts/pezkuwi-ci-ghpages-force.mjs
-    pezkuwi-dev-build-docs: scripts/pezkuwi-dev-build-docs.mjs
-    pezkuwi-dev-build-ts: scripts/pezkuwi-dev-build-ts.mjs
-    pezkuwi-dev-circular: scripts/pezkuwi-dev-circular.mjs
-    pezkuwi-dev-clean-build: scripts/pezkuwi-dev-clean-build.mjs
-    pezkuwi-dev-contrib: scripts/pezkuwi-dev-contrib.mjs
-    pezkuwi-dev-copy-dir: scripts/pezkuwi-dev-copy-dir.mjs
-    pezkuwi-dev-copy-to: scripts/pezkuwi-dev-copy-to.mjs
-    pezkuwi-dev-deno-map: scripts/pezkuwi-dev-deno-map.mjs
-    pezkuwi-dev-run-lint: scripts/pezkuwi-dev-run-lint.mjs
-    pezkuwi-dev-run-node-ts: scripts/pezkuwi-dev-run-node-ts.mjs
-    pezkuwi-dev-run-test: scripts/pezkuwi-dev-run-test.mjs
-    pezkuwi-dev-version: scripts/pezkuwi-dev-version.mjs
-    pezkuwi-dev-yarn-only: scripts/pezkuwi-dev-yarn-only.mjs
-    pezkuwi-exec-eslint: scripts/pezkuwi-exec-eslint.mjs
-    pezkuwi-exec-ghpages: scripts/pezkuwi-exec-ghpages.mjs
-    pezkuwi-exec-ghrelease: scripts/pezkuwi-exec-ghrelease.mjs
-    pezkuwi-exec-node-test: scripts/pezkuwi-exec-node-test.mjs
-    pezkuwi-exec-rollup: scripts/pezkuwi-exec-rollup.mjs
-    pezkuwi-exec-tsc: scripts/pezkuwi-exec-tsc.mjs
-    pezkuwi-exec-webpack: scripts/pezkuwi-exec-webpack.mjs
-  checksum: 10/bfd248ad2ba8db15d6005652c3d4f4ca0ba8fe675be860ec1cfbbf8124dea5fa3c67b397ac0b30ba6d47d802b6b2743bf3ac898f683341ef34c00dafef18a55b
-  languageName: node
-  linkType: hard
-
-"@pezkuwi/dev@npm:^0.85.3":
+"@pezkuwi/dev@npm:^0.85.2, @pezkuwi/dev@npm:^0.85.3":
   version: 0.85.3
   resolution: "@pezkuwi/dev@npm:0.85.3"
   dependencies:
@@ -2693,12 +2597,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/extension-compat-metamask@npm:^0.62.4":
-  version: 0.62.10
-  resolution: "@pezkuwi/extension-compat-metamask@npm:0.62.10"
+"@pezkuwi/extension-compat-metamask@npm:^0.62.13":
+  version: 0.62.13
+  resolution: "@pezkuwi/extension-compat-metamask@npm:0.62.13"
   dependencies:
     "@metamask/detect-provider": "npm:^2.0.0"
-    "@pezkuwi/extension-inject": "npm:0.62.10"
+    "@pezkuwi/extension-inject": "npm:^0.62.12"
     "@pezkuwi/types": "npm:^16.5.3"
     "@pezkuwi/util": "npm:^14.0.5"
     tslib: "npm:^2.8.1"
@@ -2706,15 +2610,15 @@ __metadata:
   peerDependencies:
     "@pezkuwi/api": "*"
     "@pezkuwi/util": "*"
-  checksum: 10/f7d9062d3880a56cb9e6e8ab139a36fe2122aeb3c1511356aac86596b25674177c356972ee9b2b40c8ffa67f9c5c349b7408e1afef9efa908fcc5ffd9aee0e53
+  checksum: 10/3ab5f8c7eb8088226780fa32a4df8070cdb59919cde4294536a777bf3459b4dedffad2f3aaaf2642b6999a37efe1d72c4648f650b168fff4cbad60140b99fceb
   languageName: node
   linkType: hard
 
-"@pezkuwi/extension-dapp@npm:^0.62.4":
-  version: 0.62.11
-  resolution: "@pezkuwi/extension-dapp@npm:0.62.11"
+"@pezkuwi/extension-dapp@npm:^0.62.13":
+  version: 0.62.13
+  resolution: "@pezkuwi/extension-dapp@npm:0.62.13"
   dependencies:
-    "@pezkuwi/extension-inject": "npm:0.62.11"
+    "@pezkuwi/extension-inject": "npm:^0.62.12"
     "@pezkuwi/util": "npm:^14.0.5"
     "@pezkuwi/util-crypto": "npm:^14.0.5"
     tslib: "npm:^2.8.1"
@@ -2722,13 +2626,13 @@ __metadata:
     "@pezkuwi/api": "*"
     "@pezkuwi/util": "*"
     "@pezkuwi/util-crypto": "*"
-  checksum: 10/74061cd048c0003c328f54cab7ad4916972677cd9dce234e91d4216a3fff400fc048c1b8e620b9c60947cbf10a598324ec5fc3c5e9128f561f1ab710c1c86d68
+  checksum: 10/50d7ca024d10808d0365114860e25bf0d1c96372f6d7f0f7232ffde6638d2e7ecc0e87ffae4a8b960a9cb8593530416f081ee929afcfe39f7eaccedb829ba842
   languageName: node
   linkType: hard
 
-"@pezkuwi/extension-inject@npm:0.62.10":
-  version: 0.62.10
-  resolution: "@pezkuwi/extension-inject@npm:0.62.10"
+"@pezkuwi/extension-inject@npm:^0.62.12, @pezkuwi/extension-inject@npm:^0.62.13":
+  version: 0.62.13
+  resolution: "@pezkuwi/extension-inject@npm:0.62.13"
   dependencies:
     "@pezkuwi/api": "npm:^16.5.5"
     "@pezkuwi/rpc-provider": "npm:^16.5.5"
@@ -2740,25 +2644,7 @@ __metadata:
   peerDependencies:
     "@pezkuwi/api": "*"
     "@pezkuwi/util": "*"
-  checksum: 10/ac08dde8d59b4db61631856b825f286ab0b2a2acaf51150fa580d12b6654ddcfed40136254a3dcf364ae0a4fbde27bcbe87b2b95fe244614dba6307acf410887
-  languageName: node
-  linkType: hard
-
-"@pezkuwi/extension-inject@npm:0.62.11":
-  version: 0.62.11
-  resolution: "@pezkuwi/extension-inject@npm:0.62.11"
-  dependencies:
-    "@pezkuwi/api": "npm:^16.5.5"
-    "@pezkuwi/rpc-provider": "npm:^16.5.5"
-    "@pezkuwi/types": "npm:^16.5.5"
-    "@pezkuwi/util": "npm:^14.0.5"
-    "@pezkuwi/util-crypto": "npm:^14.0.5"
-    "@pezkuwi/x-global": "npm:^14.0.5"
-    tslib: "npm:^2.8.1"
-  peerDependencies:
-    "@pezkuwi/api": "*"
-    "@pezkuwi/util": "*"
-  checksum: 10/85440c8a876cd295f00ded2c2084378149bfdc2ee3bf75bc3a90b75d6e4b742ac845e00a7d1a6bfdc3708e38f4f4eb3e048cf9e4f5ff443b5b99482862f7ac39
+  checksum: 10/de362be72f61adfa184993e73c2ffdd4cd07f1a5a8652949be7fbd89f3635ae38b14dd2d05eb3992987c3ca6e20eac78dc53f6ac0c9a2eecb892148c21908194
   languageName: node
   linkType: hard
 
@@ -2851,8 +2737,8 @@ __metadata:
   resolution: "@pezkuwi/react-api@workspace:packages/react-api"
   dependencies:
     "@pezkuwi/api": "npm:^16.5.6"
-    "@pezkuwi/extension-compat-metamask": "npm:^0.62.4"
-    "@pezkuwi/extension-dapp": "npm:^0.62.4"
+    "@pezkuwi/extension-compat-metamask": "npm:^0.62.13"
+    "@pezkuwi/extension-dapp": "npm:^0.62.13"
     "@pezkuwi/rpc-provider": "npm:^16.5.6"
     fflate: "npm:^0.8.1"
     rxjs: "npm:^7.8.1"
@@ -5978,10 +5864,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.23.1":
-  version: 1.23.1
-  resolution: "@remix-run/router@npm:1.23.1"
-  checksum: 10/f54845ad174564f157a2255aec8446a7f4f4e543d9d6ef9ec749d32d1fdc57273d9cc80574f87f411c2790fbe51a242273abe7002d118515038eaf4aefd3d988
+"@remix-run/router@npm:1.23.2":
+  version: 1.23.2
+  resolution: "@remix-run/router@npm:1.23.2"
+  checksum: 10/50eb497854881bbd2e1016d4eb83c935ecd618e1c3888b74718851317e3b04edbaae9fe1baa49ec08c5c52cfe7118f4664e37144813d9500f45f922d6602a782
   languageName: node
   linkType: hard
 
@@ -9014,11 +8900,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.9.0":
-  version: 2.9.11
-  resolution: "baseline-browser-mapping@npm:2.9.11"
+  version: 2.9.12
+  resolution: "baseline-browser-mapping@npm:2.9.12"
   bin:
     baseline-browser-mapping: dist/cli.js
-  checksum: 10/d71fe6693f999ee0bf1fcd72b31c01390f2bfac40d179175817f24cdb11b19d14a102227a8fa28e0a4733a17c780458c17384c75f2227e45b0e8a0080caf6532
+  checksum: 10/07af71d6139d177bfed83ed70ac6b12f3326903f67338a6e36fbb529dfc8f384da9b054650f0d44d1b2619e673ff1df2540f63bbf5d9412bad15101e6d657aff
   languageName: node
   linkType: hard
 
@@ -9631,9 +9517,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001759":
-  version: 1.0.30001762
-  resolution: "caniuse-lite@npm:1.0.30001762"
-  checksum: 10/d60a589180198ac759fa1775e521862f03503286cc9354144adcd88e76d275f03b2b6e9cab1c606790eee9d6af5cedbedb048ec652f5ff77a2b229992b7c4845
+  version: 1.0.30001763
+  resolution: "caniuse-lite@npm:1.0.30001763"
+  checksum: 10/66efb73a641fe2612f561d0f32e5b55415b742dfa3b585f69891b2306cddd8f79bc1a1b0eaac42512686ba9cff59c049aaf1a50192eb5bd27d6f6890c934a5ae
   languageName: node
   linkType: hard
 
@@ -14469,8 +14355,8 @@ __metadata:
   linkType: hard
 
 "i18next@npm:*":
-  version: 25.7.3
-  resolution: "i18next@npm:25.7.3"
+  version: 25.7.4
+  resolution: "i18next@npm:25.7.4"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
   peerDependencies:
@@ -14478,7 +14364,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10/ec6601b22660b2f0d2d3996e7ef6dd2ff24f6f6e4bee121b33ecd3d36fe11018a01af9e66c01a93e8b42669ca9735f6c0888621c46bc1894872db3ba836815d8
+  checksum: 10/7b6ee8298741cf758332a6743f721039ac33d5324ea61c4e5868797e4070108921a64ffe245ca7a60bcfb3485bdb27e16bbbd02d1c7039415dca3a34fde7ccca
   languageName: node
   linkType: hard
 
@@ -17982,6 +17868,7 @@ __metadata:
   dependencies:
     "@crustio/crust-pin": "npm:^1.0.0"
     "@pezkuwi/dev": "npm:^0.85.3"
+    "@pezkuwi/extension-inject": "npm:^0.62.13"
     "@pinata/sdk": "npm:^1.2.1"
     "@types/chart.js": "npm:^2.9.41"
     "@types/file-saver": "npm:^2.0.7"
@@ -18942,26 +18829,26 @@ __metadata:
   linkType: hard
 
 "react-router-dom@npm:^6.21.0":
-  version: 6.30.2
-  resolution: "react-router-dom@npm:6.30.2"
+  version: 6.30.3
+  resolution: "react-router-dom@npm:6.30.3"
   dependencies:
-    "@remix-run/router": "npm:1.23.1"
-    react-router: "npm:6.30.2"
+    "@remix-run/router": "npm:1.23.2"
+    react-router: "npm:6.30.3"
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 10/ca60fd157c8e1019c9994a7262a8c054326c2d5bba4bbd3b4a19918a1a21f1486cf7a1087dd3aee22c01381496b4712cd80cbd5b5388c956cdbb58541ee52194
+  checksum: 10/db974d801070e9967a076b31edca902e127793e02dc79f364461b94e81846a588c241d72e069f5b586b4a90ffd99798f5cb97753ac9d22fe90afa6dc008ab520
   languageName: node
   linkType: hard
 
-"react-router@npm:6.30.2, react-router@npm:^6.21.0":
-  version: 6.30.2
-  resolution: "react-router@npm:6.30.2"
+"react-router@npm:6.30.3, react-router@npm:^6.21.0":
+  version: 6.30.3
+  resolution: "react-router@npm:6.30.3"
   dependencies:
-    "@remix-run/router": "npm:1.23.1"
+    "@remix-run/router": "npm:1.23.2"
   peerDependencies:
     react: ">=16.8"
-  checksum: 10/537bd68aa9e8125e1b20702180d4d875421150280e2c4c039c663a105da05956a457cb4d0f4f6a56605d6cadf9b1c1282dc45a9845f81bdca9bc87364eafc073
+  checksum: 10/1a51bdcc42b8d7979228dea8b5c44a28a4add9b681781f75b74f5f920d20058a92ffe5f1d0ba0621f03abe1384b36025b53b402515ecb35f27a6a2f2f25d6fbe
   languageName: node
   linkType: hard
 

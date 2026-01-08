@@ -6,7 +6,7 @@ import type { DeriveBalancesAccountData, DeriveBalancesAll, DeriveDemocracyLock,
 import type { VestingInfo } from '@pezkuwi/react-hooks';
 import type { Raw } from '@pezkuwi/types';
 import type { BlockNumber, ValidatorPrefsTo145, Voting } from '@pezkuwi/types/interfaces';
-import type { PalletBalancesReserveData } from '@pezkuwi/types/lookup';
+import type { PezpalletBalancesReserveData } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useRef } from 'react';
@@ -369,7 +369,7 @@ function createBalanceItems (formatIndex: number, lookup: Record<string, string>
     );
   }
 
-  const allReserves = (deriveBalances?.namedReserves || []).reduce<PalletBalancesReserveData[]>((t, r) => t.concat(...r), []);
+  const allReserves = (deriveBalances?.namedReserves || []).reduce<PezpalletBalancesReserveData[]>((t, r) => t.concat(...r), []);
   const hasNamedReserves = !!allReserves && allReserves.length !== 0;
 
   balanceDisplay.locked && balancesAll && (isAllLocked || deriveBalances.lockedBalance?.gtn(0)) && allItems.push(

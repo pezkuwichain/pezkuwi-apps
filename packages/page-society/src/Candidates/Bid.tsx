@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-society authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletSocietyBid } from '@pezkuwi/types/lookup';
+import type { PezpalletSocietyBid } from '@pezkuwi/types/lookup';
 
 import React, { useMemo } from 'react';
 
@@ -13,7 +13,7 @@ import BidType from './BidType.js';
 
 interface Props {
   index: number;
-  value: PalletSocietyBid;
+  value: PezpalletSocietyBid;
 }
 
 function BidRow ({ index, value: { kind, value, who } }: Props): React.ReactElement<Props> {

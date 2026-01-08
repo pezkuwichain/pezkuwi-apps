@@ -5,7 +5,7 @@ import type { ApiPromise } from '@pezkuwi/api';
 import type { DeriveSessionInfo, DeriveStakingElected, DeriveStakingWaiting } from '@pezkuwi/api-derive/types';
 import type { Inflation } from '@pezkuwi/react-hooks/types';
 import type { Option, u32, Vec } from '@pezkuwi/types';
-import type { PalletStakingStakingLedger } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingStakingLedger } from '@pezkuwi/types/lookup';
 import type { SortedTargets, TargetSortBy, ValidatorInfo } from './types.js';
 
 import { useMemo } from 'react';
@@ -68,7 +68,7 @@ const OPT_MULTI = {
   })
 };
 
-function getLegacyRewards (ledger: PalletStakingStakingLedger): u32[] {
+function getLegacyRewards (ledger: PezpalletStakingStakingLedger): u32[] {
   return ledger.legacyClaimedRewards || (ledger as unknown as OldLedger).claimedRewards || [];
 }
 

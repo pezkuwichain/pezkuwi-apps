@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { StakerState } from '@pezkuwi/react-hooks/types';
-import type { PalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { SortedTargets } from '../types.js';
 
@@ -14,7 +14,7 @@ import { useTranslation } from '../translate.js';
 import Account from './Account/index.js';
 
 interface Props {
-  allSlashes: [BN, PalletStakingUnappliedSlash[]][];
+  allSlashes: [BN, PezpalletStakingUnappliedSlash[]][];
   className?: string;
   footer: React.ReactNode;
   isInElection?: boolean;

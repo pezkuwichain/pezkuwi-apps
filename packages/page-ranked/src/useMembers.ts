@@ -3,7 +3,7 @@
 
 import type { Option } from '@pezkuwi/types';
 import type { AccountId32 } from '@pezkuwi/types/interfaces';
-import type { PalletRankedCollectiveMemberRecord } from '@pezkuwi/types/lookup';
+import type { PezpalletRankedCollectiveMemberRecord } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { Member, PalletColl } from './types.js';
 
@@ -20,10 +20,10 @@ interface Result {
 }
 
 const OPT_MEM = {
-  transform: ([[ids], infos]: [[AccountId32[]], Option<PalletRankedCollectiveMemberRecord>[]]): Result => {
+  transform: ([[ids], infos]: [[AccountId32[]], Option<PezpalletRankedCollectiveMemberRecord>[]]): Result => {
     const members = infos
       .map((info, i) => [info.unwrapOr(null), ids[i]])
-      .filter((r): r is [PalletRankedCollectiveMemberRecord, AccountId32] => !!r[0])
+      .filter((r): r is [PezpalletRankedCollectiveMemberRecord, AccountId32] => !!r[0])
       .sort(([a], [b]) => b.rank.cmp(a.rank))
       .map(([info, accountId]): Member => ({
         accountId: accountId.toString(),

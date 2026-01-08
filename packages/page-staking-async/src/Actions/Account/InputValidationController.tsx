@@ -4,7 +4,7 @@
 import type { DeriveBalancesAll } from '@pezkuwi/api-derive/types';
 import type { Option } from '@pezkuwi/types';
 import type { AccountId } from '@pezkuwi/types/interfaces';
-import type { PalletStakingStakingLedger } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingStakingLedger } from '@pezkuwi/types/lookup';
 
 import React, { useEffect, useState } from 'react';
 
@@ -33,7 +33,7 @@ const OPT_BOND = {
 };
 
 const OPT_STASH = {
-  transform: (value: Option<PalletStakingStakingLedger>): string | null =>
+  transform: (value: Option<PezpalletStakingStakingLedger>): string | null =>
     value.isSome
       ? value.unwrap().stash.toString()
       : null

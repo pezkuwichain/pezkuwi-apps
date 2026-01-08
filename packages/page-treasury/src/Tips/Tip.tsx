@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { AccountId, Balance, BlockNumber, OpenTipTo225 } from '@pezkuwi/types/interfaces';
-import type { PalletTipsOpenTip } from '@pezkuwi/types/lookup';
+import type { PezpalletTipsOpenTip } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
@@ -25,7 +25,7 @@ interface Props {
   members: string[];
   onSelect: (hash: string, isSelected: boolean, value: BN) => void;
   onlyUntipped: boolean;
-  tip: PalletTipsOpenTip | OpenTipTo225;
+  tip: PezpalletTipsOpenTip | OpenTipTo225;
 }
 
 interface TipState {
@@ -38,11 +38,11 @@ interface TipState {
   median: BN;
 }
 
-function isCurrentTip (tip: PalletTipsOpenTip | OpenTipTo225): tip is PalletTipsOpenTip {
-  return !!(tip as PalletTipsOpenTip)?.findersFee;
+function isCurrentTip (tip: PezpalletTipsOpenTip | OpenTipTo225): tip is PezpalletTipsOpenTip {
+  return !!(tip as PezpalletTipsOpenTip)?.findersFee;
 }
 
-function extractTipState (tip: PalletTipsOpenTip | OpenTipTo225, allAccounts: string[]): TipState {
+function extractTipState (tip: PezpalletTipsOpenTip | OpenTipTo225, allAccounts: string[]): TipState {
   const closesAt = tip.closes.unwrapOr(null);
   let finder: AccountId | null = null;
   let deposit: Balance | null = null;

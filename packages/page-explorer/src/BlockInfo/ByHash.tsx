@@ -5,7 +5,7 @@ import type { HeaderExtended } from '@pezkuwi/api-derive/types';
 import type { KeyedEvent } from '@pezkuwi/react-hooks/ctx/types';
 import type { V2Weight } from '@pezkuwi/react-hooks/useWeight';
 import type { EventRecord, Hash, RuntimeVersionPartial, SignedBlock } from '@pezkuwi/types/interfaces';
-import type { FrameSupportDispatchPerDispatchClassWeight } from '@pezkuwi/types/lookup';
+import type { PezframeSupportDispatchPerDispatchClassWeight } from '@pezkuwi/types/lookup';
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -30,7 +30,7 @@ interface Props {
 
 interface State {
   events?: KeyedEvent[] | null;
-  blockWeight?: FrameSupportDispatchPerDispatchClassWeight | null;
+  blockWeight?: PezframeSupportDispatchPerDispatchClassWeight | null;
   getBlock?: SignedBlock;
   getHeader?: HeaderExtended;
   nextBlockHash?: Hash | null;
@@ -39,7 +39,7 @@ interface State {
 
 const EMPTY_HEADER: [React.ReactNode?, string?, number?][] = [['...', 'start', 6]];
 
-function transformResult ([[runtimeVersion, events, blockWeight], getBlock, getHeader]: [[RuntimeVersionPartial, EventRecord[] | null, FrameSupportDispatchPerDispatchClassWeight|null], SignedBlock, HeaderExtended?]): State {
+function transformResult ([[runtimeVersion, events, blockWeight], getBlock, getHeader]: [[RuntimeVersionPartial, EventRecord[] | null, PezframeSupportDispatchPerDispatchClassWeight|null], SignedBlock, HeaderExtended?]): State {
   return {
     blockWeight,
     events: events?.map((record, index) => ({
@@ -132,7 +132,8 @@ function BlockByHash ({ className = '', error, value }: Props): React.ReactEleme
             if (mountedRef.current && header.number.unwrap().eq(nextBlockNumber)) {
               setState((prev) => ({
                 ...prev,
-                nextBlockHash: header.hash
+                // Type assertion needed due to ArrayBufferLike vs ArrayBuffer in Hash type
+                nextBlockHash: header.hash as Hash
               }));
               unsub && unsub();
             }

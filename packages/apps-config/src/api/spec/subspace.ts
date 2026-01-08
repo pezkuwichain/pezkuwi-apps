@@ -51,9 +51,11 @@ function createHeaderExtended (
   header: Header,
   api: ApiInterfaceRx
 ): HeaderExtended {
-  const HeaderBase = registry.createClass('Header');
+  // HeaderBase is dynamically created at runtime, so we need type assertions
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const HeaderBase = registry.createClass('Header') as any;
 
-  class SubHeaderExtended extends HeaderBase implements HeaderExtended {
+  class SubHeaderExtended extends HeaderBase {
     readonly #author?: AccountId32;
 
     constructor (registry: Registry, header: Header, api: ApiInterfaceRx) {
@@ -67,7 +69,7 @@ function createHeaderExtended (
     }
   }
 
-  return new SubHeaderExtended(registry, header, api);
+  return new SubHeaderExtended(registry, header, api) as HeaderExtended;
 }
 
 function subscribeNewHeads (

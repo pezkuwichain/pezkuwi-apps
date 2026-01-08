@@ -7,10 +7,11 @@
 import CrustPinner from '@crustio/crust-pin';
 import PinataSDK from '@pinata/sdk';
 // @ts-expect-error No definition file
-import { execSync } from '@pezkuwi/dev/scripts/util.mjs';
-// @ts-expect-error No definition file
 import cloudflare from 'dnslink-cloudflare';
 import fs from 'node:fs';
+
+// @ts-expect-error No definition file
+import { execSync } from '@pezkuwi/dev/scripts/util.mjs';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore Using ignore since the file won't be there in dev

@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-referenda authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletReferendaReferendumInfoConvictionVotingTally, PalletReferendaReferendumInfoRankedCollectiveTally, PalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
+import type { PezpalletReferendaReferendumInfoConvictionVotingTally, PezpalletReferendaReferendumInfoRankedCollectiveTally, PezpalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 export type PalletReferenda = 'referenda' | 'rankedPolls' | 'fellowshipReferenda'| 'ambassadorReferenda';
@@ -10,7 +10,7 @@ export type PalletVote = 'convictionVoting' | 'rankedCollective' | 'fellowshipCo
 
 export interface ReferendaGroup {
   key: string;
-  track?: PalletReferendaTrackDetails;
+  track?: PezpalletReferendaTrackDetails;
   trackGraph?: CurveGraph;
   trackId?: BN;
   trackName?: string;
@@ -24,10 +24,10 @@ export interface ReferendaGroupKnown extends ReferendaGroup {
 export interface Referendum {
   decidingEnd?: BN;
   id: BN;
-  info: PalletReferendaReferendumInfoConvictionVotingTally | PalletReferendaReferendumInfoRankedCollectiveTally;
+  info: PezpalletReferendaReferendumInfoConvictionVotingTally | PezpalletReferendaReferendumInfoRankedCollectiveTally;
   isConvictionVote: boolean;
   key: string;
-  track?: PalletReferendaTrackDetails;
+  track?: PezpalletReferendaTrackDetails;
   trackId?: BN;
   trackGraph?: CurveGraph;
 }
@@ -60,7 +60,7 @@ export interface CurveGraph {
 export interface TrackDescription {
   graph: CurveGraph;
   id: BN;
-  info: PalletReferendaTrackDetails;
+  info: PezpalletReferendaTrackDetails;
 }
 
 export interface TrackInfo {

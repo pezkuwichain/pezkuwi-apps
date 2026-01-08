@@ -4,13 +4,37 @@
 import type { Blockchain } from '@acala-network/chopsticks-core';
 import type { ApiPromise } from '@pezkuwi/api';
 import type { SubmittableExtrinsicFunction } from '@pezkuwi/api/promise/types';
+import type { Signer as InjectedSigner } from '@pezkuwi/api/types';
 import type { HeaderExtended } from '@pezkuwi/api-derive/types';
 import type { LinkOption } from '@pezkuwi/apps-config/endpoints/types';
-import type { InjectedExtension } from '@pezkuwi/extension-inject/types';
 import type { ProviderStats } from '@pezkuwi/rpc-provider/types';
 import type { BlockNumber, EventRecord, Moment } from '@pezkuwi/types/interfaces';
 import type { BN } from '@pezkuwi/util';
 import type { AssetInfoComplete } from '../types.js';
+
+// InjectedExtension type from extension-inject (defined locally for module resolution)
+interface InjectedExtensionInfo {
+  name: string;
+  version: string;
+}
+
+interface InjectedAccount {
+  address: string;
+  genesisHash?: string | null;
+  name?: string;
+}
+
+interface InjectedAccounts {
+  get: (anyType?: boolean) => Promise<InjectedAccount[]>;
+  subscribe: (cb: (accounts: InjectedAccount[]) => void | Promise<void>) => () => void;
+}
+
+interface Injected {
+  accounts: InjectedAccounts;
+  signer: InjectedSigner;
+}
+
+export interface InjectedExtension extends InjectedExtensionInfo, Injected {}
 
 export interface ApiState {
   apiDefaultTx: SubmittableExtrinsicFunction;

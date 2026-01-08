@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/react-hooks authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletBrokerScheduleItem } from '@pezkuwi/types/lookup';
+import type { PezpalletBrokerScheduleItem } from '@pezkuwi/types/lookup';
 
 import { BN } from '@pezkuwi/util';
 
@@ -9,7 +9,7 @@ export function hexToBin (hex: string): string {
   return parseInt(hex, 16).toString(2);
 }
 
-export function processHexMask (mask: PalletBrokerScheduleItem['mask'] | undefined): string[] {
+export function processHexMask (mask: PezpalletBrokerScheduleItem['mask'] | undefined): string[] {
   if (!mask) {
     return [];
   }

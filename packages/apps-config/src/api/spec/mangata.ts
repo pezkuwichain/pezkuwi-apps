@@ -7,8 +7,7 @@
 import type { Observable } from 'rxjs';
 import type { ApiInterfaceRx } from '@pezkuwi/api/types';
 import type { DeriveBalancesAll } from '@pezkuwi/api-derive/types';
-import type { Balance } from '@pezkuwi/types/interfaces';
-import type { FrameSystemAccountInfo } from '@pezkuwi/types/lookup';
+import type { AccountInfo, Balance } from '@pezkuwi/types/interfaces';
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
 import { mangataTypesBundleForPolkadotApps } from '@mangata-finance/type-definitions';
@@ -51,7 +50,7 @@ export function getBalance (
     instanceId,
     (account: string): Observable<DeriveBalancesAll> =>
       combineLatest<[any, any]>([api.query.tokens.accounts(account, 0), api.query.system.account(account)]).pipe(
-        map(([data, systemAccount]: [OrmlAccountData, FrameSystemAccountInfo]): DeriveBalancesAll => {
+        map(([data, systemAccount]: [OrmlAccountData, AccountInfo]): DeriveBalancesAll => {
           return {
             ...defaultAccountBalance(),
             accountId: api.registry.createType('AccountId', account),
@@ -67,7 +66,8 @@ export function getBalance (
   );
 }
 
-const definitions: OverrideBundleDefinition = {
+// External package types from @mangata-finance use @polkadot types, cast to any for compatibility
+const definitions = {
   derives: {
     balances: {
       account: getBalance,
@@ -75,6 +75,6 @@ const definitions: OverrideBundleDefinition = {
     }
   },
   ...mangataTypesBundleForPolkadotApps
-};
+} as OverrideBundleDefinition;
 
 export default definitions;

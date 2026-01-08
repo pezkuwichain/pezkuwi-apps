@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@pezkuwi/types';
-import type { PalletBagsListListNode } from '@pezkuwi/types/lookup';
+import type { PezpalletBagsListListNode } from '@pezkuwi/types/lookup';
 import type { BagMap } from './types.js';
 
 import { useEffect, useState } from 'react';
@@ -12,10 +12,10 @@ import { createNamedHook, useCall } from '@pezkuwi/react-hooks';
 import useQueryModule from './useQueryModule.js';
 
 const MULTI_OPTS = {
-  transform: (opts: Option<PalletBagsListListNode>[]): BagMap =>
+  transform: (opts: Option<PezpalletBagsListListNode>[]): BagMap =>
     opts
       .filter((o) => o.isSome)
-      .map((o): PalletBagsListListNode => o.unwrap())
+      .map((o): PezpalletBagsListListNode => o.unwrap())
       .reduce((all: BagMap, node): BagMap => {
         const id = node.bagUpper.toString();
 

@@ -3,7 +3,7 @@
 
 import type { Option } from '@pezkuwi/types';
 import type { AccountId } from '@pezkuwi/types/interfaces';
-import type { PalletUniquesCollectionDetails, PalletUniquesCollectionMetadata } from '@pezkuwi/types/lookup';
+import type { PezpalletUniquesCollectionDetails, PezpalletUniquesCollectionMetadata } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { CollectionInfo, CollectionSupportedMetadata } from './types.js';
 
@@ -50,7 +50,7 @@ function isAccount (allAccounts: string[], accountId: AccountId): boolean {
   return allAccounts.some((a) => a === address);
 }
 
-function extractInfo (allAccounts: string[], id: BN, optDetails: Option<PalletUniquesCollectionDetails>, metadata: Option<PalletUniquesCollectionMetadata>): CollectionInfo {
+function extractInfo (allAccounts: string[], id: BN, optDetails: Option<PezpalletUniquesCollectionDetails>, metadata: Option<PezpalletUniquesCollectionMetadata>): CollectionInfo {
   const details = optDetails.unwrapOr(null);
 
   return {
@@ -83,8 +83,8 @@ const addFetchedMetadata = (fetchedMetadata: FetchedMetadata) => (collectionInfo
 function useCollectionInfosImpl (ids?: BN[]): CollectionInfo[] | undefined {
   const { api } = useApi();
   const { allAccounts } = useAccounts();
-  const metadata = useCall<[[BN[]], Option<PalletUniquesCollectionMetadata>[]]>(api.query.uniques.classMetadataOf.multi, [ids], QUERY_OPTS);
-  const details = useCall<[[BN[]], Option<PalletUniquesCollectionDetails>[]]>(api.query.uniques.class.multi, [ids], QUERY_OPTS);
+  const metadata = useCall<[[BN[]], Option<PezpalletUniquesCollectionMetadata>[]]>(api.query.uniques.classMetadataOf.multi, [ids], QUERY_OPTS);
+  const details = useCall<[[BN[]], Option<PezpalletUniquesCollectionDetails>[]]>(api.query.uniques.class.multi, [ids], QUERY_OPTS);
   const [state, setState] = useState<CollectionInfo[] | undefined>();
 
   const metadataLinks = useMemo(

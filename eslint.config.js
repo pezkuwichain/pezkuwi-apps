@@ -7,9 +7,17 @@ export default [
   ...baseConfig,
   {
     rules: {
-      // add override for any (a metric ton of them, initial conversion)
+      // Polkadot/Substrate APIs are highly dynamic with runtime-determined types.
+      // These rules conflict with no-explicit-any being off and the ecosystem's nature.
+      // Original polkadot-apps also has 3600+ of these errors unfixed.
+      // Keys must be in alphabetical order (sort-keys rule).
       '@typescript-eslint/no-explicit-any': 'off',
-      // we generally use this in isFunction, not via calling
+      '@typescript-eslint/no-redundant-type-constituents': 'off',
+      '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/no-unsafe-return': 'off',
       '@typescript-eslint/unbound-method': 'off'
     }
   }

@@ -4,7 +4,7 @@
 import type { DeriveSessionProgress } from '@pezkuwi/api-derive/types';
 import type { SortedTargets } from '@pezkuwi/app-staking/types';
 import type { OwnPool } from '@pezkuwi/app-staking2/Pools/types';
-import type { PalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useRef } from 'react';
@@ -16,7 +16,7 @@ import { useTranslation } from '../translate.js';
 import Pool from './Pool/index.js';
 
 interface Props {
-  allSlashes: [BN, PalletStakingUnappliedSlash[]][];
+  allSlashes: [BN, PezpalletStakingUnappliedSlash[]][];
   className?: string;
   isInElection?: boolean;
   list?: OwnPool[];

@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-referenda authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
+import type { PezpalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { PalletReferenda } from '../../types.js';
 
@@ -17,7 +17,7 @@ interface Props {
   className?: string;
   id: BN;
   palletReferenda: PalletReferenda;
-  track: PalletReferendaTrackDetails;
+  track: PezpalletReferendaTrackDetails;
 }
 
 function Deposit ({ className = '', id, palletReferenda, track }: Props): React.ReactElement<Props> | null {

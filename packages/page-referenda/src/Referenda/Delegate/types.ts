@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-referenda authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletConvictionVotingVoteVoting } from '@pezkuwi/types/lookup';
+import type { PezpalletConvictionVotingVoteVoting } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 export interface LockResultItem {
@@ -15,7 +15,7 @@ export interface VoteResultCasting {
 }
 
 export interface VoteResultDelegating {
-  conviction: PalletConvictionVotingVoteVoting['asDelegating']['conviction']['type'];
+  conviction: PezpalletConvictionVotingVoteVoting['asDelegating']['conviction']['type'];
   targetId: string;
 }
 

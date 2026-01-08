@@ -4,7 +4,7 @@
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Bytes, Option, u8, u32 } from '@pezkuwi/types';
 import type { BlockNumber, Call, Hash, Scheduled } from '@pezkuwi/types/interfaces';
-import type { FrameSupportPreimagesBounded, PalletSchedulerScheduled } from '@pezkuwi/types/lookup';
+import type { PezframeSupportPreimagesBounded, PezpalletSchedulerScheduled } from '@pezkuwi/types/lookup';
 import type { Codec, ITuple } from '@pezkuwi/types/types';
 import type { ScheduledExt } from './types.js';
 
@@ -21,7 +21,7 @@ interface Props {
 }
 
 // included here for backwards compat
-interface PalletSchedulerScheduledV3 extends Codec {
+interface PezpalletSchedulerScheduledV3 extends Codec {
   maybeId: Option<Bytes>;
   priority: u8;
   call: FrameSupportScheduleMaybeHashed;
@@ -41,7 +41,7 @@ interface FrameSupportScheduleMaybeHashed extends Codec {
 }
 
 const OPT_SCHED = {
-  transform: (entries: [{ args: [BlockNumber] }, Option<Scheduled | PalletSchedulerScheduled | PalletSchedulerScheduledV3>[]][], api: ApiPromise): ScheduledExt[] => {
+  transform: (entries: [{ args: [BlockNumber] }, Option<Scheduled | PezpalletSchedulerScheduled | PezpalletSchedulerScheduledV3>[]][], api: ApiPromise): ScheduledExt[] => {
     return entries
       .filter(([, all]) => all.some((o) => o.isSome))
       .reduce((items: ScheduledExt[], [key, all]): ScheduledExt[] => {
@@ -52,19 +52,19 @@ const OPT_SCHED = {
           .map((o) => o.unwrap())
           .reduce((items: ScheduledExt[], { call: callOrEnum, maybeId, maybePeriodic, priority }, index) => {
             let call: Call | null = null;
-            let preimageHash: FrameSupportPreimagesBounded | undefined;
+            let preimageHash: PezframeSupportPreimagesBounded | undefined;
 
             if ((callOrEnum as unknown as FrameSupportScheduleMaybeHashed).inner) {
               if ((callOrEnum as unknown as FrameSupportScheduleMaybeHashed).isValue) {
                 call = (callOrEnum as unknown as FrameSupportScheduleMaybeHashed).asValue;
-              } else if ((callOrEnum as unknown as FrameSupportPreimagesBounded).isInline) {
+              } else if ((callOrEnum as unknown as PezframeSupportPreimagesBounded).isInline) {
                 try {
-                  call = api.registry.createType('Call', (callOrEnum as unknown as FrameSupportPreimagesBounded).asInline.toHex());
+                  call = api.registry.createType('Call', (callOrEnum as unknown as PezframeSupportPreimagesBounded).asInline.toHex());
                 } catch (error) {
                   console.error(error);
                 }
-              } else if ((callOrEnum as unknown as FrameSupportPreimagesBounded).isLookup) {
-                preimageHash = (callOrEnum as unknown as FrameSupportPreimagesBounded);
+              } else if ((callOrEnum as unknown as PezframeSupportPreimagesBounded).isLookup) {
+                preimageHash = (callOrEnum as unknown as PezframeSupportPreimagesBounded);
               }
             } else {
               call = callOrEnum as Call;

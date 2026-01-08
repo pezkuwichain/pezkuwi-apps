@@ -5,7 +5,7 @@ import type { ApiPromise } from '@pezkuwi/api';
 import type { SubmittableExtrinsic } from '@pezkuwi/api/types';
 import type { BatchOptions } from '@pezkuwi/react-hooks/types';
 import type { AccountId } from '@pezkuwi/types/interfaces';
-import type { KitchensinkRuntimeProxyType, PalletProxyProxyDefinition } from '@pezkuwi/types/lookup';
+import type { KitchensinkRuntimeProxyType, PezpalletProxyProxyDefinition } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -21,7 +21,7 @@ type PrevProxyProp = [AccountId | null, KitchensinkRuntimeProxyType];
 interface Props {
   className?: string;
   onClose: () => void;
-  previousProxy?: [PalletProxyProxyDefinition[], BN];
+  previousProxy?: [PezpalletProxyProxyDefinition[], BN];
   proxiedAccount: string;
 }
 
@@ -43,7 +43,7 @@ interface PrevProxyProps extends ValueProps {
 }
 
 const BATCH_OPTS: BatchOptions = { type: 'all' };
-const EMPTY_EXISTING: [PalletProxyProxyDefinition[], BN] = [[], BN_ZERO];
+const EMPTY_EXISTING: [PezpalletProxyProxyDefinition[], BN] = [[], BN_ZERO];
 
 function createAddProxy (api: ApiPromise, account: AccountId, type: KitchensinkRuntimeProxyType, delay = 0): SubmittableExtrinsic<'promise'> {
   return api.tx.proxy.addProxy.meta.args.length === 2

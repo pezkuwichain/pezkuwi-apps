@@ -3,6 +3,6 @@
 
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
-import { typesBundleForPezkuwi } from '@peaqnetwork/type-definitions';
+import { typesBundleForPolkadot as typesBundleForPezkuwi } from '@peaqnetwork/type-definitions';
 
 export default (typesBundleForPezkuwi as { spec: { peaq: OverrideBundleDefinition } }).spec.peaq;

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Bytes, Option } from '@pezkuwi/types';
-import type { FrameSystemAccountInfo, PalletNominationPoolsBondedPoolInner, PalletNominationPoolsRewardPool, PalletStakingNominations } from '@pezkuwi/types/lookup';
+import type { PezframeSystemAccountInfo, PezpalletNominationPoolsBondedPoolInner, PezpalletNominationPoolsRewardPool, PezpalletStakingNominations } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { PoolInfo, PoolInfoBase } from './types.js';
 
@@ -15,7 +15,7 @@ import usePoolAccounts from './usePoolAccounts.js';
 
 const OPT_MULTI = {
   defaultValue: null,
-  transform: ([optBonded, metadata, optReward, optNominating, accountInfo]: [Option<PalletNominationPoolsBondedPoolInner>, Bytes, Option<PalletNominationPoolsRewardPool>, Option<PalletStakingNominations>, FrameSystemAccountInfo]): PoolInfoBase | null =>
+  transform: ([optBonded, metadata, optReward, optNominating, accountInfo]: [Option<PezpalletNominationPoolsBondedPoolInner>, Bytes, Option<PezpalletNominationPoolsRewardPool>, Option<PezpalletStakingNominations>, PezframeSystemAccountInfo]): PoolInfoBase | null =>
     optBonded.isSome && optReward.isSome
       ? {
         bonded: optBonded.unwrap(),

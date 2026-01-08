@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-referenda authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletReferendaDeposit, PalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
+import type { PezpalletReferendaDeposit, PezpalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { PalletReferenda } from '../../types.js';
 
@@ -16,12 +16,12 @@ interface Props {
   canDeposit?: boolean;
   canRefund?: boolean;
   className?: string;
-  decision: PalletReferendaDeposit | null;
+  decision: PezpalletReferendaDeposit | null;
   id: BN;
   noMedia?: boolean;
   palletReferenda: PalletReferenda;
-  submit: PalletReferendaDeposit | null;
-  track?: PalletReferendaTrackDetails;
+  submit: PezpalletReferendaDeposit | null;
+  track?: PezpalletReferendaTrackDetails;
 }
 
 function Deposits ({ canDeposit, canRefund, className = '', decision, id, noMedia, palletReferenda, submit, track }: Props): React.ReactElement<Props> {

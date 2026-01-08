@@ -49,7 +49,11 @@ function createVoteOpts (api: ApiPromise, t: (key: string, options?: { replace: 
   let hasAbstain = false;
 
   try {
-    hasAbstain = !!api.createType('PalletConvictionVotingVoteAccountVote', { SplitAbstain: { abstain: 1 } }).isSplitAbstain;
+    // Check if the runtime supports SplitAbstain vote type
+    const voteType = api.createType('PezpalletConvictionVotingVoteAccountVote', { SplitAbstain: { abstain: 1 } });
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    hasAbstain = !!(voteType as any).isSplitAbstain;
   } catch {
     hasAbstain = false;
   }

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option, StorageKey, u64 } from '@pezkuwi/types';
-import type { PalletBagsListListBag } from '@pezkuwi/types/lookup';
+import type { PezpalletBagsListListBag } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { BagInfo } from './types.js';
 
@@ -19,9 +19,9 @@ const KEY_OPTS = {
 };
 
 const MULTI_OPTS = {
-  transform: ([[ids], opts]: [[BN[]], Option<PalletBagsListListBag>[]]): BagInfo[] => {
+  transform: ([[ids], opts]: [[BN[]], Option<PezpalletBagsListListBag>[]]): BagInfo[] => {
     const sorted = ids
-      .map((id, index): [BN, Option<PalletBagsListListBag>] => [id, opts[index]])
+      .map((id, index): [BN, Option<PezpalletBagsListListBag>] => [id, opts[index]])
       .filter(([, o]) => o.isSome)
       .sort(([a], [b]) => b.cmp(a))
       .map(([bagUpper, o], index): BagInfo => ({

@@ -3,7 +3,7 @@
 
 import type { Option } from '@pezkuwi/types';
 import type { AccountId } from '@pezkuwi/types/interfaces';
-import type { PalletAssetsAssetDetails, PalletAssetsAssetMetadata } from '@pezkuwi/types/lookup';
+import type { PezpalletAssetsAssetDetails, PezpalletAssetsAssetMetadata } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { AssetInfo } from './types.js';
 
@@ -26,7 +26,7 @@ function isAccount (allAccounts: string[], accountId: AccountId): boolean {
   return allAccounts.some((a) => a === address);
 }
 
-function extractInfo (allAccounts: string[], id: BN, optDetails: Option<PalletAssetsAssetDetails>, metadata: PalletAssetsAssetMetadata): AssetInfo {
+function extractInfo (allAccounts: string[], id: BN, optDetails: Option<PezpalletAssetsAssetDetails>, metadata: PezpalletAssetsAssetMetadata): AssetInfo {
   const details = optDetails.unwrapOr(null);
 
   return {
@@ -54,8 +54,8 @@ function useAssetInfosImpl (ids?: BN[]): AssetInfo[] | undefined {
 
   const isReady = useMemo(() => !!ids?.length && !!api.tx.assets?.setMetadata && !!api.tx.assets?.transferKeepAlive, [api.tx.assets?.setMetadata, api.tx.assets?.transferKeepAlive, ids?.length]);
 
-  const metadata = useCall<[[BN[]], PalletAssetsAssetMetadata[]]>(isReady && api.query.assets.metadata.multi, [ids], QUERY_OPTS);
-  const details = useCall<[[BN[]], Option<PalletAssetsAssetDetails>[]]>(isReady && api.query.assets.asset.multi, [ids], QUERY_OPTS);
+  const metadata = useCall<[[BN[]], PezpalletAssetsAssetMetadata[]]>(isReady && api.query.assets.metadata.multi, [ids], QUERY_OPTS);
+  const details = useCall<[[BN[]], Option<PezpalletAssetsAssetDetails>[]]>(isReady && api.query.assets.asset.multi, [ids], QUERY_OPTS);
   const [state, setState] = useState<AssetInfo[] | undefined>();
 
   useEffect((): void => {

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { Option } from '@pezkuwi/types';
-import type { PalletStakingNominations } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingNominations } from '@pezkuwi/types/lookup';
 
 import { useMemo } from 'react';
 
@@ -10,7 +10,7 @@ import { createNamedHook, useAccounts, useApi, useCall } from '@pezkuwi/react-ho
 import { isFunction } from '@pezkuwi/util';
 
 const NOMINATORS_OPT = {
-  transform: (optNominators: Option<PalletStakingNominations>[]): string[] =>
+  transform: (optNominators: Option<PezpalletStakingNominations>[]): string[] =>
     optNominators.reduce<string[]>((all, o) =>
       o.isSome
         ? all.concat(

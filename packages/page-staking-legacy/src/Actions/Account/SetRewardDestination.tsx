@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { DeriveBalancesAll } from '@pezkuwi/api-derive/types';
-import type { PalletStakingRewardDestination } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingRewardDestination } from '@pezkuwi/types/lookup';
 import type { DestinationType } from '../types.js';
 
 import React, { useMemo, useState } from 'react';
@@ -15,7 +15,7 @@ import { createDestCurr } from '../destOptions.js';
 import SenderInfo from '../partials/SenderInfo.js';
 
 interface Props {
-  defaultDestination?: PalletStakingRewardDestination | null;
+  defaultDestination?: PezpalletStakingRewardDestination | null;
   controllerId: string;
   onClose: () => void;
   stashId: string;

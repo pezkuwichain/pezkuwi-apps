@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
-import type { PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 
 import React, { useRef } from 'react';
 
@@ -14,7 +14,7 @@ import { useTranslation } from '../translate.js';
 interface Props {
   className?: string;
   proposal: DeriveCollectiveProposal;
-  status: PalletBountiesBountyStatus;
+  status: PezpalletBountiesBountyStatus;
 }
 
 function VotingDescriptionInfo ({ className, proposal, status }: Props): React.ReactElement<Props> {

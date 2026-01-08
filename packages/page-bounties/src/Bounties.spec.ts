@@ -9,7 +9,7 @@ import type { ApiPromise } from '@pezkuwi/api';
 import type { SubmittableExtrinsic } from '@pezkuwi/api/types';
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
 import type { BountyIndex } from '@pezkuwi/types/interfaces';
-import type { PalletBountiesBounty, PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBounty, PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 
 import { fireEvent } from '@testing-library/react';
 
@@ -53,10 +53,10 @@ jest.mock('./hooks/useBounties', () => ({
 
 let aProposal: (extrinsic: SubmittableExtrinsic<'promise'>, ayes?: string[], nays?: string[]) => DeriveCollectiveProposal;
 let augmentedApi: ApiPromise;
-let aBounty: ({ status, value }?: Partial<PalletBountiesBounty>) => PalletBountiesBounty;
+let aBounty: ({ status, value }?: Partial<PezpalletBountiesBounty>) => PezpalletBountiesBounty;
 let aBountyIndex: (index?: number) => BountyIndex;
-let bountyStatusWith: ({ curator, status, updateDue }: { curator?: string, status?: string, updateDue?: number}) => PalletBountiesBountyStatus;
-let bountyWith: ({ status, value }: { status?: string, value?: number }) => PalletBountiesBounty;
+let bountyStatusWith: ({ curator, status, updateDue }: { curator?: string, status?: string, updateDue?: number}) => PezpalletBountiesBountyStatus;
+let bountyWith: ({ status, value }: { status?: string, value?: number }) => PezpalletBountiesBounty;
 
 describe('Bounties', () => {
   let bountiesPage: BountiesPage;

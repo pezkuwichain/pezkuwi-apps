@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-assets authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletAssetsAssetDetails, PalletAssetsAssetMetadata } from '@pezkuwi/types/lookup';
+import type { PezpalletAssetsAssetDetails, PezpalletAssetsAssetMetadata } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useMemo, useState } from 'react';
@@ -13,9 +13,9 @@ import { useTranslation } from '../../translate.js';
 
 interface Props {
   className?: string;
-  details: PalletAssetsAssetDetails;
+  details: PezpalletAssetsAssetDetails;
   id: BN;
-  metadata: PalletAssetsAssetMetadata;
+  metadata: PezpalletAssetsAssetMetadata;
   onClose: () => void;
 }
 

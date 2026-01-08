@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { ApiPromise } from '@pezkuwi/api';
-import type { BrokerStatus, CoreDescription, PalletBrokerConfigRecord, PalletBrokerSaleInfoRecord, RegionInfo } from '@pezkuwi/react-hooks/types';
+import type { BrokerStatus, CoreDescription, PezpalletBrokerConfigRecord, PezpalletBrokerSaleInfoRecord, RegionInfo } from '@pezkuwi/react-hooks/types';
 
 import React from 'react';
 
@@ -16,8 +16,8 @@ import { getCurrentRegionStartEndTs } from '../utils/index.js';
 interface Props {
   api: ApiPromise | null,
   coreDscriptors?: CoreDescription[];
-  saleInfo: PalletBrokerSaleInfoRecord
-  config: PalletBrokerConfigRecord,
+  saleInfo: PezpalletBrokerSaleInfoRecord
+  config: PezpalletBrokerConfigRecord,
   region: RegionInfo[],
   status: BrokerStatus,
   saleNumber: number,

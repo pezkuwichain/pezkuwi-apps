@@ -98,7 +98,13 @@ function Delegate ({ className, palletReferenda, palletVote, tracks }: Props): R
   const batchInner = useMemo(
     () => balance && conviction >= 0 && toAccount && includeTracks
       ? (isAllTracks ? includeTracks : [trackId]).map((trackId) =>
-        api.tx[palletVote as 'convictionVoting'].delegate(trackId, toAccount, conviction, balance)
+        // Wrap conviction number as the proper enum type
+        api.tx[palletVote as 'convictionVoting'].delegate(
+          trackId,
+          toAccount,
+          api.createType('PezpalletConvictionVotingConviction', conviction),
+          balance
+        )
       )
       : null,
     [api, balance, conviction, includeTracks, isAllTracks, palletVote, toAccount, trackId]

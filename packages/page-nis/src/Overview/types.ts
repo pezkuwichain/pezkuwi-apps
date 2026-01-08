@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { u32, u128 } from '@pezkuwi/types';
-import type { PalletNisSummaryRecord } from '@pezkuwi/types/lookup';
+import type { PezpalletNisSummaryRecord } from '@pezkuwi/types/lookup';
 
 export interface QueueTotal {
   balance: u128;
@@ -12,5 +12,5 @@ export interface QueueTotal {
 
 export interface NisInfo {
   queueTotals?: QueueTotal[];
-  summary?: PalletNisSummaryRecord;
+  summary?: PezpalletNisSummaryRecord;
 }

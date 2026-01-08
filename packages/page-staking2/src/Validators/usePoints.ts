@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-staking authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletStakingEraRewardPoints } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingEraRewardPoints } from '@pezkuwi/types/lookup';
 import type { SessionInfo } from '../types.js';
 import type { UsePoints } from './types.js';
 
@@ -13,7 +13,7 @@ import { BN_ZERO } from '@pezkuwi/util';
 import { useCacheValue } from '../useCache.js';
 
 const OPT_POINTS = {
-  transform: ({ individual }: PalletStakingEraRewardPoints): UsePoints =>
+  transform: ({ individual }: PezpalletStakingEraRewardPoints): UsePoints =>
     [...individual.entries()]
       .filter(([, points]) => points.gt(BN_ZERO))
       .reduce((result: UsePoints, [stashId, points]): UsePoints => {

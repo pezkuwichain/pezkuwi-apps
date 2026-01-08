@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-referenda authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletConvictionVotingTally, PalletRankedCollectiveTally, PalletRankedCollectiveVoteRecord } from '@pezkuwi/types/lookup';
+import type { PezpalletConvictionVotingTally, PezpalletRankedCollectiveTally, PezpalletRankedCollectiveVoteRecord } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { PalletVote } from '../types.js';
 
@@ -19,7 +19,7 @@ interface Props {
   id: BN;
   isConvictionVote: boolean;
   palletVote: PalletVote;
-  tally: PalletConvictionVotingTally | PalletRankedCollectiveTally;
+  tally: PezpalletConvictionVotingTally | PezpalletRankedCollectiveTally;
 }
 
 function renderMini (list?: [string, BN][]): React.ReactNode[] | undefined {
@@ -33,7 +33,7 @@ function renderMini (list?: [string, BN][]): React.ReactNode[] | undefined {
     ));
 }
 
-function extractVotes (votes: Record<string, PalletRankedCollectiveVoteRecord> = {}): [[string, BN][]?, [string, BN][]?] {
+function extractVotes (votes: Record<string, PezpalletRankedCollectiveVoteRecord> = {}): [[string, BN][]?, [string, BN][]?] {
   const ayes: [string, BN][] = [];
   const nays: [string, BN][] = [];
   const entries = Object.entries(votes);

@@ -4,7 +4,7 @@
 // augment package
 import '@pezkuwi/api-augment/bizinikiwi';
 
-import type { PalletAssetsAssetAccount } from '@pezkuwi/types/lookup';
+import type { PezpalletAssetsAssetAccount } from '@pezkuwi/types/lookup';
 import type { bool } from '@pezkuwi/types-codec';
 import type { BN } from '@pezkuwi/util';
 
@@ -18,7 +18,7 @@ import Transfer from './Transfer.js';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore This looks correct in the editor, but incorrect in composite mode
-interface AccountExt extends PalletAssetsAssetAccount {
+interface AccountExt extends PezpalletAssetsAssetAccount {
   isFrozen?: bool;
   sufficient?: bool
 }

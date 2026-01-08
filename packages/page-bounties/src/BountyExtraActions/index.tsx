@@ -3,7 +3,7 @@
 
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
 import type { BountyIndex } from '@pezkuwi/types/interfaces';
-import type { PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { ValidUnassignCuratorAction } from '../types.js';
 
@@ -27,7 +27,7 @@ interface Props {
   description: string;
   index: BountyIndex;
   proposals?: DeriveCollectiveProposal[];
-  status: PalletBountiesBountyStatus;
+  status: PezpalletBountiesBountyStatus;
 }
 
 function Index ({ bestNumber, className, description, index, proposals, status }: Props): React.ReactElement<Props> | null {

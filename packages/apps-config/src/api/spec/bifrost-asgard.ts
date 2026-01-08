@@ -3,6 +3,6 @@
 
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
-import { typesBundleForPezkuwi } from '@bifrost-finance/type-definitions';
+import { typesBundleForPolkadot as typesBundleForPezkuwi } from '@bifrost-finance/type-definitions';
 
 export default (typesBundleForPezkuwi as { spec: { asgard: OverrideBundleDefinition } }).spec.asgard;

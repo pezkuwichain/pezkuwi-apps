@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-bounties authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 
 import React, { useMemo } from 'react';
 
@@ -14,7 +14,7 @@ import BountyInfo from './BountyInfo.js';
 interface Props {
   bestNumber: BN;
   blocksUntilUpdate?: BN;
-  status: PalletBountiesBountyStatus;
+  status: PezpalletBountiesBountyStatus;
 }
 
 export const BLOCKS_PERCENTAGE_LEFT_TO_SHOW_WARNING = 10;

@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Vec } from '@pezkuwi/types';
-import type { PalletBrokerScheduleItem } from '@pezkuwi/types/lookup';
+import type { PezpalletBrokerScheduleItem } from '@pezkuwi/types/lookup';
 import type { Reservation } from './types.js';
 
 import { useEffect, useState } from 'react';
@@ -13,7 +13,7 @@ import { createNamedHook, useCall } from '@pezkuwi/react-hooks';
 import { processHexMask } from './utils/dataProcessing.js';
 
 function useBrokerReservationsImpl (api: ApiPromise, ready: boolean): Reservation[] | undefined {
-  const reservations = useCall<[any, Vec<Vec<PalletBrokerScheduleItem>>[]]>(ready && api?.query.broker.reservations);
+  const reservations = useCall<[any, Vec<Vec<PezpalletBrokerScheduleItem>>[]]>(ready && api?.query.broker.reservations);
   const [state, setState] = useState<Reservation[]>();
 
   useEffect((): void => {
@@ -22,7 +22,7 @@ function useBrokerReservationsImpl (api: ApiPromise, ready: boolean): Reservatio
     }
 
     setState(
-      reservations.map((info: PalletBrokerScheduleItem[]) => {
+      reservations.map((info: PezpalletBrokerScheduleItem[]) => {
         return {
           mask: processHexMask(info[0]?.mask),
           maskBits: processHexMask(info[0]?.mask)?.length ?? 0,

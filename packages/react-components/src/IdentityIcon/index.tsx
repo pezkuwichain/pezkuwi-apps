@@ -68,7 +68,9 @@ function IdentityIcon ({ className = '', forceIconType, prefix, size = 24, theme
       onCopy={onCopy}
       prefix={prefix}
       size={size}
-      theme={forceIconType || (isEthereum ? 'ethereum' : thisTheme as 'bizinikiwi')}
+      // bizinikiwi is valid in pezkuwi-sdk, cast to any for type compatibility
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      theme={(forceIconType || (isEthereum ? 'ethereum' : thisTheme)) as any}
       value={isCodec(value) ? value.toString() : value}
     />
   );

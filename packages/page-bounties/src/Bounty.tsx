@@ -3,7 +3,7 @@
 
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
 import type { BountyIndex } from '@pezkuwi/types/interfaces';
-import type { PalletBountiesBounty } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBounty } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useMemo } from 'react';
@@ -26,7 +26,7 @@ import VotersColumn from './VotersColumn.js';
 
 interface Props {
   bestNumber: BN;
-  bounty: PalletBountiesBounty;
+  bounty: PezpalletBountiesBounty;
   className?: string;
   description: string;
   index: BountyIndex;

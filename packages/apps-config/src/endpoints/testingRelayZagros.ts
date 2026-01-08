@@ -5,7 +5,6 @@ import type { EndpointOption } from './types.js';
 
 import { ZAGROS_GENESIS } from '../api/constants.js';
 import { chainsZagrosSVG } from '../ui/logos/chains/index.js';
-import { getTeleports } from './util.js';
 
 // Zagros Test Network Endpoints
 // Zagros is the test network for Pezkuwi
@@ -92,10 +91,9 @@ export const testRelayZagros: EndpointOption = {
   isPeopleForIdentity: true,
   isRelay: true,
   linked: [
-    ...getTeleports(testParasZagros)
+    ...testParasZagros
   ],
   providers: {
-    Local: 'ws://127.0.0.1:9944',
     'Pezkuwi Foundation': 'wss://zagros-rpc.pezkuwichain.io'
   },
   teleport: [1000],

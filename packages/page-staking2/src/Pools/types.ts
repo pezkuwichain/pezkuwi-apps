@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { u32 } from '@pezkuwi/types';
-import type { PalletNominationPoolsBondedPoolInner, PalletNominationPoolsPoolMember, PalletNominationPoolsRewardPool } from '@pezkuwi/types/lookup';
+import type { PezpalletNominationPoolsBondedPoolInner, PezpalletNominationPoolsPoolMember, PezpalletNominationPoolsRewardPool } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 export interface PoolAccounts {
@@ -11,7 +11,7 @@ export interface PoolAccounts {
 }
 
 export interface OwnPoolBase {
-  members: Record<string, PalletNominationPoolsPoolMember>;
+  members: Record<string, PezpalletNominationPoolsPoolMember>;
   poolId: u32;
 }
 
@@ -32,8 +32,8 @@ export interface Params {
 }
 
 export interface PoolInfoBase {
-  bonded: PalletNominationPoolsBondedPoolInner;
-  reward: PalletNominationPoolsRewardPool;
+  bonded: PezpalletNominationPoolsBondedPoolInner;
+  reward: PezpalletNominationPoolsRewardPool;
   metadata: string | null;
   nominating: string[];
   rewardClaimable: BN;
@@ -45,7 +45,7 @@ export interface PoolInfo extends PoolInfoBase, PoolAccounts {
 
 export interface MembersMapEntry {
   accountId: string;
-  member: PalletNominationPoolsPoolMember;
+  member: PezpalletNominationPoolsPoolMember;
 }
 
 export type MembersMap = Record<string, MembersMapEntry[]>;

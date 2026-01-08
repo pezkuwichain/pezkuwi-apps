@@ -3,7 +3,7 @@
 
 import type { Inflation } from '@pezkuwi/react-hooks/types';
 import type { AccountId, Balance, BlockNumber, EraIndex, Hash, SessionIndex, ValidatorPrefs, ValidatorPrefsTo196 } from '@pezkuwi/types/interfaces';
-import type { SpStakingExposurePage, SpStakingPagedExposureMetadata } from '@pezkuwi/types/lookup';
+import type { PezspStakingExposurePage, PezspStakingPagedExposureMetadata } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
 export type Nominators = Record<string, string[]>;
@@ -52,8 +52,8 @@ export interface ValidatorInfo extends ValidatorInfoRank {
   bondShare: number;
   bondTotal: BN;
   commissionPer: number;
-  exposurePaged: SpStakingExposurePage;
-  exposureMeta: SpStakingPagedExposureMetadata
+  exposurePaged: PezspStakingExposurePage;
+  exposureMeta: PezspStakingPagedExposureMetadata
   isActive: boolean;
   isBlocking: boolean;
   isElected: boolean;

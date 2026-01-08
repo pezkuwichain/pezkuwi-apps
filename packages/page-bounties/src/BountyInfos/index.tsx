@@ -3,7 +3,7 @@
 
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
 import type { AccountId } from '@pezkuwi/types/interfaces';
-import type { PalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
+import type { PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 
 import React, { useMemo } from 'react';
 
@@ -17,7 +17,7 @@ import VotingSummary from './VotingSummary.js';
 interface Props {
   beneficiary?: AccountId;
   proposals?: DeriveCollectiveProposal[];
-  status: PalletBountiesBountyStatus;
+  status: PezpalletBountiesBountyStatus;
 }
 
 function BountyInfos ({ beneficiary, proposals, status }: Props): React.ReactElement<Props> {

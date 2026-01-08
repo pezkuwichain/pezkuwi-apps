@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-coretime authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { BrokerStatus, CoreDescription, PalletBrokerConfigRecord, PalletBrokerSaleInfoRecord, RegionInfo } from '@pezkuwi/react-hooks/types';
+import type { BrokerStatus, CoreDescription, PezpalletBrokerConfigRecord, PezpalletBrokerSaleInfoRecord, RegionInfo } from '@pezkuwi/react-hooks/types';
 import type { RelayName } from '../types.js';
 
 import React, { useMemo } from 'react';
@@ -15,8 +15,8 @@ import { FirstCycleStart } from '../utils/index.js';
 
 interface Props {
   coreDscriptors?: CoreDescription[];
-  saleInfo: PalletBrokerSaleInfoRecord
-  config: PalletBrokerConfigRecord,
+  saleInfo: PezpalletBrokerSaleInfoRecord
+  config: PezpalletBrokerConfigRecord,
   region: RegionInfo[],
   status: BrokerStatus,
   teyrchainCount: number

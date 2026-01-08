@@ -3,7 +3,7 @@
 
 import type { Option, StorageKey } from '@pezkuwi/types';
 import type { AccountId, BalanceOf } from '@pezkuwi/types/interfaces';
-import type { PalletSocietyBidKind } from '@pezkuwi/types/lookup';
+import type { PezpalletSocietyBidKind } from '@pezkuwi/types/lookup';
 import type { ITuple } from '@pezkuwi/types/types';
 
 import React, { useRef } from 'react';
@@ -21,11 +21,11 @@ interface Props {
 interface CandidateSuspend {
   accountId: AccountId;
   balance: BalanceOf;
-  bid: PalletSocietyBidKind;
+  bid: PezpalletSocietyBidKind;
 }
 
 const OPT_CAN = {
-  transform: (entries: [StorageKey<[AccountId]>, Option<ITuple<[BalanceOf, PalletSocietyBidKind]>>][]): CandidateSuspend[] =>
+  transform: (entries: [StorageKey<[AccountId]>, Option<ITuple<[BalanceOf, PezpalletSocietyBidKind]>>][]): CandidateSuspend[] =>
     entries
       .filter(([{ args: [accountId] }, opt]) => opt.isSome && accountId)
       .map(([{ args: [accountId] }, opt]) => {

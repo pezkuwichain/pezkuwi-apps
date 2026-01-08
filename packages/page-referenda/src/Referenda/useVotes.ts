@@ -5,7 +5,7 @@ import type { ApiPromise } from '@pezkuwi/api';
 import type { Changes } from '@pezkuwi/react-hooks/useEventChanges';
 import type { Option, StorageKey, u32 } from '@pezkuwi/types';
 import type { AccountId, EventRecord } from '@pezkuwi/types/interfaces';
-import type { PalletRankedCollectiveVoteRecord } from '@pezkuwi/types/lookup';
+import type { PezpalletRankedCollectiveVoteRecord } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { PalletVote } from '../types.js';
 
@@ -19,8 +19,8 @@ const OPT_ACCOUNTID = {
 };
 
 const OPT_VOTES = {
-  transform: ([[params], votes]: [[[[BN, AccountId][]]], Option<PalletRankedCollectiveVoteRecord>[]]): Record<string, PalletRankedCollectiveVoteRecord> =>
-    params.reduce<Record<string, PalletRankedCollectiveVoteRecord>>((all, [, a], i) => {
+  transform: ([[params], votes]: [[[[BN, AccountId][]]], Option<PezpalletRankedCollectiveVoteRecord>[]]): Record<string, PezpalletRankedCollectiveVoteRecord> =>
+    params.reduce<Record<string, PezpalletRankedCollectiveVoteRecord>>((all, [, a], i) => {
       if (votes[i] && votes[i].isSome) {
         all[a.toString()] = votes[i].unwrap();
       }
@@ -42,7 +42,7 @@ function filterEvents (records: EventRecord[], _: ApiPromise, id?: BN): Changes<
   return { added };
 }
 
-function useVotesImpl (palletVote: PalletVote, id: BN, isConvictionVote: boolean): Record<string, PalletRankedCollectiveVoteRecord> | undefined {
+function useVotesImpl (palletVote: PalletVote, id: BN, isConvictionVote: boolean): Record<string, PezpalletRankedCollectiveVoteRecord> | undefined {
   const { api } = useApi();
 
   // After v1.4.0 runtime upgrade, Relay chains i.e. Dicle and Pezkuwi, or other teyrchains chains, replaced `voting` method with `votingFor`.

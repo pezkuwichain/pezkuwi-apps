@@ -3,6 +3,6 @@
 
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
-import { typeBundleForPezkuwi } from '@zeroio/type-definitions';
+import { typeBundleForPolkadot as typeBundleForPezkuwi } from '@zeroio/type-definitions';
 
 export default typeBundleForPezkuwi as unknown as OverrideBundleDefinition;

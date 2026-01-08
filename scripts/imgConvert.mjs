@@ -1,9 +1,10 @@
 // Copyright 2017-2026 @pezkuwi/apps authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import { formatNumber, stringCamelCase } from '@pezkuwi/util';
 import fs from 'node:fs';
 import path from 'node:path';
+
+import { formatNumber, stringCamelCase } from '@pezkuwi/util';
 
 const MAX_SIZE = 48 * 1024;
 

@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import type { ApiPromise } from '@pezkuwi/api';
-import type { PalletBrokerConfigRecord, RegionInfo } from '@pezkuwi/react-hooks/types';
+import type { PezpalletBrokerConfigRecord, RegionInfo } from '@pezkuwi/react-hooks/types';
 import type { CoreWorkloadType, CoreWorkplanType, InfoRow } from '../types.js';
 
 import React, { useEffect, useMemo, useState } from 'react';
@@ -21,7 +21,7 @@ interface Props {
   core: number;
   workload: CoreWorkloadType[] | undefined
   workplan?: CoreWorkplanType[] | undefined
-  config: PalletBrokerConfigRecord
+  config: PezpalletBrokerConfigRecord
 }
 
 function Workload ({ api, config, core, workload, workplan }: Props): React.ReactElement<Props> {

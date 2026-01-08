@@ -4,7 +4,7 @@
 import type { ApiPromise } from '@pezkuwi/api';
 import type { DeriveBalancesAll, DeriveStakingAccount } from '@pezkuwi/api-derive/types';
 import type { StakerState } from '@pezkuwi/react-hooks/types';
-import type { PalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingUnappliedSlash } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 import type { SortedTargets } from '../../types.js';
 import type { Slash } from '../types.js';
@@ -31,7 +31,7 @@ import Validate from './Validate.js';
 import WarnBond from './WarnBond.js';
 
 interface Props {
-  allSlashes?: [BN, PalletStakingUnappliedSlash[]][];
+  allSlashes?: [BN, PezpalletStakingUnappliedSlash[]][];
   className?: string;
   isDisabled?: boolean;
   info: StakerState;
@@ -41,7 +41,7 @@ interface Props {
   validators?: string[];
 }
 
-function extractSlashes (stashId: string, allSlashes: [BN, PalletStakingUnappliedSlash[]][] = []): Slash[] {
+function extractSlashes (stashId: string, allSlashes: [BN, PezpalletStakingUnappliedSlash[]][] = []): Slash[] {
   return allSlashes
     .map(([era, all]) => ({
       era,

@@ -5,7 +5,7 @@ import type { ApiPromise } from '@pezkuwi/api';
 import type { DeriveSessionInfo, DeriveStakingElected, DeriveStakingWaiting } from '@pezkuwi/api-derive/types';
 import type { Inflation } from '@pezkuwi/react-hooks/types';
 import type { Option, u32, Vec } from '@pezkuwi/types';
-import type { PalletStakingStakingLedger } from '@pezkuwi/types/lookup';
+import type { PezpalletStakingStakingLedger } from '@pezkuwi/types/lookup';
 import type { SortedTargets, TargetSortBy, ValidatorInfo } from './types.js';
 
 import { useMemo } from 'react';
@@ -68,7 +68,7 @@ const OPT_MULTI = {
   })
 };
 
-function getLegacyRewards (ledger: PalletStakingStakingLedger, claimedRewardsEras: Vec<u32>): u32[] {
+function getLegacyRewards (ledger: PezpalletStakingStakingLedger, claimedRewardsEras: Vec<u32>): u32[] {
   const legacyRewards = ledger.legacyClaimedRewards || (ledger as unknown as OldLedger).claimedRewards || [];
 
   return legacyRewards.concat(claimedRewardsEras.toArray());
@@ -130,8 +130,8 @@ function sortValidators (list: ValidatorInfo[]): ValidatorInfo[] {
 
 function extractSingle (api: ApiPromise, allAccounts: string[], derive: DeriveStakingElected | DeriveStakingWaiting, favorites: string[], { activeEra, eraLength, lastEra, sessionLength }: LastEra, historyDepth?: BN, withReturns?: boolean): [ValidatorInfo[], Record<string, BN>] {
   const nominators: Record<string, BN> = {};
-  const emptyExposure = api.createType('SpStakingExposurePage');
-  const emptyExposureMeta = api.createType('SpStakingPagedExposureMetadata');
+  const emptyExposure = api.createType('PezspStakingExposurePage');
+  const emptyExposureMeta = api.createType('PezspStakingPagedExposureMetadata');
   const earliestEra = historyDepth && lastEra.sub(historyDepth).iadd(BN_ONE);
   const list = new Array<ValidatorInfo>(derive.info.length);
 
