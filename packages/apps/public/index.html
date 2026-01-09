@@ -2,6 +2,7 @@
 <html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="manifest.json">
     <link rel="shortcut icon" href="favicon.ico">
@@ -63,11 +64,6 @@
         --color-bounty-info: #8E8E8E;
         --color-checkbox: rgba(78, 78, 78, 0.66);
         --color-error: rgba(255, 83, 83, 0.8);
-        /* --color-header: rgba(244, 242, 240, 0.8); */
-        /* --color-label: rgba(244, 242, 240, 0.45); */
-        /* --color-summary: rgba(244, 242, 240, 0.75); */
-        /* --color-table-foot: rgba(254, 240, 240, 0.66); */
-        /* --color-table-head: rgba(254, 240, 240, 0.8); */
         --color-text: rgba(244, 242, 240, 0.8);
         --opacity-gray: 0.1;
       }
@@ -91,12 +87,7 @@
         --color-bounty-info: #4D4D4D;
         --color-checkbox: rgba(34, 36, 38, 0.15);
         --color-error: rgba(139, 0, 0);
-        /* --color-header: rgba(78, 78, 78, 0.8); */
-        /* --color-label: rgba(78, 78, 78, 0.66); */
-        /* --color-summary: rgba(78, 78, 78, 0.66); */
-        /* --color-table-foot: rgba(78, 78, 78, 0.66); */
-        /* --color-table-head: rgba(78, 78, 78, 0.8); */
-        --color-text: rgba(78, 78, 78, 0.8); /* 1 */
+        --color-text: rgba(78, 78, 78, 0.8);
         --opacity-gray: 0.75;
       }
 
@@ -123,16 +114,259 @@
         filter: blur(2px);
         opacity: 0.15;
       }
+
+      /* Landing Page Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #landing-page {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      #landing-page.hidden {
+        display: none;
+      }
+
+      .landing-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        z-index: -2;
+      }
+
+      .landing-background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('kurdistan_map.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+        z-index: -1;
+      }
+
+      .landing-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+      }
+
+      .landing-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .landing-logo img {
+        height: 40px;
+      }
+
+      .landing-logo-text {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .landing-nav {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .landing-btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+      }
+
+      .landing-btn-primary {
+        background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+        color: #fff;
+      }
+
+      .landing-btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(233, 30, 99, 0.4);
+      }
+
+      .landing-btn-secondary {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .landing-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .landing-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 72px);
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .landing-version {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(233, 30, 99, 0.2);
+        border: 1px solid rgba(233, 30, 99, 0.4);
+        border-radius: 20px;
+        color: #e91e63;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+      }
+
+      .landing-title {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .landing-subtitle {
+        font-size: 1.75rem;
+        color: #4caf50;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .landing-description {
+        font-size: 1.25rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 600px;
+        line-height: 1.6;
+        margin-bottom: 2.5rem;
+      }
+
+      .landing-cta {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .landing-btn-large {
+        padding: 1rem 2.5rem;
+        font-size: 1.125rem;
+      }
+
+      @media (max-width: 768px) {
+        .landing-header {
+          flex-direction: column;
+          gap: 1rem;
+          padding: 1rem;
+        }
+
+        .landing-title {
+          font-size: 2.5rem;
+        }
+
+        .landing-subtitle {
+          font-size: 1.25rem;
+        }
+
+        .landing-description {
+          font-size: 1rem;
+        }
+
+        .landing-nav {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
     </style>
   </head>
   <body>
+    <!-- Landing Page -->
+    <div id="landing-page">
+      <div class="landing-background"></div>
+      <div class="landing-background-image"></div>
+
+      <header class="landing-header">
+        <div class="landing-logo">
+          <img src="favicon.ico" alt="PezkuwiChain Logo">
+          <span class="landing-logo-text">PezkuwiChain</span>
+        </div>
+        <nav class="landing-nav">
+          <a href="#/explorer" class="landing-btn landing-btn-primary">Explorer</a>
+          <a href="https://pezkuwichain.io" class="landing-btn landing-btn-secondary">Go to Home Page</a>
+        </nav>
+      </header>
+
+      <main class="landing-hero">
+        <span class="landing-version">Digital Kurdistan State v1.0</span>
+        <h1 class="landing-title">PezkuwiChain</h1>
+        <h2 class="landing-subtitle">Decentralized Governance for Kurdistan</h2>
+        <p class="landing-description">
+          Building a transparent, democratic future through blockchain technology
+        </p>
+        <div class="landing-cta">
+          <a href="#/explorer" class="landing-btn landing-btn-primary landing-btn-large">Launch Explorer</a>
+          <a href="#/accounts" class="landing-btn landing-btn-secondary landing-btn-large">Manage Accounts</a>
+        </div>
+      </main>
+    </div>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <div id="tooltips"></div>
+
     <script>
+      // Handle iframe escape
       if (window.self !== window.top) {
         window.top.location.href = window.location.href;
       }
+
+      // Landing page visibility logic
+      function updateLandingVisibility() {
+        var landing = document.getElementById('landing-page');
+        var root = document.getElementById('root');
+        var hash = window.location.hash;
+
+        // Show landing page only when there's no hash or hash is just '#' or '#/'
+        if (!hash || hash === '#' || hash === '#/') {
+          landing.classList.remove('hidden');
+          root.style.display = 'none';
+        } else {
+          landing.classList.add('hidden');
+          root.style.display = 'block';
+        }
+      }
+
+      // Run on page load
+      updateLandingVisibility();
+
+      // Listen for hash changes
+      window.addEventListener('hashchange', updateLandingVisibility);
     </script>
   </body>
 </html>
