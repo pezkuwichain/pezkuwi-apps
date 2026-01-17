@@ -1,0 +1,38 @@
+$ pezkuwi-dev-clean-build
+$ webpack serve --config webpack.serve.cjs --port 3000
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: http://localhost:3000/
+<i> [webpack-dev-server] On Your Network (IPv4): http://172.31.134.70:3000/
+<i> [webpack-dev-server] Content not from webpack is served from '/home/mamostehp/pezkuwi-apps/packages/apps/build' directory
+assets by info 53.4 MiB [immutable]
+  assets by status 51.2 MiB [big] 49 assets
+  + 33 assets
+assets by path locales/ 2.57 MiB
+  assets by path locales/en/*.json 317 KiB
+    asset locales/en/translation.json 89.1 KiB [emitted] [from: public/locales/en/translation.json] [copied]
+    + 57 assets
+  + 19 assets
+asset kurdistan_map.png 446 KiB [emitted] [from: public/kurdistan_map.png] [copied] [big]
+asset favicon.ico 37.2 KiB [emitted] [from: public/favicon.ico] [copied]
+asset index.html 13.3 KiB [emitted]
+asset manifest.json 335 bytes [emitted] [from: public/manifest.json] [copied]
+asset ipfs/pin.json 258 bytes [emitted] [from: public/ipfs/pin.json] [copied]
+asset env-config.js 199 bytes [emitted] [from: public/env-config.js] [copied]
+asset _headers 77 bytes [emitted] [from: public/_headers] [copied]
+Entrypoint main [big] 39.6 MiB = 63 assets
+orphan modules 17 MiB (javascript) 13.5 KiB (runtime) [orphan] 4483 modules
+runtime modules 66.7 KiB 30 modules
+built modules 48.1 MiB (javascript) 551 KiB (css/mini-extract) 1 bytes (asset) [built]
+  modules by path ../ 48 MiB (javascript) 551 KiB (css/mini-extract) 1 bytes (asset)
+    javascript modules 41.3 MiB 3374 modules
+    json modules 6.73 MiB
+      optional modules 6.73 MiB [optional] 6 modules
+      ../../node_modules/secp256k1/lib/messages.json 2.2 KiB [built] [code generated]
+      ../../node_modules/elliptic/package.json 1.11 KiB [built] [code generated]
+    css modules 551 KiB
+      css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!../../node_modules/semantic-ui-css/semantic.min.css 99 bytes [built] [code generated]
+      css ../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!../../node_modules/semantic-ui-css/semantic.min.css (1) 551 KiB [built] [code generated]
+    ../../node_modules/@acala-network/chopsticks-executor/dist/esm/chopsticks_ex...(truncated) 1 bytes (asset) 42 bytes (javascript) [built] [code generated]
+  + 15 modules
+webpack 5.104.1 compiled successfully in 21060 ms
+<i> [webpack-dev-server] Gracefully shutting down. To force exit, press ^C again. Please wait...
