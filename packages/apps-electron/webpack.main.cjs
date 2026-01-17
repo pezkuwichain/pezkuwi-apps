@@ -1,8 +1,6 @@
 // Copyright 2017-2026 @pezkuwi/apps-electron authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/* eslint-disable camelcase */
-
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
