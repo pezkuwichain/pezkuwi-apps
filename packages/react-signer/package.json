@@ -16,7 +16,7 @@
   "type": "module",
   "version": "0.168.2-4-x",
   "dependencies": {
-    "@pezkuwi/hw-ledger": "^14.0.7",
+    "@pezkuwi/hw-ledger": "^14.0.11",
     "@pezkuwi/react-components": "^0.168.2-4-x",
     "@polkadot-api/merkleize-metadata": "^1.1.27"
   },

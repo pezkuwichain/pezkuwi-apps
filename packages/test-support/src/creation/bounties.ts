@@ -20,8 +20,8 @@ export class BountyFactory {
   public aBountyIndex = (index = 0): BountyIndex =>
     this.#registry.createType('BountyIndex', index);
 
-  public defaultBounty = (): PezpalletBountiesBounty =>
-    this.#registry.createType<PezpalletBountiesBounty>('Bounty');
+  public defaultBounty = (): any =>
+    this.#registry.createType('Bounty');
 
   public aBountyStatus = (status: string): PezpalletBountiesBountyStatus =>
     this.#registry.createType('PezpalletBountiesBountyStatus', status);
@@ -38,9 +38,9 @@ export class BountyFactory {
     throw new Error('Unsupported status');
   };
 
-  public bountyWith = ({ status = 'Proposed', value = 1 } = {}): PezpalletBountiesBounty =>
+  public bountyWith = ({ status = 'Proposed', value = 1 } = {}): any =>
     this.aBounty({ status: this.aBountyStatus(status), value: balanceOf(value) });
 
-  public aBounty = ({ fee = balanceOf(10), status = this.aBountyStatus('Proposed'), value = balanceOf(500) }: Partial<PezpalletBountiesBounty> = {}): PezpalletBountiesBounty =>
-    this.#registry.createType<PezpalletBountiesBounty>('Bounty', { fee, status, value });
+  public aBounty = ({ fee = balanceOf(10), status = this.aBountyStatus('Proposed'), value = balanceOf(500) }: Partial<PezpalletBountiesBounty> = {}): any =>
+    this.#registry.createType('Bounty', { fee, status, value });
 }

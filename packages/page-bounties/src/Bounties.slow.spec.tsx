@@ -51,7 +51,7 @@ describe.skip('--SLOW--: Bounties', () => {
   it('list shows an existing bounty', async () => {
     const api = await createApi();
 
-    await execute(api.tx.bounties.proposeBounty(new BN(500_000_000_000_000), 'a short bounty title'), aliceSigner());
+    await execute((api.tx.bounties as any).proposeBounty(new BN(500_000_000_000_000), 'a short bounty title'), aliceSigner());
 
     const { findByText } = renderBounties();
 

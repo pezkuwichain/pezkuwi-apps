@@ -111,11 +111,11 @@ find "$APPS_DIR" -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -na
     # polkadot.js.org -> pezkuwichain.app
     sed -i 's|polkadot.js.org|pezkuwichain.app|g' "$file"
 
-    # apps.polkadot.io -> pezkuwichain.app
-    sed -i 's|apps.polkadot.io|pezkuwichain.app|g' "$file"
+    # apps.pezkuwichain.io -> pezkuwichain.app
+    sed -i 's|apps.pezkuwichain.io|pezkuwichain.app|g' "$file"
 
-    # polkadot.network -> pezkuwichain.io
-    sed -i 's|polkadot.network|pezkuwichain.io|g' "$file"
+    # pezkuwichain.io -> pezkuwichain.io
+    sed -i 's|pezkuwichain.io|pezkuwichain.io|g' "$file"
 
     # kusama.network -> dicle.pezkuwichain.io
     sed -i 's|kusama.network|dicle.pezkuwichain.io|g' "$file"

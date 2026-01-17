@@ -5,7 +5,6 @@
 
 /* eslint-disable jest/expect-expect */
 
-import type { ApiPromise } from '@pezkuwi/api';
 import type { SubmittableExtrinsic } from '@pezkuwi/api/types';
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
 import type { BountyIndex } from '@pezkuwi/types/interfaces';
@@ -52,7 +51,7 @@ jest.mock('./hooks/useBounties', () => ({
 }));
 
 let aProposal: (extrinsic: SubmittableExtrinsic<'promise'>, ayes?: string[], nays?: string[]) => DeriveCollectiveProposal;
-let augmentedApi: ApiPromise;
+let augmentedApi: any;
 let aBounty: ({ status, value }?: Partial<PezpalletBountiesBounty>) => PezpalletBountiesBounty;
 let aBountyIndex: (index?: number) => BountyIndex;
 let bountyStatusWith: ({ curator, status, updateDue }: { curator?: string, status?: string, updateDue?: number}) => PezpalletBountiesBountyStatus;
@@ -106,7 +105,7 @@ describe('Bounties', () => {
     describe('has extended status', () => {
       it('when voting on proposed curator', async () => {
         const bounty = bountyWith({ status: 'Funded' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.proposeCurator(0, '5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z', 1))];
+        const proposals = [aProposal((augmentedApi).tx.bounties.proposeCurator(0, '5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z', 1))];
 
         bountiesPage.renderOne(bounty, proposals);
 
@@ -115,7 +114,7 @@ describe('Bounties', () => {
 
       it('when voting on bounty approval', async () => {
         const bounty = bountyWith({ status: 'Proposed' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.approveBounty(0))];
+        const proposals = [aProposal((augmentedApi).tx.bounties.approveBounty(0))];
 
         bountiesPage.renderOne(bounty, proposals);
 
@@ -125,8 +124,8 @@ describe('Bounties', () => {
       it('when simultaneous close and approve motions exist, show approved', async () => {
         const bounty = bountyWith({ status: 'Proposed' });
         const proposals = [
-          aProposal(augmentedApi.tx.bounties.closeBounty(0)),
-          aProposal(augmentedApi.tx.bounties.approveBounty(0))
+          aProposal((augmentedApi).tx.bounties.closeBounty(0)),
+          aProposal((augmentedApi).tx.bounties.approveBounty(0))
         ];
 
         bountiesPage.renderOne(bounty, proposals);
@@ -136,7 +135,7 @@ describe('Bounties', () => {
 
       it('when voting on close bounty', async () => {
         const bounty = bountyWith({ status: 'Active' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.closeBounty(0))];
+        const proposals = [aProposal((augmentedApi).tx.bounties.closeBounty(0))];
 
         bountiesPage.renderOne(bounty, proposals);
 
@@ -145,7 +144,7 @@ describe('Bounties', () => {
 
       it('when voting on unassign curator', async () => {
         const bounty = bountyWith({ status: 'Active' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.unassignCurator(0))];
+        const proposals = [aProposal((augmentedApi).tx.bounties.unassignCurator(0))];
 
         bountiesPage.renderOne(bounty, proposals);
 
@@ -154,7 +153,7 @@ describe('Bounties', () => {
 
       it('when a motion exists that would fail on execution, show nothing', async () => {
         const bounty = bountyWith({ status: 'Active' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.approveBounty(0))];
+        const proposals = [aProposal((augmentedApi).tx.bounties.approveBounty(0))];
 
         const { findByTestId } = bountiesPage.renderOne(bounty, proposals);
 
@@ -165,7 +164,7 @@ describe('Bounties', () => {
     describe('has extended description for Curator', () => {
       it('when propose curator motion is voted and bounty is in Funded state', async () => {
         const bounty = bountyWith({ status: 'Funded' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.proposeCurator(0, alice, 1))];
+        const proposals = [aProposal((augmentedApi).tx.bounties.proposeCurator(0, alice, 1))];
 
         bountiesPage.renderOne(bounty, proposals);
 
@@ -194,7 +193,7 @@ describe('Bounties', () => {
     describe('has Beneficiary description', () => {
       it('in PendingPayout status', async () => {
         const bounty = bountyWith({ status: 'PendingPayout' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.awardBounty(0, '5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z'))];
+        const proposals = [aProposal((augmentedApi).tx.bounties.awardBounty(0, '5EYCAe5ijiYfyeZ2JJCGq56LmPyNRAKzpG4QkoQkkQNB5e6Z'))];
 
         bountiesPage.renderOne(bounty, proposals);
 
@@ -214,7 +213,7 @@ describe('Bounties', () => {
     describe('has voting summary', () => {
       it('is displayed when voting', async () => {
         const bounty = bountyWith({ status: 'Proposed' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.approveBounty(0), [alice, bob], [])];
+        const proposals = [aProposal((augmentedApi).tx.bounties.approveBounty(0), [alice, bob], [])];
 
         const { findByTestId } = bountiesPage.renderOne(bounty, proposals);
 
@@ -234,7 +233,7 @@ describe('Bounties', () => {
     describe('has voters', () => {
       it('aye and nay', async () => {
         const bounty = bountyWith({ status: 'Proposed' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.approveBounty(0))];
+        const proposals = [aProposal((augmentedApi).tx.bounties.approveBounty(0))];
         const { findAllByTestId } = bountiesPage.renderOne(bounty, proposals);
         const ayeVoters = await findAllByTestId((testId) => testId.startsWith('voters_ayes'));
         const nayVoters = await findAllByTestId((testId) => testId.startsWith('voters_nays'));
@@ -247,7 +246,7 @@ describe('Bounties', () => {
 
       it('multiple ayes and no nay', async () => {
         const bounty = bountyWith({ status: 'Proposed' });
-        const proposals = [aProposal(augmentedApi.tx.bounties.approveBounty(0), [alice, bob], [])];
+        const proposals = [aProposal((augmentedApi).tx.bounties.approveBounty(0), [alice, bob], [])];
 
         const { findAllByTestId } = bountiesPage.renderOne(bounty, proposals);
         const ayeVoters = await findAllByTestId((testId) => testId.startsWith('voters_ayes'));
@@ -337,7 +336,7 @@ describe('Bounties', () => {
 
     it('is not available when close bounty motion already exists', async () => {
       const bounty = bountyWith({ status: 'Funded' });
-      const proposals = [aProposal(augmentedApi.tx.bounties.closeBounty(0))];
+      const proposals = [aProposal((augmentedApi).tx.bounties.closeBounty(0))];
 
       const { findByTestId } = bountiesPage.renderOne(bounty, proposals);
 

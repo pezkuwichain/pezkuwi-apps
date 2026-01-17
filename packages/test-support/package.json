@@ -20,7 +20,7 @@
     "testcontainers": "^10.4.0"
   },
   "devDependencies": {
-    "@pezkuwi/types-support": "16.5.2",
+    "@pezkuwi/types-support": "16.5.9",
     "@testing-library/jest-dom": "^5.17.0",
     "tsconfig-paths": "^4.2.0"
   },
