@@ -1846,9 +1846,9 @@ __metadata:
   dependencies:
     "@pezkuwi/hw-ledger": "npm:^14.0.11"
     "@pezkuwi/phishing": "npm:^0.25.28"
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-hooks": "npm:^1.0.2-0-x"
-    "@pezkuwi/test-support": "npm:1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-hooks": "npm:^1.0.2-1-x"
+    "@pezkuwi/test-support": "npm:1.0.2-1-x"
     "@pezkuwi/util": "npm:^14.0.11"
     "@polkadot/vanitygen": "npm:^0.63.18"
     detect-browser: "npm:^5.3.0"
@@ -1864,7 +1864,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-addresses@workspace:packages/page-addresses"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
     "@testing-library/react": "npm:^14.1.2"
     file-saver: "npm:^2.0.5"
     testcontainers: "npm:^10.4.0"
@@ -1899,7 +1899,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-assets@workspace:packages/page-assets"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -1911,8 +1911,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-bounties@workspace:packages/page-bounties"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/test-support": "npm:1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/test-support": "npm:1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -1924,8 +1924,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-broker@workspace:packages/page-broker"
   dependencies:
-    "@pezkuwi/react-components": "npm:1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -1937,7 +1937,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-calendar@workspace:packages/page-calendar"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -1949,7 +1949,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-claims@workspace:packages/page-claims"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
     secp256k1: "npm:^3.8.0"
   peerDependencies:
     react: "*"
@@ -1985,8 +1985,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-coretime@workspace:packages/page-coretime"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -1998,8 +1998,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-council@workspace:packages/page-council"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2011,8 +2011,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-democracy@workspace:packages/page-democracy"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2020,11 +2020,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/app-explorer@npm:^1.0.2-0-x, @pezkuwi/app-explorer@workspace:packages/page-explorer":
+"@pezkuwi/app-explorer@npm:^1.0.2-1-x, @pezkuwi/app-explorer@workspace:packages/page-explorer":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-explorer@workspace:packages/page-explorer"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2036,9 +2036,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-extrinsics@workspace:packages/page-extrinsics"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-params": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-signer": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-params": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-signer": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2060,7 +2060,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-files@workspace:packages/page-files"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
     axios: "npm:^1.6.2"
   peerDependencies:
     react: "*"
@@ -2073,7 +2073,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-gilt@workspace:packages/page-gilt"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2085,7 +2085,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-js@workspace:packages/page-js"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2097,8 +2097,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-membership@workspace:packages/page-membership"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2110,7 +2110,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-nfts@workspace:packages/page-nfts"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2122,7 +2122,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-nis@workspace:packages/page-nis"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2134,7 +2134,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-poll@workspace:packages/page-poll"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2178,7 +2178,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-rpc@workspace:packages/page-rpc"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2190,7 +2190,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-runtime@workspace:packages/page-runtime"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2212,9 +2212,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-settings@workspace:packages/page-settings"
   dependencies:
-    "@pezkuwi/apps-config": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/apps-config": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
     query-string: "npm:^8.1.0"
   peerDependencies:
     react: "*"
@@ -2227,7 +2227,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-signing@workspace:packages/page-signing"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2239,7 +2239,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-society@workspace:packages/page-society"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2261,9 +2261,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-staking-legacy@workspace:packages/page-staking-legacy"
   dependencies:
-    "@pezkuwi/app-explorer": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/app-explorer": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2285,9 +2285,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-staking@workspace:packages/page-staking"
   dependencies:
-    "@pezkuwi/app-explorer": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/app-explorer": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2299,8 +2299,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-storage@workspace:packages/page-storage"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-params": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-params": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2312,7 +2312,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-sudo@workspace:packages/page-sudo"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2324,8 +2324,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-tech-comm@workspace:packages/page-tech-comm"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2337,8 +2337,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-teyrchains@workspace:packages/page-teyrchains"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2350,8 +2350,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-treasury@workspace:packages/page-treasury"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2363,8 +2363,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pezkuwi/app-utilities@workspace:packages/page-utilities"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-params": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-params": "npm:^1.0.2-1-x"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2382,7 +2382,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/apps-config@npm:^1.0.2-0-x, @pezkuwi/apps-config@workspace:packages/apps-config":
+"@pezkuwi/apps-config@npm:^1.0.2-1-x, @pezkuwi/apps-config@workspace:packages/apps-config":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/apps-config@workspace:packages/apps-config"
   dependencies:
@@ -2455,7 +2455,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/apps-routing@npm:^1.0.2-0-x, @pezkuwi/apps-routing@workspace:packages/apps-routing":
+"@pezkuwi/apps-routing@npm:^1.0.2-1-x, @pezkuwi/apps-routing@workspace:packages/apps-routing":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/apps-routing@workspace:packages/apps-routing"
   peerDependencies:
@@ -2470,15 +2470,15 @@ __metadata:
   resolution: "@pezkuwi/apps@workspace:packages/apps"
   dependencies:
     "@acala-network/chopsticks-core": "npm:^1.2.1"
-    "@pezkuwi/apps-config": "npm:^1.0.2-0-x"
-    "@pezkuwi/apps-routing": "npm:^1.0.2-0-x"
+    "@pezkuwi/apps-config": "npm:^1.0.2-1-x"
+    "@pezkuwi/apps-routing": "npm:^1.0.2-1-x"
     "@pezkuwi/dev": "npm:^0.85.2"
-    "@pezkuwi/react-api": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-hooks": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-params": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
-    "@pezkuwi/react-signer": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-api": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-hooks": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-params": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
+    "@pezkuwi/react-signer": "npm:^1.0.2-1-x"
     "@types/punycode": "npm:^2.1.3"
     assert: "npm:^2.1.0"
     buffer: "npm:^6.0.3"
@@ -2720,7 +2720,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/react-api@npm:^1.0.2-0-x, @pezkuwi/react-api@workspace:packages/react-api":
+"@pezkuwi/react-api@npm:^1.0.2-1-x, @pezkuwi/react-api@workspace:packages/react-api":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/react-api@workspace:packages/react-api"
   dependencies:
@@ -2737,7 +2737,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/react-components@npm:1.0.2-0-x, @pezkuwi/react-components@npm:^1.0.2-0-x, @pezkuwi/react-components@workspace:packages/react-components":
+"@pezkuwi/react-components@npm:1.0.2-1-x, @pezkuwi/react-components@npm:^1.0.2-1-x, @pezkuwi/react-components@workspace:packages/react-components":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/react-components@workspace:packages/react-components"
   dependencies:
@@ -2745,10 +2745,10 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": "npm:^6.5.1"
     "@fortawesome/react-fontawesome": "npm:^0.2.0"
     "@pezkuwi/keyring": "npm:^14.0.11"
-    "@pezkuwi/react-api": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-api": "npm:^1.0.2-1-x"
     "@pezkuwi/react-identicon": "npm:^3.17.2"
     "@pezkuwi/react-qr": "npm:^3.17.2"
-    "@pezkuwi/react-query": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-query": "npm:^1.0.2-1-x"
     "@pezkuwi/ui-keyring": "npm:^3.17.2"
     "@pezkuwi/ui-settings": "npm:^3.17.2"
     "@pezkuwi/util": "npm:^14.0.11"
@@ -2787,7 +2787,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/react-hooks@npm:^1.0.2-0-x, @pezkuwi/react-hooks@workspace:packages/react-hooks":
+"@pezkuwi/react-hooks@npm:^1.0.2-1-x, @pezkuwi/react-hooks@workspace:packages/react-hooks":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/react-hooks@workspace:packages/react-hooks"
   dependencies:
@@ -2826,11 +2826,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/react-params@npm:^1.0.2-0-x, @pezkuwi/react-params@workspace:packages/react-params":
+"@pezkuwi/react-params@npm:^1.0.2-1-x, @pezkuwi/react-params@workspace:packages/react-params":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/react-params@workspace:packages/react-params"
   dependencies:
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
     multiformats: "npm:^12.1.3"
   peerDependencies:
     react: "*"
@@ -2861,7 +2861,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/react-query@npm:1.0.2-0-x, @pezkuwi/react-query@npm:^1.0.2-0-x, @pezkuwi/react-query@workspace:packages/react-query":
+"@pezkuwi/react-query@npm:1.0.2-1-x, @pezkuwi/react-query@npm:^1.0.2-1-x, @pezkuwi/react-query@workspace:packages/react-query":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/react-query@workspace:packages/react-query"
   peerDependencies:
@@ -2871,12 +2871,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/react-signer@npm:^1.0.2-0-x, @pezkuwi/react-signer@workspace:packages/react-signer":
+"@pezkuwi/react-signer@npm:^1.0.2-1-x, @pezkuwi/react-signer@workspace:packages/react-signer":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/react-signer@workspace:packages/react-signer"
   dependencies:
     "@pezkuwi/hw-ledger": "npm:^14.0.11"
-    "@pezkuwi/react-components": "npm:^1.0.2-0-x"
+    "@pezkuwi/react-components": "npm:^1.0.2-1-x"
     "@polkadot-api/merkleize-metadata": "npm:^1.1.27"
   peerDependencies:
     react: "*"
@@ -2937,7 +2937,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/test-support@npm:1.0.2-0-x, @pezkuwi/test-support@workspace:packages/test-support":
+"@pezkuwi/test-support@npm:1.0.2-1-x, @pezkuwi/test-support@workspace:packages/test-support":
   version: 0.0.0-use.local
   resolution: "@pezkuwi/test-support@workspace:packages/test-support"
   dependencies:
