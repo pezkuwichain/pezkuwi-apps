@@ -14,10 +14,10 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "0.168.2-4-x",
+  "version": "1.0.1",
   "dependencies": {
     "@pezkuwi/hw-ledger": "^14.0.11",
-    "@pezkuwi/react-components": "^0.168.2-4-x",
+    "@pezkuwi/react-components": "^1.0.1",
     "@polkadot-api/merkleize-metadata": "^1.1.27"
   },
   "peerDependencies": {
