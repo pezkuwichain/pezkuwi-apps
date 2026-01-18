@@ -22,7 +22,7 @@
   "dependencies": {
     "@pezkuwi/api": "^16.5.9",
     "@pezkuwi/extension-compat-metamask": "^0.62.14",
-    "@pezkuwi/extension-dapp": "^0.62.14",
+    "@pezkuwi/extension-dapp": "0.62.20",
     "@pezkuwi/rpc-provider": "^16.5.9",
     "fflate": "^0.8.1",
     "rxjs": "^7.8.1"

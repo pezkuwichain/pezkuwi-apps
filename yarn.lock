@@ -2619,11 +2619,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/extension-dapp@npm:^0.62.18":
-  version: 0.62.19
-  resolution: "@pezkuwi/extension-dapp@npm:0.62.19"
+"@pezkuwi/extension-dapp@npm:0.62.20":
+  version: 0.62.20
+  resolution: "@pezkuwi/extension-dapp@npm:0.62.20"
   dependencies:
-    "@pezkuwi/extension-inject": "npm:0.62.14"
+    "@pezkuwi/extension-inject": "npm:0.62.20"
     "@pezkuwi/util": "npm:^14.0.11"
     "@pezkuwi/util-crypto": "npm:^14.0.11"
     tslib: "npm:^2.8.1"
@@ -2631,13 +2631,13 @@ __metadata:
     "@pezkuwi/api": "*"
     "@pezkuwi/util": "*"
     "@pezkuwi/util-crypto": "*"
-  checksum: 10/80fee37ac38170bb31d75ced21721ba5651bf43b83afa826d4aab12cdf7d9f07fa44e08b3e257ca2bcae05ee41c7b49a313d03c1494853a848e55fab773a3ede
+  checksum: 10/b4eb8ed02bb4c5ac96b27b53ff890293a4647d2ef808bab9672f55817930ccdba5bcd060dcbd5f462af243b01658b172a26aa0ebd83d05ede67c66c4cdc85ac7
   languageName: node
   linkType: hard
 
-"@pezkuwi/extension-inject@npm:^0.62.18":
-  version: 0.62.19
-  resolution: "@pezkuwi/extension-inject@npm:0.62.19"
+"@pezkuwi/extension-inject@npm:0.62.20":
+  version: 0.62.20
+  resolution: "@pezkuwi/extension-inject@npm:0.62.20"
   dependencies:
     "@pezkuwi/api": "npm:^16.5.9"
     "@pezkuwi/rpc-provider": "npm:^16.5.9"
@@ -2649,7 +2649,7 @@ __metadata:
   peerDependencies:
     "@pezkuwi/api": "*"
     "@pezkuwi/util": "*"
-  checksum: 10/5c2f0b4482d270e49183fd776cadc84fb0abaecde79c464c3c879fa2f512ffeba484d35f1bb9be89c9d4c7cdbdaf0c85d8135308ade5c84814a61c77b6fbfa5b
+  checksum: 10/e833c4a2a9ddba2eaf0a2639e9658e73ef764a50064d80e456e2ff75e6304e94e6ddbca2e5864670fb270d9251643eb57473469ad868d0edab13c84f61eb514d
   languageName: node
   linkType: hard
 
@@ -2726,7 +2726,7 @@ __metadata:
   dependencies:
     "@pezkuwi/api": "npm:^16.5.9"
     "@pezkuwi/extension-compat-metamask": "npm:^0.62.14"
-    "@pezkuwi/extension-dapp": "npm:^0.62.14"
+    "@pezkuwi/extension-dapp": "npm:0.62.20"
     "@pezkuwi/rpc-provider": "npm:^16.5.9"
     fflate: "npm:^0.8.1"
     rxjs: "npm:^7.8.1"
@@ -17863,7 +17863,8 @@ __metadata:
   dependencies:
     "@crustio/crust-pin": "npm:^1.0.0"
     "@pezkuwi/dev": "npm:^0.85.3"
-    "@pezkuwi/extension-inject": "npm:^0.62.18"
+    "@pezkuwi/extension-dapp": "npm:0.62.20"
+    "@pezkuwi/extension-inject": "npm:0.62.20"
     "@pinata/sdk": "npm:^1.2.1"
     "@types/chart.js": "npm:^2.9.41"
     "@types/file-saver": "npm:^2.0.7"
