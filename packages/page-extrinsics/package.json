@@ -14,11 +14,11 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2-0-x",
   "dependencies": {
-    "@pezkuwi/react-components": "^1.0.1",
-    "@pezkuwi/react-params": "^1.0.1",
-    "@pezkuwi/react-signer": "^1.0.1"
+    "@pezkuwi/react-components": "^1.0.2-0-x",
+    "@pezkuwi/react-params": "^1.0.2-0-x",
+    "@pezkuwi/react-signer": "^1.0.2-0-x"
   },
   "peerDependencies": {
     "react": "*",
