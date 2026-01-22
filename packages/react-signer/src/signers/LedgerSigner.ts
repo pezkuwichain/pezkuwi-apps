@@ -10,7 +10,7 @@ import type { Signer, SignerResult } from '@pezkuwi/api/types';
 import type { Ledger, LedgerGeneric } from '@pezkuwi/hw-ledger';
 import type { Registry, SignerPayloadJSON } from '@pezkuwi/types/types';
 
-import { merkleizeMetadata } from '@polkadot-api/merkleize-metadata';
+import { merkleizeMetadata } from '@pezkuwi/merkleize-metadata';
 
 import { settings } from '@pezkuwi/ui-settings';
 import { objectSpread, u8aToHex } from '@pezkuwi/util';

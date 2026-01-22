@@ -2506,6 +2506,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pezkuwi/bizinikiwi-bindings@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@pezkuwi/bizinikiwi-bindings@npm:1.0.0"
+  dependencies:
+    "@noble/hashes": "npm:^2.0.1"
+    "@pezkuwi/papi-utils": "npm:1.0.0"
+    "@scure/base": "npm:^2.0.0"
+    scale-ts: "npm:^1.6.1"
+  checksum: 10/af4688eab2d23c5c6e681df390851fb02cb1e6e829a0227e51c532c77473bdeefb5367786d23ae368cf9a52b1f122d3b9ea94964ace159fe98dab3c294b37537
+  languageName: node
+  linkType: hard
+
 "@pezkuwi/dev-test@npm:^0.85.3":
   version: 0.85.4
   resolution: "@pezkuwi/dev-test@npm:0.85.4"
@@ -2771,6 +2783,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pezkuwi/merkleize-metadata@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@pezkuwi/merkleize-metadata@npm:1.0.0"
+  dependencies:
+    "@pezkuwi/bizinikiwi-bindings": "npm:1.0.0"
+    "@pezkuwi/metadata-builders": "npm:1.0.0"
+    "@pezkuwi/papi-utils": "npm:1.0.0"
+  checksum: 10/2837fee1f9e987301c89040c7cece4b54dc960988587db09df35ea592a63b5934cef0add6bcfee192fc1bdf31697bfb79ab61e65c578b1ea7772be1f6937b680
+  languageName: node
+  linkType: hard
+
+"@pezkuwi/metadata-builders@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@pezkuwi/metadata-builders@npm:1.0.0"
+  dependencies:
+    "@pezkuwi/bizinikiwi-bindings": "npm:1.0.0"
+    "@pezkuwi/papi-utils": "npm:1.0.0"
+  checksum: 10/d43cc31506cec23636c5b4445a4cc36d38ed0b7556fec7828af2917719930ea7519038233cef606836316c1ee7ece6ab0a20ee5eaf8f3e14ed595dc39c0b4717
+  languageName: node
+  linkType: hard
+
 "@pezkuwi/networks@npm:^14.0.11":
   version: 14.0.11
   resolution: "@pezkuwi/networks@npm:14.0.11"
@@ -2779,6 +2812,13 @@ __metadata:
     "@substrate/ss58-registry": "npm:^1.51.0"
     tslib: "npm:^2.8.0"
   checksum: 10/addc1b800cdfae2cc5cf167ae9d227012a2ffa59faff2c7fb85c991c74596252b418951e6e23ffb5d58b656cf86251e2c67328e75060cc659c1cb69f3ea67fd0
+  languageName: node
+  linkType: hard
+
+"@pezkuwi/papi-utils@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@pezkuwi/papi-utils@npm:1.0.0"
+  checksum: 10/086de245716f6b2094b00c922eaf12352f738d959c0c0a52c41010ba89370d8d400e8087e265365cb68fd148cbe45991234ebc59c21251b66891cbc1053c123b
   languageName: node
   linkType: hard
 
@@ -2951,8 +2991,8 @@ __metadata:
   resolution: "@pezkuwi/react-signer@workspace:packages/react-signer"
   dependencies:
     "@pezkuwi/hw-ledger": "npm:^14.0.11"
+    "@pezkuwi/merkleize-metadata": "npm:^1.0.0"
     "@pezkuwi/react-components": "npm:^1.0.2-1-x"
-    "@polkadot-api/merkleize-metadata": "npm:^1.1.27"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -3448,17 +3488,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot-api/merkleize-metadata@npm:^1.1.27":
-  version: 1.1.28
-  resolution: "@polkadot-api/merkleize-metadata@npm:1.1.28"
-  dependencies:
-    "@polkadot-api/metadata-builders": "npm:0.13.8"
-    "@polkadot-api/substrate-bindings": "npm:0.16.6"
-    "@polkadot-api/utils": "npm:0.2.0"
-  checksum: 10/3e4a94427911aba60712ddc5fcec24134c1266b0218e0a84b82366a10bc09e1a0d7201cba9676b68101a01bc533ac8bb22f93f40b6275b2eb9472011526f8ead
-  languageName: node
-  linkType: hard
-
 "@polkadot-api/metadata-builders@npm:0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0":
   version: 0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0
   resolution: "@polkadot-api/metadata-builders@npm:0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0"
@@ -3466,16 +3495,6 @@ __metadata:
     "@polkadot-api/substrate-bindings": "npm:0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0"
     "@polkadot-api/utils": "npm:0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0"
   checksum: 10/0dc59527415b51b9741e95842505cfca788e9fb0e6666be971000b9fe522b7d1a81265d4cab1712c2cc564e14ae8f0e1ef8f32f4023be1261f366edaa1936cc9
-  languageName: node
-  linkType: hard
-
-"@polkadot-api/metadata-builders@npm:0.13.8":
-  version: 0.13.8
-  resolution: "@polkadot-api/metadata-builders@npm:0.13.8"
-  dependencies:
-    "@polkadot-api/substrate-bindings": "npm:0.16.6"
-    "@polkadot-api/utils": "npm:0.2.0"
-  checksum: 10/dddfe2be0ce4e57c3e31a5b6141bb12dde290a363ec22982e3aadb31314e712ab4b7de26eec8c5072eb12ebaf956dd6b595ae5e30bb33762d528263c601894d8
   languageName: node
   linkType: hard
 
@@ -3512,18 +3531,6 @@ __metadata:
     "@scure/base": "npm:^1.1.1"
     scale-ts: "npm:^1.6.0"
   checksum: 10/e14a81197b86314aa8887d7e81cbf3f0c3b9eec0267b128c81bb3bf6d26d93ac75bd113177861789a066b215a72ac03c940d590e769ca3f33a2ac4480c752538
-  languageName: node
-  linkType: hard
-
-"@polkadot-api/substrate-bindings@npm:0.16.6":
-  version: 0.16.6
-  resolution: "@polkadot-api/substrate-bindings@npm:0.16.6"
-  dependencies:
-    "@noble/hashes": "npm:^2.0.1"
-    "@polkadot-api/utils": "npm:0.2.0"
-    "@scure/base": "npm:^2.0.0"
-    scale-ts: "npm:^1.6.1"
-  checksum: 10/3428b7cc36ad8534c67543c04414f5454e2d9b68acb7211d348021ae362c8f698d04ceea6e4f7ed37c2d8949fb3d0b5abc8ae85567db0c335ddb8a6816f73e65
   languageName: node
   linkType: hard
 
@@ -3567,13 +3574,6 @@ __metadata:
   version: 0.1.0
   resolution: "@polkadot-api/utils@npm:0.1.0"
   checksum: 10/c557daea91ddb03e16b93c7c5a75533495c7b77cbbbdc2b4f5e97af0c1e1132a47e434c9c729a08241bd7b3624b6644ac0950f914aa8b29a0f419bf0fd224c7c
-  languageName: node
-  linkType: hard
-
-"@polkadot-api/utils@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@polkadot-api/utils@npm:0.2.0"
-  checksum: 10/5171c52af86bc85181cf8681342e38a6cbbe049d70f437ab256641a30f2d167d4d1f5f871d13731d9a7e08be5b35c2e981deba4efe6f16f0c57f2309d90bb52c
   languageName: node
   linkType: hard
 
