@@ -47,7 +47,7 @@ function createWebpack () {
       ],
       resolve: {
         alias: {
-          '@polkadot/hw-ledger-transports': require.resolve('@polkadot/hw-ledger-transports/node')
+          '@pezkuwi/hw-ledger-transports': require.resolve('@pezkuwi/hw-ledger-transports/node')
         },
         extensionAlias: {
           '.js': ['.ts', '.tsx', '.js']
