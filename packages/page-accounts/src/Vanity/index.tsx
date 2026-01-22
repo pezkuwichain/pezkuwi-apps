@@ -1,19 +1,19 @@
 // Copyright 2017-2026 @pezkuwi/app-accounts authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { GeneratorMatch, GeneratorMatches, GeneratorResult } from '@pezkuwi/vanitygen/types';
 import type { ActionStatus } from '@pezkuwi/react-components/Status/types';
 import type { KeypairType } from '@pezkuwi/util-crypto/types';
+import type { GeneratorMatch, GeneratorMatches, GeneratorResult } from '@pezkuwi/vanitygen/types';
 
-import generator from '@pezkuwi/vanitygen/generator';
-import matchRegex from '@pezkuwi/vanitygen/regex';
-import generatorSort from '@pezkuwi/vanitygen/sort';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Button, Dropdown, Input, styled, Table } from '@pezkuwi/react-components';
 import { useApi, useIsMountedRef } from '@pezkuwi/react-hooks';
 import { settings } from '@pezkuwi/ui-settings';
 import { nextTick } from '@pezkuwi/util';
+import generator from '@pezkuwi/vanitygen/generator';
+import matchRegex from '@pezkuwi/vanitygen/regex';
+import generatorSort from '@pezkuwi/vanitygen/sort';
 
 import CreateModal from '../modals/Create.js';
 import { useTranslation } from '../translate.js';
