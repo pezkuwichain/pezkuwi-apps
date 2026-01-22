@@ -1747,9 +1747,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/api-augment@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/api-augment@npm:16.5.9"
+"@pezkuwi/api-augment@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/api-augment@npm:16.5.11"
   dependencies:
     "@pezkuwi/api-base": "npm:16.5.9"
     "@pezkuwi/rpc-augment": "npm:16.5.9"
@@ -1758,26 +1758,26 @@ __metadata:
     "@pezkuwi/types-codec": "npm:16.5.9"
     "@pezkuwi/util": "npm:14.0.11"
     tslib: "npm:^2.8.1"
-  checksum: 10/7c758918884f9e9928cce4ea7bd06369d14c5824aa2152a58e1660e5f7cb1068718073ac489709b2eda4dd421dfbe79b95eb2259138224605ddaadad3f3db4b9
+  checksum: 10/e68490002a58579705d7156ba2688507dcc69498daefa4b80ed15fe6cc3988b4d8c760db44af147e160e04a2a1336137576f878e066fff251646e74f3cbadb14
   languageName: node
   linkType: hard
 
-"@pezkuwi/api-base@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/api-base@npm:16.5.9"
+"@pezkuwi/api-base@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/api-base@npm:16.5.11"
   dependencies:
     "@pezkuwi/rpc-core": "npm:16.5.9"
     "@pezkuwi/types": "npm:16.5.9"
     "@pezkuwi/util": "npm:14.0.11"
     rxjs: "npm:^7.8.1"
     tslib: "npm:^2.8.1"
-  checksum: 10/a098fbfe1b12820efb1403297fcf6a42c6a4f223eda93f1856108d63d53b2c0d9abb6195aa456cfbc57777afc46f603b7509af5865f0e9a782d6f9fd815fc277
+  checksum: 10/87d8a2ea6e6f4ad25054c0d4d8471717c94c5e1fe4a10c3c1e0250911d560e31dead73332ba738c62826d10e7489e2ab8da1d079623f5c03c9c11bea26a0a7f4
   languageName: node
   linkType: hard
 
-"@pezkuwi/api-contract@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/api-contract@npm:16.5.9"
+"@pezkuwi/api-contract@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/api-contract@npm:16.5.11"
   dependencies:
     "@pezkuwi/api": "npm:16.5.9"
     "@pezkuwi/api-augment": "npm:16.5.9"
@@ -1790,13 +1790,13 @@ __metadata:
     "@pezkuwi/util-crypto": "npm:14.0.11"
     rxjs: "npm:^7.8.1"
     tslib: "npm:^2.8.1"
-  checksum: 10/706d092e754e9edd24062245fa5bc6e55dc33deec0bc715d3712f5a6ae344f2bbf827540f6fad8ae12c76de892c7cb25b49c15c05f5c2ed11c1736ad1354545d
+  checksum: 10/1be45ff852bfbc51559646f8484acc67283eca1bd2f828d3afa91d6c83e9f1b6a8f4078361008a7e257df6bd9d4d0294ba2af974d81ab9487365504d8bb3be8e
   languageName: node
   linkType: hard
 
-"@pezkuwi/api-derive@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/api-derive@npm:16.5.9"
+"@pezkuwi/api-derive@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/api-derive@npm:16.5.11"
   dependencies:
     "@pezkuwi/api": "npm:16.5.9"
     "@pezkuwi/api-augment": "npm:16.5.9"
@@ -1810,13 +1810,13 @@ __metadata:
     "@pezkuwi/util-crypto": "npm:14.0.11"
     rxjs: "npm:^7.8.1"
     tslib: "npm:^2.8.1"
-  checksum: 10/9d810b60cd1ab9d7ef3704bfdb653a8b6d44692925bbece6856f89e4fa24759d5577a06c2a113fb3550c1f1e319899fc52ac55bde4544c16de707599e72b5280
+  checksum: 10/a50209755de1ab6146b794f5aa7eafd1e860e366d6b6368a457331cf3a3847ee8803f97d632a59bf24b4d248aaab22793f2d2fa5bdc8f52a07dd8c2275352c36
   languageName: node
   linkType: hard
 
-"@pezkuwi/api@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/api@npm:16.5.9"
+"@pezkuwi/api@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/api@npm:16.5.11"
   dependencies:
     "@pezkuwi/api-augment": "npm:16.5.9"
     "@pezkuwi/api-base": "npm:16.5.9"
@@ -1836,7 +1836,7 @@ __metadata:
     eventemitter3: "npm:^5.0.1"
     rxjs: "npm:^7.8.1"
     tslib: "npm:^2.8.1"
-  checksum: 10/4dfddbba8ea06f81ec7b7ca2c35a61640200915f4712d2c31b741bfff6f32023b3c50d60a52de6a48eb9601022430a873f6ce3bbbce32979580c01711621aa96
+  checksum: 10/e543528367f14afaa262bb4fcef3436d2190c61fc170fa33223c7e6d98200d3f049fb34e875f8eb1bb3d11e290af19e18789d7c49f8647676b3a62a96933f7e4
   languageName: node
   linkType: hard
 
@@ -1850,7 +1850,7 @@ __metadata:
     "@pezkuwi/react-hooks": "npm:^1.0.2-1-x"
     "@pezkuwi/test-support": "npm:1.0.2-1-x"
     "@pezkuwi/util": "npm:^14.0.11"
-    "@polkadot/vanitygen": "npm:^0.63.18"
+    "@pezkuwi/vanitygen": "npm:^1.0.1"
     detect-browser: "npm:^5.3.0"
     file-saver: "npm:^2.0.5"
   peerDependencies:
@@ -2506,6 +2506,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pezkuwi/bizinikiwi-bindings@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@pezkuwi/bizinikiwi-bindings@npm:1.0.0"
+  dependencies:
+    "@noble/hashes": "npm:^2.0.1"
+    "@pezkuwi/papi-utils": "npm:1.0.0"
+    "@scure/base": "npm:^2.0.0"
+    scale-ts: "npm:^1.6.1"
+  checksum: 10/af4688eab2d23c5c6e681df390851fb02cb1e6e829a0227e51c532c77473bdeefb5367786d23ae368cf9a52b1f122d3b9ea94964ace159fe98dab3c294b37537
+  languageName: node
+  linkType: hard
+
 "@pezkuwi/dev-test@npm:^0.85.3":
   version: 0.85.4
   resolution: "@pezkuwi/dev-test@npm:0.85.4"
@@ -2527,7 +2539,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev@npm:^0.85.2, @pezkuwi/dev@npm:^0.85.3":
+"@pezkuwi/dev@npm:^0.85.2":
   version: 0.85.4
   resolution: "@pezkuwi/dev@npm:0.85.4"
   dependencies:
@@ -2599,6 +2611,81 @@ __metadata:
     pezkuwi-exec-tsc: scripts/pezkuwi-exec-tsc.mjs
     pezkuwi-exec-webpack: scripts/pezkuwi-exec-webpack.mjs
   checksum: 10/3020c81733f967255f78fb8d9e8fdef053296647bef6ec9e3c9d1de369b541354561693a8a95f448d07ab1d19cce128fa234a4a5ee3ea472193978d0180f1393
+  languageName: node
+  linkType: hard
+
+"@pezkuwi/dev@npm:^0.85.7":
+  version: 0.85.7
+  resolution: "@pezkuwi/dev@npm:0.85.7"
+  dependencies:
+    "@eslint/js": "npm:^8.56.0"
+    "@pezkuwi/dev-test": "npm:^0.85.3"
+    "@pezkuwi/dev-ts": "npm:^0.85.3"
+    "@rollup/plugin-alias": "npm:^5.1.1"
+    "@rollup/plugin-commonjs": "npm:^25.0.8"
+    "@rollup/plugin-dynamic-import-vars": "npm:^2.1.5"
+    "@rollup/plugin-inject": "npm:^5.0.5"
+    "@rollup/plugin-json": "npm:^6.1.0"
+    "@rollup/plugin-node-resolve": "npm:^15.3.1"
+    "@tsconfig/strictest": "npm:^2.0.2"
+    "@typescript-eslint/eslint-plugin": "npm:^6.19.1"
+    "@typescript-eslint/parser": "npm:^6.19.1"
+    eslint: "npm:^8.56.0"
+    eslint-config-standard: "npm:^17.1.0"
+    eslint-import-resolver-node: "npm:^0.3.9"
+    eslint-import-resolver-typescript: "npm:^3.6.1"
+    eslint-plugin-deprecation: "npm:^2.0.0"
+    eslint-plugin-header: "npm:^3.1.1"
+    eslint-plugin-import: "npm:^2.29.1"
+    eslint-plugin-import-newlines: "npm:^1.3.4"
+    eslint-plugin-jest: "npm:^27.6.3"
+    eslint-plugin-n: "npm:^16.6.2"
+    eslint-plugin-promise: "npm:^6.1.1"
+    eslint-plugin-react: "npm:^7.33.2"
+    eslint-plugin-react-hooks: "npm:^4.6.0"
+    eslint-plugin-simple-import-sort: "npm:^10.0.0"
+    eslint-plugin-sort-destructure-keys: "npm:^1.5.0"
+    espree: "npm:^9.6.1"
+    gh-pages: "npm:^6.1.1"
+    gh-release: "npm:^7.0.2"
+    globals: "npm:^13.24.0"
+    json5: "npm:^2.2.3"
+    madge: "npm:^6.1.0"
+    rollup: "npm:^4.9.6"
+    rollup-plugin-cleanup: "npm:^3.2.1"
+    tslib: "npm:^2.7.0"
+    typescript: "npm:^5.5.4"
+    webpack: "npm:^5.89.0"
+    webpack-cli: "npm:^5.1.4"
+    webpack-dev-server: "npm:^4.15.1"
+    webpack-merge: "npm:^5.10.0"
+    webpack-subresource-integrity: "npm:^5.2.0-rc.1"
+    yargs: "npm:^17.7.2"
+  bin:
+    pezkuwi-ci-ghact-build: scripts/pezkuwi-ci-ghact-build.mjs
+    pezkuwi-ci-ghact-docs: scripts/pezkuwi-ci-ghact-docs.mjs
+    pezkuwi-ci-ghpages-force: scripts/pezkuwi-ci-ghpages-force.mjs
+    pezkuwi-dev-build-docs: scripts/pezkuwi-dev-build-docs.mjs
+    pezkuwi-dev-build-ts: scripts/pezkuwi-dev-build-ts.mjs
+    pezkuwi-dev-circular: scripts/pezkuwi-dev-circular.mjs
+    pezkuwi-dev-clean-build: scripts/pezkuwi-dev-clean-build.mjs
+    pezkuwi-dev-contrib: scripts/pezkuwi-dev-contrib.mjs
+    pezkuwi-dev-copy-dir: scripts/pezkuwi-dev-copy-dir.mjs
+    pezkuwi-dev-copy-to: scripts/pezkuwi-dev-copy-to.mjs
+    pezkuwi-dev-deno-map: scripts/pezkuwi-dev-deno-map.mjs
+    pezkuwi-dev-run-lint: scripts/pezkuwi-dev-run-lint.mjs
+    pezkuwi-dev-run-node-ts: scripts/pezkuwi-dev-run-node-ts.mjs
+    pezkuwi-dev-run-test: scripts/pezkuwi-dev-run-test.mjs
+    pezkuwi-dev-version: scripts/pezkuwi-dev-version.mjs
+    pezkuwi-dev-yarn-only: scripts/pezkuwi-dev-yarn-only.mjs
+    pezkuwi-exec-eslint: scripts/pezkuwi-exec-eslint.mjs
+    pezkuwi-exec-ghpages: scripts/pezkuwi-exec-ghpages.mjs
+    pezkuwi-exec-ghrelease: scripts/pezkuwi-exec-ghrelease.mjs
+    pezkuwi-exec-node-test: scripts/pezkuwi-exec-node-test.mjs
+    pezkuwi-exec-rollup: scripts/pezkuwi-exec-rollup.mjs
+    pezkuwi-exec-tsc: scripts/pezkuwi-exec-tsc.mjs
+    pezkuwi-exec-webpack: scripts/pezkuwi-exec-webpack.mjs
+  checksum: 10/8cda71662ea0cf9999de0644459bf0343a2c8c4cc3e8f29657415ef631cb5df0b37aca994bd7249da6bb4c240a73bb013f397d904beda522cc7d915af79883df
   languageName: node
   linkType: hard
 
@@ -2696,6 +2783,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pezkuwi/merkleize-metadata@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@pezkuwi/merkleize-metadata@npm:1.0.0"
+  dependencies:
+    "@pezkuwi/bizinikiwi-bindings": "npm:1.0.0"
+    "@pezkuwi/metadata-builders": "npm:1.0.0"
+    "@pezkuwi/papi-utils": "npm:1.0.0"
+  checksum: 10/2837fee1f9e987301c89040c7cece4b54dc960988587db09df35ea592a63b5934cef0add6bcfee192fc1bdf31697bfb79ab61e65c578b1ea7772be1f6937b680
+  languageName: node
+  linkType: hard
+
+"@pezkuwi/metadata-builders@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@pezkuwi/metadata-builders@npm:1.0.0"
+  dependencies:
+    "@pezkuwi/bizinikiwi-bindings": "npm:1.0.0"
+    "@pezkuwi/papi-utils": "npm:1.0.0"
+  checksum: 10/d43cc31506cec23636c5b4445a4cc36d38ed0b7556fec7828af2917719930ea7519038233cef606836316c1ee7ece6ab0a20ee5eaf8f3e14ed595dc39c0b4717
+  languageName: node
+  linkType: hard
+
 "@pezkuwi/networks@npm:^14.0.11":
   version: 14.0.11
   resolution: "@pezkuwi/networks@npm:14.0.11"
@@ -2704,6 +2812,13 @@ __metadata:
     "@substrate/ss58-registry": "npm:^1.51.0"
     tslib: "npm:^2.8.0"
   checksum: 10/addc1b800cdfae2cc5cf167ae9d227012a2ffa59faff2c7fb85c991c74596252b418951e6e23ffb5d58b656cf86251e2c67328e75060cc659c1cb69f3ea67fd0
+  languageName: node
+  linkType: hard
+
+"@pezkuwi/papi-utils@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@pezkuwi/papi-utils@npm:1.0.0"
+  checksum: 10/086de245716f6b2094b00c922eaf12352f738d959c0c0a52c41010ba89370d8d400e8087e265365cb68fd148cbe45991234ebc59c21251b66891cbc1053c123b
   languageName: node
   linkType: hard
 
@@ -2876,8 +2991,8 @@ __metadata:
   resolution: "@pezkuwi/react-signer@workspace:packages/react-signer"
   dependencies:
     "@pezkuwi/hw-ledger": "npm:^14.0.11"
+    "@pezkuwi/merkleize-metadata": "npm:^1.0.0"
     "@pezkuwi/react-components": "npm:^1.0.2-1-x"
-    "@polkadot-api/merkleize-metadata": "npm:^1.1.27"
   peerDependencies:
     react: "*"
     react-dom: "*"
@@ -2885,22 +3000,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/rpc-augment@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/rpc-augment@npm:16.5.9"
+"@pezkuwi/rpc-augment@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/rpc-augment@npm:16.5.11"
   dependencies:
     "@pezkuwi/rpc-core": "npm:16.5.9"
     "@pezkuwi/types": "npm:16.5.9"
     "@pezkuwi/types-codec": "npm:16.5.9"
     "@pezkuwi/util": "npm:14.0.11"
     tslib: "npm:^2.8.1"
-  checksum: 10/1a1c08a0a36a9a885a1f1111286a69dfb8a9dcb9200ec9f263c461267e5fbc3a7ecd54266224a85ecf4b1e6e096d2f06c456c8c29e8680ac2609bae7f7d16831
+  checksum: 10/5aa0f80921e26e6105ca453ec7a9f59dab688e3ec758a2e15547cbe279dc0e2e5a52ce0edf0d0f979fc05f2d1d6ca4d67e8467f68811fb07146d565aec82ddab
   languageName: node
   linkType: hard
 
-"@pezkuwi/rpc-core@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/rpc-core@npm:16.5.9"
+"@pezkuwi/rpc-core@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/rpc-core@npm:16.5.11"
   dependencies:
     "@pezkuwi/keyring": "npm:14.0.11"
     "@pezkuwi/rpc-augment": "npm:16.5.9"
@@ -2909,13 +3024,13 @@ __metadata:
     "@pezkuwi/util": "npm:14.0.11"
     rxjs: "npm:^7.8.1"
     tslib: "npm:^2.8.1"
-  checksum: 10/48c60b348f3ba3741a0b057db57d557b091bb8e49d57d7376d5d961f8415b3f8429b875b20af11bb6f0abba92cd4f8be0249e8cdcfd0ea07cc0cb7f09459bbba
+  checksum: 10/7e644ec19e7d29bfe3942b284fbb3935b1f018b5fef3cf40bbf54fc5015152ccc78e0ef1a8f773d40955334f99d89fafc7fe585543ce06ee0002cb48407175ef
   languageName: node
   linkType: hard
 
-"@pezkuwi/rpc-provider@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/rpc-provider@npm:16.5.9"
+"@pezkuwi/rpc-provider@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/rpc-provider@npm:16.5.11"
   dependencies:
     "@bizinikiwi/connect": "npm:2.1.9"
     "@pezkuwi/keyring": "npm:14.0.11"
@@ -2933,7 +3048,7 @@ __metadata:
   dependenciesMeta:
     "@bizinikiwi/connect":
       optional: true
-  checksum: 10/6763d400e129a3fadb9c5a55221d114a4b6bfdb8b08f66b8c8716c2dc0cfc596cf17d51488d3a52a37b9e163d3a7a7b5e4341793efd89bbc6ba05b5855570ae9
+  checksum: 10/5f076cb55150409bb12112d73a2d56b19bb871d65de0411bbcf8cec70849175b33b13ead496fd28e43f27a8567ef41c3bef436fdc18516d4c67af5b0b05fc0e8
   languageName: node
   linkType: hard
 
@@ -2953,21 +3068,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pezkuwi/types-augment@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/types-augment@npm:16.5.9"
+"@pezkuwi/types-augment@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/types-augment@npm:16.5.11"
   dependencies:
     "@pezkuwi/types": "npm:16.5.9"
     "@pezkuwi/types-codec": "npm:16.5.9"
     "@pezkuwi/util": "npm:14.0.11"
     tslib: "npm:^2.8.1"
-  checksum: 10/0470ca6dee66fb5838bca793322a43d909460e9e7dcfdb91c8cc296ea092ae5be7c3cf2303728aa1ec0f54ae3063ba204f6852933bd05327aa8fbc3fe694441a
+  checksum: 10/2a1ddbcd8ff5e4ee4f6c8039437d0c11b2b883e99590600b6076a1764dc1ada70fd6d530e47155c5c1419b28310d5098f9b6705c89e2eb864a9e8985091ddfb9
   languageName: node
   linkType: hard
 
-"@pezkuwi/types-codec@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/types-codec@npm:16.5.9"
+"@pezkuwi/types-codec@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/types-codec@npm:16.5.11"
   dependencies:
     "@pezkuwi/types": "npm:16.5.9"
     "@pezkuwi/types-augment": "npm:16.5.9"
@@ -2976,25 +3091,25 @@ __metadata:
     "@pezkuwi/util-crypto": "npm:14.0.11"
     "@pezkuwi/x-bigint": "npm:14.0.11"
     tslib: "npm:^2.8.1"
-  checksum: 10/ceeb2e1ee0462da43c839354150ab594776a0f29b23d09c058eeb489eea166af1c765da90ea34ceb9b114ee824bb51872bf0611836db9e984d9c6984703b448c
+  checksum: 10/107e2db6c40b5411bfb4b4655ee923bf17abecd3048fbcf9f351fdc21d506c95eef56d2202c6dfa335623a68155ec3e47dc5b7a3f2c60d4f9ae6f945174185c0
   languageName: node
   linkType: hard
 
-"@pezkuwi/types-create@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/types-create@npm:16.5.9"
+"@pezkuwi/types-create@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/types-create@npm:16.5.11"
   dependencies:
     "@pezkuwi/types": "npm:16.5.9"
     "@pezkuwi/types-codec": "npm:16.5.9"
     "@pezkuwi/util": "npm:14.0.11"
     tslib: "npm:^2.8.1"
-  checksum: 10/5218f1bd2b1fe8841a59c5c93e3f3714f106f0f022ea2ecbd7cc11ebe56f6ae6943e43b8d3c4ff9e42a028c4a03684c71b4c17e054e4ead2f8d75f8710f49c4c
+  checksum: 10/76e395eb3fb5fcd6f8ff9229d1ad91de92b9bf53babf11eb80851d44d2c7445547b511aea97c5e6b77bde7389164e71d737c83ba27c00a121b9c42bdd8c03dbb
   languageName: node
   linkType: hard
 
-"@pezkuwi/types-known@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/types-known@npm:16.5.9"
+"@pezkuwi/types-known@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/types-known@npm:16.5.11"
   dependencies:
     "@pezkuwi/networks": "npm:16.5.9"
     "@pezkuwi/types": "npm:16.5.9"
@@ -3002,23 +3117,23 @@ __metadata:
     "@pezkuwi/types-create": "npm:16.5.9"
     "@pezkuwi/util": "npm:14.0.11"
     tslib: "npm:^2.8.1"
-  checksum: 10/fb62622a4f0dd45eb004e225ace14fef4872ab5004e4a3e4e9327b0215f38d6c57e07d6c1757ff30258f582451fcaac46527b7214aa25891df51e4143e476483
+  checksum: 10/fb9673f514dfba9431d6f4e3e5a2eeffa3dc8d570ff938dcb8b30987946e970f5bf9230285fd3880e61e0413989fc2cb1027c3c5e08657e689fe7024531c2620
   languageName: node
   linkType: hard
 
-"@pezkuwi/types-support@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/types-support@npm:16.5.9"
+"@pezkuwi/types-support@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/types-support@npm:16.5.11"
   dependencies:
     "@pezkuwi/util": "npm:14.0.11"
     tslib: "npm:^2.8.1"
-  checksum: 10/40cb88f5f8561dfb47073eefe036b57783e18612b7000c2b1da02fed05cb6c41ed0c88d98e3dd7051ce191d1c2eed8c07f9dfd150b6a2702309ad407143fc1a1
+  checksum: 10/9119f00d70a79270e23b09b01ada79e449421a42a9d8e2c216c6cc16534cd0d114c299549bc17a8fb46326ce7ba189c9dbfa79d56c463f9f5cdb450f319e4022
   languageName: node
   linkType: hard
 
-"@pezkuwi/types@npm:^16.5.9":
-  version: 16.5.9
-  resolution: "@pezkuwi/types@npm:16.5.9"
+"@pezkuwi/types@npm:^16.5.11":
+  version: 16.5.11
+  resolution: "@pezkuwi/types@npm:16.5.11"
   dependencies:
     "@pezkuwi/keyring": "npm:14.0.11"
     "@pezkuwi/types-augment": "npm:16.5.9"
@@ -3029,7 +3144,7 @@ __metadata:
     "@pezkuwi/util-crypto": "npm:14.0.11"
     rxjs: "npm:^7.8.1"
     tslib: "npm:^2.8.1"
-  checksum: 10/3316023f9638de0e02f6bd6bd8903edb61c524174330b4ee194deb6966e0f2c740f8d186b2ec006dd3a512b0e59c21943db776528c975b0765bc3ce414a504b0
+  checksum: 10/1cf750f243c6f43ada21c71464e854d10db2614061b4c4a7c866ec47cc43edcad827a2851b00bbad59d409ec97d80d2963922aec59b872f6292f5ab403bdb969
   languageName: node
   linkType: hard
 
@@ -3115,6 +3230,20 @@ __metadata:
     bn.js: "npm:^5.2.1"
     tslib: "npm:^2.8.0"
   checksum: 10/1689f3f4334abad085d316aa7e6591ac65452ee6dd8e52a1d1e98eaf52a6041b707969773e15768edde160118a9705f8e4716864f513be53afbf00cc0b9a861f
+  languageName: node
+  linkType: hard
+
+"@pezkuwi/vanitygen@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@pezkuwi/vanitygen@npm:1.0.1"
+  dependencies:
+    "@pezkuwi/util": "npm:^14.0.11"
+    "@pezkuwi/util-crypto": "npm:^14.0.11"
+    tslib: "npm:^2.8.1"
+    yargs: "npm:^17.7.2"
+  bin:
+    pezkuwi-vanitygen: runcli.mjs
+  checksum: 10/a513d99c7019f64a8d4ee5649a4a4adc417235b7d1501634132eecd73e32b58463f918dab6ecef03863eadf590d18704cfdbd18e33a867bb28bcfd7510e899fa
   languageName: node
   linkType: hard
 
@@ -3359,17 +3488,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot-api/merkleize-metadata@npm:^1.1.27":
-  version: 1.1.28
-  resolution: "@polkadot-api/merkleize-metadata@npm:1.1.28"
-  dependencies:
-    "@polkadot-api/metadata-builders": "npm:0.13.8"
-    "@polkadot-api/substrate-bindings": "npm:0.16.6"
-    "@polkadot-api/utils": "npm:0.2.0"
-  checksum: 10/3e4a94427911aba60712ddc5fcec24134c1266b0218e0a84b82366a10bc09e1a0d7201cba9676b68101a01bc533ac8bb22f93f40b6275b2eb9472011526f8ead
-  languageName: node
-  linkType: hard
-
 "@polkadot-api/metadata-builders@npm:0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0":
   version: 0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0
   resolution: "@polkadot-api/metadata-builders@npm:0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0"
@@ -3377,16 +3495,6 @@ __metadata:
     "@polkadot-api/substrate-bindings": "npm:0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0"
     "@polkadot-api/utils": "npm:0.0.1-492c132563ea6b40ae1fc5470dec4cd18768d182.1.0"
   checksum: 10/0dc59527415b51b9741e95842505cfca788e9fb0e6666be971000b9fe522b7d1a81265d4cab1712c2cc564e14ae8f0e1ef8f32f4023be1261f366edaa1936cc9
-  languageName: node
-  linkType: hard
-
-"@polkadot-api/metadata-builders@npm:0.13.8":
-  version: 0.13.8
-  resolution: "@polkadot-api/metadata-builders@npm:0.13.8"
-  dependencies:
-    "@polkadot-api/substrate-bindings": "npm:0.16.6"
-    "@polkadot-api/utils": "npm:0.2.0"
-  checksum: 10/dddfe2be0ce4e57c3e31a5b6141bb12dde290a363ec22982e3aadb31314e712ab4b7de26eec8c5072eb12ebaf956dd6b595ae5e30bb33762d528263c601894d8
   languageName: node
   linkType: hard
 
@@ -3423,18 +3531,6 @@ __metadata:
     "@scure/base": "npm:^1.1.1"
     scale-ts: "npm:^1.6.0"
   checksum: 10/e14a81197b86314aa8887d7e81cbf3f0c3b9eec0267b128c81bb3bf6d26d93ac75bd113177861789a066b215a72ac03c940d590e769ca3f33a2ac4480c752538
-  languageName: node
-  linkType: hard
-
-"@polkadot-api/substrate-bindings@npm:0.16.6":
-  version: 0.16.6
-  resolution: "@polkadot-api/substrate-bindings@npm:0.16.6"
-  dependencies:
-    "@noble/hashes": "npm:^2.0.1"
-    "@polkadot-api/utils": "npm:0.2.0"
-    "@scure/base": "npm:^2.0.0"
-    scale-ts: "npm:^1.6.1"
-  checksum: 10/3428b7cc36ad8534c67543c04414f5454e2d9b68acb7211d348021ae362c8f698d04ceea6e4f7ed37c2d8949fb3d0b5abc8ae85567db0c335ddb8a6816f73e65
   languageName: node
   linkType: hard
 
@@ -3478,13 +3574,6 @@ __metadata:
   version: 0.1.0
   resolution: "@polkadot-api/utils@npm:0.1.0"
   checksum: 10/c557daea91ddb03e16b93c7c5a75533495c7b77cbbbdc2b4f5e97af0c1e1132a47e434c9c729a08241bd7b3624b6644ac0950f914aa8b29a0f419bf0fd224c7c
-  languageName: node
-  linkType: hard
-
-"@polkadot-api/utils@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@polkadot-api/utils@npm:0.2.0"
-  checksum: 10/5171c52af86bc85181cf8681342e38a6cbbe049d70f437ab256641a30f2d167d4d1f5f871d13731d9a7e08be5b35c2e981deba4efe6f16f0c57f2309d90bb52c
   languageName: node
   linkType: hard
 
@@ -4835,7 +4924,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/util-crypto@npm:13.5.9, @polkadot/util-crypto@npm:^13.4.4, @polkadot/util-crypto@npm:^13.5.3, @polkadot/util-crypto@npm:^13.5.9":
+"@polkadot/util-crypto@npm:13.5.9, @polkadot/util-crypto@npm:^13.4.4, @polkadot/util-crypto@npm:^13.5.3":
   version: 13.5.9
   resolution: "@polkadot/util-crypto@npm:13.5.9"
   dependencies:
@@ -4979,7 +5068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/util@npm:13.5.9, @polkadot/util@npm:^13.4.4, @polkadot/util@npm:^13.5.3, @polkadot/util@npm:^13.5.9":
+"@polkadot/util@npm:13.5.9, @polkadot/util@npm:^13.4.4, @polkadot/util@npm:^13.5.3":
   version: 13.5.9
   resolution: "@polkadot/util@npm:13.5.9"
   dependencies:
@@ -5052,20 +5141,6 @@ __metadata:
     bn.js: "npm:^5.2.0"
     ip-regex: "npm:^4.3.0"
   checksum: 10/ae54c4991493d4e70fb0cdb54ab06ab55dbd112d4a23a272637ad2ac228c36ec28826e98f0377ed33bb158658c975128e86acecf4541700885cf24b1bde15a77
-  languageName: node
-  linkType: hard
-
-"@polkadot/vanitygen@npm:^0.63.18":
-  version: 0.63.19
-  resolution: "@polkadot/vanitygen@npm:0.63.19"
-  dependencies:
-    "@polkadot/util": "npm:^13.5.9"
-    "@polkadot/util-crypto": "npm:^13.5.9"
-    tslib: "npm:^2.8.1"
-    yargs: "npm:^17.7.2"
-  bin:
-    polkadot-js-vanitygen: runcli.mjs
-  checksum: 10/6f7718d37037b28aba1e8ff15a5b3c3c77a05a9dc08a8010db159633963aea389bae57e79b7915cf7db8362d0245433329d26cc22a4d118fd611823cfcc63fb9
   languageName: node
   linkType: hard
 
@@ -17862,7 +17937,7 @@ __metadata:
   resolution: "pezkuwi-apps@workspace:."
   dependencies:
     "@crustio/crust-pin": "npm:^1.0.0"
-    "@pezkuwi/dev": "npm:^0.85.3"
+    "@pezkuwi/dev": "npm:^0.85.7"
     "@pezkuwi/extension-dapp": "npm:0.62.20"
     "@pezkuwi/extension-inject": "npm:0.62.20"
     "@pinata/sdk": "npm:^1.2.1"
