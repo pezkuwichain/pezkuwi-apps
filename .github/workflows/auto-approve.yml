@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: jacogr/action-approve@795afd1dd096a2071d7ec98740661af4e853b7da
         with:
-          authors: jacogr, TarikGul
+          # NOTE: Add your maintainer GitHub usernames here
+          authors: mamostehp
           labels: -auto
-          token: ${{ secrets.GH_PAT_BOT }}
+          token: ${{ github.token }}

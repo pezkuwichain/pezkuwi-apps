@@ -13,4 +13,4 @@ jobs:
           checks: pr (build:code),pr (build:i18n),pr (build:electron),pr (lint),pr (test)
           labels: -auto
           strategy: squash
-          token: ${{ secrets.GH_PAT_BOT }}
+          token: ${{ github.token }}

@@ -8,7 +8,7 @@ on:
 
 jobs:
   endpoints:
-    if: github.repository == 'polkadot-js/apps'
+    if: github.repository == 'pezkuwichain/pezkuwi-apps'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -26,7 +26,7 @@ jobs:
       if: ${{ failure() }}
       uses: JasonEtco/create-an-issue@e27dddc79c92bc6e4562f268fffa5ed752639abd
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT_BOT }}
+        GITHUB_TOKEN: ${{ github.token }}
       with:
         filename: .github/chain-endpoints.md
         update_existing: true

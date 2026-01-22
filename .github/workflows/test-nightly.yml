@@ -1,5 +1,6 @@
 name: Nightly tests run
 on:
+  workflow_dispatch:
   schedule:
     - cron:  '1 5 * * *'
 
@@ -11,6 +12,7 @@ jobs:
         step: ['test:all']
     name: ${{ matrix.step }}
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
