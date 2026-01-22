@@ -9,6 +9,7 @@ import { chainsPezkuwiSVG } from '../ui/logos/chains/index.js';
 // Pezkuwi Network Endpoints
 // These are the official PezkuwiChain network endpoints
 
+// Active Teyrchains for PezkuwiChain Mainnet
 export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
   {
     homepage: 'https://pezkuwichain.io',
@@ -16,52 +17,10 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     isPeopleForIdentity: true,
     paraId: 1000,
     providers: {
-      'Pezkuwi Foundation': 'wss://pezkuwi-asset-hub-rpc.pezkuwichain.io'
+      'Pezkuwi Foundation': 'wss://asset-hub-rpc.pezkuwichain.io'
     },
     relayName: 'pezkuwi',
     text: 'Asset Hub',
-    ui: {
-      color: '#86e62a',
-      logo: chainsPezkuwiSVG
-    }
-  },
-  {
-    homepage: 'https://pezkuwichain.io',
-    info: 'bridge-hub-pezkuwi',
-    paraId: 1002,
-    providers: {
-      'Pezkuwi Foundation': 'wss://pezkuwi-bridge-hub-rpc.pezkuwichain.io'
-    },
-    relayName: 'pezkuwi',
-    text: 'Bridge Hub',
-    ui: {
-      color: '#86e62a',
-      logo: chainsPezkuwiSVG
-    }
-  },
-  {
-    homepage: 'https://pezkuwichain.io',
-    info: 'collectives-pezkuwi',
-    paraId: 1001,
-    providers: {
-      'Pezkuwi Foundation': 'wss://pezkuwi-collectives-rpc.pezkuwichain.io'
-    },
-    relayName: 'pezkuwi',
-    text: 'Collectives',
-    ui: {
-      color: '#86e62a',
-      logo: chainsPezkuwiSVG
-    }
-  },
-  {
-    homepage: 'https://pezkuwichain.io',
-    info: 'coretime-pezkuwi',
-    paraId: 1005,
-    providers: {
-      'Pezkuwi Foundation': 'wss://pezkuwi-coretime-rpc.pezkuwichain.io'
-    },
-    relayName: 'pezkuwi',
-    text: 'Coretime',
     ui: {
       color: '#86e62a',
       logo: chainsPezkuwiSVG
@@ -73,7 +32,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
     isPeople: true,
     paraId: 1004,
     providers: {
-      'Pezkuwi Foundation': 'wss://pezkuwi-people-rpc.pezkuwichain.io'
+      'Pezkuwi Foundation': 'wss://people-rpc.pezkuwichain.io'
     },
     relayName: 'pezkuwi',
     text: 'People',
@@ -82,6 +41,7 @@ export const prodParasPezkuwi: Omit<EndpointOption, 'teleport'>[] = [
       logo: chainsPezkuwiSVG
     }
   }
+  // Bridge Hub (1002), Collectives (1001), Coretime (1005) - will be added later
 ];
 
 export const prodRelayPezkuwi: EndpointOption = {

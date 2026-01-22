@@ -1850,7 +1850,7 @@ __metadata:
     "@pezkuwi/react-hooks": "npm:^1.0.2-1-x"
     "@pezkuwi/test-support": "npm:1.0.2-1-x"
     "@pezkuwi/util": "npm:^14.0.11"
-    "@polkadot/vanitygen": "npm:^0.63.18"
+    "@pezkuwi/vanitygen": "npm:^1.0.1"
     detect-browser: "npm:^5.3.0"
     file-saver: "npm:^2.0.5"
   peerDependencies:
@@ -3190,6 +3190,20 @@ __metadata:
     bn.js: "npm:^5.2.1"
     tslib: "npm:^2.8.0"
   checksum: 10/1689f3f4334abad085d316aa7e6591ac65452ee6dd8e52a1d1e98eaf52a6041b707969773e15768edde160118a9705f8e4716864f513be53afbf00cc0b9a861f
+  languageName: node
+  linkType: hard
+
+"@pezkuwi/vanitygen@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@pezkuwi/vanitygen@npm:1.0.1"
+  dependencies:
+    "@pezkuwi/util": "npm:^14.0.11"
+    "@pezkuwi/util-crypto": "npm:^14.0.11"
+    tslib: "npm:^2.8.1"
+    yargs: "npm:^17.7.2"
+  bin:
+    pezkuwi-vanitygen: runcli.mjs
+  checksum: 10/a513d99c7019f64a8d4ee5649a4a4adc417235b7d1501634132eecd73e32b58463f918dab6ecef03863eadf590d18704cfdbd18e33a867bb28bcfd7510e899fa
   languageName: node
   linkType: hard
 
@@ -4910,7 +4924,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/util-crypto@npm:13.5.9, @polkadot/util-crypto@npm:^13.4.4, @polkadot/util-crypto@npm:^13.5.3, @polkadot/util-crypto@npm:^13.5.9":
+"@polkadot/util-crypto@npm:13.5.9, @polkadot/util-crypto@npm:^13.4.4, @polkadot/util-crypto@npm:^13.5.3":
   version: 13.5.9
   resolution: "@polkadot/util-crypto@npm:13.5.9"
   dependencies:
@@ -5054,7 +5068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@polkadot/util@npm:13.5.9, @polkadot/util@npm:^13.4.4, @polkadot/util@npm:^13.5.3, @polkadot/util@npm:^13.5.9":
+"@polkadot/util@npm:13.5.9, @polkadot/util@npm:^13.4.4, @polkadot/util@npm:^13.5.3":
   version: 13.5.9
   resolution: "@polkadot/util@npm:13.5.9"
   dependencies:
@@ -5127,20 +5141,6 @@ __metadata:
     bn.js: "npm:^5.2.0"
     ip-regex: "npm:^4.3.0"
   checksum: 10/ae54c4991493d4e70fb0cdb54ab06ab55dbd112d4a23a272637ad2ac228c36ec28826e98f0377ed33bb158658c975128e86acecf4541700885cf24b1bde15a77
-  languageName: node
-  linkType: hard
-
-"@polkadot/vanitygen@npm:^0.63.18":
-  version: 0.63.19
-  resolution: "@polkadot/vanitygen@npm:0.63.19"
-  dependencies:
-    "@polkadot/util": "npm:^13.5.9"
-    "@polkadot/util-crypto": "npm:^13.5.9"
-    tslib: "npm:^2.8.1"
-    yargs: "npm:^17.7.2"
-  bin:
-    polkadot-js-vanitygen: runcli.mjs
-  checksum: 10/6f7718d37037b28aba1e8ff15a5b3c3c77a05a9dc08a8010db159633963aea389bae57e79b7915cf7db8362d0245433329d26cc22a4d118fd611823cfcc63fb9
   languageName: node
   linkType: hard
 
