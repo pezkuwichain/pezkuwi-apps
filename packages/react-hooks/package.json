@@ -14,7 +14,7 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "1.0.2-0-x",
+  "version": "1.0.2-1-x",
   "dependencies": {
     "@pezkuwi/hw-ledger": "^14.0.11",
     "@pezkuwi/hw-ledger-transports": "^14.0.11",

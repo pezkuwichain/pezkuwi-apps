@@ -14,12 +14,12 @@
   },
   "sideEffects": false,
   "type": "module",
-  "version": "1.0.2-0-x",
+  "version": "1.0.2-1-x",
   "dependencies": {
-    "@pezkuwi/react-components": "^1.0.2-0-x"
+    "@pezkuwi/react-components": "^1.0.2-1-x"
   },
   "devDependencies": {
-    "@pezkuwi/test-support": "1.0.2-0-x"
+    "@pezkuwi/test-support": "1.0.2-1-x"
   },
   "peerDependencies": {
     "react": "*",
