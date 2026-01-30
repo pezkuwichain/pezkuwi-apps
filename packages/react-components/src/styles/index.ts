@@ -18,7 +18,7 @@ const FACTORS = [0.2126, 0.7152, 0.0722];
 const PARTS = [0, 2, 4];
 const VERY_DARK = 16;
 
-export const defaultHighlight = '#f19135';
+export const defaultHighlight = '#86e62a';
 
 function getHighlight (uiHighlight: string | undefined): string {
   return (uiHighlight || defaultHighlight);
@@ -64,27 +64,47 @@ export default createGlobalStyle<Props>(({ uiHighlight }: Props) => `
   /* Dark theme CSS variables */
   html[data-theme="dark"],
   [data-theme="dark"] {
-    --bg-page: #26272c !important;
-    --bg-table: #3b3d3f !important;
-    --bg-input: #38393f !important;
-    --bg-menu: #26272c !important;
-    --bg-tabs: #38393f !important;
-    --bg-sidebar: #1a1b20 !important;
-    --color-text: rgba(244, 242, 240, 0.8) !important;
-    --border-table: #343536 !important;
+    --bg-page: #26272c;
+    --bg-table: #3b3d3f;
+    --bg-input: #38393f;
+    --bg-input-error: #48393f;
+    --bg-menu: #26272c;
+    --bg-tabs: #38393f;
+    --bg-sidebar: #1a1b20;
+    --bg-toggle: #58595f;
+    --bg-inverse: rgba(78, 78, 78, 0.66);
+    --bg-identicon-circle: #282829;
+    --color-text: rgba(244, 242, 240, 0.8);
+    --color-header: rgba(244, 242, 240, 0.9);
+    --color-label: rgba(244, 242, 240, 0.6);
+    --color-error: rgba(255, 83, 83, 0.8);
+    --border-table: #343536;
+    --border-tabs: #343536;
+    --border-input: rgba(234, 236, 238, .15);
+    --border-identicon: transparent;
   }
 
   /* Light theme CSS variables */
   html[data-theme="light"],
   [data-theme="light"] {
-    --bg-page: #f5f3f1 !important;
-    --bg-table: #ffffff !important;
-    --bg-input: #ffffff !important;
-    --bg-menu: #ffffff !important;
-    --bg-tabs: #ffffff !important;
-    --bg-sidebar: #fafafa !important;
-    --color-text: rgba(78, 78, 78, 0.8) !important;
-    --border-table: #efedeb !important;
+    --bg-page: #f5f3f1;
+    --bg-table: #ffffff;
+    --bg-input: #ffffff;
+    --bg-input-error: #fff6f6;
+    --bg-menu: #ffffff;
+    --bg-tabs: #ffffff;
+    --bg-sidebar: #fafafa;
+    --bg-toggle: #e4e5e6;
+    --bg-inverse: rgba(244, 242, 240, 0.91);
+    --bg-identicon-circle: #eee;
+    --color-text: rgba(78, 78, 78, 0.8);
+    --color-header: rgba(78, 78, 78, 0.9);
+    --color-label: rgba(78, 78, 78, 0.6);
+    --color-error: rgba(139, 0, 0);
+    --border-table: #efedeb;
+    --border-tabs: #f1efed;
+    --border-input: rgba(34, 36, 38, .15);
+    --border-identicon: #ddd;
   }
 
   .highlight--all {
@@ -331,6 +351,8 @@ export default createGlobalStyle<Props>(({ uiHighlight }: Props) => `
     }
   }
 
+  html.theme--dark,
+  html.theme--light,
   .theme--dark,
   .theme--light {
     .ui--Tabs .active .tabLinkText::after {

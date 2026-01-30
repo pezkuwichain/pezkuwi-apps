@@ -81,8 +81,21 @@ function filterAll (api: ApiPromise, all: ExtensionKnown[]): Extensions {
     .map((info): ExtensionInfo | null => {
       const current = info.known.find(({ genesisHash }) => api.genesisHash.eq(genesisHash)) || null;
 
-      // if we cannot find it as known, or either the specVersion or properties mismatches, mark it as upgradable
-      return !current || api.runtimeVersion.specVersion.gtn(current.specVersion) || !hasCurrentProperties(api, info)
+      // Only mark as upgradable if:
+      // 1. Extension HAS metadata for this chain but specVersion is outdated, OR
+      // 2. Extension HAS metadata but properties (decimals, symbol, ss58) have changed
+      // Do NOT mark as upgradable if extension simply doesn't have metadata for this chain yet
+      // (that's a fresh install scenario, not an "update needed" scenario)
+      if (!current) {
+        // No metadata for this chain - don't mark as needing update
+        // The extension will get metadata when user explicitly provides it
+        return null;
+      }
+
+      // Check if specVersion is outdated or properties have changed
+      const needsUpdate = api.runtimeVersion.specVersion.gtn(current.specVersion) || !hasCurrentProperties(api, info);
+
+      return needsUpdate
         ? { ...info, current }
         : null;
     })

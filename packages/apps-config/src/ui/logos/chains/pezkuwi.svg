@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
     <linearGradient id="pezkuwiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e6007a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#86e62a;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#86e62a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5cb800;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <!-- Kurdistan Sun inspired design with 21 rays -->
+  <!-- Kurdistan Sun inspired design -->
   <circle cx="50" cy="50" r="48" fill="url(#pezkuwiGrad)"/>
   <circle cx="50" cy="50" r="35" fill="#ffffff"/>
-  <circle cx="50" cy="50" r="20" fill="#e6007a"/>
+  <circle cx="50" cy="50" r="20" fill="#86e62a"/>
   <!-- P letter for Pezkuwi -->
   <text x="50" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#ffffff">P</text>
 </svg>

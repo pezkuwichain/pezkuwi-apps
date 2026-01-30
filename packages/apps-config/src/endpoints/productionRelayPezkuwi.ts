@@ -59,7 +59,7 @@ export const prodRelayPezkuwi: EndpointOption = {
   teleport: [1000],
   text: 'Pezkuwi',
   ui: {
-    color: '#e6007a',
+    color: '#86e62a',
     identityIcon: 'jdenticon',
     logo: chainsPezkuwiSVG
   }

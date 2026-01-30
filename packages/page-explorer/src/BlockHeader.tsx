@@ -54,7 +54,7 @@ function BlockHeader ({ headers }: Props): React.ReactElement<Props> | null {
               )}
             </td>
             <td
-              className='all --digits blockTime'
+              className='--digits blockTime'
               key={Date.now()}
             >
               {getDisplayValue((Date.now() - value.timestamp.toNumber()) / 1000)}
@@ -74,6 +74,8 @@ const StyledTr = styled.tr<{isFirstItem: boolean; isLastItem: boolean}>`
   .blockTime {
     text-align: right;
     font-style: italic;
+    white-space: nowrap;
+    min-width: 6rem;
   }
 
   td {
