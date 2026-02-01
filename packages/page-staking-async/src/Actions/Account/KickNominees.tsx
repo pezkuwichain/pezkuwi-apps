@@ -42,7 +42,7 @@ function KickNominees ({ className = '', controllerId, nominating, onClose, stas
     try {
       setTx({
         kickTx: selected.length
-          ? api.tx.staking.kick(selected)
+          ? api.tx.staking.kick(selected as any)
           : null
       });
     } catch {

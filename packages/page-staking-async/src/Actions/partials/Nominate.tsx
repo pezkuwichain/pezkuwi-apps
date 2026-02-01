@@ -50,8 +50,8 @@ function Nominate ({ className = '', controllerId, nominating, onChange, poolId,
       onChange({
         nominateTx: selected?.length
           ? poolId
-            ? api.tx.nominationPools.nominate(poolId, selected)
-            : api.tx.staking.nominate(selected)
+            ? api.tx.nominationPools.nominate(poolId, selected as any)
+            : api.tx.staking.nominate(selected as any)
           : null
       });
     } catch {

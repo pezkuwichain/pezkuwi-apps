@@ -177,20 +177,20 @@ async function wrapTx (api: ApiPromise, currentItem: QueueTx, { isMultiCall, mul
       ? api.tx[multiModule].asMulti.meta.args.length === 5
         // We are doing toHex here since we have a Vec<u8> input
         // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        ? api.tx[multiModule].asMulti(threshold, others, timepoint, tx.method.toHex(), weight)
+        ? api.tx[multiModule].asMulti(threshold, others as any, timepoint, tx.method.toHex(), weight)
         : api.tx[multiModule].asMulti.meta.args.length === 6
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
-          ? api.tx[multiModule].asMulti(threshold, others, timepoint, tx.method.toHex(), false, weight)
+          ? api.tx[multiModule].asMulti(threshold, others as any, timepoint, tx.method.toHex(), false, weight)
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
-          : api.tx[multiModule].asMulti(threshold, others, timepoint, tx.method)
+          : api.tx[multiModule].asMulti(threshold, others as any, timepoint, tx.method)
       : api.tx[multiModule].approveAsMulti.meta.args.length === 5
         // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-        ? api.tx[multiModule].approveAsMulti(threshold, others, timepoint, tx.method.hash, weight)
+        ? api.tx[multiModule].approveAsMulti(threshold, others as any, timepoint, tx.method.hash, weight)
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        : api.tx[multiModule].approveAsMulti(threshold, others, timepoint, tx.method.hash);
+        : api.tx[multiModule].approveAsMulti(threshold, others as any, timepoint, tx.method.hash);
   }
 
   return tx;
