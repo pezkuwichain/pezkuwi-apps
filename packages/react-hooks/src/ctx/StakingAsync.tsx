@@ -12,9 +12,18 @@ import { useApi } from '@pezkuwi/react-hooks';
 
 const allEndPoints = createWsEndpoints((k, v) => v?.toString() || k);
 
+// PezkuwiChain requires AuthorizeCall signed extension for all transactions
+const PEZKUWI_SIGNED_EXTENSIONS = {
+  AuthorizeCall: {
+    extrinsic: {},
+    payload: {}
+  }
+};
+
 export const getApi = async (url: string[]|string) => {
   const api = await ApiPromise.create({
-    provider: new WsProvider(url)
+    provider: new WsProvider(url),
+    signedExtensions: PEZKUWI_SIGNED_EXTENSIONS
   });
 
   await api.isReadyOrError;

@@ -7,6 +7,14 @@ import { ApiPromise, WsProvider } from '@pezkuwi/api';
 import { Metadata, TypeRegistry } from '@pezkuwi/types';
 import metaStatic from '@pezkuwi/types-support/metadata/static-bizinikiwi';
 
+// PezkuwiChain requires AuthorizeCall signed extension for all transactions
+const PEZKUWI_SIGNED_EXTENSIONS = {
+  AuthorizeCall: {
+    extrinsic: {},
+    payload: {}
+  }
+};
+
 export function createAugmentedApi (): ApiPromise {
   const registry = new TypeRegistry();
   // FIXME - ref: https://github.com/pezkuwichain/pezkuwi-apps/pull/11051
@@ -16,7 +24,11 @@ export function createAugmentedApi (): ApiPromise {
 
   registry.setMetadata(metadata);
 
-  const api = new ApiPromise({ provider: new WsProvider('ws://', false), registry: registry as unknown as Registry });
+  const api = new ApiPromise({
+    provider: new WsProvider('ws://', false),
+    registry: registry as unknown as Registry,
+    signedExtensions: PEZKUWI_SIGNED_EXTENSIONS
+  });
 
   // eslint-disable-next-line deprecation/deprecation
   api.injectMetadata(metadata, true);

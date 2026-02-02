@@ -6,12 +6,23 @@ import { WsProvider } from '@pezkuwi/rpc-provider';
 
 import { BIZINIKIWI_PORT } from '../bizinikiwi/index.js';
 
+// PezkuwiChain requires AuthorizeCall signed extension for all transactions
+const PEZKUWI_SIGNED_EXTENSIONS = {
+  AuthorizeCall: {
+    extrinsic: {},
+    payload: {}
+  }
+};
+
 export async function createApi (port: number = BIZINIKIWI_PORT): Promise<ApiPromise> {
   process.env.NODE_ENV = 'test';
 
   const provider = new WsProvider(`ws://127.0.0.1:${port}`);
 
-  const api = await ApiPromise.create({ provider });
+  const api = await ApiPromise.create({
+    provider,
+    signedExtensions: PEZKUWI_SIGNED_EXTENSIONS
+  });
 
   const [chain, nodeName, nodeVersion] = await Promise.all([
     api.rpc.system.chain(),

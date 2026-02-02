@@ -280,10 +280,19 @@ async function createApi (apiUrl: string, signer: ApiSigner, isLocalFork: boolea
       provider = new WsProvider(apiUrl);
     }
 
+    // PezkuwiChain requires AuthorizeCall signed extension for all transactions
+    const pezkuwiSignedExtensions = {
+      AuthorizeCall: {
+        extrinsic: {},
+        payload: {}
+      }
+    };
+
     statics.api = new ApiPromise({
       provider,
       registry: statics.registry,
       signer,
+      signedExtensions: pezkuwiSignedExtensions,
       types,
       typesBundle
     });
