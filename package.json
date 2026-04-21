@@ -1,18 +1,18 @@
 {
   "author": "Dijital Kurdistan Tech Institute <info@pezkuwichain.io>",
-  "bugs": "https://github.com/pezkuwichain/pezkuwi-apps/issues",
+  "bugs": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-apps/issues",
   "description": "An Apps portal into the Pezkuwi network",
   "engines": {
     "node": ">=18.14"
   },
-  "homepage": "https://github.com/pezkuwichain/pezkuwi-apps#readme",
+  "homepage": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-apps#readme",
   "license": "Apache-2.0",
   "name": "pezkuwi-apps",
   "packageManager": "yarn@4.6.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/pezkuwichain/pezkuwi-apps.git"
+    "url": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-apps.git"
   },
   "sideEffects": false,
   "type": "module",

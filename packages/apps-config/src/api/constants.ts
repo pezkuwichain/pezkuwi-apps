@@ -20,7 +20,7 @@ export const KULUPU_GENESIS = getGenesis('kulupu');
 export const DICLE_GENESIS = '0xd9d3cd7c1e5d890d969b957f4c5b71a111bbeeabc968f1d0d4538c2663f080a7';
 
 // Pezkuwi - Pezkuwi main relay chain
-export const PEZKUWI_GENESIS = '0x1fc56b6a5fcd50358707f69b2b0bb0c8ab1fea2bcfc5eba7279efbcafef642af';
+export const PEZKUWI_GENESIS = '0x1aa94987791a5544e9667ec249d2cef1b8fdd6083c85b93fc37892d54a1156ca';
 export const PEZKUWI_DENOM_BLOCK = new BN(1248328);
 
 export const PASEO_GENESIS = '0x77afd6190f1554ad45fd0d31aee62aacc33c6db0ea801129acb813f913e0764f';

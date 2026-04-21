@@ -1,18 +1,18 @@
 {
   "author": "Dijital Kurdistan Tech Institute <info@pezkuwichain.io>",
-  "bugs": "https://github.com/pezkuwichain/pezkuwi-apps/issues",
+  "bugs": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-apps/issues",
   "description": "An Apps portal into the Pezkuwi network",
   "engines": {
     "node": ">=18"
   },
-  "homepage": "https://github.com/pezkuwichain/pezkuwi-apps/tree/master/packages/apps-electron#readme",
+  "homepage": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-apps/tree/master/packages/apps-electron#readme",
   "license": "Apache-2.0",
   "name": "@pezkuwi/apps-electron",
   "private": true,
   "repository": {
     "directory": "packages/apps-electron",
     "type": "git",
-    "url": "https://github.com/pezkuwichain/pezkuwi-apps.git"
+    "url": "https://git.pezkuwichain.io/pezkuwichain/pezkuwi-apps.git"
   },
   "sideEffects": false,
   "version": "1.0.2-1-x",
