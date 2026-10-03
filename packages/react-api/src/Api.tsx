@@ -291,8 +291,8 @@ async function createApi (apiUrl: string, signer: ApiSigner, isLocalFork: boolea
     statics.api = new ApiPromise({
       provider,
       registry: statics.registry,
-      signer,
       signedExtensions: pezkuwiSignedExtensions,
+      signer,
       types,
       typesBundle
     });
