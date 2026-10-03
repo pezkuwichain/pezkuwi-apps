@@ -1,116 +1,81 @@
 name: Main
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      rollback_to:
+        description: 'Make an earlier release live again (full commit sha); empty = deploy this commit'
+        required: false
+        default: ''
+
+# Deploys wait for each other; a newer push queues behind a running one.
+concurrency:
+  group: deploy-apps
+  cancel-in-progress: false
 
 permissions:
-  contents: write
-  pages: write
+  contents: read
 
 jobs:
-  # publish to gh-pages (& IPFS when a release is detected)
-  www:
-    if: "! startsWith(github.event.head_commit.message, '[CI Skip]')"
-    strategy:
-      matrix:
-        step: ['build:release:www']
+  build:
+    if: github.event.inputs.rollback_to == ''
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        token: ${{ secrets.GITHUB_TOKEN }}
-        persist-credentials: false
-    - name: Configure Git Credentials
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git config --global url."https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
     - uses: actions/setup-node@v4
       with:
         node-version: 'lts/*'
-    - name: Set Execute Permissions
-      run: chmod +x ./scripts/*
-    - name: ${{ matrix.step }}
+    - name: build:www
       env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-        CRUST_SEEDS: ${{ secrets.CRUST_SEEDS }}
-        GH_PAGES_SRC: packages/apps/build
-        GH_PAT: x-access-token:${{ secrets.GITHUB_TOKEN }}
-        GH_RELEASE_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        PINATA_API_KEY: ${{ secrets.PINATA_API_KEY }}
-        PINATA_SECRET_KEY: ${{ secrets.PINATA_SECRET_KEY }}
+        NODE_OPTIONS: --max-old-space-size=6144
       run: |
         yarn install --immutable
-        yarn ${{ matrix.step }}
+        yarn build:www
+        echo "$GITHUB_SHA" > packages/apps/build/.deploy-sha
+        tar -C packages/apps/build -czf apps-www.tgz .
+    - uses: actions/upload-artifact@v4
+      with:
+        name: apps-www
+        path: apps-www.tgz
+        retention-days: 7
 
-  # only run on "CI skip", i.e. when the actual version has been bumped to release/stable
-  docker:
-    if: "startsWith(github.event.head_commit.message, '[CI Skip] release/stable')"
+  # The only job that names the environment, so a run asks for approval once,
+  # and the deploy secrets (environment-scoped) exist only after it is given.
+  deploy:
+    needs: build
+    if: always() && (needs.build.result == 'success' || (needs.build.result == 'skipped' && github.event.inputs.rollback_to != ''))
     runs-on: ubuntu-latest
+    environment: production
+    env:
+      HOST: ${{ secrets.APPS_DEPLOY_HOST }}
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
       with:
-        node-version: 'lts/*'
-    - name: Set Execute Permissions
-      run: chmod +x ./docker/*
-    - name: docker
+        sparse-checkout: .github/deploy
+    - name: ssh setup
       env:
-        DOCKER_PASS: ${{ secrets.DOCKER_PASS }}
+        KEY: ${{ secrets.APPS_DEPLOY_SSH_KEY }}
+        KNOWN_HOSTS: ${{ secrets.APPS_DEPLOY_KNOWN_HOSTS }}
       run: |
-        ./docker/build.sh
-
-  # only run on "CI skip", i.e. when the actual version has been bumped to release/stable
-  electron:
-    if: "startsWith(github.event.head_commit.message, '[CI Skip] release/stable')"
-    strategy:
-      matrix:
-        # Removed `macos-latest` since notarization errors.
-        # ref: https://github.com/pezkuwichain/pezkuwi-apps/issues/10486
-        os: [ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-    - uses: actions/checkout@v4
+        install -m 700 -d ~/.ssh
+        printf '%s\n' "$KEY" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - uses: actions/download-artifact@v4
+      if: github.event.inputs.rollback_to == ''
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 'lts/*'
-    # Removed `macos-latest` since notarization errors.
-    # ref: https://github.com/pezkuwichain/pezkuwi-apps/issues/10486
-    # - name: Prepare for app notarization (macOS)
-    #   if: startsWith(matrix.os, 'macos')
-    #   # Import Apple API key for app notarization on macOS
-    #   run: |
-    #     mkdir -p ~/private_keys/
-    #     echo '${{ secrets.API_KEY }}' > ~/private_keys/AuthKey_${{ secrets.API_KEY_ID }}.p8
-    - name: Set Execute Permissions
-      run: chmod +x ./scripts/*
-    - name: Build/release Electron app
-      uses: samuelmeuli/action-electron-builder@v1
-      with:
-        # Base64-encoded code signing certificate for macOS
-        mac_certs: ${{ secrets.MAC_CERTS }}
-        # Password for decrypting `mac_certs`
-        mac_certs_password: ${{ secrets.MAC_CERTS_PASSWORD }}
-        # Base64-encoded code signing certificate for Windows
-        windows_certs: ${{ secrets.WINDOWS_CERTS }}
-        # Password for decrypting `windows_certs`
-        windows_certs_password: ${{ secrets.WINDOWS_CERTS_PASSWORD }}
-        # GitHub token, automatically provided to the action
-        # (No need to define this secret in the repo settings)
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        args: '--project packages/apps-electron'
-        build_script_name: build:release:electron
-        # If the commit is tagged with a version (e.g. "v1.0.0"),
-        # release the app after building
-        release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+        name: apps-www
+    - name: upload
+      if: github.event.inputs.rollback_to == ''
+      run: scp -o BatchMode=yes apps-www.tgz "apps-deploy@$HOST:/var/www/apps-deploy/incoming/$GITHUB_SHA.tgz"
+    - name: go live
       env:
-        # macOS notarization API key
-        API_KEY_ID: ${{ secrets.API_KEY_ID }}
-        API_KEY_ISSUER_ID: ${{ secrets.API_KEY_ISSUER_ID }}
+        ROLLBACK_TO: ${{ github.event.inputs.rollback_to }}
+      run: |
+        if [ -n "$ROLLBACK_TO" ]; then set -- rollback "$ROLLBACK_TO"; else set -- deploy "$GITHUB_SHA"; fi
+        # ssh hands its arguments to the remote shell as one string: only a
+        # bare sha may get there.
+        [[ $2 =~ ^[0-9a-f]{40}$ ]] || { echo "not a full commit sha: $2"; exit 1; }
+        ssh -o BatchMode=yes "apps-deploy@$HOST" bash -s -- "$@" < .github/deploy/release.sh
