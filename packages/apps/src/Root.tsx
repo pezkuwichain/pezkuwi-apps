@@ -16,7 +16,6 @@ import BeforeApiInit from './overlays/BeforeInit.js';
 import Apps from './Apps.js';
 
 interface Props {
-  isElectron: boolean;
   store?: KeyringStore;
 }
 
@@ -29,7 +28,7 @@ function createTheme (settings: { uiTheme?: string }): ThemeDef {
   return { theme };
 }
 
-function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
+function Root ({ store }: Props): React.ReactElement<Props> {
   const [theme, setTheme] = useState(() => createTheme(settings));
 
   useEffect((): void => {
@@ -45,7 +44,6 @@ function Root ({ isElectron, store }: Props): React.ReactElement<Props> {
           <ApiCtxRoot
             apiUrl={settings.apiUrl}
             beforeApiInit={<BeforeApiInit />}
-            isElectron={isElectron}
             store={store}
           >
             <KeyringCtxRoot>

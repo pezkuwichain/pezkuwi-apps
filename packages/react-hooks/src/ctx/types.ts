@@ -66,7 +66,6 @@ export interface ApiProps extends ApiState {
   extensions?: InjectedExtension[];
   isApiConnected: boolean;
   isApiInitialized: boolean;
-  isElectron: boolean;
   isWaitingInjected: boolean;
   isLocalFork?: boolean;
 }
