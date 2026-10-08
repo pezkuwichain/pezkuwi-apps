@@ -16,7 +16,7 @@
   "type": "module",
   "version": "1.0.2-1-x",
   "dependencies": {
-    "@pezkuwi/hw-ledger": "^14.0.11",
+    "@pezkuwi/hw-ledger": "^14.0.26",
     "@pezkuwi/merkleize-metadata": "^1.0.0",
     "@pezkuwi/react-components": "^1.0.2-1-x"
   },

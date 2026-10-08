@@ -16,8 +16,8 @@
   "type": "module",
   "version": "1.0.2-1-x",
   "dependencies": {
-    "@pezkuwi/hw-ledger": "^14.0.11",
-    "@pezkuwi/hw-ledger-transports": "^14.0.11",
+    "@pezkuwi/hw-ledger": "^14.0.26",
+    "@pezkuwi/hw-ledger-transports": "^14.0.26",
     "is-ipfs": "^8.0.1"
   },
   "peerDependencies": {
