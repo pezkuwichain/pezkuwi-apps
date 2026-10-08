@@ -20,10 +20,10 @@
     "path": false
   },
   "dependencies": {
-    "@pezkuwi/api": "^16.5.22",
-    "@pezkuwi/extension-compat-metamask": "^0.62.14",
-    "@pezkuwi/extension-dapp": "0.62.20",
-    "@pezkuwi/rpc-provider": "^16.5.22",
+    "@pezkuwi/api": "^16.5.37",
+    "@pezkuwi/extension-compat-metamask": "^0.62.27",
+    "@pezkuwi/extension-dapp": "0.62.27",
+    "@pezkuwi/rpc-provider": "^16.5.37",
     "fflate": "^0.8.1",
     "rxjs": "^7.8.1"
   },
