@@ -3,6 +3,4 @@
 
 // Automatically generated, do not edit
 
-/* eslint-disable simple-import-sort/imports */
-
 export default 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEAAQAAAAB0CZXLAAAAAnRSTlMAAHaTzTgAAAAfSURBVHgB7cEBDQAAAMIg+6c2xzdgAAAAAAAAAABxByEAAAGd0zUnAAAAAElFTkSuQmCC';

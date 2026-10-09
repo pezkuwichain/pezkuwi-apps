@@ -7,7 +7,10 @@ const path = require('node:path');
 const HEADER = `// Copyright 2017-2026 @pezkuwi/react-components authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-// Automatically generated, do not edit
+// Automatically generated, do not edit`;
+
+// Only the index files import, and they keep the generated order.
+const IMPORT_HEADER = `${HEADER}
 
 /* eslint-disable simple-import-sort/imports */`;
 const PATH = 'packages/react-components/src/IdentityIcon/RoboHash';
@@ -77,7 +80,7 @@ function extractBg () {
     getFiles(path.join(root, sub)).forEach((entry) => files.push(`./${sub}/generated/${entry}`));
   });
 
-  fs.writeFileSync(path.join(root, 'index.ts'), `${HEADER}\n\n${files.map((file, index) => `import b${getCounter(index)} from '${file.replace('.png', '')}';`).join('\n')}\n\nexport default [${files.map((_, index) => `b${getCounter(index)}`).join(', ')}];\n`);
+  fs.writeFileSync(path.join(root, 'index.ts'), `${IMPORT_HEADER}\n\n${files.map((file, index) => `import b${getCounter(index)} from '${file.replace('.png', '.js')}';`).join('\n')}\n\nexport default [${files.map((_, index) => `b${getCounter(index)}`).join(', ')}];\n`);
 }
 
 function extractSets () {
@@ -99,7 +102,7 @@ function extractSets () {
       const indexes = files.map((file, findex) => {
         const index = `s${getCounter(sindex)}${getCounter(aindex)}${getCounter(findex)}`;
 
-        imports.push(`import ${index} from '${file.replace('.png', '')}';`);
+        imports.push(`import ${index} from '${file.replace('.png', '.js')}';`);
 
         return index;
       });
@@ -112,7 +115,7 @@ function extractSets () {
 
   list = `${list}\n];`;
 
-  fs.writeFileSync(path.join(root, 'index.ts'), `${HEADER}\n\n${imports.join('\n')}\n\nexport default ${list}\n`);
+  fs.writeFileSync(path.join(root, 'index.ts'), `${IMPORT_HEADER}\n\n${imports.join('\n')}\n\nexport default ${list}\n`);
 }
 
 extractBg();
