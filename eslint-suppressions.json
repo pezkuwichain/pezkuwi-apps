@@ -1,0 +1,1622 @@
+{
+  "packages/apps/src/Content/BrowserCheckAlert.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/apps/src/Menu/index.tsx": {
+    "react-hooks/refs": {
+      "count": 6
+    }
+  },
+  "packages/apps/src/WarmUp.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-accounts/src/Accounts/Account.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/page-accounts/src/Accounts/BannerAssetHubMigration.tsx": {
+    "react-hooks/purity": {
+      "count": 1
+    }
+  },
+  "packages/page-accounts/src/Accounts/BannerExtension.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-accounts/src/Accounts/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-accounts/src/Accounts/useProxies.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-accounts/src/Vanity/index.tsx": {
+    "react-hooks/immutability": {
+      "count": 1
+    }
+  },
+  "packages/page-accounts/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-accounts/src/modals/Create.tsx": {
+    "react-hooks/refs": {
+      "count": 4
+    }
+  },
+  "packages/page-accounts/src/modals/CreateEthDerivationPath.tsx": {
+    "react-hooks/refs": {
+      "count": 3
+    }
+  },
+  "packages/page-accounts/src/modals/CreateSuriLedger.tsx": {
+    "react-hooks/refs": {
+      "count": 3
+    }
+  },
+  "packages/page-accounts/src/modals/Derive.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-accounts/src/modals/IdentityMain.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-accounts/src/modals/IdentitySub.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-accounts/src/modals/InputValidateAmount.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-accounts/src/modals/Ledger.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-accounts/src/modals/MultisigApprove.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 5
+    }
+  },
+  "packages/page-accounts/src/modals/ProxyOverview.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-addresses/src/Contacts/Address.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/page-addresses/src/Contacts/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-addresses/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-alliance/src/Announcements/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-alliance/src/Members/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-alliance/src/Unscrupulous/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-alliance/src/useMembers.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-assets/src/Balances/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-assets/src/Overview/Assets.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-assets/src/foreignAssets/Assets.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-assets/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-assets/src/useForeignAssetInfos.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-bounties/src/Bounties.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-bounties/src/BountyActions/BountyInitiateVoting.tsx": {
+    "react-hooks/refs": {
+      "count": 6
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-bounties/src/BountyActions/ProposeCuratorAction.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-bounties/src/BountyCreate.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/page-bounties/src/BountyExtraActions/CloseBounty.tsx": {
+    "react-hooks/refs": {
+      "count": 3
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-bounties/src/BountyExtraActions/SlashCurator.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-bounties/src/BountyExtraActions/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-bounties/src/BountyInfos/VotingDescriptionInfo.tsx": {
+    "react-hooks/refs": {
+      "count": 3
+    }
+  },
+  "packages/page-bounties/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-broker/src/Overview/CoreTable.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-broker/src/Overview/Workload.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-broker/src/Overview/index.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-broker/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-calendar/src/Day.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-calendar/src/DayItem.tsx": {
+    "react-hooks/set-state-in-render": {
+      "count": 1
+    }
+  },
+  "packages/page-calendar/src/Month.tsx": {
+    "react-hooks/refs": {
+      "count": 3
+    }
+  },
+  "packages/page-calendar/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-calendar/src/useScheduled.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 7
+    }
+  },
+  "packages/page-claims/src/Attest.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-claims/src/Claim.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-claims/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-collator/src/Collators.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-collator/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-collator/src/useCollators.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-contracts/src/Codes/Upload.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/page-contracts/src/Codes/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-contracts/src/Contracts/Call.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-contracts/src/Contracts/ContractsTable.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-contracts/src/Contracts/Deploy.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-contracts/src/Contracts/ValidateAddr.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-contracts/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-contracts/src/shared/CodeRow.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-contracts/src/shared/Params.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-contracts/src/useAbi.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-coretime/src/CoretimeContext.tsx": {
+    "react-hooks/preserve-manual-memoization": {
+      "count": 1
+    }
+  },
+  "packages/page-coretime/src/CoretimePage.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-coretime/src/Row.tsx": {
+    "react-hooks/purity": {
+      "count": 1
+    }
+  },
+  "packages/page-coretime/src/Sale/PhaseTable.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-coretime/src/Sale/boxes/Timeline.tsx": {
+    "react-hooks/preserve-manual-memoization": {
+      "count": 1
+    }
+  },
+  "packages/page-coretime/src/Sale/index.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-coretime/src/TeyrchainsTable.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-council/src/Motions/ProposeExternal.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-council/src/Motions/ProposeMotion.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-council/src/Motions/Slashing.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-council/src/Motions/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-council/src/Overview/Candidates.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-council/src/Overview/Members.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-council/src/Overview/Vote.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-democracy/src/Overview/Externals.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-democracy/src/Overview/Fasttrack.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-democracy/src/Overview/PreImage.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-democracy/src/Overview/Proposals.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-democracy/src/Overview/Propose.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-democracy/src/Overview/Referendums.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-democracy/src/Overview/TreasuryCell.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-democracy/src/useChangeCalc.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/BlockHeader.tsx": {
+    "react-hooks/purity": {
+      "count": 2
+    }
+  },
+  "packages/page-explorer/src/BlockHeaders.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/BlockInfo/ByHash.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/BlockInfo/Justifications.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/BlockInfo/Logs.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/BlockInfo/index.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/Forks.tsx": {
+    "react-hooks/immutability": {
+      "count": 3
+    },
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-explorer/src/Latency/useLatency.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/NodeInfo/Peers.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/NodeInfo/Summary.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-explorer/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-extrinsics/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-files/src/UploadModal.tsx": {
+    "react-hooks/purity": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-files/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-gilt/src/Overview/Queues.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-gilt/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-js/src/Playground.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-nfts/src/AccountItems/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-nfts/src/AccountItems/useItemsInfos.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-nfts/src/Overview/Collections.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-nfts/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-nfts/src/useCollectionInfos.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-nis/src/Overview/Queues.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-nis/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-poll/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-preimages/src/Preimages/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-preimages/src/Preimages/userPreimages/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-preimages/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-ranked/src/Members/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-referenda/src/Referenda/Submit/index.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-referenda/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-rpc/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-runtime/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-scheduler/src/DispatchQueue.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-scheduler/src/Scheduler.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-settings/src/Developer.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-settings/src/General.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-settings/src/I18n/index.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-settings/src/Metadata/Extensions.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-settings/src/Metadata/NetworkSpecs.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-settings/src/Metadata/SystemVersion.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-signing/src/Sign.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-signing/src/Unlock.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-signing/src/Verify.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-signing/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-society/src/Candidates/Bids.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-society/src/Candidates/CandidateVoting.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-society/src/Candidates/Candidates.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-society/src/Overview/Defender.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-society/src/Overview/DefenderVoting.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-society/src/Overview/Members.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-society/src/Overview/Votes.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-society/src/Suspended/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-society/src/useMembers.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/Account/InjectKeys.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-async/src/Actions/Account/InputValidateAmount.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/Account/InputValidationController.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/Account/InputValidationSessionKey.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/Account/InputValidationUnstakeThreshold.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/Account/KickNominees.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/Accounts.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/Pool/BondExtra.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/Pools.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Actions/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-async/src/Actions/partials/Bond.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-async/src/Actions/partials/Validate.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/CommandCenter/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/page-staking-async/src/Validators/Address/index.tsx": {
+    "react-hooks/purity": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Validators/CurrentList.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Validators/SummarySession.tsx": {
+    "react-hooks/purity": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-async/src/Validators/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Account/InjectKeys.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Account/InputValidateAmount.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Account/InputValidationController.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Account/InputValidationSessionKey.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Account/InputValidationUnstakeThreshold.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Account/KickNominees.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Accounts.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Pool/BondExtra.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/Pools.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/partials/Bond.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Actions/partials/Validate.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Bags/Bag.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/page-staking-legacy/src/Bags/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Bags/useBagEntries.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Bags/useBagsList.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Bags/useBagsNodes.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Payouts/PayButton.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Payouts/Stash.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Payouts/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Query/ChartPoints.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Query/ChartPrefs.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Query/ChartRewards.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Query/ChartStake.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking-legacy/src/Query/useBlockCounts.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Slashes/Era.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Slashes/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Targets/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Validators/Address/index.tsx": {
+    "react-hooks/purity": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Validators/CurrentList.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking-legacy/src/Validators/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Actions/Account/InjectKeys.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Actions/Account/InputValidateAmount.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Actions/Account/InputValidationController.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Actions/Account/InputValidationSessionKey.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Actions/Account/InputValidationUnstakeThreshold.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Actions/Account/KickNominees.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Actions/Accounts.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Actions/Pool/BondExtra.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Actions/Pools.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Actions/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Actions/partials/Bond.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Actions/partials/Validate.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Bags/Bag.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/page-staking/src/Bags/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Bags/useBagEntries.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Bags/useBagsList.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Bags/useBagsNodes.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Payouts/PayButton.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Payouts/Stash.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Payouts/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Query/ChartPoints.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Query/ChartPrefs.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Query/ChartRewards.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Query/ChartStake.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking/src/Query/useBlockCounts.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Slashes/Era.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Slashes/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Targets/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Validators/Address/index.tsx": {
+    "react-hooks/purity": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Validators/CurrentList.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking/src/Validators/index.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-staking2/src/Pools/Pools.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking2/src/Pools/useMembers.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-staking2/src/Validators/Active/Entry.tsx": {
+    "react-hooks/refs": {
+      "count": 5
+    }
+  },
+  "packages/page-staking2/src/Validators/Active/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking2/src/Validators/Waiting/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking2/src/Validators/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-staking2/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-storage/src/Selection/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-sudo/src/SetKey.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-sudo/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-tech-comm/src/Overview/Members.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-tech-comm/src/Proposals/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Auctions/Auction.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Crowdloan/Fund.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Crowdloan/Funds.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/page-teyrchains/src/Crowdloan/useContributions.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/page-teyrchains/src/Overview/Teyrchain.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Overview/Teyrchains.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Overview/useEvents.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Overview/useValidators.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Parathreads/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Proposals/Proposals.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/Teleport.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-teyrchains/src/useProposals.ts": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-treasury/src/Overview/Council.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    },
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-treasury/src/Tips/Tip.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/page-treasury/src/Tips/Tips.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-utilities/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-whitelist/src/Hashes/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/page-whitelist/src/index.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/AccountName.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/AccountSidebar/RegistrarJudgement.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/AddressInfo.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/Chart/HorizBar.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/ConvictionDropdown.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/CryptoType.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/DemocracyLocks.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/InputAddressMulti/index.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/InputNumber.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/Status/index.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/react-components/src/TreasuryProposal.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/TxButton.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/UsageBar.tsx": {
+    "react-hooks/immutability": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/VoteValue.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-components/src/modals/Transfer.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/ctx/StakingAsync.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useAccountInfo.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 5
+    }
+  },
+  "packages/react-hooks/src/useApiUrl.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useAssetInfos.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useBrokerConfig.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useBrokerLeases.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useBrokerPotentialRenewals.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useBrokerReservations.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useBrokerSalesInfo.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useBrokerStatus.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useCoreDescriptor.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useCoretimeConsts.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useCoretimeInformation.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 4
+    }
+  },
+  "packages/react-hooks/src/useEventChanges.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/react-hooks/src/useEventTrigger.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useInflation.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useMemoValue.ts": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useOwnEraRewards.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 4
+    }
+  },
+  "packages/react-hooks/src/usePassword.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/usePopupWindow.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/react-hooks/src/useQueueStatus.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useRegions.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useSudo.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useTeleport.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/react-hooks/src/useTreasury.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/react-hooks/src/useWeight.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useWorkloadInfos.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-hooks/src/useWorkplanInfos.ts": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-params/src/Named/Call.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-params/src/Param/BTreeMap.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/react-params/src/Param/Bool.tsx": {
+    "react-hooks/refs": {
+      "count": 1
+    }
+  },
+  "packages/react-params/src/Param/DispatchError.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-params/src/Param/KeyValue.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-params/src/Param/Vector.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/react-params/src/Param/VectorFixed.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-params/src/Param/Vote.tsx": {
+    "react-hooks/refs": {
+      "count": 2
+    }
+  },
+  "packages/react-params/src/Param/index.tsx": {
+    "react-hooks/static-components": {
+      "count": 1
+    }
+  },
+  "packages/react-query/src/TimeNow.tsx": {
+    "react-hooks/purity": {
+      "count": 2
+    }
+  },
+  "packages/react-signer/src/Address.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 3
+    }
+  },
+  "packages/react-signer/src/PayWithAsset.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  },
+  "packages/react-signer/src/TxSigned.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 2
+    }
+  },
+  "packages/react-signer/src/index.tsx": {
+    "react-hooks/set-state-in-effect": {
+      "count": 1
+    }
+  }
+}
