@@ -16,8 +16,7 @@
   "type": "module",
   "version": "1.0.2-1-x",
   "dependencies": {
-    "@pezkuwi/react-components": "^1.0.2-1-x",
-    "secp256k1": "^3.8.0"
+    "@pezkuwi/react-components": "^1.0.2-1-x"
   },
   "peerDependencies": {
     "react": "*",
