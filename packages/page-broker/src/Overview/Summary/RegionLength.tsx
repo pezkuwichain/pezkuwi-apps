@@ -19,7 +19,7 @@ function RegionLength ({ children, className }: Props): React.ReactElement<Props
 
   return (
     <div className={className}>
-      {length?.toString() || '-'}
+      {typeof length === 'number' ? length : '-'}
       {children}
     </div>
   );

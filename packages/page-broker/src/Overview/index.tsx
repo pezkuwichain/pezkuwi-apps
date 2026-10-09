@@ -18,8 +18,8 @@ interface Props {
   className?: string;
 }
 
-type LeaseMapType = Record<number, LegacyLease>
-type ReservationMapType = Record<number, Reservation>
+type LeaseMapType = Record<number, LegacyLease>;
+type ReservationMapType = Record<number, Reservation>;
 
 const formatDataObject = (one: CoreWorkplan | CoreWorkload, leaseMap: LeaseMapType, reservationMap: ReservationMapType) => ({
   ...one,

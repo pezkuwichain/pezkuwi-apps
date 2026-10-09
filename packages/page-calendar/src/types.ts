@@ -3,7 +3,7 @@
 
 import type { BN } from '@pezkuwi/util';
 
-export type EntryType = 'councilElection' | 'councilMotion' | 'democracyDispatch' | 'democracyLaunch' | 'teyrchainAuction' | 'teyrchainLease' | 'referendumDispatch' | 'referendumVote' | 'scheduler' | 'societyChallenge' | 'societyRotate'| 'stakingEpoch' | 'stakingEra' | 'stakingSlash' | 'treasurySpend';
+export type EntryType = 'councilElection' | 'councilMotion' | 'democracyDispatch' | 'democracyLaunch' | 'teyrchainAuction' | 'teyrchainLease' | 'referendumDispatch' | 'referendumVote' | 'scheduler' | 'societyChallenge' | 'societyRotate' | 'stakingEpoch' | 'stakingEra' | 'stakingSlash' | 'treasurySpend';
 
 export interface EntryInfo {
   blockNumber: BN;

@@ -279,7 +279,7 @@ export function QueueCtxRoot ({ children }: Props): React.ReactElement<Props> {
         setTimeout((): void => {
           const item = txRef.current.find((item) => item.id === id);
 
-          item && item.removeItem();
+          item?.removeItem();
         }, REMOVE_TIMEOUT);
       }
     },

@@ -124,7 +124,7 @@ function useInactivesImpl (stashId: string, nominees?: string[]): Inactives {
     }
 
     return (): void => {
-      unsub && unsub();
+      unsub?.();
     };
   }, [api, indexes, mountedRef, nominees, stashId]);
 

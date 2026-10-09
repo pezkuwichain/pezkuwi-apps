@@ -26,7 +26,7 @@ function OpaqueCall ({ className = '', defaultValue, isDisabled, isError, label,
         callData = (value as SubmittableExtrinsic<'promise'>).method.toHex();
       }
 
-      onChange && onChange({
+      onChange?.({
         isValid,
         value: callData
       });

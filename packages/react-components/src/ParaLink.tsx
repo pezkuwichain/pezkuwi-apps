@@ -87,12 +87,12 @@ function ParaLink ({ className, id, showLogo = true, type = ParaLinkType.PJS }: 
                 className='chainAlign'
                 href={`${window.location.origin}${window.location.pathname}?rpc=${encodeURIComponent(value)}`}
               >
-                {typeof text === 'string' ? text : text?.toString()}
+                {text}
               </a>
             )}
           </>
         )
-        : type === ParaLinkType.PJS ? (typeof text === 'string' ? text : text?.toString()) : null
+        : type === ParaLinkType.PJS ? text : null
       }
     </StyledDiv>
   );

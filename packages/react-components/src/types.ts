@@ -96,7 +96,7 @@ export interface Judgement {
   registrars: (Registrar | undefined)[];
 }
 
-export type UseJudgements = Judgement[]
+export type UseJudgements = Judgement[];
 
 export interface TabItem {
   alias?: string;

@@ -7,7 +7,7 @@ import type { KeyringJson$Meta } from '@pezkuwi/ui-keyring/types';
 
 export type Override<T> = {
   [P in keyof T]?: T[P];
-}
+};
 
 export interface AccountOverrides {
   meta?: Override<KeyringJson$Meta>;

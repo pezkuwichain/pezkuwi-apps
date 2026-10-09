@@ -60,18 +60,16 @@ function expandParams (registry: Registry, st: StorageEntryTypeLatest, isIterabl
   }
 
   return types.map((str, index) => {
-    let name: string | undefined;
     let type: TypeDefExt;
 
     if (isIterable && index === (types.length - 1)) {
-      // name = 'entryKey';
       type = getTypeDef(`Option<${str}>`);
       type.withOptionActive = true;
     } else {
       type = getTypeDef(str);
     }
 
-    return { name, type };
+    return { name: undefined, type };
   });
 }
 

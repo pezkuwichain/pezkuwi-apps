@@ -36,7 +36,7 @@ function AccountMenuButtons ({ className = '', flags, isEditing, isEditingName, 
   const _onForgetAddress = useCallback(
     (): void => {
       onForgetAddress();
-      onUpdateName && onUpdateName();
+      onUpdateName?.();
     },
     [onForgetAddress, onUpdateName]
   );
@@ -49,7 +49,7 @@ function AccountMenuButtons ({ className = '', flags, isEditing, isEditingName, 
   const _onUpdateName = useCallback(
     (): void => {
       onSaveName();
-      onUpdateName && onUpdateName();
+      onUpdateName?.();
     },
     [onSaveName, onUpdateName]
   );

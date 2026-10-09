@@ -3,7 +3,6 @@
 
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
-/* eslint-disable sort-keys */
 const definitions: OverrideBundleDefinition = {
   types: [
     {

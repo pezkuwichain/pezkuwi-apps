@@ -21,7 +21,7 @@ export type AccountsMap = Record<string, Account>;
 
 export type Override<T> = {
   [P in keyof T]?: T[P];
-}
+};
 
 /**
  * Test inputs structure

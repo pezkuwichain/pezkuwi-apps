@@ -39,8 +39,8 @@ function Tags ({ children, className = '', isEditable, isEditing, onChange, onSa
 
   const _onSave = useCallback(
     (): void => {
-      onSave && onSave();
-      onToggleIsEditing && onToggleIsEditing();
+      onSave?.();
+      onToggleIsEditing?.();
     },
     [onSave, onToggleIsEditing]
   );

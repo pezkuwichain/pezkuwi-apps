@@ -10,7 +10,7 @@ import { isString } from '@pezkuwi/util';
 
 import { createNamedHook } from './createNamedHook.js';
 
-const endpoints = createWsEndpoints((k, v) => v?.toString() || k);
+const endpoints = createWsEndpoints((k, v) => (typeof v === 'string' && v) || k);
 
 export function getCoretimeEndpoint (curApiInfo?: string): LinkOption | null {
   return endpoints.find(({ info }) => isString(info) && isString(curApiInfo) && info.toLowerCase().includes('coretime') && info.toLowerCase().includes(curApiInfo.toLowerCase())) || null;

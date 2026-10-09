@@ -52,9 +52,9 @@ jest.mock('./hooks/useBounties', () => ({
 
 let aProposal: (extrinsic: SubmittableExtrinsic<'promise'>, ayes?: string[], nays?: string[]) => DeriveCollectiveProposal;
 let augmentedApi: any;
-let aBounty: ({ status, value }?: Partial<PezpalletBountiesBounty>) => PezpalletBountiesBounty;
+let aBounty: (bounty?: Partial<PezpalletBountiesBounty>) => PezpalletBountiesBounty;
 let aBountyIndex: (index?: number) => BountyIndex;
-let bountyStatusWith: ({ curator, status, updateDue }: { curator?: string, status?: string, updateDue?: number}) => PezpalletBountiesBountyStatus;
+let bountyStatusWith: ({ curator, status, updateDue }: { curator?: string, status?: string, updateDue?: number }) => PezpalletBountiesBountyStatus;
 let bountyWith: ({ status, value }: { status?: string, value?: number }) => PezpalletBountiesBounty;
 
 describe('Bounties', () => {

@@ -4,7 +4,7 @@
 import type { PezpalletReferendaReferendumInfoConvictionVotingTally, PezpalletReferendaReferendumInfoRankedCollectiveTally, PezpalletReferendaTrackDetails } from '@pezkuwi/types/lookup';
 import type { BN } from '@pezkuwi/util';
 
-export type PalletReferenda = 'referenda' | 'rankedPolls' | 'fellowshipReferenda'| 'ambassadorReferenda';
+export type PalletReferenda = 'referenda' | 'rankedPolls' | 'fellowshipReferenda' | 'ambassadorReferenda';
 
 export type PalletVote = 'convictionVoting' | 'rankedCollective' | 'fellowshipCollective' | 'ambassadorCollective';
 

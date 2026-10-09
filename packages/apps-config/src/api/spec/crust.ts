@@ -5,5 +5,4 @@ import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
 import { typesBundleForPolkadot as typesBundleForPezkuwi } from '@crustio/type-definitions';
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 export default (typesBundleForPezkuwi as Record<string, Record<string, unknown>>).spec.crust as OverrideBundleDefinition;

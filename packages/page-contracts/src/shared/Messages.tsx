@@ -89,7 +89,7 @@ function Messages ({ className = '', contract, contractAbi: { constructors, info
   );
 
   const _onSelect = useCallback(
-    (index: number) => onSelect && onSelect(index, _setMessageResult),
+    (index: number) => onSelect?.(index, _setMessageResult),
     [_setMessageResult, onSelect]
   );
 

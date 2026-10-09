@@ -31,7 +31,7 @@ function CopyButton ({ children, className = '', icon = 'copy', label, type, val
 
   const _onCopy = useCallback(
     (): void => {
-      queueAction && queueAction({
+      queueAction?.({
         action: t('clipboard'),
         message: t('{{type}} copied', { replace: { type: type || t('value') } }),
         status: 'queued'

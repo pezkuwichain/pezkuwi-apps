@@ -43,7 +43,6 @@ import Vote from './Vote.js';
 import VoteThreshold from './VoteThreshold.js';
 
 interface TypeToComponent {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   c: React.ComponentType<any>;
   t: string[];
 }
@@ -115,7 +114,7 @@ function fromDef ({ displayName, info, lookupName, sub, type }: TypeDef): string
       return 'Enum';
 
     case TypeDefInfo.Result: {
-      const [, errSub] = (sub as TypeDef[]);
+      const [, errSub] = sub as TypeDef[];
 
       return DISPATCH_ERROR.includes(errSub.lookupName || errSub.type)
         ? 'DispatchResult'

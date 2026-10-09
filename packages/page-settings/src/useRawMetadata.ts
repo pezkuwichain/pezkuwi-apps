@@ -14,13 +14,13 @@ function useRawMetadataImpl (): HexString | null {
 
   useEffect(
     (): void => {
-      isApiReady &&
-        api.call.metadata.metadataAtVersion &&
-          api.call.metadata.metadataAtVersion(15).then((opaque) => {
-            const raw = opaque.toHex();
+      if (isApiReady) {
+        api.call.metadata.metadataAtVersion?.(15).then((opaque) => {
+          const raw = opaque.toHex();
 
-            setState(raw);
-          }).catch(console.error);
+          setState(raw);
+        }).catch(console.error);
+      }
     },
     [api, isApiReady]
   );

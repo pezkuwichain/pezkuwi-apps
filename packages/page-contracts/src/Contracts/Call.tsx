@@ -138,11 +138,11 @@ function Call ({ className = '', contract, messageIndex, onCallResult, onChangeM
             params,
             when: new Date()
           }, ...outcomes]);
-          onCallResult && onCallResult(messageIndex, result);
+          onCallResult?.(messageIndex, result);
         })
         .catch((error): void => {
           console.error(error);
-          onCallResult && onCallResult(messageIndex);
+          onCallResult?.(messageIndex);
         });
     },
     [accountId, contract.query, message, messageIndex, onCallResult, outcomes, params, value, weight]

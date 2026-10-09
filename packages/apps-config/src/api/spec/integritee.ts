@@ -4,7 +4,6 @@
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
 // structs need to be in order
-/* eslint-disable sort-keys */
 
 const definitions: OverrideBundleDefinition = {
   types: [

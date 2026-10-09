@@ -46,13 +46,12 @@ function filterMembers (allAccounts: string[], members?: string[], ranks?: BN[],
 }
 
 function createVoteOpts (api: ApiPromise, t: (key: string, options?: { replace: Record<string, unknown> }) => string): { text: string, value: string }[] {
-  let hasAbstain = false;
+  let hasAbstain: boolean;
 
   try {
     // Check if the runtime supports SplitAbstain vote type
     const voteType = api.createType('PezpalletConvictionVotingVoteAccountVote', { SplitAbstain: { abstain: 1 } });
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     hasAbstain = !!(voteType as any).isSplitAbstain;
   } catch {
     hasAbstain = false;

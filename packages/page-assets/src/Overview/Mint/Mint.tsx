@@ -26,7 +26,7 @@ function Mint ({ className, details: { issuer, minBalance }, id, metadata, onClo
   const [recipientId, setRecipientId] = useState<string | null>(null);
 
   const isAmountValid = useMemo(
-    () => amount && amount.gte(minBalance),
+    () => amount?.gte(minBalance),
     [amount, minBalance]
   );
 

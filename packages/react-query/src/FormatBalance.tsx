@@ -32,7 +32,7 @@ interface Props {
 const M_LENGTH = 6 + 1;
 const K_LENGTH = 3 + 1;
 
-type LabelPost = string | React.ReactNode
+type LabelPost = string | React.ReactNode;
 
 function getFormat (registry: Registry, formatIndex = 0): [number, string] {
   const decimals = registry.chainDecimals;

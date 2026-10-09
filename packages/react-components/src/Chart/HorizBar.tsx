@@ -105,10 +105,8 @@ function ChartHorizBar ({ aspectRatio = 8, className = '', max = 100, showLabels
   return (
     <div className={`${className} ui--Chart-HorizBar`}>
       <Bar
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         data={chartData as any}
         height={null as unknown as number}
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         options={chartOptions as any}
         width={null as unknown as number}
       />

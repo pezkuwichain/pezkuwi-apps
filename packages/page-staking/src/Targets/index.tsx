@@ -100,7 +100,7 @@ function applyFilter (validators: ValidatorInfo[], medianComm: number, allIdenti
     ) {
       if (!withGroup) {
         return true;
-      } else if (!thisIdentity || !thisIdentity.hasIdentity) {
+      } else if (!thisIdentity?.hasIdentity) {
         parentIds.push(stashId);
 
         return true;
@@ -287,7 +287,6 @@ function Targets ({ className = '', isInElection, nominatedBy, ownStashes, targe
   );
 
   // False positive, this is part of the type...
-  // eslint-disable-next-line func-call-spacing
   const header = useMemo<[React.ReactNode?, string?, number?, (() => void)?][]>(() => [
     [t('validators'), 'start', 4],
     [t('payout'), 'media--1400'],

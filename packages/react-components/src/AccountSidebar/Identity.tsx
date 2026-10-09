@@ -39,8 +39,8 @@ function Identity ({ address, identity }: Props): React.ReactElement<Props> | nu
         key={sub.toString()}
         value={sub}
       />
-    )
-  , [subs]
+    ),
+  [subs]
   );
 
   if (!identity || !identity.isExistent || !apiIdentity.query.identity?.identityOf) {

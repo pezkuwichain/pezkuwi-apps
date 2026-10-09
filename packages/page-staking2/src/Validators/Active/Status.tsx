@@ -21,7 +21,7 @@ function Status ({ className, heartbeat: { authoredBlocks, isOnline } = {}, isCh
   const { allAccounts } = useAccounts();
 
   const isNominating = useMemo(
-    () => nominators && nominators.some((a) => allAccounts.includes(a)),
+    () => nominators?.some((a) => allAccounts.includes(a)),
     [allAccounts, nominators]
   );
 

@@ -14,7 +14,7 @@ export interface BountyStatusType {
 export type HelpMessages = Record<StatusName, string>;
 
 export type StatusName = 'Active' | 'Approved' | 'CuratorProposed' | 'Funded' | 'PendingPayout' | 'Proposed';
-export type BountyVotingStatuses = { [status in StatusName]: string[] };
+export type BountyVotingStatuses = Record<StatusName, string[]>;
 export type ValidUnassignCuratorAction = 'UnassignCurator' | 'SlashCuratorMotion' | 'SlashCuratorAction';
 export type UnassignCuratorAction = ValidUnassignCuratorAction | 'None';
 export type UserRole = 'User' | 'Member' | 'Curator' | 'None';

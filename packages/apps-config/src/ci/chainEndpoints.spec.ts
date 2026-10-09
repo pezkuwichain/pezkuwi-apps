@@ -77,7 +77,7 @@ describe('check endpoints', (): void => {
                 assert(result?.startsWith('0x'), 'Invalid/non-hex response');
                 resolve(result);
               } catch (e) {
-                reject(e);
+                reject(e instanceof Error ? e : new Error(String(e)));
               }
             };
 

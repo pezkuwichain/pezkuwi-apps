@@ -48,7 +48,7 @@
     "test:skipped": "echo 'tests skipped'"
   },
   "devDependencies": {
-    "@pezkuwi/dev": "^0.85.12",
+    "@pezkuwi/dev": "^0.86.4",
     "@pezkuwi/extension-dapp": "^0.62.27",
     "@pezkuwi/extension-inject": "^0.62.27",
     "@types/chart.js": "^2.9.41",

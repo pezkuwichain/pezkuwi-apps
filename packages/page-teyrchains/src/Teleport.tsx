@@ -84,7 +84,11 @@ function Teleport ({ onClose }: Props): React.ReactElement<Props> | null {
 
   const call = useMemo(
     (): SubmittableExtrinsicFunction<'promise'> => {
-      const m = XCM_LOC.filter((x) => api.tx[x] && isFunction(api.tx[x].limitedTeleportAssets))[0];
+      const m = XCM_LOC.find((x) => api.tx[x] && isFunction(api.tx[x].limitedTeleportAssets));
+
+      if (!m) {
+        throw new Error(`None of ${XCM_LOC.join(', ')} has limitedTeleportAssets`);
+      }
 
       return api.tx[m].limitedTeleportAssets;
     },

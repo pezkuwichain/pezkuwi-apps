@@ -34,7 +34,7 @@ function useTreasuryImpl (): Result {
       : BN_ZERO,
     treasuryAccount: u8aConcat(
       'modl',
-      api.consts.treasury && api.consts.treasury.palletId
+      api.consts.treasury?.palletId
         ? api.consts.treasury.palletId.toU8a(true)
         : 'py/trsry',
       EMPTY_U8A_32

@@ -34,7 +34,7 @@ function Import ({ favorites, onStatusChange, toggleFavorite }: Props): React.Re
         status
       });
     },
-  [onStatusChange, t]
+    [onStatusChange, t]
   );
 
   const validateAccountInfo = useCallback(({ address: addressInput, name }: SaveFile) => {

@@ -130,7 +130,7 @@ function doDownload (strings: Strings, withEmpty: boolean): void {
     return result;
   }, {});
 
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   FileSaver.saveAs(
     new Blob([JSON.stringify(sanitized, null, 2)], { type: 'application/json; charset=utf-8' }),
     'translation.json'

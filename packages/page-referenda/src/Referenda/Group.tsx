@@ -6,8 +6,8 @@ import type { PalletReferenda, PalletVote, ReferendaGroup, TrackDescription } fr
 
 import React, { useMemo } from 'react';
 
-import { ExpandButton, Table } from '@pezkuwi/react-components';
-import { useApi, useToggle } from '@pezkuwi/react-hooks';
+import { Table } from '@pezkuwi/react-components';
+import { useApi } from '@pezkuwi/react-hooks';
 
 import { useTranslation } from '../translate.js';
 import { getTrackInfo } from '../util.js';
@@ -27,41 +27,23 @@ interface Props extends ReferendaGroup {
 function Group ({ activeIssuance, className, isMember, members, palletReferenda, palletVote, ranks, referenda, trackId, trackName, tracks }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
   const { api, specName } = useApi();
-  const [isExpanded, toggleExpanded] = useToggle();
 
   const trackInfo = useMemo(
     () => getTrackInfo(api, specName, palletReferenda, tracks, trackId?.toNumber()),
     [api, specName, palletReferenda, tracks, trackId]
   );
 
-  const [headerButton, headerChildren] = useMemo(
-    () => [
-      false && trackInfo && (
-        <ExpandButton
-          expanded={isExpanded}
-          onClick={toggleExpanded}
-        />
-      ),
-      isExpanded && trackInfo && (
-        <tr>
-          <th colSpan={8} />
-        </tr>
-      )
-    ],
-    [isExpanded, toggleExpanded, trackInfo]
-  );
-
   const [header, key] = useMemo(
     (): [([React.ReactNode?, string?, number?] | null)[], string] => [
       [
         [trackName ? <>{trackName}<div className='sub'>{trackInfo?.text}</div></> : t('referenda'), 'start', 8],
-        [headerButton]
+        []
       ],
       trackName
         ? `track:${trackName}`
         : 'untracked'
     ],
-    [headerButton, t, trackInfo, trackName]
+    [t, trackInfo, trackName]
   );
 
   return (
@@ -69,7 +51,6 @@ function Group ({ activeIssuance, className, isMember, members, palletReferenda,
       className={className}
       empty={referenda && t('No active referenda')}
       header={header}
-      headerChildren={headerChildren}
       isSplit={!trackId}
       key={key}
     >

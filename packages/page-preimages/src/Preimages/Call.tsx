@@ -32,7 +32,7 @@ function PreimageCall ({ className = '', value }: Props): React.ReactElement<Pro
   return (
     <>
       <td className={`${className} all`}>
-        {value && value.isCompleted
+        {value?.isCompleted
           ? (
             <>
               {value.proposal && (
@@ -63,7 +63,7 @@ function PreimageCall ({ className = '', value }: Props): React.ReactElement<Pro
         }
       </td>
       <td className='address media--1300'>
-        {value && value.isCompleted
+        {value?.isCompleted
           ? value.deposit
             ? (
               <AddressMini

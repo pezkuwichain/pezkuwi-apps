@@ -33,7 +33,7 @@ function Unlock ({ onClose, onUnlock, pair }: Props): React.ReactElement<Props> 
 
   const _onUnlock = useCallback(
     (): void => {
-      if (!pair || !pair.isLocked) {
+      if (!pair?.isLocked) {
         return;
       }
 

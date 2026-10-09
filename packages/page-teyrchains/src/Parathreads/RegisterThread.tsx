@@ -62,7 +62,7 @@ function RegisterThread ({ className, nextParaId, onClose, ownedIds }: Props): R
     [api, wasm, genesisState, paraConfig]
   );
 
-  const isIdError = !paraId || !paraId.gt(LOWEST_INVALID_ID);
+  const isIdError = !paraId?.gt(LOWEST_INVALID_ID);
 
   return (
     <Modal

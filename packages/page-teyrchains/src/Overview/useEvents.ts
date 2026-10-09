@@ -36,7 +36,7 @@ function includeEntry (map: EventMap, event: Event, blockHash: string, blockNumb
       };
     }
   } catch (error) {
-    throw new Error(`${event.section}.${event.method}(${stringify(event.data)}):: ${(error as Error).message}`);
+    throw new Error(`${event.section}.${event.method}(${stringify(event.data)}):: ${(error as Error).message}`, { cause: error });
   }
 }
 

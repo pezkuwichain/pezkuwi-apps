@@ -10,9 +10,9 @@ export interface ElementPosition {
   height: number,
 }
 
-export type HorizontalPosition = 'left' | 'middle' | 'right'
+export type HorizontalPosition = 'left' | 'middle' | 'right';
 
-export type VerticalPosition = 'top' | 'bottom'
+export type VerticalPosition = 'top' | 'bottom';
 
 export interface PopupWindowProps {
   className?: string;

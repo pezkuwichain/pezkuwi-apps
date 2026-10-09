@@ -83,7 +83,7 @@ export interface RegionInfo {
   regionEnd: number;
 }
 
-export type RelayName = 'dicle' | 'pezkuwi' | 'paseo testnet' | 'zagros'
+export type RelayName = 'dicle' | 'pezkuwi' | 'paseo testnet' | 'zagros';
 
 export interface GetResponse {
   blocks: {

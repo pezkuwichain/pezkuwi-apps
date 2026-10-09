@@ -28,7 +28,7 @@ function BoolParam ({ className = '', defaultValue: { value }, isDisabled, isErr
 
   const _onChange = useCallback(
     (value: boolean) =>
-      onChange && onChange({
+      onChange?.({
         isValid: true,
         value
       }),

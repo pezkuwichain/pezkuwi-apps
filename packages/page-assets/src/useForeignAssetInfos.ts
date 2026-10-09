@@ -68,7 +68,7 @@ function useForeignAssetInfosImpl (locations?: StagingXcmV3MultiLocation[]): For
   const [state, setState] = useState<ForeignAssetInfo[] | undefined>();
 
   useEffect((): void => {
-    details && metadata && (details[0][0].length === metadata[0][0].length) &&
+    details && details[0][0].length === metadata?.[0][0].length &&
       setState(
         details[0][0].map((location, index) =>
           extractInfo(allAccounts, location, details[1][index], metadata[1][index])

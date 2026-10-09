@@ -3,7 +3,6 @@
 
 // structs need to be in order
 /* eslint-disable sort-keys */
-/* eslint-disable camelcase */
 
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 

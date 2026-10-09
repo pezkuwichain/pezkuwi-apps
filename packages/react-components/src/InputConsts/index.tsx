@@ -52,7 +52,7 @@ function InputConsts ({ className = '', defaultValue, label, onChange, withLabel
         const updated = { meta, method, section };
 
         setValue(updated);
-        onChange && onChange(updated);
+        onChange?.(updated);
       }
     },
     [api, onChange, value]

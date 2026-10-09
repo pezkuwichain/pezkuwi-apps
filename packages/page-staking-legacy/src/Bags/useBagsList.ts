@@ -43,7 +43,7 @@ const MULTI_OPTS = {
 };
 
 function merge (prev: BagInfo[] | undefined, curr: BagInfo[]): BagInfo[] {
-  return !prev || curr.length !== prev.length
+  return curr.length !== prev?.length
     ? curr
     : curr.map((q, i) =>
       JSON.stringify(q) === JSON.stringify(prev[i])

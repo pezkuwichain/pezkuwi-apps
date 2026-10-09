@@ -37,8 +37,7 @@ jest.mock('@pezkuwi/react-hooks/useAccounts', () => ({
 }));
 
 jest.mock('@pezkuwi/react-hooks/useAccountInfo', () => {
-  // eslint-disable-next-line func-call-spacing
-  const actual = jest.requireActual<{useAccountInfo: (address: string) => UseAccountInfo}>('@pezkuwi/react-hooks/useAccountInfo');
+  const actual = jest.requireActual<{ useAccountInfo: (address: string) => UseAccountInfo }>('@pezkuwi/react-hooks/useAccountInfo');
 
   return ({
     useAccountInfo: (address: string) => {

@@ -14,7 +14,7 @@ function useUnbondDurationImpl (): BN | undefined {
   const sessionInfo = useCall<DeriveSessionInfo>(api.derive.session.info);
 
   return useMemo(
-    () => (sessionInfo && sessionInfo.sessionLength.gt(BN_ONE))
+    () => (sessionInfo?.sessionLength.gt(BN_ONE))
       ? sessionInfo.eraLength.mul(api.consts.staking.bondingDuration)
       : undefined,
     [api, sessionInfo]

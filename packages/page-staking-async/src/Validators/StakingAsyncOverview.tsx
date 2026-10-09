@@ -22,17 +22,17 @@ function StakingAsyncOverview ({ children, className = '', withIcon = true }: Pr
         rel='noreferrer'
         target='_blank'
       >
-    this guide
+        this guide
       </a>.
       <br />
       <br />
-  For more information about Staking Async and AssetHub migration, please see the{' '}
+      For more information about Staking Async and AssetHub migration, please see the{' '}
       <a
         href='https://docs.google.com/document/d/1XR3vL2p4QV0wC7FrlC8eN-q62BqNFTFElbj21wEmMGg/edit?tab=t.tyioldyxov9u'
         rel='noreferrer'
         target='_blank'
       >
-    Asset Hub Migration FAQ
+        Asset Hub Migration FAQ
       </a>.
       {children}
     </StyledArticle>

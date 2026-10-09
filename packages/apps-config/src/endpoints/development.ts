@@ -7,7 +7,6 @@ import type { LinkOption } from './types.js';
 export const CUSTOM_ENDPOINT_KEY = 'pezkuwi-app-custom-endpoints';
 
 interface EnvWindow {
-  // eslint-disable-next-line camelcase
   process_env?: {
     WS_URL: string;
   }

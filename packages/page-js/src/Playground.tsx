@@ -80,7 +80,7 @@ function Playground ({ basePath, className = '' }: Props): React.ReactElement<Pr
   const { t } = useTranslation();
   const apiProps = useApi();
   const injectedRef = useRef<Injected | null>(null);
-  const iframeRef = useRef<IframeWithInjected|null>(null);
+  const iframeRef = useRef<IframeWithInjected | null>(null);
   const [code, setCode] = useState('');
   const [isCustomExample, setIsCustomExample] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
@@ -118,7 +118,7 @@ function Playground ({ basePath, className = '' }: Props): React.ReactElement<Pr
     const selected = options.find((option): boolean => option.value === localData.selectedValue);
 
     setCustomExamples(customExamples);
-    setIsCustomExample((selected && selected.type === 'custom') || false);
+    setIsCustomExample((selected?.type === 'custom') || false);
     setOptions(options);
     setSelected(selected || snippets[0]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -168,7 +168,6 @@ function Playground ({ basePath, className = '' }: Props): React.ReactElement<Pr
             const iframeDoc = iframeRef.current.contentWindow.document;
 
             iframeDoc.open();
-            // eslint-disable-next-line deprecation/deprecation
             iframeDoc.write('<!DOCTYPE html><html><head></head><body></body></html>');
             iframeDoc.close();
 
@@ -196,7 +195,7 @@ function Playground ({ basePath, className = '' }: Props): React.ReactElement<Pr
             // Create script tag to run code
             const bridgeScript = iframeDoc.createElement('script');
 
-            // eslint-disable-next-line no-new-func, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-implied-eval, @typescript-eslint/no-unsafe-assignment
+            // eslint-disable-next-line no-new-func, @typescript-eslint/no-implied-eval
             bridgeScript.innerText = new Function('injected', exec).bind({}, iframeRef.current.contentWindow.injected)();
 
             iframeRef.current.contentWindow.document.body.appendChild(bridgeScript);

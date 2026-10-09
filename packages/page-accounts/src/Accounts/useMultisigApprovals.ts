@@ -41,16 +41,18 @@ function useMultisigApprovalsImpl (address: string): [H256, Multisig][] | undefi
 
   // query all the entries for the multisig, extracting approvals with their hash
   useEffect((): void => {
-    trigger && api.query.multisig?.multisigs && api.query.multisig?.multisigs
-      .entries(address)
-      .then((infos: [StorageKey, Option<Multisig>][]): void => {
-        mountedRef.current && setMultiInfos(
-          infos
-            .filter(([, opt]) => opt.isSome)
-            .map(([key, opt]) => [key.args[1] as H256, opt.unwrap()])
-        );
-      })
-      .catch(console.error);
+    if (trigger) {
+      api.query.multisig?.multisigs
+        .entries(address)
+        .then((infos: [StorageKey, Option<Multisig>][]): void => {
+          mountedRef.current && setMultiInfos(
+            infos
+              .filter(([, opt]) => opt.isSome)
+              .map(([key, opt]) => [key.args[1] as H256, opt.unwrap()])
+          );
+        })
+        .catch(console.error);
+    }
   }, [address, api, mountedRef, trigger]);
 
   return multiInfos;

@@ -20,7 +20,7 @@ function mapValidators (startWith: Record<string, [GroupIndex, ValidatorInfo[]]>
   return ids.reduce((all: Record<string, [GroupIndex, ValidatorInfo[]]>, id) => {
     // paraId should never be undefined, since it comes from the state, yet here we are...
     // See https://github.com/pezkuwichain/pezkuwi-apps/issues/6435
-    const assignment = scheduled.find(({ paraId }) => paraId && paraId.eq(id));
+    const assignment = scheduled.find(({ paraId }) => paraId?.eq(id));
 
     if (!assignment) {
       return all;

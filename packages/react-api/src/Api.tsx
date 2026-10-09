@@ -226,10 +226,8 @@ async function getLightProvider (chain: string): Promise<ScProvider> {
     return relay;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const specMod = await import(`${lightSpecs[relayName][paraName]}`);
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
   return new ScProvider(Sc, JSON.stringify(specMod.default), relay);
 }
 

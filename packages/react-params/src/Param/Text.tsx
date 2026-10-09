@@ -16,7 +16,7 @@ function Text ({ className = '', defaultValue: { value }, isDisabled, isError, l
     (value: string): void => {
       const isValid = value.length !== 0;
 
-      onChange && onChange({
+      onChange?.({
         isValid,
         value
       });

@@ -88,7 +88,6 @@ function getOptions (options: ChartOptions = {}): DatasetChartOptions<'line'> {
     // Re-spread plugins for deep(er) copy
     plugins: objectSpread({}, BASE_OPTS.plugins, options.plugins, {
       // Same applied to plugins, we may want specific values
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       annotation: objectSpread({}, BASE_OPTS.plugins?.annotation, options.plugins?.annotation),
       crosshair: objectSpread({}, BASE_OPTS.plugins?.crosshair, options.plugins?.crosshair),
       tooltip: objectSpread({}, BASE_OPTS.plugins?.tooltip, options.plugins?.tooltip)

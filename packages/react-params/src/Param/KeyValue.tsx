@@ -15,7 +15,7 @@ interface StateParam {
   u8a: Uint8Array;
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-types
+// eslint-disable-next-line @typescript-eslint/no-wrapper-object-types
 export function createParam (hex: string | String, ignoreLength = false): StateParam {
   let u8a;
   let isValid = false;
@@ -42,7 +42,7 @@ function KeyValue ({ className = '', isDisabled, label, onChange, onEnter, withL
   useEffect((): void => {
     const isValid = key.isValid && value.isValid;
 
-    onChange && onChange({
+    onChange?.({
       isValid,
       value: u8aConcat(
         key.u8a,

@@ -77,7 +77,7 @@ function AssetApp ({ basePath, className }: Props): React.ReactElement<Props> {
   ]);
 
   const showForeignAssetsTab = useMemo(() => !!foreignAssetLocations.length, [foreignAssetLocations.length]);
-  const showBalancesTab = useMemo(() => hasAccounts && infos && infos.some(({ details, metadata }) => !!(details && metadata)), [hasAccounts, infos]);
+  const showBalancesTab = useMemo(() => hasAccounts && infos?.some(({ details, metadata }) => !!(details && metadata)), [hasAccounts, infos]);
 
   const hidden = useMemo(
     () =>

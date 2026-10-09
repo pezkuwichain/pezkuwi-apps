@@ -18,7 +18,7 @@ declare module 'react-copy-to-clipboard' {
     options?: Options;
   }
 
-  function CopyToClipboard(props: Props): ReactElement;
+  function CopyToClipboard (props: Props): ReactElement;
 
   export = CopyToClipboard;
 }

@@ -21,7 +21,7 @@ export default function createOptions (api: ApiPromise, sectionName: string): Dr
     .filter((s) => !s.startsWith('$'))
     .sort()
     .map((value): DropdownOption => {
-      const method = (section[value] as ConstantCodec);
+      const method = section[value] as ConstantCodec;
 
       return {
         className: 'ui--DropdownLinked-Item',

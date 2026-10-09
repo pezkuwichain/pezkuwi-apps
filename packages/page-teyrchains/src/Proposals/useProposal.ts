@@ -18,7 +18,7 @@ function useProposalImpl (id: ParaId, approvedIds: ParaId[], scheduled: Schedule
       id,
       isApproved: approvedIds.some((a) => a.eq(id)),
       isScheduled: scheduled.some(({ scheduledIds }) => scheduledIds.some((s) => s.eq(id))),
-      proposal: opt && opt.isSome
+      proposal: opt?.isSome
         ? opt.unwrap()
         : undefined
     }),

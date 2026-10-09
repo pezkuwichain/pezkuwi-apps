@@ -19,7 +19,7 @@ interface Props {
 }
 
 async function send (queueSetTxStatus: QueueTxMessageSetStatus, currentItem: QueueTx, tx: SubmittableExtrinsic<'promise'>): Promise<void> {
-  currentItem.txStartCb && currentItem.txStartCb();
+  currentItem.txStartCb?.();
 
   try {
     const unsubscribe = await tx.send(handleTxResults('send', queueSetTxStatus, currentItem, (): void => {
@@ -29,7 +29,7 @@ async function send (queueSetTxStatus: QueueTxMessageSetStatus, currentItem: Que
     console.error('send: error:', error);
     queueSetTxStatus(currentItem.id, 'error', {}, error as Error);
 
-    currentItem.txFailedCb && currentItem.txFailedCb(null);
+    currentItem.txFailedCb?.(null);
   }
 }
 

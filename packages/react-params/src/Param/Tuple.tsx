@@ -28,7 +28,7 @@ function TupleDisplay (props: Props): React.ReactElement<Props> {
         return;
       }
 
-      onChange && onChange({
+      onChange?.({
         isValid: values.reduce<boolean>((result, { isValid }) => result && isValid, true),
         value: values.map(({ value }) => value)
       });

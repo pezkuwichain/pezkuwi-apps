@@ -85,7 +85,7 @@ function createResult (bestNumber: BlockNumber, minContribution: BN, funds: Camp
   const hasNewTotalCap = !prev.totalCap.eq(totalCap);
   const hasNewTotalRaised = !prev.totalRaised.eq(totalRaised);
   const hasChanged =
-    !prev.funds || prev.funds.length !== funds.length ||
+    prev.funds?.length !== funds.length ||
     hasNewActiveCap || hasNewActiveRaised || hasNewTotalCap || hasNewTotalRaised ||
     funds.some((c) => isFundUpdated(bestNumber, minContribution, c, leased, prev));
 

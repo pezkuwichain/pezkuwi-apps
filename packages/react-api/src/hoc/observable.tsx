@@ -70,7 +70,6 @@ export default function withObservable<T, P> (observable: Observable<P>, { callO
 
       public override render (): React.ReactNode {
         const { children } = this.props;
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { callResult, callUpdated, callUpdatedAt } = this.state;
         const _props = {
           ...defaultProps,

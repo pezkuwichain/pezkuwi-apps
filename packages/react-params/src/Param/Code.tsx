@@ -17,7 +17,7 @@ function Code ({ className = '', defaultValue, isDisabled, isError, label, onCha
     (value: Uint8Array): void => {
       const isValid = isWasm(value);
 
-      onChange && onChange({ isValid, value });
+      onChange?.({ isValid, value });
       setIsValid(isValid);
     },
     [onChange]

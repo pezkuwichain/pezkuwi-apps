@@ -34,7 +34,7 @@ function useBagEntriesImpl (headId: AccountId32 | null, trigger: number): [boole
   );
 
   useEffect((): void => {
-    if (node && node.isSome) {
+    if (node?.isSome) {
       const { next } = node.unwrap();
 
       if (next.isSome) {

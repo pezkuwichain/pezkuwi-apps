@@ -79,7 +79,7 @@ function InputFile ({ accept, className = '', clearContent, isDisabled, isError 
             const name = file.name;
             const data = convertResult(target.result as ArrayBuffer);
 
-            onChange && onChange(data, name);
+            onChange?.(data, name);
             dropRef && setFile({
               name,
               size: data.length

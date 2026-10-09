@@ -44,7 +44,6 @@ function Validate ({ className = '', controllerId, minCommission, onChange, stas
   useEffect((): void => {
     try {
       onChange({
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         validateTx: api.tx.staking.validate({
           blocked: !allowNoms,
           commission

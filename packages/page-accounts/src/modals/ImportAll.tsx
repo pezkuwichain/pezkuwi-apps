@@ -26,7 +26,7 @@ interface TPassword {
 
 type FileAccount = (KeyringPair$Json | KeyringPair);
 
-type File = FileAccount[]
+type File = FileAccount[];
 
 const acceptedFormats = ['application/json'];
 

@@ -30,7 +30,7 @@ export function createAugmentedApi (): ApiPromise {
     signedExtensions: PEZKUWI_SIGNED_EXTENSIONS
   });
 
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   api.injectMetadata(metadata, true);
 
   return api;

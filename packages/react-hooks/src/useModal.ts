@@ -14,7 +14,7 @@ function useModalImpl (defaultIsOpen?: boolean, onOpen?: () => void, onClose?: (
     (): void => {
       setIsOpen(true);
 
-      onOpen && onOpen();
+      onOpen?.();
     },
     [onOpen, setIsOpen]
   );
@@ -22,7 +22,7 @@ function useModalImpl (defaultIsOpen?: boolean, onOpen?: () => void, onClose?: (
     (): void => {
       setIsOpen(false);
 
-      onClose && onClose();
+      onClose?.();
     },
     [onClose, setIsOpen]
   );

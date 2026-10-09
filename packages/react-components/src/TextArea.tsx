@@ -20,7 +20,7 @@ interface Props {
 function TextArea ({ children, className, isError, isReadOnly, label, onChange, seed, withLabel }: Props): React.ReactElement<Props> {
   const _onChange = useCallback(
     ({ target: { value } }: React.ChangeEvent<HTMLTextAreaElement>): void => {
-      onChange && onChange(value);
+      onChange?.(value);
     },
     [onChange]
   );

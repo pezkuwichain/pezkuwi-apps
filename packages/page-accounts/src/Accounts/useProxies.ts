@@ -45,7 +45,7 @@ function useProxiesImpl (address?: string | null): State | null {
   useEffect((): void => {
     setState(null);
 
-    address &&
+    if (address) {
       api.query.proxy
         ?.proxies<ITuple<[Vec<ITuple<[AccountId, KitchensinkRuntimeProxyType]> | PezpalletProxyProxyDefinition>, BalanceOf]>>(address)
         .then(([_proxies]): void => {
@@ -65,6 +65,7 @@ function useProxiesImpl (address?: string | null): State | null {
           });
         })
         .catch(console.error);
+    }
   }, [allAccounts, api, address, mountedRef]);
 
   return known;

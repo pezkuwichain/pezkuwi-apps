@@ -84,7 +84,7 @@ function Vector ({ className = '', defaultValue, isDisabled = false, label, onCh
 
   // when our values has changed, alert upstream
   useEffect((): void => {
-    onChange && onChange({
+    onChange?.({
       isValid: values.reduce<boolean>((result, { isValid }) => result && isValid, true),
       value: values.map(({ value }) => value)
     });

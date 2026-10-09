@@ -35,7 +35,7 @@ function DeregisterId ({ className, nextParaId, onClose, ownedIds }: Props): Rea
     []
   );
 
-  const isIdError = !paraId || !paraId.gt(LOWEST_INVALID_ID);
+  const isIdError = !paraId?.gt(LOWEST_INVALID_ID);
 
   const extrinsic = useMemo(() => api.tx.registrar.deregister(paraId), [api.tx.registrar, paraId]);
 

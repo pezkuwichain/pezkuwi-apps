@@ -65,7 +65,7 @@ function Expander ({ children, className = '', isHeader, isLeft, isOpen, isPadde
   const [isExpanded, toggleExpanded] = useToggle(isOpen, onClick);
 
   const demandChildren = useMemo(
-    () => isExpanded && renderChildren && renderChildren(),
+    () => isExpanded && renderChildren?.(),
     [isExpanded, renderChildren]
   );
 

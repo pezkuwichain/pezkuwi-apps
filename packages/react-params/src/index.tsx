@@ -153,13 +153,13 @@ class Params extends React.PureComponent<Props, State> {
       return;
     }
 
-    onChange && onChange(values);
+    onChange?.(values);
   };
 
   private onRenderError = (): void => {
     const { onError } = this.props;
 
-    onError && onError();
+    onError?.();
   };
 }
 

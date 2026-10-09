@@ -25,7 +25,7 @@ export function useMapKeys <T = any> (entry: QueryableStorageEntry<'promise'> | 
 
         (
           at && at !== '0'
-            // eslint-disable-next-line deprecation/deprecation
+            // eslint-disable-next-line @typescript-eslint/no-deprecated
             ? entry.keysAt(at, ...params)
             : entry.keys(...params)
         ).then((keys) => setState(

@@ -21,7 +21,7 @@ function Bytes ({ className = '', defaultValue, isDisabled, isError, label, name
     (value: Uint8Array): void => {
       const isValid = value.length !== 0;
 
-      onChange && onChange({
+      onChange?.({
         isValid,
         value: compactAddLength(value)
       });

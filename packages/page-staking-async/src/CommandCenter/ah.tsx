@@ -142,11 +142,11 @@ function AssetHubSection ({ ahApi, ahEvents, ahOutput, ahUrl, children, isRelayC
               <h4>{t('Bags List')}</h4>
               <div className='stats'>
                 <CardSummary label={t('all nodes')}>
-                  {/* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access */}
+                  {}
                   {ahOutput.bagsList ? ahOutput.bagsList.allNodes : 'None'}
                 </CardSummary>
                 <CardSummary label={t('lock')}>
-                  {/* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access */}
+                  {}
                   {ahOutput.bagsList ? ahOutput.bagsList.lock : 'None'}
                 </CardSummary>
               </div>

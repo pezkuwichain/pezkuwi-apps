@@ -29,8 +29,8 @@ function AccountItems ({ className, infos = [] }: Props): React.ReactElement<Pro
   const collectionItems = useMemo(
     () => !info || !accountItems
       ? []
-      : accountItems.filter(({ collectionId }) => collectionId.eq(info.id))
-    , [info, accountItems]
+      : accountItems.filter(({ collectionId }) => collectionId.eq(info.id)),
+    [info, accountItems]
   );
 
   const itemsInfos = useItemsInfos(collectionItems);

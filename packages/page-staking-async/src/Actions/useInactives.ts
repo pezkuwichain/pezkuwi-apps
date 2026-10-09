@@ -40,7 +40,7 @@ interface ExtractStateParams {
   stashId: string;
   unappliedSlashes: string[];
   nominationsInfo: NominationInfo[];
-  activeEra: EraIndex| undefined;
+  activeEra: EraIndex | undefined;
   submittedIn: EraIndex;
   activeValidators: DeriveEraValidatorExposurePaged;
 }
@@ -173,7 +173,7 @@ function useInactivesImpl (stashId: string, nominees?: string[]): Inactives {
     }
 
     return (): void => {
-      unsub && unsub();
+      unsub?.();
     };
   }, [api, mountedRef, nominees, stashId, indexes]);
 

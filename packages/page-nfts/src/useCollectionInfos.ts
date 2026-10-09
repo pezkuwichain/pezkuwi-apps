@@ -101,7 +101,7 @@ function useCollectionInfosImpl (ids?: BN[]): CollectionInfo[] | undefined {
   const fetchedMetadata = useMetadataFetch<CollectionSupportedMetadata | null>(metadataLinks, METADATA_FETCH_OPTIONS);
 
   useEffect((): void => {
-    if (fetchedMetadata && details && metadata && (details[0][0].length === metadata[0][0].length)) {
+    if (fetchedMetadata && details && details[0][0].length === metadata?.[0][0].length) {
       const collectionInfos = details[0][0].map((id, index) =>
         extractInfo(allAccounts, id, details[1][index], metadata[1][index])
       );

@@ -23,7 +23,7 @@ function Query ({ className = '', onQuery }: Props): React.ReactElement<Props> {
 
   const _onQuery = useCallback(
     (): void => {
-      onQuery && onQuery(input);
+      onQuery?.(input);
     },
     [input, onQuery]
   );

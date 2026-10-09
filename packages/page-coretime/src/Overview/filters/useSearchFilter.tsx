@@ -1,7 +1,7 @@
 // Copyright 2017-2026 @pezkuwi/app-coretime authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 import { useRelayEndpoints } from '@pezkuwi/react-hooks/useParaEndpoints';
 
@@ -18,7 +18,7 @@ export function useSearchFilter ({ data, onFilter }: UseSearchFilterProps) {
       endpoints
         .filter((e) => e?.text && e.paraId)
         .map((e) => [
-          React.isValidElement(e.text) ? '' : String(e.text),
+          typeof e.text === 'string' ? e.text : '',
           e.paraId
         ])
     ),

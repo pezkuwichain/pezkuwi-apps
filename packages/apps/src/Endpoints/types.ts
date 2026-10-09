@@ -9,7 +9,7 @@ export interface IFavoriteChainProps {
   paraId?: number;
 }
 
-export type IFavoriteChainsStorage = Record<string, {relay: string, paraId: number}[]>
+export type IFavoriteChainsStorage = Record<string, { relay: string, paraId: number }[]>;
 
 export interface Network {
   isChild?: boolean;

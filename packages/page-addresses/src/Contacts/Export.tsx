@@ -29,7 +29,7 @@ function Export ({ sortedAddresses }: Props): React.ReactElement<Props> {
 
     const blob = new Blob([JSON.stringify(accounts, null, 2)], { type: 'application/json; charset=utf-8' });
 
-    // eslint-disable-next-line deprecation/deprecation
+    // eslint-disable-next-line @typescript-eslint/no-deprecated
     FileSaver.saveAs(blob, `batch_exported_address_book_${new Date().getTime()}.json`);
 
     /** ********************* ************** ************************/

@@ -97,37 +97,37 @@ function Input ({ autoFocus = false, children, className, defaultValue, icon, in
   const [initialValue] = useState(() => defaultValue);
 
   useEffect((): void => {
-    initialValue && onChange && onChange(initialValue);
+    initialValue && onChange?.(initialValue);
   }, [initialValue, onChange]);
 
   const _onBlur = useCallback(
-    () => onBlur && onBlur(),
+    () => onBlur?.(),
     [onBlur]
   );
 
   const _onChange = useCallback(
     ({ target }: React.SyntheticEvent<HTMLInputElement>): void =>
-      onChange && onChange((target as HTMLInputElement).value),
+      onChange?.((target as HTMLInputElement).value),
     [onChange]
   );
 
   const _onKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>): void =>
-      onKeyDown && onKeyDown(event),
+      onKeyDown?.(event),
     [onKeyDown]
   );
 
   const _onKeyUp = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>): void => {
-      onKeyUp && onKeyUp(event);
+      onKeyUp?.(event);
 
-      // eslint-disable-next-line deprecation/deprecation
+      // eslint-disable-next-line @typescript-eslint/no-deprecated
       if (onEnter && (event.key === 'Enter' || event.keyCode === 13)) {
         (event.target as HTMLInputElement).blur();
         isFunction(onEnter) && onEnter();
       }
 
-      // eslint-disable-next-line deprecation/deprecation
+      // eslint-disable-next-line @typescript-eslint/no-deprecated
       if (onEscape && (event.key === 'Escape' || event.keyCode === 27)) {
         (event.target as HTMLInputElement).blur();
         onEscape();
@@ -138,7 +138,7 @@ function Input ({ autoFocus = false, children, className, defaultValue, icon, in
 
   const _onPaste = useCallback(
     (event: React.ClipboardEvent<HTMLInputElement>): void =>
-      onPaste && onPaste(event),
+      onPaste?.(event),
     [onPaste]
   );
 

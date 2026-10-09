@@ -38,7 +38,6 @@ export interface Props {
   onChange?: RawParamOnChange;
   onEnter?: RawParamOnEnter;
   onEscape?: RawParamOnEscape;
-  // eslint-disable-next-line no-use-before-define
   overrides?: ComponentMap;
   registry: Registry;
   type: TypeDefExt;

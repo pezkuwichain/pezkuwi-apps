@@ -27,7 +27,7 @@ function createOptions (blockTime: BN, voteLockingPeriod: BN, t: (key: string, o
       text: t('{{value}}x voting balance, locked for {{duration}}x duration{{period}}', {
         replace: {
           duration,
-          period: voteLockingPeriod && voteLockingPeriod.gt(BN_ZERO)
+          period: voteLockingPeriod?.gt(BN_ZERO)
             ? ` (${calcBlockTime(blockTime, durationBn.mul(voteLockingPeriod), t)[1]})`
             : '',
           value

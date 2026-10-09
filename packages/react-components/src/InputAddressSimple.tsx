@@ -39,7 +39,7 @@ function InputAddressSimple ({ autoFocus, bytesLength, children, className = '',
         : address;
 
       setAddress(output);
-      onChange && onChange(output);
+      onChange?.(output);
     },
     [bytesLength, noConvert, onChange]
   );

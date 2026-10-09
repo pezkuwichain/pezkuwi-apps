@@ -19,7 +19,7 @@ function Balance ({ className = '', defaultValue: { value }, isDisabled, isError
     (value?: BN): void => {
       const isValid = !isError && !!value;
 
-      onChange && onChange({
+      onChange?.({
         isValid,
         value
       });

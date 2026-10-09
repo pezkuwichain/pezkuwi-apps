@@ -140,7 +140,6 @@ function MultisigApprove ({ className = '', onClose, ongoing, threshold = 0, who
           ? isMultiCall && isCallOverride
             ? callData
               ? multiMod.asMulti.meta.args.length === 5
-                // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
                 ? multiMod.asMulti(threshold, others as any, multisig.when, callData.toHex(), weight as any)
                 : multiMod.asMulti.meta.args.length === 6
                   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -151,7 +150,6 @@ function MultisigApprove ({ className = '', onClose, ongoing, threshold = 0, who
                   : multiMod.asMulti(threshold, others as any, multisig.when, callData)
               : null
             : multiMod.approveAsMulti.meta.args.length === 5
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
               ? multiMod.approveAsMulti(threshold, others as any, multisig.when, hash, weight as any)
               // eslint-disable-next-line @typescript-eslint/ban-ts-comment
               // @ts-ignore

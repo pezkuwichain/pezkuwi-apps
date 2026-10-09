@@ -10,7 +10,7 @@ import { isString } from '@pezkuwi/util';
 
 import { createNamedHook } from './createNamedHook.js';
 
-const endpoints = createWsEndpoints((k, v) => v?.toString() || k);
+const endpoints = createWsEndpoints((k, v) => (typeof v === 'string' && v) || k);
 
 export function getPeopleEndpoint (curApiInfo?: string): LinkOption | null {
   return endpoints.find(({ info, isPeople }) => isPeople && isString(info) && isString(curApiInfo) && info.toLowerCase().includes(curApiInfo.toLowerCase())) || null;
