@@ -168,7 +168,7 @@ function InputNumber ({ autoFocus, bitLength = DEFAULT_BITLENGTH, children, clas
   const [isPreKeyDown, setIsPreKeyDown] = useState(false);
 
   useEffect((): void => {
-    onChange && onChange(isValid ? valueBn : undefined);
+    onChange?.(isValid ? valueBn : undefined);
   }, [isValid, onChange, valueBn]);
 
   const _onChangeWithSi = useCallback(

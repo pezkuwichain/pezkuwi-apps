@@ -26,7 +26,7 @@ function useToggleImpl (defaultValue = false, onToggle?: (isActive: boolean) => 
   );
 
   useEffect(
-    () => onToggle && onToggle(isActive),
+    () => onToggle?.(isActive),
     [isActive, onToggle]
   );
 

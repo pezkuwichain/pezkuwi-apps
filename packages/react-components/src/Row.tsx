@@ -39,7 +39,7 @@ function Row ({ address, buttons, children, className = '', defaultName, details
   const [isEditingTags, toggleIsEditingTags] = useToggle();
 
   const _onSaveName = useCallback((): void => {
-    onSaveName && onSaveName();
+    onSaveName?.();
     toggleIsEditingName();
   }, [onSaveName, toggleIsEditingName]);
 

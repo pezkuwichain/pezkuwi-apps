@@ -12,7 +12,7 @@ function useAccountIdImpl (initialValue: string | null = null, onChangeAccountId
     (accountId: string | null = null): void => {
       setAccountId(accountId);
 
-      onChangeAccountId && onChangeAccountId(accountId);
+      onChangeAccountId?.(accountId);
     },
     [onChangeAccountId]
   );

@@ -13,10 +13,15 @@ export { CUSTOM_ENDPOINT_KEY } from './development.js';
 export * from './production.js';
 export * from './testing.js';
 
-function defaultT (keyOrText: string, text?: string | TOptions, options?: TOptions): string {
+function defaultT (keyOrText: string, textOrOptions?: string | TOptions, options?: TOptions): string {
+  // as TFunction: the second argument is either the default text or the options
+  const [text, opts] = typeof textOrOptions === 'string'
+    ? [textOrOptions, options]
+    : [undefined, textOrOptions];
+
   return (
-    (options?.replace?.host as string) ||
-    text?.toString() ||
+    (opts?.replace?.host as string) ||
+    text ||
     keyOrText
   );
 }

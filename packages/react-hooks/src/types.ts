@@ -16,16 +16,13 @@ import type { BN } from '@pezkuwi/util';
 import type { HexString } from '@pezkuwi/util/types';
 import type { CoreTimeTypes } from './constants.js';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type CallParam = any;
 
 export type CallParams = [] | CallParam[];
 
 export interface CallOptions<T> {
   defaultValue?: T;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   paramMap?: (params: any) => CallParams;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   transform?: (value: any, api: ApiPromise) => T;
   withParams?: boolean;
   withParamsTransform?: boolean;
@@ -344,7 +341,7 @@ export interface ChainWorkTaskInformation {
 export interface ChainInformation {
   id: number,
   lease: LegacyLease | undefined,
-  reservation: Reservation| undefined
+  reservation: Reservation | undefined
   workTaskInfo: ChainWorkTaskInformation[]
 }
 export interface ChainBlockConstants {

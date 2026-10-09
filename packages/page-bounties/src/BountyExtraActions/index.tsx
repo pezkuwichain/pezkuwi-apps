@@ -53,14 +53,14 @@ function Index ({ bestNumber, className, description, index, proposals, status }
 
   const existingCloseBountyProposal = useMemo(
     () => proposals?.find(({ proposal }) =>
-      proposal && proposal.method === 'closeBounty'
+      proposal?.method === 'closeBounty'
     ),
     [proposals]
   );
 
   const existingUnassignCuratorProposal = useMemo(
     () => proposals?.find(({ proposal }) =>
-      proposal && proposal.method === 'unassignCurator'
+      proposal?.method === 'unassignCurator'
     ),
     [proposals]
   );

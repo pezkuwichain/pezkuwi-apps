@@ -44,7 +44,7 @@ function Amount ({ className = '', defaultValue: { value }, isDisabled, isError,
 
   const _onChange = useCallback(
     (value?: BN) =>
-      onChange && onChange({
+      onChange?.({
         isValid: !isUndefined(value),
         value
       }),

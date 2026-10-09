@@ -245,7 +245,7 @@ function ProxyOverview ({ className, onClose, previousProxy: [existing] = EMPTY_
     [api]
   );
 
-  const isSameAdd = added.some(([accountId]) => accountId && accountId.eq(proxiedAccount));
+  const isSameAdd = added.some(([accountId]) => accountId?.eq(proxiedAccount));
 
   return (
     <StyledModal

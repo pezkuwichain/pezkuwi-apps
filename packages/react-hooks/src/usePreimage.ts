@@ -46,9 +46,7 @@ interface OldRequested {
  */
 export function getParamType (api: ApiPromise): Result {
   if ((
-    api.query.preimage &&
-    api.query.preimage.preimageFor &&
-    api.query.preimage.preimageFor.creator.meta.type.isMap
+    api.query.preimage?.preimageFor?.creator.meta.type.isMap
   )) {
     const { type } = api.registry.lookup.getTypeDef(api.query.preimage.preimageFor.creator.meta.type.asMap.key);
 

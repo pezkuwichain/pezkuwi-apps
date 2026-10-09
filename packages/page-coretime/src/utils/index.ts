@@ -10,8 +10,8 @@ import { BN } from '@pezkuwi/util';
 type FirstCycleStartType = Record<
 'block' | 'timeslice',
 Record<
-'coretime',
-Record<RelayName, number>
+  'coretime',
+  Record<RelayName, number>
 >
 >;
 

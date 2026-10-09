@@ -21,14 +21,14 @@ function TxButton ({ accountId, className = '', extrinsic: propsExtrinsic, icon,
   const [isStarted, setIsStarted] = useState(false);
 
   useEffect((): void => {
-    (isStarted && onStart) && onStart();
+    isStarted && onStart?.();
   }, [isStarted, onStart]);
 
   const _onFailed = useCallback(
     (result: Error | SubmittableResult | null): void => {
       mountedRef.current && setIsSending(false);
 
-      onFailed && onFailed(result);
+      onFailed?.(result);
     },
     [onFailed, setIsSending, mountedRef]
   );
@@ -37,7 +37,7 @@ function TxButton ({ accountId, className = '', extrinsic: propsExtrinsic, icon,
     (result: SubmittableResult): void => {
       mountedRef.current && setIsSending(false);
 
-      onSuccess && onSuccess(result);
+      onSuccess?.(result);
     },
     [onSuccess, setIsSending, mountedRef]
   );
@@ -83,7 +83,7 @@ function TxButton ({ accountId, className = '', extrinsic: propsExtrinsic, icon,
         });
       });
 
-      onClick && onClick();
+      onClick?.();
     },
     [_onFailed, _onStart, _onSuccess, accountId, isUnsigned, mountedRef, onClick, onFailed, onSuccess, onUpdate, params, propsExtrinsic, queueExtrinsic, tx, withSpinner]
   );

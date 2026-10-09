@@ -27,7 +27,7 @@ interface Props {
   onClose?: () => void;
   openOnFocus?: boolean;
   placeholder?: string;
-  searchInput?: {autoFocus: boolean};
+  searchInput?: { autoFocus: boolean };
   value?: string[];
   withLabel?: boolean;
 }

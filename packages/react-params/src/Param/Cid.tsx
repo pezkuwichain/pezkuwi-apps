@@ -29,7 +29,7 @@ function Cid (props: Props): React.ReactElement<Props> {
       const value = fromIpfsCid(_value);
       const isValid = !!value;
 
-      onChange && onChange({
+      onChange?.({
         isValid,
         value
       });

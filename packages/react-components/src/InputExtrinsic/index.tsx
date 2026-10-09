@@ -38,7 +38,7 @@ function InputExtrinsic ({ className = '', defaultValue, filter, isDisabled, lab
       if (value !== newValue) {
         // set this via callback, since the we are setting a function (alternatively... we have issues)
         setValue((): SubmittableExtrinsicFunction<'promise'> => newValue);
-        onChange && onChange(newValue);
+        onChange?.(newValue);
       }
     },
     [onChange, value]

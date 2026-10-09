@@ -15,7 +15,7 @@ import { processHexMask } from './utils/dataProcessing.js';
 
 function extractInfo (info: Option<PezpalletBrokerPotentialRenewalRecord>, item: PezpalletBrokerPotentialRenewalId): PotentialRenewal | undefined {
   const unwrapped: PezpalletBrokerPotentialRenewalRecord | null = info.isSome ? info.unwrap() : null;
-  let mask: string[] = [];
+  let mask: string[];
   let task = '';
 
   if (!unwrapped) {

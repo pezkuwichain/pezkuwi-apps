@@ -20,7 +20,7 @@ function WarnBond ({ minBond, stakingInfo }: Props): React.ReactElement<Props> |
   const { t } = useTranslation();
 
   const isBelow = useMemo(
-    () => minBond && stakingInfo && stakingInfo.stakingLedger.active.unwrap().lt(minBond),
+    () => minBond && stakingInfo?.stakingLedger.active.unwrap().lt(minBond),
     [minBond, stakingInfo]
   );
 

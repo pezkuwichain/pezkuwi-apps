@@ -63,9 +63,9 @@ function combineEndpoints (endpoints: LinkOption[]): Group[] {
       const prov = { isLightClient: e.isLightClient, name: e.textBy, url: e.value };
 
       const isFavorite = isFavoriteChain(favoriteChains,
-        { chainName: e.text?.toString() ?? '',
+        { chainName: typeof e.text === 'string' ? e.text : '',
           paraId: e.paraId,
-          relay: e.textRelay?.toString() });
+          relay: typeof e.textRelay === 'string' ? e.textRelay : undefined });
 
       if (isFavorite && favoriteGroupIndex !== -1 && !e.isUnreachable) {
         const favGroup = result[favoriteGroupIndex];
@@ -106,7 +106,7 @@ function combineEndpoints (endpoints: LinkOption[]): Group[] {
 
   // Swap first two items in `networks` if first item is relay chain
   combinedEndpoints.forEach((r) => {
-    if (r.networks.length >= 2 && r.networks[0].isRelay && r.header?.toString().includes('teyrchains')) {
+    if (r.networks.length >= 2 && r.networks[0].isRelay && typeof r.header === 'string' && r.header.includes('teyrchains')) {
       [r.networks[0], r.networks[1]] = [r.networks[1], r.networks[0]];
     }
   });

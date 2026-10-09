@@ -186,7 +186,7 @@ function Fund ({ bestHash, bestNumber, className = '', isOngoing, leasePeriod, v
   );
 }
 
-interface IDissolveCrowdloan{
+interface IDissolveCrowdloan {
   isEnded?: boolean;
   paraId: ParaId;
   isDepositor: boolean;

@@ -23,8 +23,7 @@ function getTrackOptions (api: ApiPromise, specName: string, palletReferenda: st
         !includeBn ||
         includeBn.some((v) => v.eq(id))
       ) && (
-        !excludeBn ||
-        !excludeBn.some((v) => v.eq(id))
+        !excludeBn?.some((v) => v.eq(id))
       )
     )
     .map(({ id, info }): TrackOption => {

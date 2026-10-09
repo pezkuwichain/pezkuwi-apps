@@ -16,7 +16,7 @@ function useEraBlocksImpl (historyDepth?: BN, era?: BN): BN | undefined {
   const forcing = useCall<Forcing>(api.query.staking.forceEra);
 
   return useMemo(
-    () => (historyDepth && era && forcing && progress && progress.sessionLength.gt(BN_ONE))
+    () => (historyDepth && era && forcing && progress?.sessionLength.gt(BN_ONE))
       ? (
         forcing.isForceAlways
           ? progress.sessionLength

@@ -25,7 +25,7 @@ function ProposalDisplay ({ className = '', defaultValue, isDisabled, isError, l
         proposal = api.createType('Proposal', value);
       }
 
-      onChange && onChange({
+      onChange?.({
         isValid,
         value: proposal
       });

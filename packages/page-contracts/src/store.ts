@@ -53,12 +53,12 @@ class Store extends EventEmitter {
       const genesisHash = statics.api.genesisHash.toHex();
 
       store.each((json: CodeJson, key: string): void => {
-        if (json && json.genesisHash === genesisHash && key.startsWith(KEY_CODE)) {
+        if (json?.genesisHash === genesisHash && key.startsWith(KEY_CODE)) {
           this.addCode(key, json);
         }
       });
 
-      onLoaded && onLoaded();
+      onLoaded?.();
     } catch (error) {
       console.error('Unable to load code', error);
     }

@@ -89,10 +89,10 @@ function ExtrinsicDisplay ({ defaultArgs, defaultValue, filter, isDisabled, isEr
       try {
         method = extrinsic.fn(...values.map(({ value }) => value));
       } catch (error) {
-        onError && onError(error as Error);
+        onError?.(error as Error);
       }
     } else {
-      onError && onError(null);
+      onError?.(null);
     }
 
     onChange(method);

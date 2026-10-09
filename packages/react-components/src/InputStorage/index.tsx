@@ -35,7 +35,7 @@ function InputStorage ({ className = '', defaultValue, label, onChange, withLabe
       if (value !== newValue) {
         // set via callback
         setValue(() => newValue);
-        onChange && onChange(newValue);
+        onChange?.(newValue);
       }
     },
     [onChange, value]

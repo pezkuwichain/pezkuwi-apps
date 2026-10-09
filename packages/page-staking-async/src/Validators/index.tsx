@@ -69,7 +69,7 @@ function Overview ({ className = '', favorites, hasAccounts, hasQueries, minComm
   );
 
   useEffect((): void => {
-    toggleLedger && toggleLedger();
+    toggleLedger?.();
   }, [toggleLedger]);
 
   const isOwn = typeIndex === 0;

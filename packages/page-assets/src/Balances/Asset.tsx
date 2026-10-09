@@ -62,7 +62,7 @@ const BASE_BORDER = 0.125;
 const BORDER_TOP = `${BASE_BORDER * 3}rem solid var(--bg-page)`;
 const BORDER_RADIUS = `${BASE_BORDER * 4}rem`;
 
-const StyledTr = styled.tr<{isFirstItem: boolean; isLastItem: boolean}>`
+const StyledTr = styled.tr<{ isFirstItem: boolean; isLastItem: boolean }>`
   td {
     border-top: ${(props) => props.isFirstItem && BORDER_TOP};
     border-radius: 0rem !important;

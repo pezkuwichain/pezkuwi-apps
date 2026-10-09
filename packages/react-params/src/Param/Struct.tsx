@@ -29,7 +29,7 @@ function StructParam (props: Props): React.ReactElement<Props> {
         return;
       }
 
-      onChange && onChange({
+      onChange?.({
         isValid: values.reduce((result: boolean, { isValid }) => result && isValid, true),
         value: params.reduce((value: Record<string, unknown>, { name }, index): Record<string, unknown> => {
           value[name || 'unknown'] = values[index].value;

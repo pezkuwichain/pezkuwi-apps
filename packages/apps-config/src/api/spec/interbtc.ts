@@ -1,8 +1,6 @@
 // Copyright 2017-2026 @pezkuwi/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/* eslint-disable @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-assignment */
-
 import type { Observable } from 'rxjs';
 import type { ApiInterfaceRx } from '@pezkuwi/api/types';
 import type { DeriveBalancesAll } from '@pezkuwi/api-derive/types';
@@ -21,7 +19,6 @@ function balanceOf (number: number | string): U128 {
 }
 
 function defaultAccountBalance (): DeriveBalancesAll {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return {
     accountNonce: new BN(1),
     additional: [],

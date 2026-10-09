@@ -34,7 +34,6 @@ function formatKeys (keys: [ValidatorId, Keys][]): string {
 }
 
 function toHuman (value: Codec | Codec[]): unknown {
-  // eslint-disable-next-line @typescript-eslint/unbound-method
   return isFunction((value as Codec).toHuman)
     ? (value as Codec).toHuman()
     : Array.isArray(value)
@@ -65,7 +64,6 @@ export default function valueToText (type: string, value: Codec | undefined | nu
   }
 
   const renderedValue = (
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     ['Bytes', 'Raw', 'Option<Keys>', 'Keys'].includes(type) && isFunction(value.toU8a)
       ? u8aToHex(value.toU8a(true))
       // HACK Handle Keys as hex-only (this should go away once the node value is

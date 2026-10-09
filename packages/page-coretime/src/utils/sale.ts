@@ -185,7 +185,7 @@ const getPhaseConfiguration = (
 };
 
 export const getSaleParameters = (
-  { config, constants, salesInfo }: {salesInfo: RegionInfo, config: Pick<PezpalletBrokerConfigRecord, 'interludeLength' | 'leadinLength' | 'regionLength'>, constants: ChainConstants},
+  { config, constants, salesInfo }: { salesInfo: RegionInfo, config: Pick<PezpalletBrokerConfigRecord, 'interludeLength' | 'leadinLength' | 'regionLength'>, constants: ChainConstants },
   relayName: RelayName,
   lastCommittedTimeslice: number,
   chosenSaleNumber = -1

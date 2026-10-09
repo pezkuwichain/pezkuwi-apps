@@ -37,7 +37,6 @@ const useActiveNominators = () => {
       const exposedNominators = (await api.query.staking.erasStakersPaged.entries(currentEra)).map(([_, value]) => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
         return (value).unwrap().others.map((x) => x.who.toString());
       }).flat();
 

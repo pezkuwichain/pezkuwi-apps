@@ -56,7 +56,7 @@ function Sign ({ className = '' }: Props): React.ReactElement<Props> {
     setIsLocked(
       isInjected
         ? false
-        : (currentPair && currentPair.isLocked) || false
+        : (currentPair?.isLocked) || false
     );
     setSignature('');
     setSigner({ isUsable, signer: null });

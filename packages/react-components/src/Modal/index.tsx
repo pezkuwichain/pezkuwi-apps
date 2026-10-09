@@ -28,7 +28,7 @@ function ModalBase ({ children, className = '', header, onClose, size = 'medium'
   const { themeClassName } = useTheme();
 
   const listenKeyboard = useCallback((event: KeyboardEvent) => {
-    // eslint-disable-next-line deprecation/deprecation
+    // eslint-disable-next-line @typescript-eslint/no-deprecated
     if (event.key === 'Escape' || event.keyCode === 27) {
       onClose();
     }

@@ -28,7 +28,7 @@ enum Step {
   Account = 0,
   ETHAddress = 1,
   Sign = 2,
-  Claim = 3,
+  Claim = 3
 }
 
 const PRECLAIMS_LOADING = 'PRECLAIMS_LOADING';
@@ -105,7 +105,7 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
     setEthereumAddress(null);
     setPreclaimEthereumAddress(PRECLAIMS_LOADING);
 
-    if (!api.query.claims || !api.query.claims.preclaims) {
+    if (!api.query.claims?.preclaims) {
       return setPreclaimEthereumAddress(null);
     }
 

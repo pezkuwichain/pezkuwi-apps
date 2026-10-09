@@ -43,7 +43,7 @@ function groupLocks (t: (key: string, options?: { replace: Record<string, unknow
   return {
     maxBalance: bnMax(...locks.map(({ balance }) => balance).filter((b): b is Balance => !!b)),
     sorted: locks
-      .map((info): [Partial<DeriveDemocracyLock>, BN] => [info, info.unlockAt && info.unlockAt.gt(bestNumber) ? info.unlockAt.sub(bestNumber) : BN_ZERO])
+      .map((info): [Partial<DeriveDemocracyLock>, BN] => [info, info.unlockAt?.gt(bestNumber) ? info.unlockAt.sub(bestNumber) : BN_ZERO])
       .sort((a, b) => (a[0].referendumId || BN_ZERO).cmp(b[0].referendumId || BN_ZERO))
       .sort((a, b) => a[1].cmp(b[1]))
       .sort((a, b) => a[0].isFinished === b[0].isFinished ? 0 : (a[0].isFinished ? -1 : 1))

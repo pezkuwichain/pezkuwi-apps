@@ -22,7 +22,7 @@ function Hash256 ({ className = '', defaultValue, isDisabled, isError, label, na
       const value = registry.hash(u8a);
 
       setPlaceholder(u8aToHex(value));
-      onChange && onChange({
+      onChange?.({
         isValid: true,
         value
       });

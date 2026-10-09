@@ -12,7 +12,7 @@ import Amount from './Amount.js';
 function Moment ({ className = '', defaultValue, isDisabled, isError, label, onChange, onEnter, onEscape, registry, type, withLabel }: Props): React.ReactElement<Props> {
   const _onChange = useCallback(
     (value: RawParamOnChangeValue) =>
-      onChange && onChange(value),
+      onChange?.(value),
     [onChange]
   );
 

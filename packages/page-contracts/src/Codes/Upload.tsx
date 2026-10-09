@@ -97,7 +97,6 @@ function Upload ({ onClose }: Props): React.ReactElement {
                 : api.registry.createType('Balance', BN_ZERO),
               weight.weightV2,
               null,
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               { Upload: api.registry.createType('Raw', wasm) } as any,
               contractAbi?.constructors[constructorIndex]?.toU8a(params),
               ''

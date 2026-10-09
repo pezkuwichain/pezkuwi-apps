@@ -45,7 +45,7 @@ function useMembersImpl (collective: PalletColl): Result | undefined {
   const result = useCall(ids && ids.length !== 0 && api.query[collective].members.multi, [ids], OPT_MEM);
 
   return useMemo(
-    () => ids && ids.length === 0
+    () => ids?.length === 0
       ? { memberIds: [], memberRanks: [], members: [] }
       : result,
     [ids, result]

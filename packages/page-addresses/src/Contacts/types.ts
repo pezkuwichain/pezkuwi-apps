@@ -7,4 +7,4 @@ export interface SortedAddress { address: string; isFavorite: boolean, isVisible
 
 export interface SaveFile { address: string; isFavorite: boolean, name: string }
 
-export type FunInputFile = (e: React.ChangeEvent<HTMLInputElement>) => void
+export type FunInputFile = (e: React.ChangeEvent<HTMLInputElement>) => void;

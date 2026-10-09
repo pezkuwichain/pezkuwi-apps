@@ -24,7 +24,7 @@ function Row ({ index, isSelected, onSelect, slash: { era, isMine, slash: { othe
   const { api } = useApi();
 
   const _onSelect = useCallback(
-    () => onSelect && onSelect(index),
+    () => onSelect?.(index),
     [index, onSelect]
   );
 

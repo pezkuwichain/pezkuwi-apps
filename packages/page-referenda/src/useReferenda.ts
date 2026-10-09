@@ -89,7 +89,7 @@ function group (tracks: TrackDescription[], totalIssuance?: BN, referenda?: Refe
     }
 
     const trackInfo = tracks.find(({ id }) =>
-      id?.eq && id.eq(ref.info.asOngoing.track)
+      id?.eq?.(ref.info.asOngoing.track)
     );
 
     if (trackInfo) {
@@ -152,7 +152,7 @@ function useReferendaImpl (palletReferenda: PalletReferenda): [ReferendaGroup[],
 
   return useMemo(
     () => [
-      (ids && ids.length === 0)
+      (ids?.length === 0)
         ? [{ key: 'referenda', referenda: [] }]
         : group(tracks, totalIssuance, (referenda as Referendum[])),
       tracks

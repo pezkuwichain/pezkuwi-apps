@@ -12,7 +12,7 @@ const BrowserCheckAlert: React.FC = () => {
     const ua = navigator.userAgent;
 
     // Detect Firefox
-    const firefoxMatch = ua.match(/Firefox\/(\d+\.\d+)/);
+    const firefoxMatch = /Firefox\/(\d+\.\d+)/.exec(ua);
 
     if (firefoxMatch) {
       // Check for Firefox 145.0 specifically

@@ -6,7 +6,7 @@ import type { IFavoriteChainProps, IFavoriteChainsStorage } from './types.js';
 import { createWsEndpoints } from '@pezkuwi/apps-config';
 
 export const FAVORITE_CHAINS_KEY = 'pezkuwi-app-favorite-chains';
-const chainsConfig = createWsEndpoints((k, v) => v?.toString() || k);
+const chainsConfig = createWsEndpoints((k, v) => (typeof v === 'string' && v) || k);
 
 export const toggleFavoriteChain = (
   chainInfo: IFavoriteChainProps

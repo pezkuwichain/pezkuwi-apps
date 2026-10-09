@@ -2,10 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // Something is seriously going wrong here...
-/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 
 import CodeFlask from 'codeflask';
 import React, { useEffect, useRef, useState } from 'react';
@@ -58,7 +54,7 @@ function Editor ({ className = '', code, isValid, onEdit }: Props): React.ReactE
   }, []);
 
   useEffect((): void => {
-    editorRef.current && editorRef.current.updateCode(code);
+    editorRef.current?.updateCode(code);
   }, [code]);
 
   return (

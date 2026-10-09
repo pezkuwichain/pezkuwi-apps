@@ -12,7 +12,7 @@ function useIncrementImpl (defaultValue = 1): [number, () => void, (value: numbe
 
   const increment = useCallback(
     (): void => {
-      mountedRef.current && setValue((value: number) => ++value);
+      mountedRef.current && setValue((value: number) => value + 1);
     },
     [mountedRef]
   );

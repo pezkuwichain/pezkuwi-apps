@@ -94,7 +94,7 @@ function getKnown (api: ApiPromise): Known {
           : api.consts.system.maximumBlockWeight as Weight
       ).v2Weight
     ),
-    maxExtrinsic: api.consts.system.blockWeights && api.consts.system.blockWeights.perClass.normal.maxExtrinsic.isSome
+    maxExtrinsic: api.consts.system.blockWeights?.perClass.normal.maxExtrinsic.isSome
       ? bnWeight(
         convertWeight(
           api.consts.system.blockWeights.perClass.normal.maxExtrinsic.unwrap()

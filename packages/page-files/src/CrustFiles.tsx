@@ -53,7 +53,7 @@ const createOnDown = (f: SaveFile) => () => {
   // FileSaver.saveAs(createUrl(f), f.Name);
 };
 
-type FunInputFile = (e: React.ChangeEvent<HTMLInputElement>) => void
+type FunInputFile = (e: React.ChangeEvent<HTMLInputElement>) => void;
 
 const Noop = (): void => undefined;
 
@@ -76,7 +76,6 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
     // @ts-ignore
     // eslint-disable-next-line
     inputRef.current.webkitdirectory = dir;
-    // eslint-disable-next-line
     inputRef.current.multiple = dir;
     inputRef.current.click();
   }, [inputRef]);
@@ -111,7 +110,6 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
 
     // eslint-disable-next-line
     // @ts-ignore
-    // eslint-disable-next-line
     const isDirectory = e.target.webkitdirectory;
 
     if (!isDirectory) {
@@ -120,7 +118,6 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
     } else if (files.length >= 1) {
       // eslint-disable-next-line
       // @ts-ignore eslint-disable-next-line
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       const dirFiles: DirFile[] = [];
 
       for (let i = 0, count = files.length; i < count; i++) {
@@ -141,13 +138,13 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
 
   const _onImportResult = useCallback<(m: string, s?: ActionStatusBase['status']) => void>(
     (message, status = 'queued') => {
-      queueAction && queueAction({
+      queueAction?.({
         action: t('Import files'),
         message,
         status
       });
     },
-  [queueAction, t]
+    [queueAction, t]
   );
   const importInputRef = useRef<HTMLInputElement>(null);
   const _clickImport = useCallback(() => {
@@ -214,7 +211,7 @@ function CrustFiles ({ className }: Props): React.ReactElement<Props> {
   const _export = useCallback(() => {
     const blob = new Blob([JSON.stringify(wFiles.files)], { type: 'application/json; charset=utf-8' });
 
-    // eslint-disable-next-line deprecation/deprecation
+    // eslint-disable-next-line @typescript-eslint/no-deprecated
     FileSaver.saveAs(blob, 'files.json');
   }, [wFiles]);
 

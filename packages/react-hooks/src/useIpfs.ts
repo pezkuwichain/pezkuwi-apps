@@ -40,7 +40,7 @@ function extractLocalIpns (url: string): State {
   const dnsLink = ipfsPath.replace(LOCAL_IPNS, '');
   const linkParts = dnsLink.split('.');
   let ipnsChain: string | null = null;
-  let ipnsDomain: string | null = null;
+  let ipnsDomain: string;
 
   if (linkParts.length > 2) {
     ipnsChain = linkParts[0];

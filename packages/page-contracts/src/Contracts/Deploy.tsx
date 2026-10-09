@@ -108,7 +108,7 @@ function Deploy ({ codeHash, constructorIndex = 0, onClose, setConstructorIndex 
           tags: []
         });
 
-        onClose && onClose();
+        onClose?.();
       }
     },
     [api, name, onClose]

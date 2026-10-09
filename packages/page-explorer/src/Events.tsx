@@ -18,7 +18,7 @@ import Event from './Event.js';
 import { useTranslation } from './translate.js';
 
 const MAX_CACHE = 200;
-const blockCache = new Map<string, { author: AccountId | undefined; extrinsics: Vec<GenericExtrinsic<AnyTuple>>}>();
+const blockCache = new Map<string, { author: AccountId | undefined; extrinsics: Vec<GenericExtrinsic<AnyTuple>> }>();
 
 interface Props {
   className?: string;
@@ -81,8 +81,8 @@ function Events ({ className = '', emptyLabel, error, eventClassName, events, la
 
         if (!blockData) {
           const [{ author }, block] = await Promise.all([
-            await api.derive.chain.getHeader(blockHash),
-            await api.rpc.chain.getBlock(blockHash)
+            api.derive.chain.getHeader(blockHash),
+            api.rpc.chain.getBlock(blockHash)
           ]);
           const extrinsics = block.block.extrinsics;
 

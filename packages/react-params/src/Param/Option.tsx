@@ -41,7 +41,7 @@ function OptionDisplay ({ className = '', defaultValue: _defaultValue, isDisable
   );
 
   useEffect((): void => {
-    !isActive && onChange && onChange({
+    !isActive && onChange?.({
       isValid: true,
       value: null
     });
@@ -49,7 +49,7 @@ function OptionDisplay ({ className = '', defaultValue: _defaultValue, isDisable
 
   const _onChange = useCallback(
     (value: RawParamOnChangeValue) =>
-      onChange && onChange(
+      onChange?.(
         value.isValid && isU8a(value.value) && !withOptionActive && isActive
           ? { isValid: true, value: u8aConcat(OPT_PREFIX, value.value) }
           : value

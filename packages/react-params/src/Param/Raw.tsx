@@ -17,7 +17,7 @@ function Raw ({ className = '', defaultValue: { value }, isDisabled, isError, la
     (value: string): void => {
       const isValid = value.length !== 0;
 
-      onChange && onChange({
+      onChange?.({
         isValid,
         value
       });

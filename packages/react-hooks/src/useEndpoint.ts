@@ -9,7 +9,7 @@ import { createWsEndpoints } from '@pezkuwi/apps-config';
 
 import { createNamedHook } from './createNamedHook.js';
 
-const endpoints = createWsEndpoints((k, v) => v?.toString() || k);
+const endpoints = createWsEndpoints((k, v) => (typeof v === 'string' && v) || k);
 
 export function getEndpoint (apiUrl?: string): LinkOption | null {
   return endpoints.find(({ value }) => value === apiUrl) || null;

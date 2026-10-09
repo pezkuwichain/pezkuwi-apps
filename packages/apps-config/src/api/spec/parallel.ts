@@ -6,5 +6,4 @@ import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 import { typesBundleForPolkadot as typesBundleForPezkuwi } from '@parallel-finance/type-definitions';
 
 // External package types, cast to proper type for compatibility
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 export default ((typesBundleForPezkuwi as Record<string, unknown>).spec || {}) as Record<string, OverrideBundleDefinition>;

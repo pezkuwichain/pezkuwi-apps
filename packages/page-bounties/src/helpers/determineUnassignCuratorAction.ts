@@ -19,7 +19,7 @@ export function determineUnassignCuratorAction (roles: UserRole[], status: Pezpa
       actions.push('SlashCuratorMotion');
     }
 
-    if (roles.includes('User') && blocksUntilUpdate && blocksUntilUpdate.lt(BN_ZERO)) {
+    if (roles.includes('User') && blocksUntilUpdate?.lt(BN_ZERO)) {
       actions.push('SlashCuratorAction');
     }
   }

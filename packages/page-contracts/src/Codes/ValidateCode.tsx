@@ -1,8 +1,6 @@
 // Copyright 2017-2026 @pezkuwi/app-contracts authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/* eslint-disable camelcase */
-
 import type { Option } from '@pezkuwi/types';
 import type { PrefabWasmModule } from '@pezkuwi/types/interfaces';
 

@@ -9,8 +9,7 @@ import { createNamedHook } from './createNamedHook.js';
 
 function isRefClicked (refs: React.RefObject<HTMLDivElement>[], e: MouseEvent): boolean {
   return refs.some((r) =>
-    r.current &&
-    r.current.contains(e.target as HTMLElement)
+    r.current?.contains(e.target as HTMLElement)
   );
 }
 

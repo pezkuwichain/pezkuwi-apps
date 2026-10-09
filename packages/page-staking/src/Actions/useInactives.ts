@@ -25,7 +25,7 @@ interface ExtractStateParams {
   stashId: string;
   slashes: Option<SlashingSpans>[];
   nominees: string[];
-  activeEra: EraIndex| undefined;
+  activeEra: EraIndex | undefined;
   submittedIn: EraIndex;
   exposures: Exposure[];
   version: number | undefined;
@@ -188,8 +188,8 @@ function useInactivesImpl (stashId: string, nominees?: string[], eraExposure?: D
       api.queryMulti(
         [[api.query.staking.nominators, stashId] as QueryableStorageMultiArg<'promise'>]
           .concat(
-            nominees.map((id) => [api.query.staking.slashingSpans, id]))
-        , ([optNominators, ...slashingSpans]: [Option<Nominations>, ...(Option<SlashingSpans>)[]]): void => {
+            nominees.map((id) => [api.query.staking.slashingSpans, id])),
+        ([optNominators, ...slashingSpans]: [Option<Nominations>, ...(Option<SlashingSpans>)[]]): void => {
           setSubmittedIn(optNominators.unwrapOrDefault().submittedIn);
           setSlashes(slashingSpans);
         })
@@ -200,7 +200,7 @@ function useInactivesImpl (stashId: string, nominees?: string[], eraExposure?: D
     }
 
     return (): void => {
-      unsub && unsub();
+      unsub?.();
     };
   }, [api, indexes, mountedRef, nominees, stashId]);
 
@@ -216,8 +216,8 @@ function useInactivesImpl (stashId: string, nominees?: string[], eraExposure?: D
       api.queryMulti(
         api.query.staking.erasStakers
           ? nominees.map((id) => [api.query.staking.erasStakers, [indexes?.activeEra, id]])
-          : nominees.map((id) => [api.query.staking.stakers, id])
-        , (exposures: Exposure[]): void => setExposures(exposures))
+          : nominees.map((id) => [api.query.staking.stakers, id]),
+        (exposures: Exposure[]): void => setExposures(exposures))
         .then((_unsub): void => {
           unsub = _unsub;
         })
@@ -225,7 +225,7 @@ function useInactivesImpl (stashId: string, nominees?: string[], eraExposure?: D
     }
 
     return (): void => {
-      unsub && unsub();
+      unsub?.();
     };
   }, [api, indexes, mountedRef, nominees, stashId, version]);
 

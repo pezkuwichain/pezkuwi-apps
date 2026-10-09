@@ -56,10 +56,10 @@ const OPT_MULTI = {
     counterForNominators,
     counterForValidators,
     historyDepth,
-    maxNominatorsCount: optMaxNominatorsCount && optMaxNominatorsCount.isSome
+    maxNominatorsCount: optMaxNominatorsCount?.isSome
       ? optMaxNominatorsCount.unwrap()
       : undefined,
-    maxValidatorsCount: optMaxValidatorsCount && optMaxValidatorsCount.isSome
+    maxValidatorsCount: optMaxValidatorsCount?.isSome
       ? optMaxValidatorsCount.unwrap()
       : undefined,
     minNominatorBond,
@@ -171,7 +171,7 @@ function extractSingle (api: ApiPromise, allAccounts: string[], derive: DeriveSt
       commissionPer: validatorPrefs.commission.unwrap().toNumber() / 10_000_000,
       exposure: exposureEraStakers,
       isActive: !skipRewards,
-      isBlocking: !!(validatorPrefs.blocked && validatorPrefs.blocked.isTrue),
+      isBlocking: !!(validatorPrefs.blocked?.isTrue),
       isElected: !isWaitingDerive(derive) && derive.nextElected.some((e) => e.eq(accountId)),
       isFavorite: favorites.includes(key),
       isNominating: (exposureEraStakers.others || []).reduce((isNominating, indv): boolean => {

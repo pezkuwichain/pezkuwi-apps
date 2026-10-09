@@ -21,7 +21,7 @@ function RemoveABI ({ code, onClose, onRemove }: Props): React.ReactElement<Prop
 
   const _onRemove = useCallback(
     (): void => {
-      onClose && onClose();
+      onClose?.();
       onRemove();
     },
     [onClose, onRemove]

@@ -333,7 +333,7 @@ function Account ({ allSlashes, className = '', info, isDisabled, minCommission,
                         onClick={toggleRebond}
                       />
                       <Menu.Item
-                        isDisabled={!isOwnController || !stakingAccount?.redeemable || !stakingAccount.redeemable.gtn(0)}
+                        isDisabled={!isOwnController || !stakingAccount?.redeemable?.gtn(0)}
                         label={t('Withdraw unbonded funds')}
                         onClick={withdrawFunds}
                       />

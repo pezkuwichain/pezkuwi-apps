@@ -33,7 +33,7 @@ function InputRpc ({ className = '', defaultValue, label, onChange, withLabel }:
   const [value, setValue] = useState<DefinitionRpcExt>((): DefinitionRpcExt => defaultValue);
 
   useEffect((): void => {
-    onChange && onChange(value);
+    onChange?.(value);
   }, [onChange, value]);
 
   const _onMethodChange = useCallback(

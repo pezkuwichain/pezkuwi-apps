@@ -8,7 +8,7 @@ import { AddressMini, Card, styled } from '@pezkuwi/react-components';
 import { useTranslation } from './translate.js';
 import usePezkuwiPreclaims from './usePezkuwiPreclaims.js';
 
-export interface Props{
+export interface Props {
   className?: string;
 }
 

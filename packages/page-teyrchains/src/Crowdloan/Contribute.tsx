@@ -57,7 +57,7 @@ function Contribute ({ cap, className, needsSignature, paraId, raised }: Props):
 
   const remaining = cap.sub(raised);
   const isAmountBelow = !amount || amount.lt(api.consts.crowdloan.minContribution as BalanceOf);
-  const isAmountOver = !!(amount && amount.gt(remaining));
+  const isAmountOver = !!(amount?.gt(remaining));
   const isAmountError = isAmountBelow || isAmountOver;
   const minContribution = api.consts.crowdloan.minContribution as BlockNumber;
 

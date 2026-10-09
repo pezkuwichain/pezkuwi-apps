@@ -11,7 +11,7 @@ function isElectron () {
     return true;
   }
 
-  return navigator?.userAgent?.indexOf('Electron') >= 0;
+  return !!navigator?.userAgent?.includes('Electron');
 }
 
 export function getEnvironment (): Environment {

@@ -42,7 +42,7 @@ function Message ({ className = '', index, lastResult, message, onSelect }: Prop
   const { t } = useTranslation();
 
   const _onSelect = useCallback(
-    () => onSelect && onSelect(index),
+    () => onSelect?.(index),
     [index, onSelect]
   );
 

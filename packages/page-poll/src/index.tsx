@@ -90,7 +90,7 @@ function PollApp ({ basePath, className }: Props): React.ReactElement<Props> {
   ];
   const hasValue = opt10m || opt100m || opt1b || opt10b;
 
-  /* eslint-disable react/jsx-max-props-per-line */
+  /* eslint-disable @stylistic/jsx-max-props-per-line */
 
   return (
     <StyledMain className={className}>

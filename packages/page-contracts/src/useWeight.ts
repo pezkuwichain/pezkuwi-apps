@@ -35,7 +35,7 @@ function useWeightImpl (): UseWeight {
   const [isEmpty, setIsEmpty] = useState(false);
 
   const setMegaGas = useCallback(
-    (value?: BN | undefined) =>
+    (value?: BN) =>
       _setMegaGas(value || convertWeight(
         api.consts.system.blockWeights
           ? api.consts.system.blockWeights.maxBlock
@@ -44,7 +44,7 @@ function useWeightImpl (): UseWeight {
     [api]
   );
   const setMegaRefTime = useCallback(
-    (value?: BN | undefined) =>
+    (value?: BN) =>
       _setMegaRefTime(
         value || api.consts.system.blockWeights
           ? api.consts.system.blockWeights.perClass.normal.maxExtrinsic.unwrapOrDefault().refTime.toBn().div(BN_MILLION).div(BN_TEN)
@@ -53,7 +53,7 @@ function useWeightImpl (): UseWeight {
     [api]
   );
   const setProofSize = useCallback(
-    (value?: BN | undefined) =>
+    (value?: BN) =>
       _setProofSize(
         value || api.consts.system.blockWeights
           ? api.consts.system.blockWeights.perClass.normal.maxExtrinsic.unwrapOrDefault().proofSize.toBn()

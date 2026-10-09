@@ -22,14 +22,14 @@ export function normalizeMetadataLink (link?: string): string {
   }
 
   // handle V0 CID
-  const matchCidV0 = link.match(/Qm[A-Za-z0-9]{44}(?![A-Za-z0-9])/);
+  const matchCidV0 = /Qm[A-Za-z0-9]{44}(?![A-Za-z0-9])/.exec(link);
 
   if (matchCidV0 !== null) {
     return matchCidV0[0];
   }
 
   // handle V1 CID
-  const matchCidV1 = link.match(/[a-z0-9]{59}(?![A-Za-z0-9])/);
+  const matchCidV1 = /[a-z0-9]{59}(?![A-Za-z0-9])/.exec(link);
 
   if (matchCidV1 !== null) {
     return matchCidV1[0];

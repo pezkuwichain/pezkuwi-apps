@@ -58,7 +58,6 @@ async function sendRpc (api: ApiPromise, queueSetTxStatus: QueueTxMessageSetStat
   if (rpc) {
     queueSetTxStatus(id, 'sending');
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const { error, result, status } = await submitRpc(api, rpc, values);
 
     queueSetTxStatus(id, status, result, error);

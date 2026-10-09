@@ -487,7 +487,7 @@ function createBalanceItems (formatIndex: number, lookup: Record<string, string>
           </div>
         </React.Fragment>
       );
-    } else if (bestNumber && votingOf && votingOf.isDirect) {
+    } else if (bestNumber && votingOf?.isDirect) {
       const { prior: [unlockAt, balance] } = votingOf.asDirect;
 
       balance.gt(BN_ZERO) && unlockAt.gt(BN_ZERO) && allItems.push(

@@ -70,7 +70,7 @@ function KeyValueArray ({ className = '', defaultValue, isDisabled, isError, lab
         setPlaceholder(t('click to select or drag and drop JSON key/value (hex-encoded) file'));
       }
 
-      onChange && onChange(encoded);
+      onChange?.(encoded);
     },
     [onChange, t]
   );

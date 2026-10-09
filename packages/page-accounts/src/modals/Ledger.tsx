@@ -3,7 +3,7 @@
 
 // This is for the use of `Ledger`
 //
-/* eslint-disable deprecation/deprecation */
+/* eslint-disable @typescript-eslint/no-deprecated */
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { Ledger, LedgerGeneric } from '@pezkuwi/hw-ledger';

@@ -30,7 +30,7 @@ function AddressToggle ({ address, className = '', filter, isHidden, noToggle, o
   );
 
   const _onClick = useCallback(
-    () => onChange && onChange(!value),
+    () => onChange?.(!value),
     [onChange, value]
   );
 

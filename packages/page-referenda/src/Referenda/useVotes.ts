@@ -21,7 +21,7 @@ const OPT_ACCOUNTID = {
 const OPT_VOTES = {
   transform: ([[params], votes]: [[[[BN, AccountId][]]], Option<PezpalletRankedCollectiveVoteRecord>[]]): Record<string, PezpalletRankedCollectiveVoteRecord> =>
     params.reduce<Record<string, PezpalletRankedCollectiveVoteRecord>>((all, [, a], i) => {
-      if (votes[i] && votes[i].isSome) {
+      if (votes[i]?.isSome) {
         all[a.toString()] = votes[i].unwrap();
       }
 

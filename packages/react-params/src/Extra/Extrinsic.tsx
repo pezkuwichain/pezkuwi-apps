@@ -25,7 +25,7 @@ interface Props {
 function ExtrinsicDisplay ({ className = '', defaultArgs, defaultValue, isDisabled, isError, isPrivate, label, onChange, onEnter, onEscape, withLabel }: Props): React.ReactElement<Props> {
   const _onChange = useCallback(
     (value?: SubmittableExtrinsic<'promise'>) =>
-      onChange && onChange({
+      onChange?.({
         isValid: !!value,
         value
       }),

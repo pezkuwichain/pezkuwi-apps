@@ -39,7 +39,7 @@ interface State {
 
 const EMPTY_HEADER: [React.ReactNode?, string?, number?][] = [['...', 'start', 6]];
 
-function transformResult ([[runtimeVersion, events, blockWeight], getBlock, getHeader]: [[RuntimeVersionPartial, EventRecord[] | null, PezframeSupportDispatchPerDispatchClassWeight|null], SignedBlock, HeaderExtended?]): State {
+function transformResult ([[runtimeVersion, events, blockWeight], getBlock, getHeader]: [[RuntimeVersionPartial, EventRecord[] | null, PezframeSupportDispatchPerDispatchClassWeight | null], SignedBlock, HeaderExtended?]): State {
   return {
     blockWeight,
     events: events?.map((record, index) => ({
@@ -64,7 +64,7 @@ function BlockByHash ({ className = '', error, value }: Props): React.ReactEleme
   const [isVersionCurrent, maxBlockWeight] = useMemo(
     () => [
       !!runtimeVersion && api.runtimeVersion.specName.eq(runtimeVersion.specName) && api.runtimeVersion.specVersion.eq(runtimeVersion.specVersion),
-      api.consts.system.blockWeights && api.consts.system.blockWeights.maxBlock && convertWeight(api.consts.system.blockWeights.maxBlock).v2Weight
+      api.consts.system.blockWeights?.maxBlock && convertWeight(api.consts.system.blockWeights.maxBlock).v2Weight
     ],
     [api, runtimeVersion]
   );
@@ -133,9 +133,9 @@ function BlockByHash ({ className = '', error, value }: Props): React.ReactEleme
               setState((prev) => ({
                 ...prev,
                 // Type assertion needed due to ArrayBufferLike vs ArrayBuffer in Hash type
-                nextBlockHash: header.hash as Hash
+                nextBlockHash: header.hash
               }));
-              unsub && unsub();
+              unsub?.();
             }
           }).then((_unsub) => {
             unsub = _unsub;
@@ -149,7 +149,7 @@ function BlockByHash ({ className = '', error, value }: Props): React.ReactEleme
       });
 
     return (): void => {
-      unsub && unsub();
+      unsub?.();
     };
   }, [api, getHeader?.number, mountedRef]);
 

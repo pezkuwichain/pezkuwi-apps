@@ -100,7 +100,7 @@ function BaseBytes ({ asHex, children, className = '', defaultValue: { value }, 
         value = compactAddLength(value);
       }
 
-      onChange && onChange({
+      onChange?.({
         isValid,
         value: asHex
           ? u8aToHex(value)

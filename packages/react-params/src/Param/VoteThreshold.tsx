@@ -28,7 +28,7 @@ export const textMap = options.reduce((textMap, { text, value }): TextMap => {
 function VoteThresholdParam ({ className = '', defaultValue: { value }, isDisabled, isError, label, onChange, withLabel }: Props): React.ReactElement<Props> {
   const _onChange = useCallback(
     (value: number) =>
-      onChange && onChange({
+      onChange?.({
         isValid: true,
         value
       }),
@@ -36,7 +36,6 @@ function VoteThresholdParam ({ className = '', defaultValue: { value }, isDisabl
   );
 
   const defaultValue = useMemo(
-    // eslint-disable-next-line @typescript-eslint/unbound-method
     () => isFunction((value as BN).toNumber)
       ? (value as BN).toNumber()
       : bnToBn(value as number).toNumber(),

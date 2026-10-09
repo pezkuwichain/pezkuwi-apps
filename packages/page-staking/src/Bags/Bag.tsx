@@ -42,7 +42,7 @@ function Bag ({ bagLower, bagUpper, info, nodesOwn }: Props): React.ReactElement
 
   useEffect((): void => {
     info && nodesOwn &&
-      setHeadId(([, trigger]) => [info.head.unwrapOr(null), ++trigger]);
+      setHeadId(([, trigger]) => [info.head.unwrapOr(null), trigger + 1]);
   }, [info, nodesOwn]);
 
   useEffect((): void => {

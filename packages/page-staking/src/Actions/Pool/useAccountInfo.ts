@@ -21,13 +21,14 @@ function useAccountInfoImpl (accountId: string): AccountInfo | null {
   const member = useCall(api.query.nominationPools.poolMembers, [accountId], OPT_DEL);
 
   useEffect((): void => {
-    member &&
+    if (member) {
       api.call.nominationPoolsApi
         ?.pendingRewards(accountId)
         .then((claimable) =>
           isMountedRef.current && setState({ claimable, member })
         )
         .catch(console.error);
+    }
   }, [accountId, member, api, isMountedRef]);
 
   return state;

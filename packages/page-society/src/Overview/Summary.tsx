@@ -25,7 +25,7 @@ function Summary ({ className = '', info, payoutTotal }: Props): React.ReactElem
   const bestNumber = useBestNumber();
 
   const pot = useMemo(
-    () => info && info.pot.gtn(0)
+    () => info?.pot.gtn(0)
       ? info.pot
       : null,
     [info]

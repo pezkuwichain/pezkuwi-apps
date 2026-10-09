@@ -93,7 +93,7 @@ export interface ApiStats {
 
 export interface PayWithAsset {
   isDisabled: boolean;
-  assetOptions: {text: string, value: string}[];
+  assetOptions: { text: string, value: string }[];
   onChange: (assetId: BN, cb?: () => void) => void;
   selectedFeeAsset: AssetInfoComplete | null;
 }

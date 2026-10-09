@@ -100,7 +100,7 @@ function DayItem ({ className, item: { blockNumber, date, info, type }, showAllE
                         : ['teyrchainAuction'].includes(type)
                           ? createLink('teyrchains/auction', t('via Teyrchains/Auction'))
                           : undefined;
-      let s = '';
+      let s: string;
 
       switch (type) {
         case 'councilElection':

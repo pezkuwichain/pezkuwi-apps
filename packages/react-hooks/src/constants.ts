@@ -4,8 +4,8 @@
 export const AddressIdentityOtherDiscordKey = 'Discord';
 
 export enum CoreTimeTypes {
-  'Reservation',
-  'Lease',
+  Reservation,
+  Lease,
   'Bulk Coretime',
   'On Demand'
 }

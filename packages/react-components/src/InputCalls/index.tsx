@@ -29,7 +29,7 @@ function InputCalls ({ className, label, onChange, withLabel }: Props): React.Re
   const [value, setValue] = useState<DefinitionCallNamed | null>(() => defaultValue);
 
   useEffect((): void => {
-    value && onChange && onChange(value);
+    value && onChange?.(value);
   }, [onChange, value]);
 
   const _onMethodChange = useCallback(

@@ -161,7 +161,7 @@ function Developer ({ className = '', onStatusChange }: Props): React.ReactEleme
   const typesHasNoEntries = Object.keys(types).length === 0;
 
   // Trans component
-  /* eslint-disable react/jsx-max-props-per-line */
+  /* eslint-disable @stylistic/jsx-max-props-per-line */
 
   return (
     <StyledDiv className={className}>

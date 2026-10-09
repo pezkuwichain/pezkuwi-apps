@@ -33,7 +33,7 @@ export function createMenuGroup (key: string, items: (React.ReactNode | false | 
 export type AccountIdIsh = AccountId | AccountIndex | Address | string | Uint8Array | null;
 
 export function downloadAccount ({ json, pair }: CreateResult): void {
-  // eslint-disable-next-line deprecation/deprecation
+  // eslint-disable-next-line @typescript-eslint/no-deprecated
   FileSaver.saveAs(
     new Blob([JSON.stringify(json)], { type: 'application/json; charset=utf-8' }),
     `${pair.address}.json`

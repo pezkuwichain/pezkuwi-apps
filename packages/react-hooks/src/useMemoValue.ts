@@ -50,7 +50,7 @@ export function getMemoValue <T> (ref: Ref<T>, value: T): T {
     const stringified = stringify({ value });
 
     // no previous or the stringified result is different
-    if (!ref.current || ref.current.stringified !== stringified) {
+    if (ref.current?.stringified !== stringified) {
       ref.current = { stringified, value };
     }
   }

@@ -18,7 +18,7 @@ function useMemberInfoImpl (accountId: string): MemberInfo | undefined {
     () => depositOf && {
       accountId,
       deposit: depositOf.unwrapOr(null),
-      isUpForKicking: upForKicking && upForKicking.isTrue,
+      isUpForKicking: upForKicking?.isTrue,
       retiringAt: retiringAt?.unwrapOr(null)
     },
     [accountId, depositOf, retiringAt, upForKicking]

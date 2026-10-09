@@ -7,7 +7,7 @@ import React, { useEffect } from 'react';
 
 function Null ({ onChange }: Props): React.ReactElement<Props> | null {
   useEffect((): void => {
-    onChange && onChange({
+    onChange?.({
       isValid: true,
       value: null
     });

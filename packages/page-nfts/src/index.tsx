@@ -39,7 +39,7 @@ function NftApp ({ basePath, className }: Props): React.ReactElement<Props> {
   ]);
 
   const hidden = useMemo(
-    () => (hasAccounts && infos && infos.some(({ details, metadata }) => !!(details && metadata)))
+    () => (hasAccounts && infos?.some(({ details, metadata }) => !!(details && metadata)))
       ? []
       : ['my-nfts'],
     [hasAccounts, infos]

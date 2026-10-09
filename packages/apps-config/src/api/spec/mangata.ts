@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // structs need to be in order
-/* eslint-disable sort-keys, @typescript-eslint/no-unsafe-assignment */
 
 import type { Observable } from 'rxjs';
 import type { ApiInterfaceRx } from '@pezkuwi/api/types';
@@ -22,7 +21,6 @@ function balanceOf (number: number | string): U128 {
 }
 
 function defaultAccountBalance (): DeriveBalancesAll {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return {
     accountNonce: new BN(1),
     additional: [],
@@ -54,7 +52,6 @@ export function getBalance (
           return {
             ...defaultAccountBalance(),
             accountId: api.registry.createType('AccountId', account),
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
             accountNonce: systemAccount.nonce,
             availableBalance: api.registry.createType('Balance', data.free.sub(data.frozen)),
             freeBalance: data.free,

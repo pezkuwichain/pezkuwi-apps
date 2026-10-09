@@ -20,7 +20,7 @@ interface Props {
 }
 
 // TODO-MOONBEAM: update NetworkSpecsStruct in @pezkuwi/ui-settings/types
-interface NetworkSpecsStructWithType extends NetworkSpecsStruct{
+interface NetworkSpecsStructWithType extends NetworkSpecsStruct {
   chainType: ChainType
 }
 

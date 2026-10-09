@@ -42,7 +42,7 @@ interface Props<Option extends DropdownItemProps> {
 
 export type IDropdown<Option extends DropdownItemProps> = React.ComponentType<Props<Option>> & {
   Header: React.ComponentType<{ content: React.ReactNode }>;
-}
+};
 
 function DropdownBase<Option extends DropdownItemProps> ({ allowAdd = false, children, className = '', defaultValue, dropdownClassName, isButton, isDisabled, isError, isFull, isMultiple, label, labelExtra, onAdd, onBlur, onChange, onClose, onSearch, options, placeholder, renderLabel, searchInput, tabIndex, transform, value, withEllipsis, withLabel }: Props<Option>): React.ReactElement<Props<Option>> {
   const lastUpdate = useRef<string>('');
@@ -57,7 +57,7 @@ function DropdownBase<Option extends DropdownItemProps> ({ allowAdd = false, chi
 
         setStored(value);
 
-        onChange && onChange(
+        onChange?.(
           transform
             ? transform(value)
             : value
@@ -73,7 +73,7 @@ function DropdownBase<Option extends DropdownItemProps> ({ allowAdd = false, chi
 
   const _onAdd = useCallback(
     (_: React.SyntheticEvent<HTMLElement>, { value }: DropdownProps): void =>
-      onAdd && onAdd(value),
+      onAdd?.(value),
     [onAdd]
   );
 

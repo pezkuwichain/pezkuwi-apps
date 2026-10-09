@@ -3,7 +3,7 @@
 
 // This is for the use of `Ledger`
 //
-/* eslint-disable deprecation/deprecation */
+/* eslint-disable @typescript-eslint/no-deprecated */
 
 import type { ApiPromise } from '@pezkuwi/api';
 import type { SignerOptions } from '@pezkuwi/api/submittable/types';
@@ -103,7 +103,7 @@ async function fakeSignForChopsticks (api: ApiPromise, tx: SubmittableExtrinsic<
 }
 
 async function signAndSend (queueSetTxStatus: QueueTxMessageSetStatus, currentItem: QueueTx, tx: SubmittableExtrinsic<'promise'>, pairOrAddress: KeyringPair | string, options: Partial<SignerOptions>, api: ApiPromise, isMockSign: boolean): Promise<void> {
-  currentItem.txStartCb && currentItem.txStartCb();
+  currentItem.txStartCb?.();
 
   try {
     if (!isMockSign) {
@@ -123,7 +123,7 @@ async function signAndSend (queueSetTxStatus: QueueTxMessageSetStatus, currentIt
     console.error('signAndSend: error:', error);
     queueSetTxStatus(currentItem.id, 'error', {}, error as Error);
 
-    currentItem.txFailedCb && currentItem.txFailedCb(error as Error);
+    currentItem.txFailedCb?.(error as Error);
   }
 }
 
@@ -157,7 +157,6 @@ async function wrapTx (api: ApiPromise, currentItem: QueueTx, { isMultiCall, mul
 
   if (multiRoot) {
     const multiModule = api.tx.multisig ? 'multisig' : 'utility';
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const [info, { weight }] = await Promise.all([
       api.query[multiModule].multisigs<Option<Multisig>>(multiRoot, tx.method.hash),
       tx.paymentInfo(multiRoot) as Promise<{ weight: any }>
@@ -176,7 +175,6 @@ async function wrapTx (api: ApiPromise, currentItem: QueueTx, { isMultiCall, mul
     tx = isMultiCall
       ? api.tx[multiModule].asMulti.meta.args.length === 5
         // We are doing toHex here since we have a Vec<u8> input
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         ? api.tx[multiModule].asMulti(threshold, others as any, timepoint, tx.method.toHex(), weight)
         : api.tx[multiModule].asMulti.meta.args.length === 6
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -186,7 +184,6 @@ async function wrapTx (api: ApiPromise, currentItem: QueueTx, { isMultiCall, mul
           // @ts-ignore
           : api.tx[multiModule].asMulti(threshold, others as any, timepoint, tx.method)
       : api.tx[multiModule].approveAsMulti.meta.args.length === 5
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         ? api.tx[multiModule].approveAsMulti(threshold, others as any, timepoint, tx.method.hash, weight)
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
@@ -276,7 +273,7 @@ function TxSigned ({ className, currentItem, isQueueSubmit, queueSize, requestAd
   }, [api, currentItem, senderInfo]);
 
   const _addQrSignature = useCallback(
-    ({ signature }: { signature: string }) => qrResolve && qrResolve({
+    ({ signature }: { signature: string }) => qrResolve?.({
       id: ++qrId,
       signature: signature as HexString
     }),

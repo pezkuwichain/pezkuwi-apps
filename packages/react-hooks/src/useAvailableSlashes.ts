@@ -57,7 +57,7 @@ function useAvailableSlashesImpl (apiOverride?: ApiPromise): [BN, PezpalletStaki
     }
 
     return (): void => {
-      unsub && unsub();
+      unsub?.();
     };
   }, [api, earliestSlash, indexes, mountedRef]);
 

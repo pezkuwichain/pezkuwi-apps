@@ -53,7 +53,7 @@ export interface IAhOutput {
   finalizedBlock: number,
   staking: {
     currentEra: number,
-    activeEra: {index: number, start: string, duration?: string},
+    activeEra: { index: number, start: string, duration?: string },
     erasStartSessionIndex?: number,
     bondedEras: Vec<ITuple<[u32, u32]>>,
     unprunedEras: string,
@@ -76,7 +76,7 @@ export interface IAhOutput {
     phase: string,
     round: number,
     snapshotRange: string[]
-    queuedScore: string|null,
+    queuedScore: string | null,
     signedSubmissions: number
   },
   bagsList?: {
@@ -309,7 +309,6 @@ const commandCenterHandler = async (
     const parsedQueuedScore = ahApi.createType('Option<SpNposElectionsElectionScore>', queuedScore);
     const formattedQueuedScore = parsedQueuedScore.isSome
       ? (() => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const score = parsedQueuedScore.unwrap() as any;
         const minimalStake = score.minimalStake?.toString() || '0';
         const formattedMinStake = formatBalance(minimalStake, { forceUnit: '-', withSi: true });
@@ -400,11 +399,11 @@ function CommandCenter ({ ahApi: initialAhApi, ahEndPoints, isRelayChain, rcApi:
   const [rcEvents, setRcEvents] = useState<EnhancedEvent[]>([]);
   const [ahEvents, setAhEvents] = useState<EnhancedEvent[]>([]);
 
-  const [rcUrl, setRcUrl] = useState<string|undefined>(undefined);
-  const [ahUrl, setAhUrl] = useState<string|undefined>(undefined);
+  const [rcUrl, setRcUrl] = useState<string | undefined>(undefined);
+  const [ahUrl, setAhUrl] = useState<string | undefined>(undefined);
 
-  const [ahApi, setAhApi] = useState<ApiPromise|undefined>(initialAhApi);
-  const [rcApi, setRcApi] = useState<ApiPromise|undefined>(initialRcApi);
+  const [ahApi, setAhApi] = useState<ApiPromise | undefined>(initialAhApi);
+  const [rcApi, setRcApi] = useState<ApiPromise | undefined>(initialRcApi);
 
   const [isLoadingHistory, setIsLoadingHistory] = useState(false);
   const [rcLowestBlock, setRcLowestBlock] = useState<number | null>(null);

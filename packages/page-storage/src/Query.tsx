@@ -30,7 +30,7 @@ interface CacheInstance {
   refresh: (swallowErrors: boolean) => React.ComponentType<any>;
 }
 
-const cache: CacheInstance[] = [];
+const cache = new Map<number, CacheInstance>();
 
 function keyToName (isConst: boolean, _key: Uint8Array | QueryableStorageEntry<'promise'> | ConstValue): string {
   if (isConst) {
@@ -83,7 +83,9 @@ function createComponent (type: string, Component: React.ComponentType<any>, def
 function getCachedComponent (registry: Registry, query: QueryTypes): CacheInstance {
   const { blockHash, id, isConst, key, params = [] } = query as StorageModuleQuery;
 
-  if (!cache[id]) {
+  let instance = cache.get(id);
+
+  if (!instance) {
     let renderHelper;
     let type: string;
 
@@ -116,7 +118,7 @@ function getCachedComponent (registry: Registry, query: QueryTypes): CacheInstan
           params: isEntries
             ? [key.entries, ...values]
             : blockHash
-              // eslint-disable-next-line deprecation/deprecation
+              // eslint-disable-next-line @typescript-eslint/no-deprecated
               ? [key.at, blockHash, ...values]
               : [key, ...values],
           withIndicator: true
@@ -135,10 +137,11 @@ function getCachedComponent (registry: Registry, query: QueryTypes): CacheInstan
       defaultProps
     );
 
-    cache[query.id] = createComponent(type, Component, defaultProps, renderHelper);
+    instance = createComponent(type, Component, defaultProps, renderHelper);
+    cache.set(id, instance);
   }
 
-  return cache[id];
+  return instance;
 }
 
 function Query ({ className = '', onRemove, value }: Props): React.ReactElement<Props> | null {
@@ -158,7 +161,7 @@ function Query ({ className = '', onRemove, value }: Props): React.ReactElement<
 
   const _onRemove = useCallback(
     (): void => {
-      delete cache[value.id];
+      cache.delete(value.id);
 
       onRemove(value.id);
     },

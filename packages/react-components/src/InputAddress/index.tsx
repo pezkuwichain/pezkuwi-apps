@@ -280,7 +280,7 @@ class InputAddress extends React.PureComponent<Props, State> {
 
     !filter && setLastValue(type, address);
 
-    onChange && onChange(
+    onChange?.(
       !!address && (this.hasValue(address) || (type === 'allPlus' && isAddress(address)))
         ? transformToAccountId(address)
         : null

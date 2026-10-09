@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // structs need to be in order
-/* eslint-disable sort-keys */
 
 import type { Observable } from 'rxjs';
 import type { ApiInterfaceRx } from '@pezkuwi/api/types';
@@ -52,7 +51,6 @@ function createHeaderExtended (
   api: ApiInterfaceRx
 ): HeaderExtended {
   // HeaderBase is dynamically created at runtime, so we need type assertions
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const HeaderBase = registry.createClass('Header') as any;
 
   class SubHeaderExtended extends HeaderBase {

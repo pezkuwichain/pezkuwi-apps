@@ -47,7 +47,7 @@ class ErrorBoundary extends React.Component<Props> {
   public override componentDidCatch (error: Error): void {
     const { doThrow, onError } = this.props;
 
-    onError && onError();
+    onError?.();
 
     if (doThrow) {
       throw error;

@@ -34,8 +34,8 @@ function Workload ({ api, config, core, workload, workplan }: Props): React.Reac
   const { currentRegion, status } = useBrokerContext();
 
   const currentTimeSlice = useMemo(() =>
-    status?.lastTimeslice ?? 0
-  , [status]);
+    status?.lastTimeslice ?? 0,
+  [status]);
 
   const regionInfo = useRegions(api);
   const regionOwnerInfo: RegionInfo | undefined = useMemo(() => regionInfo?.find((v) => v.core === core && v.start <= currentTimeSlice && v.end > currentTimeSlice), [regionInfo, core, currentTimeSlice]);

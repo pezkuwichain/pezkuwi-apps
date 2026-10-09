@@ -35,7 +35,7 @@ function Code ({ className, code, onShowDeploy }: Props): React.ReactElement<Pro
 
   const _onDeployConstructor = useCallback(
     (constructorIndex?: number): void => {
-      onShowDeploy && onShowDeploy(code.json.codeHash, constructorIndex || 0);
+      onShowDeploy?.(code.json.codeHash, constructorIndex || 0);
     },
     [code, onShowDeploy]
   );

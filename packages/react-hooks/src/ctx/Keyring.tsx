@@ -139,7 +139,7 @@ export function KeyringCtxRoot ({ children }: Props): React.ReactElement<Props> 
     }
 
     return (): void => {
-      sub && sub.unsubscribe();
+      sub?.unsubscribe();
     };
   }, [isApiReady, isEthereum]);
 

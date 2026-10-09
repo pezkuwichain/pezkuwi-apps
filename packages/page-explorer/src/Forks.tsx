@@ -22,7 +22,7 @@ interface LinkHeader {
   width: number;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface,no-use-before-define
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 interface LinkArray extends Array<Link> {}
 
 interface Link {
@@ -361,8 +361,8 @@ function Forks ({ className }: Props): React.ReactElement<Props> | null {
     })().catch(console.error);
 
     return (): void => {
-      _subFinHead && _subFinHead();
-      _subNewHead && _subNewHead();
+      _subFinHead?.();
+      _subNewHead?.();
     };
   }, [api, _newFinalized, _newHeader]);
 

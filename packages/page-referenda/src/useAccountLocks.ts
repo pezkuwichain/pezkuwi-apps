@@ -84,7 +84,7 @@ function getLocks (api: ApiPromise, palletVote: PalletVote, votes: [classId: BN,
       if (refInfo) {
         const [, tally] = refInfo;
         let total: BN | undefined;
-        let endBlock: BN| undefined;
+        let endBlock: BN | undefined;
         let convictionIndex = 0;
         let locked = 'None';
         const durationIndex = 1;

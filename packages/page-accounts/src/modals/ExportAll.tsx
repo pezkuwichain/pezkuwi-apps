@@ -68,7 +68,7 @@ function ExportAll ({ accountsByGroup, className, onClose, onStatusChange }: Pro
 
         const blob = new Blob([JSON.stringify(accounts, null, 2)], { type: 'application/json; charset=utf-8' });
 
-        // eslint-disable-next-line deprecation/deprecation
+        // eslint-disable-next-line @typescript-eslint/no-deprecated
         FileSaver.saveAs(blob, `batch_exported_accounts_${new Date().getTime()}.json`);
 
         status.status = 'success';
@@ -138,7 +138,7 @@ function ExportAll ({ accountsByGroup, className, onClose, onStatusChange }: Pro
   );
 }
 
-const BrowserAccounts = ({ accounts, allPassword, setAllPassword }: {accounts: string[], allPassword: TPassword[], setAllPassword: React.Dispatch<React.SetStateAction<TPassword[]>>}) => {
+const BrowserAccounts = ({ accounts, allPassword, setAllPassword }: { accounts: string[], allPassword: TPassword[], setAllPassword: React.Dispatch<React.SetStateAction<TPassword[]>> }) => {
   const { t } = useTranslation();
 
   const _onChangePass = useCallback(

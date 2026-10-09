@@ -106,7 +106,7 @@ function generateSeed (_seed: string | undefined | null, derivePath: string, see
 function updateAddress (seed: string, derivePath: string, seedType: SeedType, pairType: PairType): AddressState {
   let address: string | null = null;
   let deriveValidation: DeriveValidationOutput = deriveValidate(seed, seedType, derivePath, pairType);
-  let isSeedValid = false;
+  let isSeedValid: boolean;
 
   if (seedType === 'raw') {
     isSeedValid = rawValidate(seed);

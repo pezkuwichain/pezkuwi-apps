@@ -41,7 +41,6 @@ function PaymentInfo ({ accountId, className = '', extrinsic, isHeader, signerOp
           const info = await extrinsic.paymentInfo(accountId, signerOptions);
 
           if (signerOptions?.assetId) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             const convertedFee = new BN((await api.call.assetConversionApi.quotePriceTokensForExactTokens(
               signerOptions?.assetId as any,
               {
@@ -73,6 +72,8 @@ function PaymentInfo ({ accountId, className = '', extrinsic, isHeader, signerOp
     balances.freeBalance.sub(dispatchInfo.partialFee).lte(api.consts.balances.existentialDeposit)
   );
 
+  const feeSymbol = signerOptions?.feeAsset?.metadata.symbol.toHuman();
+
   return (
     <>
       <Expander
@@ -82,7 +83,7 @@ function PaymentInfo ({ accountId, className = '', extrinsic, isHeader, signerOp
           <Trans i18nKey='feesForSubmission'>
             Fees of <span className='highlight'>
               {formatBalance(dispatchInfo.partialFee, { decimals: signerOptions?.feeAsset?.metadata.decimals.toNumber() ?? api.registry.chainDecimals.at(0), withSiFull: true }).split(' ').slice(0, -1).join(' ')}{' '}
-              {signerOptions?.feeAsset?.metadata.symbol.toHuman()?.toString() ?? api.registry.chainTokens.at(0) }
+              {typeof feeSymbol === 'string' ? feeSymbol : api.registry.chainTokens.at(0)}
             </span> will be applied to the submission
           </Trans>
         }

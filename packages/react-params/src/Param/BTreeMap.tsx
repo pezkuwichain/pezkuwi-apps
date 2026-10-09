@@ -108,7 +108,7 @@ function BTreeMapParam ({ className = '', defaultValue, isDisabled = false, labe
       isValid = isValid && entry.isValid;
     }
 
-    onChange && onChange({
+    onChange?.({
       isValid,
       value: output
     });

@@ -32,7 +32,7 @@ function Account (props: Props): React.ReactElement<Props> {
 
   const _onChange = useCallback(
     (value?: string | null) =>
-      onChange && onChange({
+      onChange?.({
         isValid: isValidAddress(value),
         value
       }),

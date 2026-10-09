@@ -47,7 +47,7 @@ function VectorFixed ({ className = '', defaultValue, isDisabled = false, label,
 
   // when our values has changed, alert upstream
   useEffect((): void => {
-    onChange && onChange({
+    onChange?.({
       isValid: values.reduce((result: boolean, { isValid }) => result && isValid, true),
       value: values.map(({ value }) => value)
     });

@@ -24,7 +24,7 @@ function Toggle ({ className = '', isDisabled, isRadio, label, onChange, prevent
           event.stopPropagation();
         }
 
-        onChange && onChange(!value);
+        onChange?.(!value);
       }
     },
     [isDisabled, onChange, preventDefault, value]

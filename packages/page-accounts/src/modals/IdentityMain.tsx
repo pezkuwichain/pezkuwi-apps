@@ -53,8 +53,8 @@ interface PeopleIdentityInfo extends Struct {
 const WHITESPACE = [' ', '\t'];
 
 function setData (data: Data, setActive: null | ((isActive: boolean) => void), setVal: (val: string) => void): void {
-  if (data && data.isRaw) {
-    setActive && setActive(true);
+  if (data?.isRaw) {
+    setActive?.(true);
     setVal(u8aToString(data.asRaw.toU8a(true)));
   }
 }
@@ -64,7 +64,7 @@ function setAdditionalFieldData (api: ApiPromise, info: IdentityInfo, key: strin
   const dataNone = api.registry.createType('Data', '');
   const value = info.additional.find((v) => v[0].eq(dataKey))?.[1] || dataNone;
 
-  if (value && value.isRaw) {
+  if (value?.isRaw) {
     setData(value, setActive, setVal);
   }
 
@@ -73,7 +73,7 @@ function setAdditionalFieldData (api: ApiPromise, info: IdentityInfo, key: strin
 
 function setDiscordFieldData (info: PeopleIdentityInfo, setActive: null | ((isActive: boolean) => void), setVal: (val: string) => void): Data {
   if (info.discord && !info.discord.isNone) {
-    setActive && setActive(true);
+    setActive?.(true);
     setVal(u8aToString(info.discord.asRaw.toU8a(true)));
   }
 
@@ -124,7 +124,7 @@ function IdentityMain ({ address, className = '', onClose }: Props): React.React
   const [isPalletChecked, setIsPalletChecked] = useState<boolean>(false);
 
   useEffect((): void => {
-    if (identityOpt && identityOpt.isSome) {
+    if (identityOpt?.isSome) {
       const identity = identityOpt.unwrap();
       const foundInfo = Array.isArray(identity) ? identity[0].info : (identity as Registration).info;
 
@@ -150,7 +150,7 @@ function IdentityMain ({ address, className = '', onClose }: Props): React.React
           : [foundInfo.display, foundInfo.email, (foundInfo as unknown as PeopleIdentityInfo).github, foundInfo.legal, (foundInfo as unknown as PeopleIdentityInfo).matrix, foundInfo.twitter, infoDiscord, foundInfo.web];
 
         previousKeys.some((info: Data | null) => {
-          if (info && info.isRaw) {
+          if (info?.isRaw) {
             setGotPreviousIdentity(true);
 
             return true;

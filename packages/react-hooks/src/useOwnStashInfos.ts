@@ -110,7 +110,7 @@ function useOwnStashInfosImpl (apiOverride?: ApiPromise): StakerState[] | undefi
     }
 
     return (): void => {
-      unsub && unsub();
+      unsub?.();
     };
   }, [api, mountedRef, ownStashes]);
 

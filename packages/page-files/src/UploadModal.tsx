@@ -134,7 +134,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
     setIsLocked(
       isInjected
         ? false
-        : (currentPair && currentPair.isLocked) || false
+        : (currentPair?.isLocked) || false
     );
     setSigner({ isUsable, signer: null });
 
@@ -157,7 +157,7 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
           currentPair.decodePkcs8(password);
           resolve(1);
         } catch (error) {
-          reject(error);
+          reject(error instanceof Error ? error : new Error(String(error)));
         }
       });
     });
@@ -240,11 +240,10 @@ function UploadModal ({ className, file, onClose = NOOP, onSuccess = NOOP }: Pro
       if (typeof upResult.data === 'string') {
         const jsonStr = upResult.data.replace(/}\n{/g, '},{');
         const items = JSON.parse(`[${jsonStr}]`) as UploadRes[];
-        const folder = items.length - 1;
 
-        upRes = items[folder];
-        delete items[folder];
-        upRes.items = items;
+        // the last entry is the folder itself, the ones before it its files
+        upRes = items[items.length - 1];
+        upRes.items = items.slice(0, -1);
       } else {
         upRes = upResult.data;
       }

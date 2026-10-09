@@ -84,8 +84,8 @@ const SaleDetailsView = ({ chosenSaleNumber, relayName, saleParams }: { salePara
   const { t } = useTranslation();
 
   const subscanPriceGraphUrl = useMemo(() =>
-    `https://coretime-${relayName}.subscan.io/coretime_dashboard`
-  , [relayName]);
+    `https://coretime-${relayName}.subscan.io/coretime_dashboard`,
+  [relayName]);
 
   if (chosenSaleNumber === -1 || !saleParams) {
     return null;
