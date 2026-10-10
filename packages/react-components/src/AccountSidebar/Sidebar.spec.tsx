@@ -12,16 +12,20 @@ import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 import i18next from '@pezkuwi/react-components/i18n';
 import { anAccount, anAccountWithInfo, anAccountWithMeta } from '@pezkuwi/test-support/creation/account';
 import { alice, bob, MemoryStore } from '@pezkuwi/test-support/keyring';
-import { charlieShortAddress, ferdieShortAddress, mockRegistration, registrars } from '@pezkuwi/test-support/mockData';
-import { mockApiHooks } from '@pezkuwi/test-support/utils';
+import { assertHasClass, assertTextContent, mockApiHooks } from '@pezkuwi/test-support/utils';
 import { keyring } from '@pezkuwi/ui-keyring';
 
-import { AccountsPage } from '../../../page-accounts/test/pages/accountsPage.js';
+import { mockAccountsPageHooks } from '../../../page-accounts/test/mockAccountsPageHooks.js';
+
+await mockAccountsPageHooks();
+
+const { charlieShortAddress, ferdieShortAddress, mockRegistration, registrars } = await import('@pezkuwi/test-support/mockData');
+const { AccountsPage } = await import('../../../page-accounts/test/pages/accountsPage.js');
 
 // FIXME: these all need to be wrapped in waitFor ....
 // eslint-disable-next-line jest/no-disabled-tests
 describe.skip('Sidebar', () => {
-  let accountsPage: AccountsPage;
+  let accountsPage: InstanceType<typeof AccountsPage>;
   let sideBar: Sidebar;
 
   beforeAll(async () => {
@@ -62,7 +66,6 @@ describe.skip('Sidebar', () => {
         expect(changedAccount?.meta?.name).toEqual(newName);
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('within sidebar', async () => {
         await sideBar.assertAccountName(newName);
       });
@@ -105,7 +108,6 @@ describe.skip('Sidebar', () => {
         sideBar.edit();
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('restores tags and name to state from keyring', async () => {
         await sideBar.typeAccountName(newName);
         await sideBar.selectTag(defaultTag);
@@ -149,7 +151,6 @@ describe.skip('Sidebar', () => {
         expect(sideBar.queryByRole('button', { name: 'Cancel' })).toBeTruthy();
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('cancels editing and changes name when opening sidebar for another account', async () => {
         await waitFor(() => sideBar.assertAccountInput('alice'));
 
@@ -188,12 +189,11 @@ describe.skip('Sidebar', () => {
           const subsNumber = subs[0].childNodes[0];
           const subAccount = subs[0].childNodes[1];
 
-          expect(subsNumber).toHaveClass('subs-number');
-          expect(subsNumber).toHaveTextContent('1');
-          expect(subAccount).toHaveTextContent('BOB');
+          assertHasClass(subsNumber, 'subs-number');
+          assertTextContent(subsNumber, '1');
+          assertTextContent(subAccount, 'BOB');
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('displays picked sub in sidebar', async () => {
           const subAccount = subs[0].childNodes[1];
 
@@ -205,7 +205,6 @@ describe.skip('Sidebar', () => {
     });
 
     describe('judgements', () => {
-      // eslint-disable-next-line jest/expect-expect
       it('displays several judgements', async () => {
         mockApiHooks.setJudgements(mockRegistration.judgements as RegistrationJudgement[]);
         accountsPage.renderDefaultAccounts(1);
@@ -216,7 +215,6 @@ describe.skip('Sidebar', () => {
         await sideBar.assertJudgement('1 Erroneous');
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('displays no judgements', async () => {
         accountsPage.renderDefaultAccounts(1);
         sideBar = await accountsPage.openSidebarForRow(0);
@@ -235,14 +233,12 @@ describe.skip('Sidebar', () => {
           sideBar = await accountsPage.openSidebarForRow(0);
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('singular registrar', async () => {
           const judgementTag = await sideBar.getJudgement('1 Known good');
 
           await judgementTag.assertRegistrars([charlieShortAddress]);
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('multiple registrars', async () => {
           const judgementTag = await sideBar.getJudgement('2 Reasonable');
 

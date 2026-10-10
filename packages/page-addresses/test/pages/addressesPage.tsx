@@ -1,8 +1,6 @@
 // Copyright 2017-2026 @pezkuwi/app-addresses authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/* global jest */
-
 import type { Row } from '@pezkuwi/test-support/pagesElements';
 import type { AccountOverrides as ContactOverrides } from '@pezkuwi/test-support/types';
 
@@ -10,19 +8,10 @@ import React from 'react';
 
 import { aContact } from '@pezkuwi/test-support/creation/contact';
 import { Page } from '@pezkuwi/test-support/pages/Page';
-import { mockAccountHooks } from '@pezkuwi/test-support/utils';
 
 import AddressOverview from '../../src/Contacts/index.js';
 
 const NOOP_CHANGE = () => undefined;
-
-jest.mock('@pezkuwi/react-hooks/useAddresses', () => ({
-  useAddresses: () => ({
-    allAddresses: mockAccountHooks.useAccounts.allAccounts,
-    hasAddresses: mockAccountHooks.useAccounts.hasAccounts,
-    isAddress: true
-  })
-}));
 
 export class AddressesPage extends Page {
   constructor () {

@@ -11,7 +11,11 @@ import { assertButtonDisabled, assertText, clickButton, fillInput } from '@pezku
 import { keyring } from '@pezkuwi/ui-keyring';
 import { cryptoWaitReady } from '@pezkuwi/util-crypto';
 
-import { AccountsPage } from '../../test/pages/accountsPage.js';
+import { mockAccountsPageHooks } from '../../test/mockAccountsPageHooks.js';
+
+await mockAccountsPageHooks();
+
+const { AccountsPage } = await import('../../test/pages/accountsPage.js');
 
 const spy = jest.spyOn(keyring, 'addUri');
 
@@ -19,7 +23,7 @@ const newAccountName = 'NEW ACCOUNT NAME';
 const newAccountPassword = 'mySecretPassword';
 
 describe('Create an account modal', () => {
-  let accountsPage: AccountsPage;
+  let accountsPage: InstanceType<typeof AccountsPage>;
 
   beforeAll(async () => {
     await cryptoWaitReady();
@@ -33,7 +37,6 @@ describe('Create an account modal', () => {
     accountsPage = new AccountsPage();
   });
 
-  // eslint-disable-next-line jest/expect-expect
   it('creates an account', async () => {
     await accountsPage.enterCreateAccountModal();
 
@@ -53,7 +56,6 @@ describe('Create an account modal', () => {
     expectCreateAnAccountCall();
   });
 
-  // eslint-disable-next-line jest/expect-expect
   it('navigates through the modal flow with enter key', async () => {
     await accountsPage.enterCreateAccountModal();
 
@@ -74,7 +76,6 @@ describe('Create an account modal', () => {
     expectCreateAnAccountCall();
   });
 
-  // eslint-disable-next-line jest/expect-expect
   it('gives an error message when entering invalid derivation path', async () => {
     await accountsPage.enterCreateAccountModal();
 

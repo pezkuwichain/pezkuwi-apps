@@ -127,6 +127,7 @@
       "@pezkuwi/test-support/hooks": ["test-support/src/hooks/index.ts"],
       "@pezkuwi/test-support/keyring": ["test-support/src/keyring/index.ts"],
       "@pezkuwi/test-support/mockData": ["test-support/src/mockData/index.ts"],
+      "@pezkuwi/test-support/mocks": ["test-support/src/mocks/index.ts"],
       "@pezkuwi/test-support/pages/*": ["test-support/src/pages/*.tsx"],
       "@pezkuwi/test-support/pagesElements": ["test-support/src/pagesElements/index.ts"],
       "@pezkuwi/test-support/react": ["test-support/src/react/index.ts"],

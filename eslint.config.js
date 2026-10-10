@@ -20,5 +20,13 @@ export default [
       '@typescript-eslint/no-unsafe-return': 'off',
       '@typescript-eslint/unbound-method': 'off'
     }
+  },
+  {
+    // the same files the base config enables the jest plugin for
+    files: ['**/*.spec.ts', '**/*.spec.tsx'],
+    rules: {
+      // the specs assert through expect() and the assert* helpers in test-support
+      'jest/expect-expect': ['warn', { assertFunctionNames: ['expect', 'assert*', '*.assert*', '*.expect*'] }]
+    }
   }
 ];

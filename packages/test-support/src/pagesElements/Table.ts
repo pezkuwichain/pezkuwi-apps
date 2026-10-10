@@ -6,6 +6,7 @@
 import { within } from '@testing-library/react';
 
 import { showBalance } from '../utils/balance.js';
+import { assertTextContent } from '../utils/domAssertions.js';
 import { Row } from './Row.js';
 
 export class Table {
@@ -21,7 +22,7 @@ export class Table {
       const row = orderedRows[index];
       const expectedBalanceTextContent = showBalance(balancesExpectedOrder[index]);
 
-      expect(await row.getBalanceSummary()).toHaveTextContent(expectedBalanceTextContent);
+      assertTextContent(await row.getBalanceSummary(), expectedBalanceTextContent);
     }
   }
 

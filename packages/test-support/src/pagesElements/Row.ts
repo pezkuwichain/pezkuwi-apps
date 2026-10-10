@@ -8,6 +8,7 @@ import type { Balance } from '@pezkuwi/types/interfaces';
 import { fireEvent, screen, within } from '@testing-library/react';
 
 import { format } from '../utils/balance.js';
+import { assertTextContent } from '../utils/domAssertions.js';
 import { Sidebar } from './Sidebar.js';
 
 // utility wrapper over an account item in accounts table, serves basic assertions about an account row
@@ -24,7 +25,7 @@ export class Row {
     const actualBalanceText = await this.getBalanceSummary();
     const expectedBalanceText = format(expectedTotalBalance);
 
-    expect(actualBalanceText).toHaveTextContent(expectedBalanceText);
+    assertTextContent(actualBalanceText, expectedBalanceText);
   }
 
   async getBalanceSummary (): Promise<HTMLElement> {
@@ -34,7 +35,7 @@ export class Row {
   async assertAccountName (expectedName: string): Promise<void> {
     const accountName = await this.getAccountName();
 
-    expect(accountName).toHaveTextContent(expectedName);
+    assertTextContent(accountName, expectedName);
   }
 
   async assertBalancesDetails (expectedBalanceComponents: { name: string, amount: Balance }[]): Promise<void> {
@@ -54,13 +55,13 @@ export class Row {
   async assertTags (expectedTagsContent: string): Promise<void> {
     const actualTags = await within(this.detailsRow).findByTestId('tags');
 
-    expect(actualTags).toHaveTextContent(expectedTagsContent);
+    assertTextContent(actualTags, expectedTagsContent);
   }
 
   async assertShortAddress (expectedShortAddress: string): Promise<void> {
     const actualShortAddress = await within(this.primaryRow).findByTestId('short-address');
 
-    expect(actualShortAddress).toHaveTextContent(expectedShortAddress);
+    assertTextContent(actualShortAddress, expectedShortAddress);
   }
 
   async expand (): Promise<void> {
@@ -85,7 +86,7 @@ export class Row {
     const balanceElement = await this.getBalanceElementByLabelName(expectedBalanceComponent.name);
     const balanceText = format(expectedBalanceComponent.amount);
 
-    expect(balanceElement).toHaveTextContent(balanceText);
+    assertTextContent(balanceElement, balanceText);
   }
 
   private async getBalanceElementByLabelName (labelName: string): Promise<ChildNode | null> {

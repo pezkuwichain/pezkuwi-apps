@@ -3,14 +3,13 @@
 
 /// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
-/* eslint-disable jest/expect-expect */
-
 import type { SubmittableExtrinsic } from '@pezkuwi/api/types';
 import type { DeriveCollectiveProposal } from '@pezkuwi/api-derive/types';
 import type { BountyIndex } from '@pezkuwi/types/interfaces';
 import type { PezpalletBountiesBounty, PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 
 import { fireEvent } from '@testing-library/react';
+import { mock } from 'node:test';
 
 import i18next from '@pezkuwi/react-components/i18n';
 import { createAugmentedApi } from '@pezkuwi/test-support/api';
@@ -19,36 +18,43 @@ import { BountyFactory } from '@pezkuwi/test-support/creation/bounties';
 import { proposalFactory } from '@pezkuwi/test-support/creation/treasury';
 import { mockHooks } from '@pezkuwi/test-support/hooks';
 import { alice, bob, MemoryStore } from '@pezkuwi/test-support/keyring';
+import { assertHasClass } from '@pezkuwi/test-support/utils';
 import { keyring } from '@pezkuwi/ui-keyring';
 import { BN } from '@pezkuwi/util';
 
 import { defaultBountyUpdatePeriod, mockBountyHooks } from '../test/hooks/defaults.js';
-import { BountiesPage } from '../test/pages/bountiesPage.js';
-import { BLOCKS_PERCENTAGE_LEFT_TO_SHOW_WARNING } from './BountyNextActionInfo/BountyActionMessage.js';
 
-jest.mock('@pezkuwi/react-hooks/useTreasury', () => ({
-  useTreasury: () => mockHooks.treasury
-}));
+// Node only swaps a module that has not been loaded yet, so the page and
+// anything that loads @pezkuwi/react-hooks are imported after these. A module
+// mock replaces every export, so each one lists them all.
+mock.module('@pezkuwi/react-hooks/useTreasury', {
+  namedExports: { useTreasury: () => mockHooks.treasury }
+});
 
-jest.mock('@pezkuwi/react-hooks/useCollectiveInstance', () => ({
-  useCollectiveInstance: () => 'council'
-}));
+mock.module('@pezkuwi/react-hooks/useCollectiveInstance', {
+  namedExports: { useCollectiveInstance: () => 'council' }
+});
 
-jest.mock('@pezkuwi/react-hooks/useCollectiveMembers', () => ({
-  useCollectiveMembers: () => mockHooks.members
-}));
+mock.module('@pezkuwi/react-hooks/useCollectiveMembers', {
+  namedExports: { useCollectiveMembers: () => mockHooks.members }
+});
 
-jest.mock('@pezkuwi/react-hooks/useBlockTime', () => ({
-  useBlockTime: () => mockHooks.blockTime
-}));
+const { calcBlockTime } = await import('@pezkuwi/react-hooks/useBlockTime');
 
-jest.mock('./hooks/useBalance', () => ({
-  useBalance: () => mockBountyHooks.balance
-}));
+mock.module('@pezkuwi/react-hooks/useBlockTime', {
+  namedExports: { calcBlockTime, useBlockTime: () => mockHooks.blockTime }
+});
 
-jest.mock('./hooks/useBounties', () => ({
-  useBounties: () => mockBountyHooks.bountyApi
-}));
+mock.module('./hooks/useBalance', {
+  namedExports: { useBalance: () => mockBountyHooks.balance }
+});
+
+mock.module('./hooks/useBounties', {
+  namedExports: { useBounties: () => mockBountyHooks.bountyApi }
+});
+
+const { BountiesPage } = await import('../test/pages/bountiesPage.js');
+const { BLOCKS_PERCENTAGE_LEFT_TO_SHOW_WARNING } = await import('./BountyNextActionInfo/BountyActionMessage.js');
 
 let aProposal: (extrinsic: SubmittableExtrinsic<'promise'>, ayes?: string[], nays?: string[]) => DeriveCollectiveProposal;
 let augmentedApi: any;
@@ -58,7 +64,7 @@ let bountyStatusWith: ({ curator, status, updateDue }: { curator?: string, statu
 let bountyWith: ({ status, value }: { status?: string, value?: number }) => PezpalletBountiesBounty;
 
 describe('Bounties', () => {
-  let bountiesPage: BountiesPage;
+  let bountiesPage: InstanceType<typeof BountiesPage>;
 
   beforeAll(async () => {
     await i18next.changeLanguage('en');
@@ -309,7 +315,7 @@ describe('Bounties', () => {
     it('disables Assign Curator button if validation fails', async () => {
       await bountiesPage.enterCuratorsFee('6');
 
-      expect(await bountiesPage.assignCuratorButton()).toHaveClass('isDisabled');
+      assertHasClass(await bountiesPage.assignCuratorButton(), 'isDisabled');
     });
 
     it('queues propose extrinsic on submit', async () => {
