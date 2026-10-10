@@ -42,7 +42,7 @@
     "lint": "pezkuwi-dev-run-lint",
     "postinstall": "pezkuwi-dev-yarn-only",
     "start": "yarn clean && cd packages/apps && yarn pezkuwi-exec-webpack serve --config webpack.serve.cjs --port 3000",
-    "test": "pezkuwi-dev-run-test --env browser ^typesBundle ^chainEndpoints ^chainTypes ^:.slow. ^Accounts/index.spec ^modals/Create.spec ^Contacts/index.spec ^Bounties.spec ^AccountSidebar ^Modal/Modal.spec ^Popup/Popup.spec",
+    "test": "pezkuwi-dev-run-test --env browser ^typesBundle ^chainEndpoints ^chainTypes ^:.slow. ^Accounts/index.spec ^modals/Create.spec ^Contacts/index.spec ^Bounties.spec ^AccountSidebar",
     "test:all": "pezkuwi-dev-run-test --env browser ^chainEndpoints ^chainTypes",
     "test:one": "pezkuwi-dev-run-test --env browser",
     "test:skipped": "echo 'tests skipped'"
