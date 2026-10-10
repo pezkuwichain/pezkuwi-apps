@@ -5,9 +5,6 @@
 // pezkuwi, bizinikiwi, beachball, robohash
 
 export const identityNodes: Record<string, string> = [
-  ['centrifuge chain', 'pezkuwi'],
-  ['joystream-node', 'beachball'],
-  ['litentry-node', 'pezkuwi'],
   ['parity-pezkuwi', 'pezkuwi']
 ].reduce((icons, [node, icon]): Record<string, string> => ({
   ...icons,
@@ -15,11 +12,9 @@ export const identityNodes: Record<string, string> = [
 }), {});
 
 export const identitySpec: Record<string, string> = [
-  ['dicle', 'pezkuwi'],
   ['pezkuwi', 'pezkuwi'],
   ['pezkuwichain', 'pezkuwi'],
-  ['zagros', 'pezkuwi'],
-  ['paseo', 'pezkuwi']
+  ['zagros', 'pezkuwi']
 ].reduce((icons, [spec, icon]): Record<string, string> => ({
   ...icons,
   [spec.toLowerCase().replace(/-/g, ' ')]: icon

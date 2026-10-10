@@ -33,7 +33,7 @@ const all = {};
 /** @type {Record<string, number>} */
 const oversized = {};
 
-for (const dir of ['extensions', 'external', 'chains', 'nodes']) {
+for (const dir of ['extensions', 'external', 'chains']) {
   const sub = path.join('packages/apps-config/src/ui/logos', dir);
   const generated = path.join(sub, 'generated');
   /** @type {Record<string, string>} */
