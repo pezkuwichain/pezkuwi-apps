@@ -24,6 +24,16 @@ export function assertHasClass (node: Node | null, className: string): void {
   assert.ok(classList.contains(className), `Expected class "${className}" on ${describeElement(node)}`);
 }
 
+/** As not.toHaveClass: the element is there, without the class */
+export function assertNotHasClass (node: Node | null, className: string): void {
+  assert.ok(node, `Expected an element without class "${className}", found none`);
+
+  const classList = (node as Partial<Element>).classList;
+
+  assert.ok(classList, `Expected an element without class "${className}", found ${describeElement(node)}`);
+  assert.ok(!classList.contains(className), `Expected no class "${className}" on ${describeElement(node)}`);
+}
+
 /** As toHaveTextContent: the whitespace-normalized text contains the string, or matches the pattern */
 export function assertTextContent (element: Node | null, expected: string | RegExp): void {
   assert.ok(element, `Expected an element with text ${String(expected)}, found none`);

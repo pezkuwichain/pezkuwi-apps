@@ -14,10 +14,12 @@ import { Sidebar } from './Sidebar.js';
 // utility wrapper over an account item in accounts table, serves basic assertions about an account row
 export class Row {
   public primaryRow: HTMLElement;
+  public balanceRow: HTMLElement;
   public detailsRow: HTMLElement;
 
-  constructor (primaryRow: HTMLElement, detailsRow: HTMLElement) {
+  constructor (primaryRow: HTMLElement, balanceRow: HTMLElement, detailsRow: HTMLElement) {
     this.primaryRow = primaryRow;
+    this.balanceRow = balanceRow;
     this.detailsRow = detailsRow;
   }
 
@@ -29,7 +31,7 @@ export class Row {
   }
 
   async getBalanceSummary (): Promise<HTMLElement> {
-    return within(this.primaryRow).findByTestId('balance-summary');
+    return within(this.balanceRow).findByTestId('balance-summary');
   }
 
   async assertAccountName (expectedName: string): Promise<void> {
@@ -64,8 +66,13 @@ export class Row {
     assertTextContent(actualShortAddress, expectedShortAddress);
   }
 
-  async expand (): Promise<void> {
-    const toggle = await within(this.primaryRow).findByTestId('row-toggle');
+  expand (): void {
+    // the toggle is the row's expand column (Table.Column.Expand)
+    const toggle = this.primaryRow.querySelector('td.ui--Table-Column-Expand');
+
+    if (!toggle) {
+      throw new Error('Expected an expand toggle in the row');
+    }
 
     fireEvent.click(toggle);
   }

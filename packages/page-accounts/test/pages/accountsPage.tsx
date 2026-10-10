@@ -23,16 +23,21 @@ settings.set({ ...settings.get(), storage: 'on' });
 export class AccountsPage extends Page {
   constructor () {
     super(
-      <AccountOverview onStatusChange={NOOP_CHANGE} />,
-      'Account-'
+      <AccountOverview onStatusChange={NOOP_CHANGE} />
     );
   }
 
+  /** The rows of every account group table, in the order shown */
   async getAccountRows (): Promise<AccountRow[]> {
-    const table = await this.getTable();
-    const rows = await table.getRows();
+    const rows: AccountRow[] = [];
 
-    return rows.map((row) => new AccountRow(row.primaryRow, row.detailsRow));
+    for (const table of await this.getTables()) {
+      for (const row of await table.getRows()) {
+        rows.push(new AccountRow(row.primaryRow, row.balanceRow, row.detailsRow));
+      }
+    }
+
+    return rows;
   }
 
   async reverseSortingOrder (): Promise<void> {

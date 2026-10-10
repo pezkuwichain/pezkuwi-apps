@@ -1,9 +1,8 @@
 // Copyright 2017-2026 @pezkuwi/test-supports authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/* global expect */
-
 import { fireEvent, screen, within } from '@testing-library/react';
+import assert from 'node:assert/strict';
 
 import { assertTextContent } from '../utils/domAssertions.js';
 import { JudgementTag } from './JudgementTag.js';
@@ -42,7 +41,7 @@ export class Sidebar {
   async assertAccountInput (expectedInput: string): Promise<void> {
     const nameInput = await this.findByTestId('name-input');
 
-    expect(nameInput).toHaveProperty('value', expectedInput);
+    assert.equal((nameInput as HTMLInputElement).value, expectedInput);
   }
 
   async assertAccountName (expectedAccountName: string): Promise<void> {

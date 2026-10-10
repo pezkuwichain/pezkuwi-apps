@@ -41,7 +41,3 @@ export const charlieRegistrar: Registrar = { address: charlie, index: 1 };
 export const ferdieRegistrar: Registrar = { address: ferdie, index: 3 };
 
 export const registrars: Registrar[] = [bobRegistrar, charlieRegistrar, ferdieRegistrar];
-
-export const bobShortAddress = '5FHneW…M694ty';
-export const charlieShortAddress = '5DAAnr…3PTXFy';
-export const ferdieShortAddress = '5CiPPs…SK2DjL';

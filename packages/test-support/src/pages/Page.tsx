@@ -16,6 +16,7 @@ import { ThemeProvider } from 'styled-components';
 import { PEZKUWI_GENESIS } from '@pezkuwi/apps-config';
 import { AccountSidebar, lightTheme } from '@pezkuwi/react-components';
 import { ApiCtx } from '@pezkuwi/react-hooks/ctx/Api';
+import { KeyringCtxRoot } from '@pezkuwi/react-hooks/ctx/Keyring';
 import { QueueCtx } from '@pezkuwi/react-hooks/ctx/Queue';
 import { TypeRegistry } from '@pezkuwi/types/create';
 import { keyring } from '@pezkuwi/ui-keyring';
@@ -34,9 +35,8 @@ export abstract class Page {
   private renderResult?: RenderResult;
   protected readonly defaultAddresses = [alice, bob, charlie, ferdie];
 
-  protected constructor (private readonly overview: React.ReactElement, private readonly rowClassName: string) {
+  protected constructor (private readonly overview: React.ReactElement) {
     this.overview = overview;
-    this.rowClassName = rowClassName;
   }
 
   render (accounts: [string, AccountOverrides][]): void {
@@ -59,6 +59,9 @@ export abstract class Page {
         proxy: {
           proxyDepositBase: new BN(1),
           proxyDepositFactor: new BN(1)
+        },
+        system: {
+          ss58Prefix: new BN(42)
         }
       },
       createType: () => ({
@@ -141,9 +144,11 @@ export abstract class Page {
             <MemoryRouter>
               <ThemeProvider theme={lightTheme}>
                 <ApiCtx.Provider value={mockApi}>
-                  <AccountSidebar>
-                    {React.cloneElement(this.overview, { onStatusChange: noop }) }
-                  </AccountSidebar>
+                  <KeyringCtxRoot>
+                    <AccountSidebar>
+                      {React.cloneElement(this.overview, { onStatusChange: noop }) }
+                    </AccountSidebar>
+                  </KeyringCtxRoot>
                 </ApiCtx.Provider>
               </ThemeProvider>
             </MemoryRouter>
@@ -156,7 +161,14 @@ export abstract class Page {
   async getTable (): Promise<Table> {
     this.assertRendered();
 
-    return new Table(await screen.findByRole('table'), this.rowClassName);
+    return new Table(await screen.findByRole('table'));
+  }
+
+  /** All tables, in document order, for a page that splits its items over several */
+  async getTables (): Promise<Table[]> {
+    this.assertRendered();
+
+    return (await screen.findAllByRole('table')).map((table) => new Table(table));
   }
 
   clearAccounts (): void {

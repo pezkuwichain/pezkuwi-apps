@@ -10,9 +10,8 @@ import { assertTextContent } from '../utils/domAssertions.js';
 import { Row } from './Row.js';
 
 export class Table {
-  constructor (private readonly table: HTMLElement, private readonly rowClassName: string) {
+  constructor (private readonly table: HTMLElement) {
     this.table = table;
-    this.rowClassName = rowClassName;
   }
 
   async assertRowsOrder (balancesExpectedOrder: number[]): Promise<void> {
@@ -26,18 +25,28 @@ export class Table {
     }
   }
 
+  /**
+   * An item (account, contact) spans the rows from one marked isFirst up to
+   * the next: the main row, the total balance, and the expandable details
+   */
   async getRows (): Promise<Row[]> {
-    const htmlRows = await this.getFilteredHtmlRows();
-    const collapsibleRows: Row[] = [];
+    const items: HTMLElement[][] = [];
 
-    for (let rowIdx = 0; rowIdx < htmlRows.length; rowIdx = rowIdx + 2) {
-      const primaryRow = htmlRows[rowIdx];
-      const detailsRow = htmlRows[rowIdx + 1];
-
-      collapsibleRows.push(new Row(primaryRow, detailsRow));
+    for (const htmlRow of await this.getBodyRows()) {
+      if (htmlRow.classList.contains('isFirst')) {
+        items.push([htmlRow]);
+      } else if (items.length) {
+        items[items.length - 1].push(htmlRow);
+      }
     }
 
-    return collapsibleRows;
+    return items.map((rows) => {
+      if (rows.length !== 3) {
+        throw new Error(`Expected an item to span 3 rows, found ${rows.length}`);
+      }
+
+      return new Row(rows[0], rows[1], rows[2]);
+    });
   }
 
   assertColumnNotExist (columnName: string): void {
@@ -52,15 +61,16 @@ export class Table {
     return within(this.table).findByText(text);
   }
 
-  private async getFilteredHtmlRows (): Promise<HTMLElement[]> {
-    const htmlRows = await this.getAllHtmlRows();
-
-    return htmlRows.filter((row) => row.className.startsWith(this.rowClassName));
-  }
-
-  private async getAllHtmlRows (): Promise<HTMLElement[]> {
+  private async getBodyRows (): Promise<HTMLElement[]> {
     const tableBody = this.table.getElementsByTagName('tbody')[0];
 
-    return within(tableBody).findAllByRole('row');
+    if (!tableBody) {
+      return [];
+    }
+
+    // a collapsed details row is hidden, and still part of its item; rows of
+    // tables nested in a cell (e.g. a badge popup) are not items
+    return (await within(tableBody).findAllByRole('row', { hidden: true }))
+      .filter((row) => row.parentElement === tableBody);
   }
 }

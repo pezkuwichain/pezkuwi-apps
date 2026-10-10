@@ -19,9 +19,7 @@ await mockAddressesPageHooks();
 
 const { AddressesPage } = await import('../../test/pages/addressesPage.js');
 
-// FIXME isSplit Table
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('Addresses page', () => {
+describe('Addresses page', () => {
   let addressesPage: InstanceType<typeof AddressesPage>;
 
   beforeAll(async () => {
@@ -133,7 +131,7 @@ describe.skip('Addresses page', () => {
 
       assertHasClass(row.detailsRow, 'isCollapsed');
 
-      await row.expand();
+      row.expand();
 
       assertHasClass(row.detailsRow, 'isExpanded');
     });

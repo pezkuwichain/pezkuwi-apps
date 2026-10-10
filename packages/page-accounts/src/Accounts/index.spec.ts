@@ -9,15 +9,14 @@ import type { u32 } from '@pezkuwi/types';
 import type { AccountId, Multisig, ProxyDefinition, Timepoint, Voting, VotingDelegating } from '@pezkuwi/types/interfaces';
 import type { AccountRow } from '../../test/pageElements/AccountRow.js';
 
-import { fireEvent, screen, within } from '@testing-library/react';
+import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 
 import { PEZKUWI_GENESIS } from '@pezkuwi/apps-config';
 import i18next from '@pezkuwi/react-components/i18n';
-import { toShortAddress } from '@pezkuwi/react-components/util';
 import { anAccountWithBalance, anAccountWithBalanceAndMeta, anAccountWithInfo, anAccountWithInfoAndMeta, anAccountWithMeta, anAccountWithStaking } from '@pezkuwi/test-support/creation/account';
 import { makeStakingLedger as ledger } from '@pezkuwi/test-support/creation/staking';
 import { alice, bob, MemoryStore } from '@pezkuwi/test-support/keyring';
-import { assertHasClass, assertTextContent, balance, mockApiHooks, showBalance } from '@pezkuwi/test-support/utils';
+import { assertHasClass, assertNotHasClass, assertTextContent, balance, mockApiHooks, showBalance } from '@pezkuwi/test-support/utils';
 import { TypeRegistry } from '@pezkuwi/types/create';
 import { keyring } from '@pezkuwi/ui-keyring';
 import { BN } from '@pezkuwi/util';
@@ -28,9 +27,10 @@ await mockAccountsPageHooks();
 
 const { AccountsPage } = await import('../../test/pages/accountsPage.js');
 
-// FIXME isSplit Table
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('Accounts page', () => {
+// the totals always shown; bonded, redeemable and unbonding only when non-zero
+const SUMMARY_TOTALS = ['card-summary:total balance', 'card-summary:total transferable', 'card-summary:total locked'];
+
+describe('Accounts page', () => {
   let accountsPage: InstanceType<typeof AccountsPage>;
 
   beforeAll(async () => {
@@ -75,10 +75,11 @@ describe.skip('Accounts page', () => {
       await accountsTable.assertText(noAccountsMessage);
     });
 
-    it('no summary is displayed', () => {
-      const summaries = screen.queryAllByTestId(/card-summary:total \w+/i);
+    it('the summary shows placeholders, and no staking totals', async () => {
+      const summaries = await screen.findAllByTestId(/card-summary:/i);
 
-      expect(summaries).toHaveLength(0);
+      expect(summaries.map((s) => s.dataset.testid)).toEqual(SUMMARY_TOTALS);
+      summaries.forEach((s) => assertHasClass(s.querySelector('.ui--FormatBalance'), '--tmp'));
     });
   });
 
@@ -120,9 +121,7 @@ describe.skip('Accounts page', () => {
         { amount: balance(150), name: 'reserved' }]);
     });
 
-    // FIXME multiple tables
-    // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('derived account displays parent account info', async () => {
+    it('derived account displays parent account info', async () => {
       accountsPage.renderAccountsWithDefaultAddresses(
         anAccountWithMeta({ isInjected: true, name: 'ALICE', whenCreated: 200 }),
         anAccountWithMeta({ name: 'ALICE_CHILD', parentAddress: alice, whenCreated: 300 })
@@ -134,26 +133,25 @@ describe.skip('Accounts page', () => {
       await accountRows[1].assertParentAccountName('ALICE');
     });
 
-    // FIXME broken after column rework
-    // eslint-disable-next-line jest/no-disabled-tests
-    it.skip('a separate column for parent account is not displayed', async () => {
+    it('parent and type are not separate columns, the type is in the row details', async () => {
       accountsPage.renderDefaultAccounts(1);
       const accountsTable = await accountsPage.getTable();
+      const rows = await accountsTable.getRows();
 
       accountsTable.assertColumnNotExist('parent');
-      accountsTable.assertColumnExists('type');
+      accountsTable.assertColumnNotExist('type');
+      assertTextContent(rows[0].detailsRow, /account type ?qr/);
     });
 
-    it('account rows display the shorted address', async () => {
+    it('account rows display the address', async () => {
       accountsPage.renderAccountsForAddresses(
         alice
       );
       const accountRows = await accountsPage.getAccountRows();
 
       expect(accountRows).toHaveLength(1);
-      const aliceShortAddress = toShortAddress(alice);
-
-      await accountRows[0].assertShortAddress(aliceShortAddress);
+      // shown in full, shortened by css
+      await accountRows[0].assertShortAddress(alice);
     });
 
     // eslint-disable-next-line jest/expect-expect
@@ -181,20 +179,23 @@ describe.skip('Accounts page', () => {
 
       assertHasClass(row.detailsRow, 'isCollapsed');
 
-      await row.expand();
+      row.expand();
 
       assertHasClass(row.detailsRow, 'isExpanded');
     });
 
-    it('displays some summary', () => {
+    it('displays the summary totals, not placeholders', async () => {
       accountsPage.renderAccountsWithDefaultAddresses(
         anAccountWithBalance({ freeBalance: balance(500) }),
         anAccountWithBalance({ freeBalance: balance(200), reservedBalance: balance(150) })
       );
 
-      const summaries = screen.queryAllByTestId(/card-summary:total \w+/i);
+      await waitFor(async () => {
+        const summaries = await screen.findAllByTestId(/card-summary:total \w+/i);
 
-      expect(summaries).not.toHaveLength(0);
+        expect(summaries.map((s) => s.dataset.testid)).toEqual(SUMMARY_TOTALS);
+        summaries.forEach((s) => assertNotHasClass(s.querySelector('.ui--FormatBalance'), '--tmp'));
+      });
     });
 
     it('displays balance summary', async () => {
@@ -306,21 +307,14 @@ describe.skip('Accounts page', () => {
       await accountsTable.assertRowsOrder([3, 1, 2]);
     });
 
-    // FIXME multiple tables now
-    // eslint-disable-next-line jest/no-disabled-tests
-    describe.skip('when sorting is used', () => {
+    // the page sorts within each account group, so all three share a group
+    describe('when sorting is used', () => {
       let accountsTable: Table;
 
       beforeEach(async () => {
         accountsPage.renderAccountsWithDefaultAddresses(
           anAccountWithBalanceAndMeta({ freeBalance: balance(1) }, { isInjected: true, name: 'bbb', whenCreated: 200 }),
-          anAccountWithBalanceAndMeta({ freeBalance: balance(2) }, {
-            hardwareType: 'ledger',
-            isHardware: true,
-            name: 'bb',
-            parentAddress: alice,
-            whenCreated: 300
-          }),
+          anAccountWithBalanceAndMeta({ freeBalance: balance(2) }, { isInjected: true, name: 'bb', parentAddress: alice, whenCreated: 300 }),
           anAccountWithBalanceAndMeta({ freeBalance: balance(3) }, { isInjected: true, name: 'aaa', whenCreated: 100 })
         );
 
@@ -468,22 +462,20 @@ describe.skip('Accounts page', () => {
     describe('show popups', () => {
       beforeEach(async () => {
         accountsPage.renderAccountsWithDefaultAddresses(
-          anAccountWithInfoAndMeta({ flags: { isDevelopment: true } as AddressFlags }, { name: 'alice', who: [] })
+          anAccountWithInfoAndMeta({ flags: { isDevelopment: true, isMultisig: true } as AddressFlags }, { name: 'alice', who: [] })
         );
         accountRows = await accountsPage.getAccountRows();
       });
 
       // eslint-disable-next-line jest/expect-expect
       it('development', async () => {
-        await accountRows[0].assertBadge('wrench-badge');
-        const badgePopup = getPopupById(/wrench-badge-hover.*/);
+        const badgePopup = await openBadgePopup('wrench-badge');
 
         await within(badgePopup).findByText('This is a development account derived from the known development seed. Do not use for any funds on a non-development network.');
       });
 
       it('multisig approvals', async () => {
-        await accountRows[0].assertBadge('file-signature-badge');
-        const badgePopup = getPopupById(/file-signature-badge-hover.*/);
+        const badgePopup = await openBadgePopup('file-signature-badge');
         const approvalsModalToggle = await within(badgePopup).findByText('View pending approvals');
 
         fireEvent.click(approvalsModalToggle);
@@ -494,8 +486,7 @@ describe.skip('Accounts page', () => {
       });
 
       it('delegate democracy vote', async () => {
-        await accountRows[0].assertBadge('calendar-check-badge');
-        const badgePopup = getPopupById(/calendar-check-badge-hover.*/);
+        const badgePopup = await openBadgePopup('calendar-check-badge');
         const delegateModalToggle = await within(badgePopup).findByText('Manage delegation');
 
         fireEvent.click(delegateModalToggle);
@@ -506,8 +497,7 @@ describe.skip('Accounts page', () => {
       });
 
       it('proxy overview', async () => {
-        await accountRows[0].assertBadge('sitemap-badge');
-        const badgePopup = getPopupById(/sitemap-badge-hover.*/);
+        const badgePopup = await openBadgePopup('sitemap-badge');
         const proxyOverviewToggle = await within(badgePopup).findByText('Manage proxies');
 
         fireEvent.click(proxyOverviewToggle);
@@ -522,14 +512,21 @@ describe.skip('Accounts page', () => {
       });
     });
 
-    function getPopupById (popupId: RegExp): HTMLElement {
-      const badgePopup = accountsPage.getById(popupId);
+    // a badge renders its popup while hovered
+    async function openBadgePopup (badgeTestId: string): Promise<HTMLElement> {
+      const badge = await within(accountRows[0].primaryRow).findByTestId(badgeTestId);
 
-      if (!badgePopup) {
-        throw new Error('badge popup should be found');
-      }
+      fireEvent.mouseEnter(badge);
 
-      return badgePopup;
+      return waitFor(() => {
+        const badgePopup = accountsPage.getById(new RegExp(`^${badgeTestId}-hover-`));
+
+        if (!badgePopup) {
+          throw new Error(`${badgeTestId} popup should be found`);
+        }
+
+        return badgePopup;
+      });
     }
   });
 });
