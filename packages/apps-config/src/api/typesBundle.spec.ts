@@ -20,6 +20,12 @@ describe('typesBundle', (): void => {
   const typesBundle: { chain: Record<string, unknown>, spec: Record<string, unknown> } = { chain: {}, spec: {} };
 
   afterAll((): void => {
+    // sort-keys has nothing to report (and its directive is flagged as unused) without entries
+    const isEmpty = !specEntries.length && !chainEntries.length;
+    const sortKeys = isEmpty
+      ? ''
+      : '\n/* eslint-disable sort-keys */';
+
     fs.writeFileSync('packages/apps-config/src/api/typesBundle.ts', `// Copyright 2017-2026 @pezkuwi/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
@@ -28,8 +34,7 @@ describe('typesBundle', (): void => {
 import type { OverrideBundleType } from '@pezkuwi/types/types';
 
 /* eslint-disable @stylistic/quotes */
-/* eslint-disable @stylistic/quote-props */
-/* eslint-disable sort-keys */
+/* eslint-disable @stylistic/quote-props */${sortKeys}
 
 export const typesBundle = ${JSON.stringify(typesBundle, null, 2)} as unknown as OverrideBundleType;
 `);

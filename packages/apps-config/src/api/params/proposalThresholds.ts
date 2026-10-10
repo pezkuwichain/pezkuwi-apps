@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 
-import { DICLE_GENESIS, KULUPU_GENESIS, PEZKUWI_GENESIS } from '../constants.js';
+import { PEZKUWI_GENESIS } from '../constants.js';
 
 // normal fast-track proposals
 const FAST_TRACK: Record<string, number> = {
@@ -16,21 +16,16 @@ const FAST_TRACK_NO_DELAY: Record<string, number> = {
 };
 
 const PROPOSE: Record<string, number> = {
-  [DICLE_GENESIS]: 1 / 2,
-  [KULUPU_GENESIS]: 1,
   [PEZKUWI_GENESIS]: 3 / 5,
   default: 1 / 2
 };
 
 const SLASH: Record<string, number> = {
-  [DICLE_GENESIS]: 1 / 2,
   [PEZKUWI_GENESIS]: 3 / 4,
   default: 1 / 2
 };
 
 const TREASURY: Record<string, number> = {
-  [DICLE_GENESIS]: 3 / 5,
-  [KULUPU_GENESIS]: 1 / 2,
   [PEZKUWI_GENESIS]: 3 / 5,
   default: 3 / 5
 };

@@ -4,17 +4,14 @@
 import type { ApiPromise } from '@pezkuwi/api';
 import type { TrackInfo } from './types.js';
 
-import { DICLE_GENESIS, PEZKUWI_GENESIS } from '../../constants.js';
-import { dicle } from './dicle.js';
+import { PEZKUWI_GENESIS } from '../../constants.js';
 import { pezkuwi } from './pezkuwi.js';
 
 const KNOWN_GENE_TRACKS: Record<string, Record<string, TrackInfo[]>> = {
-  [DICLE_GENESIS]: dicle,
   [PEZKUWI_GENESIS]: pezkuwi
 };
 
 const KNOWN_SPEC_TRACKS: Record<string, Record<string, TrackInfo[]>> = {
-  dicle,
   // for kitchensink, we just use the root
   node: {
     referenda: [

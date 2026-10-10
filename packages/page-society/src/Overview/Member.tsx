@@ -13,7 +13,6 @@ import { BlockToTime, FormatBalance } from '@pezkuwi/react-query';
 import { formatNumber } from '@pezkuwi/util';
 
 import { useTranslation } from '../translate.js';
-import DesignDicle from './DesignDicle.js';
 
 interface Props {
   bestNumber?: BN;
@@ -141,9 +140,6 @@ function Member ({ bestNumber, className = '', value: { accountId, isCandidateVo
       </td>
       <td className='together'>{votedOn}</td>
       <td className='number'>{formatNumber(strikes)}</td>
-      <td className='button start'>
-        <DesignDicle accountId={accountId} />
-      </td>
     </StyledTr>
   );
 }

@@ -7,7 +7,6 @@ import type { OverrideBundleType } from '@pezkuwi/types/types';
 
 /* eslint-disable @stylistic/quotes */
 /* eslint-disable @stylistic/quote-props */
-/* eslint-disable sort-keys */
 
 export const typesBundle = {
   "chain": {},
