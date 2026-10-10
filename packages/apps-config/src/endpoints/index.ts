@@ -5,7 +5,7 @@ import type { TFunction, TOptions } from '../types.js';
 import type { LinkOption } from './types.js';
 
 import { createCustom, createDev, createOwn } from './development.js';
-import { prodRelayDicle, prodRelayPezkuwi } from './production.js';
+import { prodRelayPezkuwi } from './production.js';
 import { testRelayZagros } from './testing.js';
 import { expandEndpoints } from './util.js';
 
@@ -48,16 +48,6 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       value: ''
     },
     ...expandEndpoints(t, [prodRelayPezkuwi], firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      isSpaced: true,
-      text: t('rpc.header.dicle.relay', 'Dicle & teyrchains', { ns: 'apps-config' }),
-      textBy: '',
-      ui: {},
-      value: ''
-    },
-    ...expandEndpoints(t, [prodRelayDicle], firstOnly, withSort),
     {
       isDisabled: false,
       isHeader: true,
