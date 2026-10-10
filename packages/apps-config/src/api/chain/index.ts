@@ -3,11 +3,7 @@
 
 import type { OverrideBundleDefinition } from '@pezkuwi/types/types';
 
-import cere from './cere.js';
-
-// NOTE: The mapping is done from chain name in system.chain
-const chain: Record<string, OverrideBundleDefinition> = {
-  'Cere Mainnet Beta': cere
-};
+// Type bundles by system.chain name; see spec/index.ts.
+const chain: Record<string, OverrideBundleDefinition> = {};
 
 export default chain;
