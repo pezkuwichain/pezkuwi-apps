@@ -5,3 +5,4 @@ import '@pezkuwi/api-augment/bizinikiwi';
 
 export * from './createApi.js';
 export * from './createAugmentedApi.js';
+export * from './createLookupRegistry.js';

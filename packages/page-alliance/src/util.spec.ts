@@ -3,15 +3,11 @@
 
 /// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
-import { Metadata, TypeRegistry } from '@pezkuwi/types';
-import bizinikiwi from '@pezkuwi/types-support/metadata/static-bizinikiwi';
+import { createLookupRegistry } from '@pezkuwi/test-support/api';
 
 import { createCid, createPalletCid } from './util.js';
 
-const registry = new TypeRegistry();
-const metadata = new Metadata(registry, bizinikiwi);
-
-registry.setMetadata(metadata);
+const registry = createLookupRegistry();
 
 describe('util', (): void => {
   describe('createPalletCid', (): void => {

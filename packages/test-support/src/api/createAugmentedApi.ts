@@ -1,10 +1,11 @@
 // Copyright 2017-2026 @pezkuwi/test-support authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { Registry } from '@pezkuwi/types/types';
+import type { Registry, RegistryTypes } from '@pezkuwi/types/types';
 
 import { ApiPromise, WsProvider } from '@pezkuwi/api';
 import { Metadata, TypeRegistry } from '@pezkuwi/types';
+import lookupDefinitions from '@pezkuwi/types-augment/lookup/definitions';
 import metaStatic from '@pezkuwi/types-support/metadata/static-bizinikiwi';
 
 // PezkuwiChain requires AuthorizeCall signed extension for all transactions
@@ -23,6 +24,10 @@ export function createAugmentedApi (): ApiPromise {
   const metadata = new Metadata(registry as unknown as Registry, metaStatic);
 
   registry.setMetadata(metadata);
+  // The static metadata predates the rename and only has Pallet* names; the
+  // app (and the creation helpers) use the Pezpallet* lookup names.
+  // RegistryTypes does not model a struct's `_alias`, which the registry accepts
+  registry.register(lookupDefinitions.types as RegistryTypes);
 
   const api = new ApiPromise({
     provider: new WsProvider('ws://', false),

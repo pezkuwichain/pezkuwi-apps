@@ -19,6 +19,7 @@
     "@testing-library/react": "^14.1.2"
   },
   "devDependencies": {
+    "@pezkuwi/types-augment": "^16.5.37",
     "@pezkuwi/types-support": "16.5.37",
     "@testing-library/jest-dom": "^5.17.0",
     "tsconfig-paths": "^4.2.0"

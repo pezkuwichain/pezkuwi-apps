@@ -14,7 +14,8 @@ describe('Calculate bounty bond', () => {
     const depositBase = registry.createType('BalanceOf', new BN(166666666666));
     const depositPerByte = registry.createType('BalanceOf', new BN(1666666666));
 
-    expect(calculateBountyBond('Dicle network UI Bounty', depositBase, depositPerByte)).toEqual(new BN(206666666650));
+    // 25 bytes: 166666666666 + 25 * 1666666666
+    expect(calculateBountyBond('Pezkuwi network UI Bounty', depositBase, depositPerByte)).toEqual(new BN(208333333316));
   });
 
   it('handles utf-8 chars', () => {
