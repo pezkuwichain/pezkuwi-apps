@@ -3,15 +3,15 @@
 
 /// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
-import { TypeRegistry } from '@pezkuwi/types/create';
+import { createLookupRegistry } from '@pezkuwi/test-support/api';
 
 import { getBountyStatus } from './getBountyStatus.js';
 
 describe('get bounty status', () => {
-  let registry: TypeRegistry;
+  let registry: ReturnType<typeof createLookupRegistry>;
 
   beforeEach(() => {
-    registry = new TypeRegistry();
+    registry = createLookupRegistry();
   });
 
   it('for CuratorProposed state it has curator defined', () => {
