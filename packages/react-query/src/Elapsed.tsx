@@ -21,7 +21,11 @@ const tickers = new Map<number, Ticker>();
 
 let lastNow = Date.now();
 let lastId = 0;
+let isTicking = false;
 
+// One shared clock for every mounted Elapsed. It runs only while there is at
+// least one: it used to start when the module loaded and tick 10 times a
+// second forever, on every page, and kept test processes from exiting.
 function tick (): void {
   lastNow = Date.now();
 
@@ -29,7 +33,11 @@ function tick (): void {
     ticker(lastNow);
   }
 
-  setTimeout(tick, TICK_TIMEOUT);
+  isTicking = tickers.size !== 0;
+
+  if (isTicking) {
+    setTimeout(tick, TICK_TIMEOUT);
+  }
 }
 
 function formatValue (value: number, type = 's', withDecimal = false): React.ReactNode {
@@ -60,8 +68,6 @@ function getDisplayValue (now = 0, value: BN | Date | number = 0): React.ReactNo
       : formatValue(elapsed / 3600, 'hr');
 }
 
-tick();
-
 function Elapsed ({ children, className = '', value }: Props): React.ReactElement<Props> {
   const [now, setNow] = useState(lastNow);
 
@@ -69,6 +75,10 @@ function Elapsed ({ children, className = '', value }: Props): React.ReactElemen
     const id = lastId++;
 
     tickers.set(id, setNow);
+
+    if (!isTicking) {
+      tick();
+    }
 
     return (): void => {
       tickers.delete(id);
