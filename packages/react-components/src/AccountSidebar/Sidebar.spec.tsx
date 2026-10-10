@@ -11,7 +11,7 @@ import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 
 import i18next from '@pezkuwi/react-components/i18n';
 import { anAccount, anAccountWithInfo, anAccountWithMeta } from '@pezkuwi/test-support/creation/account';
-import { alice, bob, MemoryStore } from '@pezkuwi/test-support/keyring';
+import { alice, bob, charlie, ferdie, MemoryStore } from '@pezkuwi/test-support/keyring';
 import { assertHasClass, assertTextContent, mockApiHooks } from '@pezkuwi/test-support/utils';
 import { keyring } from '@pezkuwi/ui-keyring';
 
@@ -19,12 +19,10 @@ import { mockAccountsPageHooks } from '../../../page-accounts/test/mockAccountsP
 
 await mockAccountsPageHooks();
 
-const { charlieShortAddress, ferdieShortAddress, mockRegistration, registrars } = await import('@pezkuwi/test-support/mockData');
+const { mockRegistration, registrars } = await import('@pezkuwi/test-support/mockData');
 const { AccountsPage } = await import('../../../page-accounts/test/pages/accountsPage.js');
 
-// FIXME: these all need to be wrapped in waitFor ....
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('Sidebar', () => {
+describe('Sidebar', () => {
   let accountsPage: InstanceType<typeof AccountsPage>;
   let sideBar: Sidebar;
 
@@ -45,7 +43,6 @@ describe.skip('Sidebar', () => {
     const initialName = 'INITIAL_NAME';
     const newName = 'NEW_NAME';
     const defaultTag = 'Default';
-    const nameInputNotFoundError = 'Unable to find an element by: [data-testid="name-input"]';
 
     describe('changes name', () => {
       beforeEach(async () => {
@@ -83,8 +80,7 @@ describe.skip('Sidebar', () => {
       sideBar = await accountsPage.openSidebarForRow(0);
       await sideBar.clickByText('none');
       expect(sideBar.queryByRole('combobox')).toBeFalsy();
-
-      await expect(sideBar.typeAccountName(newName)).rejects.toThrow(nameInputNotFoundError);
+      expect(sideBar.queryByTestId('name-input')).toBeFalsy();
     });
 
     it('when isEditable is false account name is not editable', async () => {
@@ -94,7 +90,7 @@ describe.skip('Sidebar', () => {
       sideBar = await accountsPage.openSidebarForRow(0);
       sideBar.edit();
 
-      await expect(sideBar.typeAccountName(newName)).rejects.toThrow(nameInputNotFoundError);
+      expect(sideBar.queryByTestId('name-input')).toBeFalsy();
     });
 
     describe('on edit cancel', () => {
@@ -137,7 +133,7 @@ describe.skip('Sidebar', () => {
         await sideBar.typeAccountName(newName);
         await sideBar.selectTag(defaultTag);
 
-        fireEvent.click(await screen.findByText('accounts'));
+        fireEvent.click(await screen.findByTestId('sort-by-section'));
 
         await sideBar.assertTags('none');
         await sideBar.assertAccountName('ALICE');
@@ -236,13 +232,13 @@ describe.skip('Sidebar', () => {
         it('singular registrar', async () => {
           const judgementTag = await sideBar.getJudgement('1 Known good');
 
-          await judgementTag.assertRegistrars([charlieShortAddress]);
+          await judgementTag.assertRegistrars([charlie]);
         });
 
         it('multiple registrars', async () => {
           const judgementTag = await sideBar.getJudgement('2 Reasonable');
 
-          await judgementTag.assertRegistrars(['BOB', ferdieShortAddress]);
+          await judgementTag.assertRegistrars(['BOB', ferdie]);
         });
 
         it('opens clicked registrar in sidebar and closes popup', async () => {

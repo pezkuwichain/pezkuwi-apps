@@ -16,8 +16,7 @@ const NOOP_CHANGE = () => undefined;
 export class AddressesPage extends Page {
   constructor () {
     super(
-      <AddressOverview onStatusChange={NOOP_CHANGE} />,
-      'Address-'
+      <AddressOverview onStatusChange={NOOP_CHANGE} />
     );
   }
 
