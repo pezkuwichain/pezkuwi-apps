@@ -12,7 +12,9 @@ jobs:
         step: ['test:all']
     name: ${{ matrix.step }}
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    # the full suite runs in about 2 minutes; a hang fails early instead of
+    # holding a runner for hours
+    timeout-minutes: 20
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
