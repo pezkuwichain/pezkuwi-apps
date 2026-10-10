@@ -137,11 +137,6 @@ function Row ({ chainRecord, highlight = false, id, lastCommittedTimeslice, leas
         $p={highlight}
         className='media--800'
       >{<div style={{ alignItems: 'center', columnGap: '12px', display: 'flex', flexDirection: 'row', justifyContent: 'left' }}>
-          <ParaLink
-            id={new BN(id)}
-            showLogo={false}
-            type={ParaLinkType.SUBSCAN}
-          />
           <div style={{ marginBottom: '2px' }}>
             <ParaLink
               id={new BN(id)}

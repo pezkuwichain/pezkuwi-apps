@@ -3,5 +3,4 @@
 
 export * from './inflation.js';
 export * from './proposalThresholds.js';
-export * from './teleport.js';
 export * from './tracks/index.js';

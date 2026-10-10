@@ -5,7 +5,6 @@ import type { BN } from '@pezkuwi/util';
 
 import React, { useMemo } from 'react';
 
-import { Subscan } from '@pezkuwi/apps-config/links/subscan';
 import { useParaEndpoints } from '@pezkuwi/react-hooks';
 
 import ChainImg from './ChainImg.js';
@@ -14,8 +13,7 @@ import { styled } from './styled.js';
 
 export enum ParaLinkType {
   PJS = 'pjs',
-  HOME = 'home',
-  SUBSCAN = 'subscan'
+  HOME = 'home'
 }
 
 interface Props {
@@ -40,11 +38,6 @@ function ParaLink ({ className, id, showLogo = true, type = ParaLinkType.PJS }: 
     ? links[links.length - 1]
     : endpoints[0];
 
-  const subscanUrl = text &&
-    typeof text === 'string' &&
-    Subscan.chains[text] &&
-    Subscan.create(Subscan.chains[text], '', '').toString();
-
   return (
     <StyledDiv className={className}>
       {showLogo && (
@@ -57,19 +50,6 @@ function ParaLink ({ className, id, showLogo = true, type = ParaLinkType.PJS }: 
       {links.length
         ? (
           <>
-            {type === ParaLinkType.SUBSCAN && !!subscanUrl && (
-              <a
-                href={subscanUrl}
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                <img
-                  alt='Subscan'
-                  height='20'
-                  src={Subscan.ui.logo}
-                />
-              </a>
-            )}
             {type === ParaLinkType.HOME && homepage && (
               <a
                 href={homepage}

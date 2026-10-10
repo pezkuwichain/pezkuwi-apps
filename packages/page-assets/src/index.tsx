@@ -5,14 +5,12 @@
 import '@pezkuwi/api-augment/bizinikiwi';
 
 import type { BN } from '@pezkuwi/util';
-import type { HexString } from '@pezkuwi/util/types';
 
 import React, { useMemo, useRef } from 'react';
 import { Route, Routes } from 'react-router';
 
-import { getGenesis } from '@pezkuwi/apps-config';
 import { Tabs } from '@pezkuwi/react-components';
-import { useAccounts, useApi, useAssetIds, useAssetInfos } from '@pezkuwi/react-hooks';
+import { useAccounts, useAssetIds, useAssetInfos } from '@pezkuwi/react-hooks';
 import { BN_ONE } from '@pezkuwi/util';
 
 import Balances from './Balances/index.js';
@@ -27,16 +25,9 @@ interface Props {
   className?: string;
 }
 
-// Chains in which next asset id should be incremented from 1
-const GENESIS_HASHES = [getGenesis('statemint'), getGenesis('statemine')];
-
-function findOpenId (genesisHash: HexString, ids?: BN[]): BN {
+function findOpenId (ids?: BN[]): BN {
   if (!ids?.length) {
     return BN_ONE;
-  }
-
-  if (GENESIS_HASHES.includes(genesisHash)) {
-    return ids.sort((a, b) => a.cmp(b))[ids.length - 1].add(BN_ONE);
   }
 
   const lastTaken = ids.find((id, index) =>
@@ -52,7 +43,6 @@ function findOpenId (genesisHash: HexString, ids?: BN[]): BN {
 
 function AssetApp ({ basePath, className }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
-  const { api } = useApi();
   const { hasAccounts } = useAccounts();
   const ids = useAssetIds();
   const infos = useAssetInfos(ids);
@@ -86,11 +76,9 @@ function AssetApp ({ basePath, className }: Props): React.ReactElement<Props> {
   );
 
   const openId = useMemo(
-    () => findOpenId(
-      api.genesisHash.toHex(),
-      // Check if id is valid digit
-      ids?.filter((id) => /^\d{1,3}(,\d{3})*$/.test(id.toString()))),
-    [api.genesisHash, ids]
+    // Check if id is valid digit
+    () => findOpenId(ids?.filter((id) => /^\d{1,3}(,\d{3})*$/.test(id.toString()))),
+    [ids]
   );
 
   return (

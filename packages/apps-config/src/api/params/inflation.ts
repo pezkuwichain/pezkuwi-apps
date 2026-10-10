@@ -3,7 +3,7 @@
 
 import type { ApiPromise } from '@pezkuwi/api';
 
-import { CERE_NETWORK_GENESIS, CERE_NETWORK_TESTNET_GENESIS, DICLE_GENESIS, DOCK_POS_TESTNET_GENESIS, JOYSTREAM_GENESIS, NEATCOIN_GENESIS, NFTMART_GENESIS, PEZKUWI_GENESIS, VARA_NETWORK_GENESIS, VARA_NETWORK_TESTNET_GENESIS, ZKVERIFY_GENESIS, ZKVERIFY_VOLTA_GENESIS } from '../constants.js';
+import { PEZKUWI_GENESIS } from '../constants.js';
 
 interface InflationParams {
   auctionAdjust: number;
@@ -27,33 +27,8 @@ const DEFAULT_PARAMS: InflationParams = {
   stakeTarget: 0.5
 };
 
-const CERE_NETWORK_INFLATION_PARAMS = { ...DEFAULT_PARAMS, maxInflation: 0.05, minInflation: 0.0001, stakeTarget: 0.2 };
-
-const VARA_NETWORK_INFLATION_PARAMS = { ...DEFAULT_PARAMS, maxInflation: 0, minInflation: 0.0001, stakeTarget: 0.85 };
-
-const JOYSTREAM_INFLATION_PARAMS = { ...DEFAULT_PARAMS, maxInflation: 0.03, minInflation: 0.0075 };
-
-const ZKVERIFY_INFLATION_PARAMS = { ...DEFAULT_PARAMS, auctionAdjust: 0, maxInflation: 0.025, minInflation: 0.025, stakeTarget: 0 };
-
-const ZKVERIFY_VOLTA_INFLATION_PARAMS = { ...DEFAULT_PARAMS, auctionAdjust: 0, maxInflation: 0.025, minInflation: 0.025, stakeTarget: 0 };
-
 const KNOWN_PARAMS: Record<string, InflationParams> = {
-  [CERE_NETWORK_GENESIS]: CERE_NETWORK_INFLATION_PARAMS,
-  [CERE_NETWORK_TESTNET_GENESIS]: CERE_NETWORK_INFLATION_PARAMS,
-  // 30% for up to 60 slots, see
-  // https://github.com/pezkuwichain/pezkuwi/blob/816cb64ea16102c6c79f6be2a917d832d98df757/runtime/dicle/src/lib.rs#L526-L527
-  // 75% ideal target, see
-  // https://github.com/pezkuwichain/pezkuwi/blob/816cb64ea16102c6c79f6be2a917d832d98df757/runtime/dicle/src/lib.rs#L529-L531
-  [DICLE_GENESIS]: { ...DEFAULT_PARAMS, auctionAdjust: (0.3 / 60), auctionMax: 60, stakeTarget: 0.75 },
-  [DOCK_POS_TESTNET_GENESIS]: { ...DEFAULT_PARAMS, stakeTarget: 0.75 },
-  [JOYSTREAM_GENESIS]: JOYSTREAM_INFLATION_PARAMS,
-  [NEATCOIN_GENESIS]: { ...DEFAULT_PARAMS, stakeTarget: 0.75 },
-  [NFTMART_GENESIS]: { ...DEFAULT_PARAMS, falloff: 0.04, stakeTarget: 0.60 },
-  [PEZKUWI_GENESIS]: { ...DEFAULT_PARAMS, stakeTarget: 0.75 },
-  [VARA_NETWORK_GENESIS]: VARA_NETWORK_INFLATION_PARAMS,
-  [VARA_NETWORK_TESTNET_GENESIS]: VARA_NETWORK_INFLATION_PARAMS,
-  [ZKVERIFY_GENESIS]: ZKVERIFY_INFLATION_PARAMS,
-  [ZKVERIFY_VOLTA_GENESIS]: ZKVERIFY_VOLTA_INFLATION_PARAMS
+  [PEZKUWI_GENESIS]: { ...DEFAULT_PARAMS, stakeTarget: 0.75 }
 };
 
 export function getInflationParams (api: ApiPromise): InflationParams {
