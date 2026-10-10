@@ -31,7 +31,7 @@ function Badge ({ className = '', color = 'normal', hover, hoverAction, icon, in
 
   const [trigger] = useState(() => `${badgeTestId}-hover-${Date.now()}-${badgeId++}`);
   const extraProps = hover
-    ? { 'data-for': trigger, 'data-tip': true }
+    ? { 'data-tooltip-id': trigger }
     : {};
   const isHighlight = color === 'highlight';
 

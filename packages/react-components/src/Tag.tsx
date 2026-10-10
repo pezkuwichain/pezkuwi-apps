@@ -28,8 +28,7 @@ function Tag ({ className = '', color = 'theme', hover, label, size = 'small' }:
     <StyledDiv
       className={`${className} ui--Tag ${color}Color ${size}Size ${theme}Theme`}
       color={color || 'grey'}
-      data-for={hover && trigger}
-      data-tip={!!hover}
+      data-tooltip-id={hover ? trigger : undefined}
     >
       {label}
       {hover && (
