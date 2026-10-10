@@ -2336,7 +2336,7 @@ __metadata:
     "@acala-network/chopsticks-core": "npm:^1.2.1"
     "@pezkuwi/apps-config": "npm:^1.0.2-1-x"
     "@pezkuwi/apps-routing": "npm:^1.0.2-1-x"
-    "@pezkuwi/dev": "npm:^0.86.5"
+    "@pezkuwi/dev": "npm:^0.86.6"
     "@pezkuwi/react-api": "npm:^1.0.2-1-x"
     "@pezkuwi/react-components": "npm:^1.0.2-1-x"
     "@pezkuwi/react-hooks": "npm:^1.0.2-1-x"
@@ -2381,35 +2381,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev-test@npm:^0.86.5":
-  version: 0.86.5
-  resolution: "@pezkuwi/dev-test@npm:0.86.5"
+"@pezkuwi/dev-test@npm:^0.86.6":
+  version: 0.86.6
+  resolution: "@pezkuwi/dev-test@npm:0.86.6"
   dependencies:
     jsdom: "npm:^24.0.0"
     tslib: "npm:^2.7.0"
-  checksum: 10/261c76d2ab5aa6a318bd1b8fa2a08507e919c8c62fb46719c083ab4d1c77f7437bd472eb74f1d695bb7a14404e2d9691b949b6fcaa4858ca8c79ff586a32be13
+  checksum: 10/6fcaf161a11c190d041f62772d149c147072f410b2ee2e4f233b6fd3694b71dd94fa82a9024673ca7c31d5fe5e83c9ddf4ad9c56c32db255f3188ba97ee0693f
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev-ts@npm:^0.86.5":
-  version: 0.86.5
-  resolution: "@pezkuwi/dev-ts@npm:0.86.5"
+"@pezkuwi/dev-ts@npm:^0.86.6":
+  version: 0.86.6
+  resolution: "@pezkuwi/dev-ts@npm:0.86.6"
   dependencies:
     json5: "npm:^2.2.3"
     tslib: "npm:^2.7.0"
     typescript: "npm:^5.5.4"
-  checksum: 10/7ef452e10dcdf0b1130d10285ec5a4567ed25cdd5a8e1d13c7d9f0be259d58e90780127df258312e9206097eac6ea692fb7b0bdbfe38c36ed910081e4dba391e
+  checksum: 10/8f4b2e0ff4026872404cc93bd0823313aaee3701d8efcfeb91cf93cf16308659a13d34170a3964f96509d5e5b341b58c378cbeff22b6616090144db22a46b985
   languageName: node
   linkType: hard
 
-"@pezkuwi/dev@npm:^0.86.5":
-  version: 0.86.5
-  resolution: "@pezkuwi/dev@npm:0.86.5"
+"@pezkuwi/dev@npm:^0.86.6":
+  version: 0.86.6
+  resolution: "@pezkuwi/dev@npm:0.86.6"
   dependencies:
     "@eslint/compat": "npm:^2.1.1"
     "@eslint/js": "npm:^10.0.1"
-    "@pezkuwi/dev-test": "npm:^0.86.5"
-    "@pezkuwi/dev-ts": "npm:^0.86.5"
+    "@pezkuwi/dev-test": "npm:^0.86.6"
+    "@pezkuwi/dev-ts": "npm:^0.86.6"
     "@rollup/plugin-alias": "npm:^5.1.1"
     "@rollup/plugin-commonjs": "npm:^29.0.3"
     "@rollup/plugin-dynamic-import-vars": "npm:^2.1.5"
@@ -2474,7 +2474,7 @@ __metadata:
     pezkuwi-exec-rollup: scripts/pezkuwi-exec-rollup.mjs
     pezkuwi-exec-tsc: scripts/pezkuwi-exec-tsc.mjs
     pezkuwi-exec-webpack: scripts/pezkuwi-exec-webpack.mjs
-  checksum: 10/64ea24c63576a8891b45e7ead60cd7b516cd53a43e78ee8958b3293d47f1584144fdee3579de611ebf6e439dcb073d3793124a7eaa23baeb63b9bc18ada2b516
+  checksum: 10/55e5f51a664adf776c3fad5e7a2a636bc9a2bafa820f384701fa4ed215b7640df748824af29ab1e1a85cfb14d1b10f7b4d2c4fe02155b6275cd7d396673be460
   languageName: node
   linkType: hard
 
@@ -12541,7 +12541,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pezkuwi-apps@workspace:."
   dependencies:
-    "@pezkuwi/dev": "npm:^0.86.5"
+    "@pezkuwi/dev": "npm:^0.86.6"
     "@pezkuwi/extension-dapp": "npm:^0.62.27"
     "@pezkuwi/extension-inject": "npm:^0.62.27"
     "@types/chart.js": "npm:^2.9.41"

@@ -42,13 +42,13 @@
     "lint": "pezkuwi-dev-run-lint",
     "postinstall": "pezkuwi-dev-yarn-only",
     "start": "yarn clean && cd packages/apps && yarn pezkuwi-exec-webpack serve --config webpack.serve.cjs --port 3000",
-    "test": "pezkuwi-dev-run-test --env browser ^typesBundle ^chainEndpoints ^chainTypes ^:.slow. ^Accounts/index.spec ^modals/Create.spec ^Contacts/index.spec ^Bounties.spec ^AccountSidebar",
-    "test:all": "pezkuwi-dev-run-test --env browser ^chainEndpoints ^chainTypes",
-    "test:one": "pezkuwi-dev-run-test --env browser",
+    "test": "pezkuwi-dev-run-test --experimental-test-module-mocks --env browser ^typesBundle ^chainEndpoints ^chainTypes ^:.slow.",
+    "test:all": "pezkuwi-dev-run-test --experimental-test-module-mocks --env browser ^chainEndpoints ^chainTypes",
+    "test:one": "pezkuwi-dev-run-test --experimental-test-module-mocks --env browser",
     "test:skipped": "echo 'tests skipped'"
   },
   "devDependencies": {
-    "@pezkuwi/dev": "^0.86.5",
+    "@pezkuwi/dev": "^0.86.6",
     "@pezkuwi/extension-dapp": "^0.62.27",
     "@pezkuwi/extension-inject": "^0.62.27",
     "@types/chart.js": "^2.9.41",
