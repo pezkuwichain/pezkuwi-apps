@@ -12,7 +12,7 @@ import type { BountyIndex } from '@pezkuwi/types/interfaces';
 import type { PezpalletBountiesBounty, PezpalletBountiesBountyStatus } from '@pezkuwi/types/lookup';
 import type { BountyApi } from '../../src/hooks/index.js';
 
-import { fireEvent, render, within } from '@testing-library/react';
+import { fireEvent, render, waitFor, within } from '@testing-library/react';
 import React, { Suspense } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
@@ -24,6 +24,7 @@ import { ApiCtx } from '@pezkuwi/react-hooks/ctx/Api';
 import { QueueCtx } from '@pezkuwi/react-hooks/ctx/Queue';
 import { balanceOf } from '@pezkuwi/test-support/creation/balance';
 import { BountyFactory } from '@pezkuwi/test-support/creation/bounties';
+import { assertVisible } from '@pezkuwi/test-support/utils';
 import { TypeRegistry } from '@pezkuwi/types/create';
 
 import Bounties from '../../src/Bounties.js';
@@ -330,6 +331,10 @@ export class BountiesPage {
     const icon = await within(votingInfo).findByTestId('question-circle');
 
     fireEvent.mouseEnter(icon);
-    expect(await this.findByText(description)).toBeVisible();
+
+    const text = await this.findByText(description);
+
+    // the tooltip renders hidden, then fades in
+    await waitFor(() => assertVisible(text));
   }
 }

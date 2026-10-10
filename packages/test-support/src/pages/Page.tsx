@@ -6,7 +6,6 @@
 import type { RenderResult } from '@testing-library/react';
 import type { ApiProps } from '@pezkuwi/react-api/types';
 import type { PartialQueueTxExtrinsic, QueueProps, QueueTxExtrinsicAdd } from '@pezkuwi/react-components/Status/types';
-import type { UseAccountInfo } from '@pezkuwi/react-hooks/types';
 import type { AccountOverrides } from '../utils/accountDefaults.js';
 
 import { queryByAttribute, render, screen } from '@testing-library/react';
@@ -25,93 +24,11 @@ import { BN } from '@pezkuwi/util';
 import { alice, bob, charlie, ferdie } from '../keyring/index.js';
 import { Table } from '../pagesElements/index.js';
 import { mockAccountHooks } from '../utils/accountDefaults.js';
-import { mockApiHooks } from '../utils/mockApiHooks.js';
 
 let queueExtrinsic: (value: PartialQueueTxExtrinsic) => void;
 
 class NotYetRendered extends Error {
 }
-
-jest.mock('@pezkuwi/react-hooks/useAccounts', () => ({
-  useAccounts: () => mockAccountHooks.useAccounts
-}));
-
-jest.mock('@pezkuwi/react-hooks/useAccountInfo', () => {
-  const actual = jest.requireActual<{ useAccountInfo: (address: string) => UseAccountInfo }>('@pezkuwi/react-hooks/useAccountInfo');
-
-  return ({
-    useAccountInfo: (address: string) => {
-      const mockInfo = mockAccountHooks.accountsMap[address];
-
-      return mockInfo
-        ? {
-          ...actual.useAccountInfo(address),
-          flags: { ...actual.useAccountInfo(address).flags, ...(mockInfo.info.flags) },
-          identity: {
-            ...actual.useAccountInfo(address).identity,
-            ...(mockInfo.info.identity),
-            judgements: [
-              ...(actual.useAccountInfo(address).identity?.judgements || []),
-              ...(mockApiHooks.judgements || [])
-            ]
-          },
-          tags: [...actual.useAccountInfo(address).tags, ...(mockInfo.info.tags)]
-        }
-        : actual.useAccountInfo(address);
-    }
-  });
-});
-
-jest.mock('@pezkuwi/react-hooks/useNextTick', () => ({
-  useNextTick: () => true
-}));
-
-jest.mock('@pezkuwi/react-hooks/useBalancesAll', () => ({
-  useBalancesAll: (address: string) => mockAccountHooks.accountsMap[address].balance
-}));
-
-jest.mock('@pezkuwi/react-hooks/useStakingInfo', () => ({
-  useStakingInfo: (address: string) => mockAccountHooks.accountsMap[address].staking
-}));
-
-jest.mock('@pezkuwi/react-hooks/useBestNumber', () => ({
-  useBestNumber: () => 1
-}));
-
-jest.mock('@pezkuwi/react-hooks/useSubidentities', () => ({
-  useSubidentities: () => mockApiHooks.subs
-}));
-
-jest.mock('@pezkuwi/app-accounts/Accounts/useMultisigApprovals', () => ({
-  __esModule: true,
-  default: () => mockApiHooks.multisigApprovals
-}));
-
-jest.mock('@pezkuwi/react-hooks/useDelegations', () => ({
-  useDelegations: () => mockApiHooks.delegations
-}));
-
-jest.mock('@pezkuwi/react-hooks/useProxies', () => ({
-  useProxies: () => mockApiHooks.proxies
-}));
-
-jest.mock('@pezkuwi/react-hooks/useSubidentities', () => ({
-  useSubidentities: () => mockApiHooks.subs
-}));
-
-jest.mock('@pezkuwi/react-hooks/useRegistrars', () => ({
-  useRegistrars: () => ({
-    isRegistrar: false,
-    registrars: mockApiHooks.registrars
-  })
-}));
-
-jest.mock('@pezkuwi/react-hooks/useTheme', () => ({
-  useTheme: () => ({
-    theme: 'light',
-    themeClassName: 'theme--light'
-  })
-}));
 
 export abstract class Page {
   private renderResult?: RenderResult;
@@ -198,6 +115,8 @@ export abstract class Page {
     };
     const mockApi: ApiProps = {
       api,
+      // identities live on the people chain; here both are the same mock
+      apiIdentity: api,
       apiSystem: {
         ...api,
         isReady: Promise.resolve(api)

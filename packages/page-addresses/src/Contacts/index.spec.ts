@@ -10,15 +10,19 @@ import { screen } from '@testing-library/react';
 import i18next from '@pezkuwi/react-components/i18n';
 import { aContactWithBalance } from '@pezkuwi/test-support/creation/contact';
 import { MemoryStore } from '@pezkuwi/test-support/keyring';
-import { balance } from '@pezkuwi/test-support/utils';
+import { assertHasClass, balance } from '@pezkuwi/test-support/utils';
 import { keyring } from '@pezkuwi/ui-keyring';
 
-import { AddressesPage } from '../../test/pages/addressesPage.js';
+import { mockAddressesPageHooks } from '../../test/mockAddressesPageHooks.js';
+
+await mockAddressesPageHooks();
+
+const { AddressesPage } = await import('../../test/pages/addressesPage.js');
 
 // FIXME isSplit Table
 // eslint-disable-next-line jest/no-disabled-tests
 describe.skip('Addresses page', () => {
-  let addressesPage: AddressesPage;
+  let addressesPage: InstanceType<typeof AddressesPage>;
 
   beforeAll(async () => {
     await i18next.changeLanguage('en');
@@ -49,7 +53,6 @@ describe.skip('Addresses page', () => {
       expect(await addressesTable.getRows()).toHaveLength(0);
     });
 
-    // eslint-disable-next-line jest/expect-expect
     it('the contacts table contains a message about no contacts available', async () => {
       const noContactsMessage = 'no addresses saved yet, add any existing address';
 
@@ -128,11 +131,11 @@ describe.skip('Addresses page', () => {
       addressesPage.renderDefaultContacts(1);
       const row = (await addressesPage.getAddressesRows())[0];
 
-      expect(row.detailsRow).toHaveClass('isCollapsed');
+      assertHasClass(row.detailsRow, 'isCollapsed');
 
       await row.expand();
 
-      expect(row.detailsRow).toHaveClass('isExpanded');
+      assertHasClass(row.detailsRow, 'isExpanded');
     });
   });
 });

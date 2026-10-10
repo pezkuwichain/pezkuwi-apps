@@ -1,9 +1,9 @@
 // Copyright 2017-2026 @pezkuwi/test-supports authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-/* global expect */
-
 import { fireEvent, screen } from '@testing-library/react';
+
+import { assertHasClass } from './domAssertions.js';
 
 export const clickButton = async (buttonName: string): Promise<void> => {
   const button = await screen.findByRole('button', { name: buttonName });
@@ -24,5 +24,5 @@ export const fillInput = (inputTestId: string, value: string): void => {
 export const assertButtonDisabled = (buttonName: string): void => {
   const button = screen.getByRole('button', { name: buttonName });
 
-  expect(button).toHaveClass('isDisabled');
+  assertHasClass(button, 'isDisabled');
 };

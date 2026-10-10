@@ -3,6 +3,7 @@
 
 export * from './accountDefaults.js';
 export * from './balance.js';
+export * from './domAssertions.js';
 export * from './mockApiHooks.js';
 export * from './renderedScreenUtils.js';
 export * from './waitFor.js';

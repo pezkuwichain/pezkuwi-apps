@@ -17,17 +17,21 @@ import { toShortAddress } from '@pezkuwi/react-components/util';
 import { anAccountWithBalance, anAccountWithBalanceAndMeta, anAccountWithInfo, anAccountWithInfoAndMeta, anAccountWithMeta, anAccountWithStaking } from '@pezkuwi/test-support/creation/account';
 import { makeStakingLedger as ledger } from '@pezkuwi/test-support/creation/staking';
 import { alice, bob, MemoryStore } from '@pezkuwi/test-support/keyring';
-import { balance, mockApiHooks, showBalance } from '@pezkuwi/test-support/utils';
+import { assertHasClass, assertTextContent, balance, mockApiHooks, showBalance } from '@pezkuwi/test-support/utils';
 import { TypeRegistry } from '@pezkuwi/types/create';
 import { keyring } from '@pezkuwi/ui-keyring';
 import { BN } from '@pezkuwi/util';
 
-import { AccountsPage } from '../../test/pages/accountsPage.js';
+import { mockAccountsPageHooks } from '../../test/mockAccountsPageHooks.js';
+
+await mockAccountsPageHooks();
+
+const { AccountsPage } = await import('../../test/pages/accountsPage.js');
 
 // FIXME isSplit Table
 // eslint-disable-next-line jest/no-disabled-tests
 describe.skip('Accounts page', () => {
-  let accountsPage: AccountsPage;
+  let accountsPage: InstanceType<typeof AccountsPage>;
 
   beforeAll(async () => {
     await i18next.changeLanguage('en');
@@ -64,7 +68,6 @@ describe.skip('Accounts page', () => {
       expect(accountRows).toHaveLength(0);
     });
 
-    // eslint-disable-next-line jest/expect-expect
     it('the accounts table contains a message about no accounts available', async () => {
       const noAccountsMessage = 'You don\'t have any accounts. Some features are currently hidden and will only become available once you have accounts.';
       const accountsTable = await accountsPage.getTable();
@@ -132,7 +135,7 @@ describe.skip('Accounts page', () => {
     });
 
     // FIXME broken after column rework
-    // eslint-disable-next-line jest/no-disabled-tests, jest/expect-expect
+    // eslint-disable-next-line jest/no-disabled-tests
     it.skip('a separate column for parent account is not displayed', async () => {
       accountsPage.renderDefaultAccounts(1);
       const accountsTable = await accountsPage.getTable();
@@ -176,11 +179,11 @@ describe.skip('Accounts page', () => {
       accountsPage.renderDefaultAccounts(1);
       const row = (await accountsPage.getAccountRows())[0];
 
-      expect(row.detailsRow).toHaveClass('isCollapsed');
+      assertHasClass(row.detailsRow, 'isCollapsed');
 
       await row.expand();
 
-      expect(row.detailsRow).toHaveClass('isExpanded');
+      assertHasClass(row.detailsRow, 'isExpanded');
     });
 
     it('displays some summary', () => {
@@ -202,7 +205,7 @@ describe.skip('Accounts page', () => {
 
       const summary = await screen.findByTestId(/card-summary:(total )?balance/i);
 
-      expect(summary).toHaveTextContent(showBalance(500 + 200 + 150));
+      assertTextContent(summary, showBalance(500 + 200 + 150));
     });
 
     it('displays transferable summary', async () => {
@@ -213,7 +216,7 @@ describe.skip('Accounts page', () => {
 
       const summary = await screen.findByTestId(/card-summary:(total )?transferable/i);
 
-      expect(summary).toHaveTextContent(showBalance(400 + 600));
+      assertTextContent(summary, showBalance(400 + 600));
     });
 
     it('displays locked summary', async () => {
@@ -224,7 +227,7 @@ describe.skip('Accounts page', () => {
 
       const summary = await screen.findByTestId(/card-summary:(total )?locked/i);
 
-      expect(summary).toHaveTextContent(showBalance(400 + 600));
+      assertTextContent(summary, showBalance(400 + 600));
     });
 
     it('displays bonded summary', async () => {
@@ -235,7 +238,7 @@ describe.skip('Accounts page', () => {
 
       const summary = await screen.findByTestId(/card-summary:(total )?bonded/i);
 
-      expect(summary).toHaveTextContent(showBalance(70 + 20));
+      assertTextContent(summary, showBalance(70 + 20));
     });
 
     it('displays unbonding summary', async () => {
@@ -276,7 +279,7 @@ describe.skip('Accounts page', () => {
 
       const summary = await screen.findByTestId(/card-summary:(total )?unbonding/i);
 
-      expect(summary).toHaveTextContent(showBalance(200 + 300 + 400 + 100 + 200 + 300));
+      assertTextContent(summary, showBalance(200 + 300 + 400 + 100 + 200 + 300));
     });
 
     it('displays redeemable summary', async () => {
@@ -287,7 +290,7 @@ describe.skip('Accounts page', () => {
 
       const summary = await screen.findByTestId(/card-summary:(total )?redeemable/i);
 
-      expect(summary).toHaveTextContent(showBalance(4000 + 5000));
+      assertTextContent(summary, showBalance(4000 + 5000));
     });
 
     it('sorts accounts by date by default', async () => {
@@ -296,7 +299,7 @@ describe.skip('Accounts page', () => {
         anAccountWithBalanceAndMeta({ freeBalance: balance(2) }, { whenCreated: 300 }),
         anAccountWithBalanceAndMeta({ freeBalance: balance(3) }, { whenCreated: 100 })
       );
-      expect(await accountsPage.getCurrentSortCategory()).toHaveTextContent('date');
+      assertTextContent(await accountsPage.getCurrentSortCategory(), 'date');
 
       const accountsTable = await accountsPage.getTable();
 
@@ -326,35 +329,29 @@ describe.skip('Accounts page', () => {
 
       it('changes default dropdown value', async () => {
         await accountsPage.sortBy('balances');
-        expect(await accountsPage.getCurrentSortCategory())
-          .toHaveTextContent('balances');
+        assertTextContent(await accountsPage.getCurrentSortCategory(), 'balances');
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('sorts by parent if asked', async () => {
         await accountsPage.sortBy('parent');
         await accountsTable.assertRowsOrder([3, 1, 2]);
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('sorts by name if asked', async () => {
         await accountsPage.sortBy('name');
         await accountsTable.assertRowsOrder([3, 2, 1]);
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('sorts by date if asked', async () => {
         await accountsPage.sortBy('date');
         await accountsTable.assertRowsOrder([3, 1, 2]);
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('sorts by balances if asked', async () => {
         await accountsPage.sortBy('balances');
         await accountsTable.assertRowsOrder([1, 2, 3]);
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('implements stable sort', async () => {
         await accountsPage.sortBy('name');
         await accountsTable.assertRowsOrder([3, 2, 1]);
@@ -362,7 +359,6 @@ describe.skip('Accounts page', () => {
         await accountsTable.assertRowsOrder([1, 2, 3]);
       });
 
-      // eslint-disable-next-line jest/expect-expect
       it('respects reverse button', async () => {
         await accountsPage.sortBy('name');
         await accountsTable.assertRowsOrder([3, 2, 1]);
@@ -410,17 +406,14 @@ describe.skip('Accounts page', () => {
           await aliceRow.assertAccountName('ALICE');
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('the development badge is displayed', async () => {
           await aliceRow.assertBadge('wrench-badge');
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('the all networks badge is not displayed', () => {
           aliceRow.assertNoBadge('exclamation-triangle-badge');
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('the regular badge is not displayed', () => {
           aliceRow.assertNoBadge('transparent-badge');
         });
@@ -434,17 +427,14 @@ describe.skip('Accounts page', () => {
           await bobRow.assertAccountName('BOB');
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('the development badge is not displayed', () => {
           bobRow.assertNoBadge('wrench-badge');
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('the all networks badge is displayed', async () => {
           await bobRow.assertBadge('exclamation-triangle-badge');
         });
 
-        // eslint-disable-next-line jest/expect-expect
         it('the regular badge is not displayed', () => {
           bobRow.assertNoBadge('transparent-badge');
         });
@@ -500,7 +490,7 @@ describe.skip('Accounts page', () => {
         const modal = await screen.findByTestId('modal');
 
         within(modal).getByText('Pending call hashes');
-        expect(approvalsModalToggle).toHaveClass('purpleColor');
+        assertHasClass(approvalsModalToggle, 'purpleColor');
       });
 
       it('delegate democracy vote', async () => {
@@ -512,7 +502,7 @@ describe.skip('Accounts page', () => {
         const modal = await screen.findByTestId('modal');
 
         within(modal).getByText('democracy vote delegation');
-        expect(delegateModalToggle).toHaveClass('normalColor');
+        assertHasClass(delegateModalToggle, 'normalColor');
       });
 
       it('proxy overview', async () => {
@@ -524,7 +514,7 @@ describe.skip('Accounts page', () => {
         const modal = await screen.findByTestId('modal');
 
         within(modal).getByText('Proxy overview');
-        expect(proxyOverviewToggle).toHaveClass('normalColor');
+        assertHasClass(proxyOverviewToggle, 'normalColor');
       });
 
       afterEach(() => {

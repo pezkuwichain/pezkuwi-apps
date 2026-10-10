@@ -5,6 +5,7 @@
 
 import { fireEvent, screen, within } from '@testing-library/react';
 
+import { assertTextContent } from '../utils/domAssertions.js';
 import { JudgementTag } from './JudgementTag.js';
 
 export class Sidebar {
@@ -48,19 +49,19 @@ export class Sidebar {
     const sideBarAddressSection = await this.findByTestId('sidebar-address-menu');
     const sideBarName = await within(sideBarAddressSection).findByTestId('account-name');
 
-    expect(sideBarName).toHaveTextContent(expectedAccountName);
+    assertTextContent(sideBarName, expectedAccountName);
   }
 
   async assertJudgement (judgement: string): Promise<void> {
     const judgementsSection = await this.findByTestId('judgements');
 
-    expect(judgementsSection).toHaveTextContent(judgement);
+    assertTextContent(judgementsSection, judgement);
   }
 
   async assertTags (tagsContent: string): Promise<void> {
     const sideBarTags = await this.findByTestId('sidebar-tags');
 
-    expect(sideBarTags).toHaveTextContent(tagsContent);
+    assertTextContent(sideBarTags, tagsContent);
   }
 
   close (): Promise<void> {
