@@ -3,7 +3,7 @@
 
 /// <reference types="@pezkuwi/dev-test/globals.d.ts" />
 
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import React, { Suspense } from 'react';
 import { ThemeProvider } from 'styled-components';
 
@@ -42,41 +42,37 @@ describe('Popup Component', () => {
     await i18next.changeLanguage('en');
   });
 
+  afterEach(cleanup);
+
   // eslint-disable-next-line jest/expect-expect
   it('opens and closes', async () => {
     renderPopup();
 
-    await waitFor(async () => {
-      await expectPopupToBeClosed();
-      await togglePopup();
-      await expectPopupToBeOpen();
-      await togglePopup();
-      await expectPopupToBeClosed();
-    });
+    await expectPopupToBeClosed();
+    await togglePopup();
+    await expectPopupToBeOpen();
+    await togglePopup();
+    await expectPopupToBeClosed();
   });
 
   // eslint-disable-next-line jest/expect-expect
   it('closes popup with outside click', async () => {
     renderPopup();
 
-    await waitFor(async () => {
-      await expectPopupToBeClosed();
-      await togglePopup();
-      await expectPopupToBeOpen();
-      await clickOutside();
-      await expectPopupToBeClosed();
-    });
+    await expectPopupToBeClosed();
+    await togglePopup();
+    await expectPopupToBeOpen();
+    await clickOutside();
+    await expectPopupToBeClosed();
   });
 });
 
 async function expectPopupToBeClosed () {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
   await screen.findByRole('button');
-  expect(screen.queryAllByText('Test popup content')).toHaveLength(0);
+  await waitFor(() => expect(screen.queryAllByText('Test popup content')).toHaveLength(0));
 }
 
 async function expectPopupToBeOpen () {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
   await screen.findByText('Test popup content');
 }
 
