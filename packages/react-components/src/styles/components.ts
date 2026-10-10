@@ -130,19 +130,12 @@ export default `
       box-shadow: 0 2px 4px 0 rgb(34 36 38 / 12%), 0 2px 10px 0 rgb(34 36 38 / 15%);
       z-index: 999;
 
-      &.place-top::after {
-        border-top-color: var(--bg-menu) !important;
-      }
+      a {
+        color: #3BBEFF;
 
-      &.place-right::after {
-        border-right-color: var(--bg-menu) !important;
-      }
-
-    a {
-      color: #3BBEFF;
-
-      &.purpleColor {
-        color: #E6007A;
+        &.purpleColor {
+          color: #E6007A;
+        }
       }
     }
   }

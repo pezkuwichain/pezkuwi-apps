@@ -571,6 +571,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.7.5":
+  version: 1.8.0
+  resolution: "@floating-ui/core@npm:1.8.0"
+  dependencies:
+    "@floating-ui/utils": "npm:^0.2.12"
+  checksum: 10/762cd5677fd4e82597db2efdd8f1e81d248eac5615d8be755e1bbb5f12a14c56a6bccd735676374d4914db7ccb3f09ec405ec7433e8c48a5521f5d66dc8dd5d6
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:1.7.6":
+  version: 1.7.6
+  resolution: "@floating-ui/dom@npm:1.7.6"
+  dependencies:
+    "@floating-ui/core": "npm:^1.7.5"
+    "@floating-ui/utils": "npm:^0.2.11"
+  checksum: 10/84dff2ffdf85c8b92d7edafc543c55869abbeaeb3007fa983159467e050153b507a0f5fe8e84f88c3f28c35a82de9df9c20a6eef5560cbba3afae19141444ff2
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.2.11, @floating-ui/utils@npm:^0.2.12":
+  version: 0.2.12
+  resolution: "@floating-ui/utils@npm:0.2.12"
+  checksum: 10/ec4e176fb22d33d75df752c5acf82dcaacae40ed2d09c1a5015cb4081318fff20260db216678e952344b95f90c6b43214762b69eba7c51556ecd82c35a795cff
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:6.7.2":
   version: 6.7.2
   resolution: "@fortawesome/fontawesome-common-types@npm:6.7.2"
@@ -2649,7 +2675,7 @@ __metadata:
     react-markdown: "npm:^9.0.1"
     react-router: "npm:^7.18.0"
     react-router-dom: "npm:^7.18.0"
-    react-tooltip: "npm:^4.5.1"
+    react-tooltip: "npm:^6.0.8"
     rehype-raw: "npm:^7.0.0"
     semantic-ui-css: "npm:^2.5.0"
     semantic-ui-react: "npm:^0.88.2"
@@ -6542,6 +6568,13 @@ __metadata:
   version: 2.1.2
   resolution: "clone@npm:2.1.2"
   checksum: 10/d9c79efba655f0bf601ab299c57eb54cbaa9860fb011aee9d89ed5ac0d12df1660ab7642fddaabb9a26b7eff0e117d4520512cb70798319ff5d30a111b5310c2
+  languageName: node
+  linkType: hard
+
+"clsx@npm:2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10/cdfb57fa6c7649bbff98d9028c2f0de2f91c86f551179541cf784b1cfdc1562dcb951955f46d54d930a3879931a980e32a46b598acaea274728dbe068deca919
   languageName: node
   linkType: hard
 
@@ -13332,16 +13365,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-tooltip@npm:^4.5.1":
-  version: 4.5.1
-  resolution: "react-tooltip@npm:4.5.1"
+"react-tooltip@npm:^6.0.8":
+  version: 6.0.8
+  resolution: "react-tooltip@npm:6.0.8"
   dependencies:
-    prop-types: "npm:^15.8.1"
-    uuid: "npm:^7.0.3"
+    "@floating-ui/dom": "npm:1.7.6"
+    clsx: "npm:2.1.1"
   peerDependencies:
-    react: ">=16.0.0"
-    react-dom: ">=16.0.0"
-  checksum: 10/a2031d6a9903f18046bb3374a1a23f739fb5ebd272c049772dec9108d5da141f4cf98354970e824d70a83f06aed48cf7e96ab69616ecc0d4e6e8c73cef4b6823
+    react: ">=16.14.0"
+    react-dom: ">=16.14.0"
+  checksum: 10/b0823d8c48375953862c39261bde60b02339b38f64501572bdc51d1c201155a11ca62593b2b1f52d59706d92a35e9933bbf984433a63d5025fce9ba576a81fea
   languageName: node
   linkType: hard
 
@@ -15828,15 +15861,6 @@ __metadata:
   version: 0.4.0
   resolution: "utila@npm:0.4.0"
   checksum: 10/b068d8cb140588da0d0c80ee3c14c6b75d3f68760d8a1c6c3908d0270e9e4056454ff16189586481b7382926c44674f6929d08e06eaf9ec8f62736cd900169c5
-  languageName: node
-  linkType: hard
-
-"uuid@npm:^7.0.3":
-  version: 7.0.3
-  resolution: "uuid@npm:7.0.3"
-  bin:
-    uuid: dist/bin/uuid
-  checksum: 10/b2a4d30ecd6581015175487426558aafd7f7b4013a2e30802c128cc28cad9abe46ecd36c02f7fbcde7908fd4672334818d56a441c0871963d6bd89d911bef2ea
   languageName: node
   linkType: hard
 

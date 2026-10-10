@@ -28,10 +28,7 @@ function Icon ({ className = '', color = 'normal', icon, isPadded, isSpinning, o
   const extraProps: Record<string, unknown> = {
     'data-testid': icon,
     ...(tooltip
-      ? {
-        'data-for': tooltip,
-        'data-tip': true
-      }
+      ? { 'data-tooltip-id': tooltip }
       : {}
     )
   };

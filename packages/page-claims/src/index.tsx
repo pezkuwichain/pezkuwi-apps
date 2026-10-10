@@ -264,8 +264,7 @@ function ClaimsApp ({ basePath }: Props): React.ReactElement<Props> {
                 text={payload}
               >
                 <Payload
-                  data-for='tx-payload'
-                  data-tip
+                  data-tooltip-id='tx-payload'
                 >
                   {payload}
                 </Payload>

@@ -3,7 +3,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import ReactTooltip from 'react-tooltip';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 
 import { styled } from './styled.js';
 
@@ -43,7 +43,6 @@ function Tooltip ({ children, className = '', isClickable = false, place, text, 
     <StyledReactTooltip
       className={`${className} ui--Tooltip`}
       clickable={isClickable}
-      effect='solid'
       id={trigger}
       place={place}
     >
@@ -55,15 +54,14 @@ function Tooltip ({ children, className = '', isClickable = false, place, text, 
   );
 }
 
-// FIXME This cast should really not be needed since the export is React.Component<TooltipProps>,
-// however while it works as specified, it fails here on the definition. Until we have the component
-// upgraded to latest, we probably don't want to start digging...
-const StyledReactTooltip = styled(ReactTooltip as unknown as React.ComponentType<any>)`
+// The content sits in react-tooltip's .react-tooltip-content-wrapper, next to
+// its .react-tooltip-arrow element.
+const StyledReactTooltip = styled(ReactTooltip)`
   .tooltipSpacer {
     padding-bottom: 0.1rem;
   }
 
-  > div {
+  .react-tooltip-content-wrapper > div {
     overflow: hidden;
   }
 
@@ -96,7 +94,7 @@ const StyledReactTooltip = styled(ReactTooltip as unknown as React.ComponentType
     margin-top: 0.75rem;
   }
 
-  > div+div {
+  .react-tooltip-content-wrapper > div+div {
     margin-top: 0.5rem;
   }
 
