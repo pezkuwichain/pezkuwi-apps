@@ -20,6 +20,8 @@ jobs:
           done
           echo; docker logs node 2>&1 | tail -5
       - run: corepack enable && yarn install --immutable
+      - name: api probe
+        run: node .github/probe-api.mjs 2>&1 | tail -40
       - name: Bounties spec (4 min cap)
         run: timeout -s INT 240 yarn test:one :Bounties.slow. ; echo "rc=$?"
       - name: CreateAccount spec (4 min cap)
