@@ -5,17 +5,23 @@
 
 import '@pezkuwi/react-components/i18n';
 
-import { fireEvent, render, waitForElementToBeRemoved } from '@testing-library/react';
+import { cleanup, fireEvent, render, waitForElementToBeRemoved } from '@testing-library/react';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import AccountsApp from '@pezkuwi/app-accounts';
 import { ApiCtxRoot } from '@pezkuwi/react-api';
+import { statics } from '@pezkuwi/react-api/statics';
 import { lightTheme } from '@pezkuwi/react-components';
+import { KeyringCtxRoot } from '@pezkuwi/react-hooks/ctx/Keyring';
 import { BIZINIKIWI_PORT } from '@pezkuwi/test-support/bizinikiwi';
 import { MemoryStore } from '@pezkuwi/test-support/keyring';
 import { WaitForApi } from '@pezkuwi/test-support/react';
+import { settings } from '@pezkuwi/ui-settings';
+
+// the Account button only shows when accounts can be stored
+settings.set({ ...settings.get(), storage: 'on' });
 
 function noop (): void {
   // do nothing
@@ -25,19 +31,21 @@ const renderAccounts = () => {
   const memoryStore = new MemoryStore();
 
   return render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={['/accounts']}>
       <ThemeProvider theme={lightTheme}>
         <ApiCtxRoot
           apiUrl={`ws://127.0.0.1:${BIZINIKIWI_PORT}`}
           store={memoryStore}
         >
           <WaitForApi>
-            <div>
-              <AccountsApp
-                basePath='/accounts'
-                onStatusChange={noop}
-              />
-            </div>
+            <KeyringCtxRoot>
+              <div>
+                <AccountsApp
+                  basePath='/accounts'
+                  onStatusChange={noop}
+                />
+              </div>
+            </KeyringCtxRoot>
           </WaitForApi>
         </ApiCtxRoot>
       </ThemeProvider>
@@ -47,12 +55,17 @@ const renderAccounts = () => {
 
 // eslint-disable-next-line jest/no-disabled-tests
 describe.skip('--SLOW--: Account Create', () => {
+  // each render opens its own connection, and an open one keeps the process alive
+  afterEach(async () => {
+    cleanup();
+    await statics.api.disconnect();
+  });
+
   it('created account is added to list', async () => {
-    const { findByTestId, findByText, queryByText } = renderAccounts();
+    const { findByRole, findByTestId, findByText, queryByText } = renderAccounts();
 
-    const addAccountButton = await findByText('Add account', {});
-
-    fireEvent.click(addAccountButton);
+    // the page draws once the api and keyring are ready, later than the 1s default on a busy machine
+    fireEvent.click(await findByRole('button', { name: 'Account' }, { timeout: 20_000 }));
 
     const isSeedSavedCheckbox = await findByText('I have saved my mnemonic seed safely');
     const hiddenCheckbox = isSeedSavedCheckbox as HTMLInputElement;
@@ -89,11 +102,9 @@ describe.skip('--SLOW--: Account Create', () => {
   });
 
   it('gives an error message when entering invalid derivation path', async () => {
-    const { findByTestId, findByText } = renderAccounts();
+    const { findByRole, findByTestId, findByText } = renderAccounts();
 
-    const addAccountButton = await findByText('Add account', {});
-
-    fireEvent.click(addAccountButton);
+    fireEvent.click(await findByRole('button', { name: 'Account' }, { timeout: 20_000 }));
 
     const showAdvancedOptionsButton = await findByText('Advanced creation options', {});
 
