@@ -20,6 +20,14 @@ jobs:
           done
           echo; docker logs node 2>&1 | tail -5
       - run: corepack enable && yarn install --immutable
-      - run: yarn test:one :.slow.
+      - name: Bounties spec (4 min cap)
+        run: timeout -s INT 240 yarn test:one :Bounties.slow. ; echo "rc=$?"
+      - name: CreateAccount spec (4 min cap)
+        if: always()
+        run: timeout -s INT 240 yarn test:one :CreateAccount.slow. ; echo "rc=$?"
+      - name: chain state
+        if: always()
+        run: |
+          for m in system_chain state_getRuntimeVersion; do curl -s -H 'Content-Type: application/json' -d "{\"id\":1,\"jsonrpc\":\"2.0\",\"method\":\"$m\"}" http://127.0.0.1:30333 | head -c 400; echo; done
       - if: always()
         run: docker logs node 2>&1 | tail -40
