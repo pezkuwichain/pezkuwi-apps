@@ -20,6 +20,9 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: 'lts/*'
+    # test:all includes the .slow. specs, which need a live dev node
+    - name: dev node
+      run: .github/scripts/start-dev-node.sh
     - name: ${{ matrix.step }}
       run: |
         yarn install --immutable
