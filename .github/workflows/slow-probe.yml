@@ -20,6 +20,6 @@ jobs:
           done
           echo; docker logs node 2>&1 | tail -5
       - run: corepack enable && yarn install --immutable
-      - run: yarn test:one .slow.
+      - run: yarn test:one :.slow.
       - if: always()
         run: docker logs node 2>&1 | tail -40
