@@ -7,7 +7,7 @@ import '@pezkuwi/react-components/i18n';
 
 import type { ApiPromise } from '@pezkuwi/api';
 
-import { cleanup, render } from '@testing-library/react';
+import { cleanup, configure, getConfig, render } from '@testing-library/react';
 import React, { Suspense } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
@@ -16,14 +16,13 @@ import { ApiCtxRoot } from '@pezkuwi/react-api';
 import { statics } from '@pezkuwi/react-api/statics';
 import { lightTheme } from '@pezkuwi/react-components';
 import { createApi } from '@pezkuwi/test-support/api';
+import { assertDevNode, BIZINIKIWI_PORT } from '@pezkuwi/test-support/bizinikiwi';
 import { aliceSigner, MemoryStore } from '@pezkuwi/test-support/keyring';
 import { WaitForApi } from '@pezkuwi/test-support/react';
 import { execute } from '@pezkuwi/test-support/transaction';
 import { BN } from '@pezkuwi/util';
 
 import BountiesApp from './index.js';
-
-const BIZINIKIWI_PORT = Number.parseInt(process.env.TEST_BIZINIKIWI_PORT || '30333');
 
 const renderBounties = () => {
   const memoryStore = new MemoryStore();
@@ -48,12 +47,22 @@ const renderBounties = () => {
   );
 };
 
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('--SLOW--: Bounties', () => {
+describe('--SLOW--: Bounties', () => {
+  // every step waits on a live chain and a page that draws once the api and
+  // keyring are ready, which takes longer than the 1s default on a busy machine
+  let asyncUtilTimeout: number;
+
+  beforeAll(async () => {
+    await assertDevNode();
+    asyncUtilTimeout = getConfig().asyncUtilTimeout;
+    configure({ asyncUtilTimeout: 20_000 });
+  });
+
   let api: ApiPromise | undefined;
 
   // both connections stay open otherwise, and keep the process alive
   afterAll(async () => {
+    configure({ asyncUtilTimeout });
     cleanup();
     await api?.disconnect();
     await statics.api.disconnect();
@@ -69,6 +78,6 @@ describe.skip('--SLOW--: Bounties', () => {
 
     const { findByText } = renderBounties();
 
-    expect(await findByText(title, {}, { timeout: 20_000 })).toBeTruthy();
+    expect(await findByText(title)).toBeTruthy();
   });
 });

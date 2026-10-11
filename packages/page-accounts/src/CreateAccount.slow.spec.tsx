@@ -5,7 +5,7 @@
 
 import '@pezkuwi/react-components/i18n';
 
-import { cleanup, fireEvent, render, waitForElementToBeRemoved } from '@testing-library/react';
+import { cleanup, configure, fireEvent, getConfig, render, waitForElementToBeRemoved } from '@testing-library/react';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
@@ -15,7 +15,7 @@ import { ApiCtxRoot } from '@pezkuwi/react-api';
 import { statics } from '@pezkuwi/react-api/statics';
 import { lightTheme } from '@pezkuwi/react-components';
 import { KeyringCtxRoot } from '@pezkuwi/react-hooks/ctx/Keyring';
-import { BIZINIKIWI_PORT } from '@pezkuwi/test-support/bizinikiwi';
+import { assertDevNode, BIZINIKIWI_PORT } from '@pezkuwi/test-support/bizinikiwi';
 import { MemoryStore } from '@pezkuwi/test-support/keyring';
 import { WaitForApi } from '@pezkuwi/test-support/react';
 import { settings } from '@pezkuwi/ui-settings';
@@ -53,19 +53,31 @@ const renderAccounts = () => {
   );
 };
 
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('--SLOW--: Account Create', () => {
+describe('--SLOW--: Account Create', () => {
+  // every step waits on a live chain and a page that draws once the api and
+  // keyring are ready, which takes longer than the 1s default on a busy machine
+  let asyncUtilTimeout: number;
+
+  beforeAll(async () => {
+    await assertDevNode();
+    asyncUtilTimeout = getConfig().asyncUtilTimeout;
+    configure({ asyncUtilTimeout: 20_000 });
+  });
+
   // each render opens its own connection, and an open one keeps the process alive
   afterEach(async () => {
     cleanup();
     await statics.api.disconnect();
   });
 
+  afterAll(() => {
+    configure({ asyncUtilTimeout });
+  });
+
   it('created account is added to list', async () => {
     const { findByRole, findByTestId, findByText, queryByText } = renderAccounts();
 
-    // the page draws once the api and keyring are ready, later than the 1s default on a busy machine
-    fireEvent.click(await findByRole('button', { name: 'Account' }, { timeout: 20_000 }));
+    fireEvent.click(await findByRole('button', { name: 'Account' }));
 
     const isSeedSavedCheckbox = await findByText('I have saved my mnemonic seed safely');
     const hiddenCheckbox = isSeedSavedCheckbox as HTMLInputElement;
@@ -104,7 +116,7 @@ describe.skip('--SLOW--: Account Create', () => {
   it('gives an error message when entering invalid derivation path', async () => {
     const { findByRole, findByTestId, findByText } = renderAccounts();
 
-    fireEvent.click(await findByRole('button', { name: 'Account' }, { timeout: 20_000 }));
+    fireEvent.click(await findByRole('button', { name: 'Account' }));
 
     const showAdvancedOptionsButton = await findByText('Advanced creation options', {});
 
