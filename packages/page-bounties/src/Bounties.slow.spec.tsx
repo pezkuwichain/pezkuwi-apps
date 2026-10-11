@@ -45,8 +45,7 @@ const renderBounties = () => {
   );
 };
 
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('--SLOW--: Bounties', () => {
+describe('--SLOW--: Bounties', () => {
   it('list shows an existing bounty', async () => {
     const api = await createApi();
 
