@@ -24,3 +24,22 @@ jobs:
     # tree it changed. The committed tree must already be what they produce.
     - name: tree unchanged
       run: git diff --exit-code --stat
+
+  # The .slow. specs drive the UI against a live dev node; `yarn test` leaves
+  # them out, so they run here with one.
+  slow:
+    name: pr (test:slow)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+    - name: dev node
+      run: .github/scripts/start-dev-node.sh
+    - name: test:slow
+      run: |
+        corepack enable
+        yarn install --immutable
+        yarn test:slow
