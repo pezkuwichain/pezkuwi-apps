@@ -1,14 +1,12 @@
 // Copyright 2017-2026 @pezkuwi/react-api authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { Blockchain } from '@acala-network/chopsticks-core';
 import type { LinkOption } from '@pezkuwi/apps-config/endpoints/types';
 import type { InjectedExtension } from '@pezkuwi/extension-inject/types';
 import type { ChainProperties, ChainType } from '@pezkuwi/types/interfaces';
 import type { KeyringStore } from '@pezkuwi/ui-keyring/types';
 import type { ApiProps, ApiState, InjectedAccountExt } from './types.js';
 
-import { ChopsticksProvider, setStorage } from '@acala-network/chopsticks-core';
 import * as Sc from '@bizinikiwi/connect';
 import React, { useEffect, useMemo, useState } from 'react';
 import store from 'store';
@@ -48,7 +46,6 @@ interface ChainData {
 
 interface CreateApiReturn {
   types: Record<string, Record<string, string>>;
-  fork: Blockchain | null;
 }
 
 export const DEFAULT_DECIMALS = statics.registry.createType('u32', 12);
@@ -129,7 +126,7 @@ async function retrieve (api: ApiPromise, injectedPromise: Promise<InjectedExten
   };
 }
 
-async function loadOnReady (api: ApiPromise, endpoint: LinkOption | null, fork: Blockchain | null, injectedPromise: Promise<InjectedExtension[]>, store: KeyringStore | undefined, types: Record<string, Record<string, string>>, urlIsEthereum = false): Promise<ApiState> {
+async function loadOnReady (api: ApiPromise, endpoint: LinkOption | null, injectedPromise: Promise<InjectedExtension[]>, store: KeyringStore | undefined, types: Record<string, Record<string, string>>, urlIsEthereum = false): Promise<ApiState> {
   statics.registry.register(types);
 
   const { injectedAccounts, properties, systemChain, systemChainType, systemName, systemVersion } = await retrieve(api, injectedPromise);
@@ -194,7 +191,6 @@ async function loadOnReady (api: ApiPromise, endpoint: LinkOption | null, fork: 
     apiDefaultTx,
     apiDefaultTxSudo,
     chainSS58,
-    fork,
     hasInjectedAccounts: injectedAccounts.length !== 0,
     isApiReady: true,
     isDevelopment,
@@ -234,42 +230,14 @@ async function getLightProvider (chain: string): Promise<ScProvider> {
 /**
  * @internal
  */
-async function createApi (apiUrl: string, signer: ApiSigner, isLocalFork: boolean, onError: (error: unknown) => void): Promise<CreateApiReturn> {
+async function createApi (apiUrl: string, signer: ApiSigner, onError: (error: unknown) => void): Promise<CreateApiReturn> {
   const types = getDevTypes();
   const isLight = apiUrl.startsWith('light://');
   let provider;
 
-  let chopsticksFork: Blockchain | null = null;
-  let chopsticksProvider;
-  let setupChopsticksSuccess = false;
-
-  if (isLocalFork) {
-    try {
-      chopsticksProvider = await ChopsticksProvider.fromEndpoint(apiUrl);
-      chopsticksFork = chopsticksProvider.chain;
-      await setStorage(chopsticksFork, {
-        System: {
-          Account: [
-            [['5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY'], { data: { free: 5000 * 1e12 }, providers: 1 }]
-          ]
-        }
-      });
-      setupChopsticksSuccess = true;
-    } catch (error) {
-      store.set('localFork', '');
-      const msg = `Local fork failed, please refresh to switch back to default API provider. This is likely due to chain not supported by chopsticks.
-      Please consider to send an issue to https://github.com/AcalaNetwork/chopsticks.`;
-
-      onError(new Error(msg));
-      throw error;
-    }
-  }
-
   try {
     if (isLight) {
       provider = await getLightProvider(apiUrl.replace('light://', ''));
-    } else if (isLocalFork && setupChopsticksSuccess) {
-      provider = chopsticksProvider;
     } else {
       provider = new WsProvider(apiUrl);
     }
@@ -299,7 +267,7 @@ async function createApi (apiUrl: string, signer: ApiSigner, isLocalFork: boolea
     onError(error);
   }
 
-  return { fork: chopsticksFork, types };
+  return { types };
 }
 
 export function ApiCtxRoot ({ apiUrl, beforeApiInit, children, store: keyringStore }: Props): React.ReactElement<Props> | null {
@@ -309,7 +277,6 @@ export function ApiCtxRoot ({ apiUrl, beforeApiInit, children, store: keyringSto
   const [isApiInitialized, setIsApiInitialized] = useState(false);
   const [apiError, setApiError] = useState<null | string>(null);
   const [extensions, setExtensions] = useState<InjectedExtension[] | undefined>();
-  const isLocalFork = useMemo(() => store.get('localFork') === apiUrl, [apiUrl]);
   const apiEndpoint = useEndpoint(apiUrl);
   const peopleEndpoint = usePeopleEndpoint(apiEndpoint?.relayName || apiEndpoint?.info);
   const coreTimeEndpoint = useCoretimeEndpoint(apiEndpoint?.relayName || apiEndpoint?.info);
@@ -344,8 +311,8 @@ export function ApiCtxRoot ({ apiUrl, beforeApiInit, children, store: keyringSto
     // Ensure that when isPeopleForIdentity is set to false that it enables the identity pallet access.
     (typeof apiEndpoint?.isPeopleForIdentity === 'boolean' && !apiEndpoint?.isPeopleForIdentity);
   const value = useMemo<ApiProps>(
-    () => objectSpread({}, state, { api: statics.api, apiCoretime, apiEndpoint, apiError, apiIdentity: ((apiEndpoint?.isPeopleForIdentity && apiSystemPeople) || statics.api), apiRelay, apiSystemPeople, apiUrl, createLink, enableIdentity, extensions, isApiConnected, isApiInitialized, isLocalFork, isWaitingInjected: !extensions }),
-    [apiError, createLink, extensions, isApiConnected, isApiInitialized, isLocalFork, state, apiEndpoint, apiCoretime, apiRelay, apiUrl, apiSystemPeople, enableIdentity]
+    () => objectSpread({}, state, { api: statics.api, apiCoretime, apiEndpoint, apiError, apiIdentity: ((apiEndpoint?.isPeopleForIdentity && apiSystemPeople) || statics.api), apiRelay, apiSystemPeople, apiUrl, createLink, enableIdentity, extensions, isApiConnected, isApiInitialized, isWaitingInjected: !extensions }),
+    [apiError, createLink, extensions, isApiConnected, isApiInitialized, state, apiEndpoint, apiCoretime, apiRelay, apiUrl, apiSystemPeople, enableIdentity]
   );
 
   // initial initialization
@@ -356,8 +323,8 @@ export function ApiCtxRoot ({ apiUrl, beforeApiInit, children, store: keyringSto
       setApiError((error as Error).message);
     };
 
-    createApi(apiUrl, new ApiSigner(statics.registry, queuePayload, queueSetTxStatus), isLocalFork, onError)
-      .then(({ fork, types }): void => {
+    createApi(apiUrl, new ApiSigner(statics.registry, queuePayload, queueSetTxStatus), onError)
+      .then(({ types }): void => {
         statics.api.on('connected', () => setIsApiConnected(true));
         statics.api.on('disconnected', () => setIsApiConnected(false));
         statics.api.on('error', onError);
@@ -370,22 +337,15 @@ export function ApiCtxRoot ({ apiUrl, beforeApiInit, children, store: keyringSto
 
           const urlIsEthereum = !!location.href.includes('keyring-type=ethereum');
 
-          loadOnReady(statics.api, apiEndpoint, fork, injectedPromise, keyringStore, types, urlIsEthereum)
+          loadOnReady(statics.api, apiEndpoint, injectedPromise, keyringStore, types, urlIsEthereum)
             .then(setState)
             .catch(onError);
         });
 
-        if (isLocalFork) {
-          // clear localFork from local storage onMount after api setup
-          store.set('localFork', '');
-          statics.api.connect()
-            .catch(onError);
-        }
-
         setIsApiInitialized(true);
       })
       .catch(onError);
-  }, [apiEndpoint, apiUrl, queuePayload, queueSetTxStatus, keyringStore, isLocalFork]);
+  }, [apiEndpoint, apiUrl, queuePayload, queueSetTxStatus, keyringStore]);
 
   if (!value.isApiInitialized) {
     return <>{beforeApiInit}</>;

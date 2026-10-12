@@ -1,7 +1,6 @@
 // Copyright 2017-2026 @pezkuwi/react-api authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { Blockchain } from '@acala-network/chopsticks-core';
 import type React from 'react';
 import type { ApiPromise } from '@pezkuwi/api';
 import type { SubmittableExtrinsicFunction } from '@pezkuwi/api/promise/types';
@@ -55,7 +54,6 @@ export interface ApiState {
   apiDefaultTx: SubmittableExtrinsicFunction;
   apiDefaultTxSudo: SubmittableExtrinsicFunction;
   chainSS58: number;
-  fork: Blockchain | null;
   hasInjectedAccounts: boolean;
   isApiReady: boolean;
   isDevelopment: boolean;
@@ -88,7 +86,6 @@ export interface ApiProps extends ApiState {
   isApiConnected: boolean;
   isApiInitialized: boolean;
   isWaitingInjected: boolean;
-  isLocalFork?: boolean;
 }
 
 export interface OnChangeCbObs {

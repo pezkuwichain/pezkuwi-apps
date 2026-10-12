@@ -16,7 +16,6 @@
   "type": "module",
   "version": "1.0.2-1-x",
   "dependencies": {
-    "@acala-network/chopsticks-core": "^1.2.1",
     "@pezkuwi/apps-config": "^1.0.2-1-x",
     "@pezkuwi/apps-routing": "^1.0.2-1-x",
     "@pezkuwi/dev": "^0.86.8",
