@@ -4,7 +4,7 @@
 import type { ApiPromise } from '@pezkuwi/api';
 import type { DeriveStakingOverview, DeriveStakingValidators } from '@pezkuwi/api-derive/types';
 import type { AppProps } from '@pezkuwi/react-components/types';
-import type { ElectionStatus, ParaValidatorIndex, ValidatorId } from '@pezkuwi/types/interfaces';
+import type { AccountId, ElectionStatus, ParaValidatorIndex, ValidatorId } from '@pezkuwi/types/interfaces';
 import type { BN } from '@pezkuwi/util';
 
 import React, { useCallback, useMemo, useState } from 'react';
@@ -72,7 +72,18 @@ function StakingApp ({ ahApi, ahEndPoints, basePath, isRelayChain, rcApi, rcEndP
   const nominatedBy = useNominations(loadNominations);
   const ownPools = useOwnPools();
   const ahStakingOverview = useCall<DeriveStakingOverview>(api?.derive.staking.overview);
-  const validatorsInfo = useCall<DeriveStakingValidators>(rcApi?.derive.staking.validators);
+  // derive.staking.validators pairs the session set with the next elected set, and the api
+  // only offers it on a chain that has the staking pallet. Here staking lives on Asset Hub and
+  // the relay carries only stakingAhClient, so neither chain can answer it alone: the active
+  // set is the relay's session set (Asset Hub's session set is its collators), the next set is
+  // elected on Asset Hub.
+  const rcValidators = useCall<AccountId[]>(rcApi?.query.session.validators);
+  const nextElected = useCall<AccountId[]>(api.derive.staking.nextElected);
+  const validatorsInfo = useMemo((): DeriveStakingValidators | undefined => (
+    rcValidators && nextElected
+      ? { nextElected, validators: rcValidators }
+      : undefined
+  ), [nextElected, rcValidators]);
 
   const stakingOverview = useMemo(() => (
     !!ahStakingOverview && !!validatorsInfo
