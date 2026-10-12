@@ -21,9 +21,7 @@ export function getAccountCryptoType (accountId: AccountIdIsh): string {
               ? 'multisig'
               : current.meta.isProxied
                 ? 'proxied'
-                : current.meta.isLocal
-                  ? 'chopsticks'
-                  : 'qr'
+                : 'qr'
             : current.type;
     }
   } catch {
