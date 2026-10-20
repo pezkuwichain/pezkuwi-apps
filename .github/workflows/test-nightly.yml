@@ -5,6 +5,11 @@ on:
     - cron:  '1 5 * * *'
 
 
+
+# Read-only token: no step writes through GITHUB_TOKEN.
+permissions:
+  contents: read
+
 jobs:
   alltests:
     strategy:

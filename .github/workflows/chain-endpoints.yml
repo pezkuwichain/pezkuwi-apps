@@ -6,6 +6,12 @@ on:
     # once daily (early mornings, 02:50 GMT, generally not busy)
     - cron:  '50 2 * * *'
 
+
+# GITHUB_TOKEN only opens an issue when the endpoint check fails.
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   endpoints:
     if: github.repository == 'pezkuwichain/pezkuwi-apps'
