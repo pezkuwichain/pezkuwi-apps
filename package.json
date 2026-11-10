@@ -68,6 +68,7 @@
     "source-map-explorer": "^2.5.3"
   },
   "resolutions": {
+    "@isaacs/nonrecursive-glob-match@npm:^1.0.1": "1.0.1",
     "@pezkuwi/api": "^16.5.37",
     "@pezkuwi/api-augment": "^16.5.37",
     "@pezkuwi/api-base": "^16.5.37",
@@ -106,6 +107,8 @@
     "@pezkuwi/x-ws": "^14.0.26",
     "@zondax/ledger-substrate": "1.1.1",
     "braces": "npm:@pezkuwi/braces@^3.0.4",
+    "glob@npm:^13.0.0": "14.0.2",
+    "minimatch@npm:^11.0.0": "11.0.1",
     "typescript": "5.5.4"
   }
 }
