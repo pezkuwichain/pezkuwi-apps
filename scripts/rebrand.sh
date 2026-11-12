@@ -108,11 +108,11 @@ echo "   Terminology replacements applied."
 echo "[4/6] Updating URLs and domains..."
 
 find "$APPS_DIR" -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.md" -o -name "*.html" -o -name "*.cjs" -o -name "*.mjs" \) ! -path "*/node_modules/*" | while read file; do
-    # polkadot.js.org -> pezkuwichain.app
-    sed -i 's|polkadot.js.org|pezkuwichain.app|g' "$file"
+    # polkadot.js.org -> developers.pezkuwichain.io
+    sed -i 's|polkadot.js.org|developers.pezkuwichain.io|g' "$file"
 
-    # apps.pezkuwichain.io -> pezkuwichain.app
-    sed -i 's|apps.pezkuwichain.io|pezkuwichain.app|g' "$file"
+    # apps.pezkuwichain.io -> js.pezkuwichain.io
+    sed -i 's|apps.pezkuwichain.io|js.pezkuwichain.io|g' "$file"
 
     # pezkuwichain.io -> pezkuwichain.io
     sed -i 's|pezkuwichain.io|pezkuwichain.io|g' "$file"
